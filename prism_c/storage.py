@@ -282,6 +282,35 @@ class Authority(WorkerAuthority):
             spec, rows = self._valid_rows(db, name)
             return recover(rows, spec["length"], spec["profile"])[0]
 
+    @contextmanager
+    def _read_transaction(self):
+        """Committed metadata snapshot; never a physical slot read lock."""
+        connection = sqlite3.connect(self.db_path.as_uri() + "?mode=ro", uri=True,
+                                     isolation_level=None, timeout=10)
+        connection.row_factory = sqlite3.Row
+        try:
+            connection.execute("PRAGMA query_only=ON")
+            connection.execute("BEGIN")
+            yield connection
+        finally:
+            connection.close()
+
+    def read_snapshot(self, name: str) -> bytes:
+        """Opt-in immutable-content read with authenticated bytes and one fallback.
+
+        WAL snapshots protect metadata, not pool bytes. Retirement/reuse may
+        overwrite a snapshot's source extent. Any reconstruction rejection
+        closes the snapshot before retrying under the existing writer lock.
+        A successful read returns only the exact immutable content identity
+        from its committed metadata snapshot, even if placement has changed.
+        """
+        try:
+            with self._read_transaction() as db:
+                spec, rows = self._valid_rows(db, name)
+                return recover(rows, spec["length"], spec["profile"])[0]
+        except Rejected:
+            return self.read(name)
+
     def admit(self, witness: Witness, fence: int, plan_id: str | None = None) -> str:
         """Legacy full-store admission; mutually exclusive with scoped plans."""
         return self._admit(witness, fence, plan_id)

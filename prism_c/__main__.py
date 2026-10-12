@@ -311,6 +311,10 @@ def main():
     diagnostics = commands.add_parser("measurement-diagnostics", help="Collect uncensored foreground windows and diagnostic CPU attribution")
     diagnostics.add_argument("--report", default="evidence/results/measurement-diagnostics.json")
     diagnostics.add_argument("--seed", type=int, default=20261012)
+    latency = commands.add_parser("snapshot-latency", help="Compare fixed-arrival serialized and immutable snapshot reads")
+    latency.add_argument("--report", default="evidence/results/snapshot-latency.json")
+    latency.add_argument("--runs", type=int, default=10)
+    latency.add_argument("--seed", type=int, default=20261012)
     for name in ("resume", "cancel"):
         operation = commands.add_parser(name, help=f"{name.capitalize()} an existing admitted plan")
         operation.add_argument("--root", required=True)
@@ -358,6 +362,15 @@ def main():
         report = diagnostics(args.seed, checkpoint)
         print(json.dumps({"report": str(Path(args.report).resolve()), "status": report["status"],
                           "windows": len(report["windows"]), "cpu_profiles": len(report["cpu_profiles"])}))
+        return 0 if report["status"] == "completed" else 1
+    if args.command == "snapshot-latency":
+        from .snapshot_latency import snapshot_latency
+        metadata = environment()
+        def checkpoint(report):
+            write_report(args.report, {"environment": metadata, **report})
+        report = snapshot_latency(args.runs, args.seed, checkpoint)
+        print(json.dumps({"report": str(Path(args.report).resolve()), "status": report["status"],
+                          "configurations": len(report["configurations"])}))
         return 0 if report["status"] == "completed" else 1
     return operate(args)
 

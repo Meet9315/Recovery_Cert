@@ -70,7 +70,7 @@ Build a bounded reference model and a local durable storage prototype first. Ver
 
 ## Next actions
 
-1. Register independent paired foreground confirmation with strengthened arrival workloads. Diagnostic sampling is sufficient, but the single windows show substantial contention and cannot establish comparative effects.
+1. Milestone 8 in progress: opt-in authenticated WAL snapshot reads and the [fixed-arrival paired latency protocol](experiments/snapshot_latency_protocol.md) are implemented. Ten focused tests passed: writer-lock overlap, actual retire/reclaim fallback, corruption/identity checks, coding/worker compatibility, queued boundary reads, phase separation and failed-attempt preservation. Freeze the code/protocol, run four configurations with ten pairs each, then the full regression suite. Confirmation outcomes are pending; serialized reads and conventional caching remain defaults.
 2. Investigate authority transactions and repeated physical reconstruction/checking, preserving safety checks and requiring fresh registered confirmation for any optimization. Then register fault/retry and scoped-contention comparisons. The logical span subset excludes physical verification and is not the complete G6 verification-CPU metric.
 3. Keep conventional caching as default; preserve the measured slowdowns and selective/shadow modes for investigation. Require fresh registered confirmation for any optimization.
 4. Extend local worker processes to authenticated remote daemons and test actual device/host fault boundaries separately.
