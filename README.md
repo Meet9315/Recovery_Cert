@@ -19,6 +19,7 @@ python -m prism_c four-plus-two-demo --root tmp/four-plus-two-demo-new --report 
 python -m prism_c controller-benchmark --report evidence/results/controller-benchmark-new.json --runs 10 --seed 20261012
 python -m prism_c measurement-diagnostics --report evidence/results/measurement-diagnostics-new.json --seed 20261012
 python -m prism_c snapshot-latency --report evidence/results/snapshot-latency-new.json --runs 10 --seed 20261012
+python -m prism_c read-reuse-benchmark --report evidence/results/read-reuse-new.json --runs 10 --seed 20261012
 ```
 
 The demo root must be new or empty. Existing stores are never reset by the demo. Choose a new root name for another run. `verify` uses disposable temporary stores and preserves the report, test details, source hashes and model campaign counts.
@@ -97,6 +98,16 @@ The [registered paired protocol](experiments/snapshot_latency_protocol.md) prese
 The [milestone 8 results](evidence/results/MILESTONE_08.md) preserve the original campaign failure after 35 pairs and its separately registered continuation. The supplemented forty-pair set contains 80 windows and 64,000 successful requests. Snapshot reads reduced mean paired loaded p99 by about 92% in both worker configurations and 67% in local 4+2; local 2+1 remains inconclusive, including a retained approximately 187-second interruption. None met the own-control 5% condition. Serialized reads remain default. The [continuation protocol](experiments/snapshot_latency_continuation_protocol.md) documents provenance, all retained/unused windows and failure handling; no original data is overwritten.
 
 Milestone 8 full verification passed 120 methods and 296 subtests, retaining 37 process-exit cases and both finite campaigns with zero observed violations/disagreements. The continuation helper's source hash is saved separately from the 34 package/test hashes, all matching their recorded versions.
+
+## Authenticated read-result reuse
+
+Both read APIs return the content already reconstructed and authenticated by the common validator. They keep all source/row, coding/padding, regenerated-row and content-identity checks; repair and worker callers retain their existing `_valid_rows` interface. Snapshot failure still closes its transaction before one serialized fallback. This removes a second decode of the same in-memory rows without a cross-request content cache. Serialized reads remain default.
+
+`read-reuse-benchmark` compares the former redundant decode sequence with result reuse across both read APIs, both coding profiles and 512/65,537-byte objects: eight configurations with ten seeded pairs each. It calibrates batches for process CPU resolution and keeps all raw counts, attempts and intervals. Eight separate fixed-arrival foreground windows are diagnostics rather than paired foreground confirmation. CPU and foreground collectors retain process pulses, wall/monotonic/CPU timestamps and overlapping gaps of at least 500 ms; gaps do not identify their cause.
+
+The [registered protocol](experiments/read_reuse_protocol.md) preserves every authenticity check and provides the same common validator/controller to both variants. The [milestone 9 results](evidence/results/MILESTONE_09.md) show 44%–47% less read CPU for large objects, while small-object intervals span zero. Every measured window passed its byte/target/capacity checks; no 500 ms pulse gap was observed. These read costs are not continuation-verification CPU, and the single foreground windows do not complete the research gate or increase the patentability assessment. The prior campaign failure and all historical reports remain preserved.
+
+Local milestone 9 verification passed 129 methods and 318 subtests, with both finite campaigns observing zero violations/disagreements. Two short test backlogs were enlarged after measurement to fix a fast-Linux CI failure; an empty-backlog regression retains the collector's rejection policy. Measurement source is preserved in its frozen Git version, and the final verification records the corrected test hashes.
 
 ## Repository verification
 

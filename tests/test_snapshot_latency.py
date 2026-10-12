@@ -71,7 +71,8 @@ class SnapshotLatencyTests(unittest.TestCase):
                 receive.close()
 
     def test_live_pair_uses_identical_backlog_and_preserves_phase_membership(self):
-        cells = [latency_window(DEFAULT_PROFILE, False, 103, api, count=8, rate=100, groups=2)
+        # Keep enough real repair work for the scheduled phase on fast hosts.
+        cells = [latency_window(DEFAULT_PROFILE, False, 103, api, count=8, rate=100, groups=64)
                  for api in ("read", "read_snapshot")]
         self.assertEqual(cells[0]["initial_backlog"], cells[1]["initial_backlog"])
         for cell in cells:
@@ -82,6 +83,15 @@ class SnapshotLatencyTests(unittest.TestCase):
             idle = [r for r in cell["foreground"]["requests"] if r["phase"] == 0]
             self.assertLessEqual(max(r["end_ns"] for r in idle), marks["load_origin_ns"])
             self.assertEqual(cell["foreground"]["fallback_count"], 0)
+
+    def test_empty_repair_backlog_is_rejected_without_idle_padding(self):
+        from prism_c.measurement_diagnostics import _backlog_fixture
+        def empty(*args, **kwargs):
+            store, fence, contents, _, capacity = _backlog_fixture(*args, **kwargs)
+            return store, fence, contents, [], capacity
+        with patch("prism_c.snapshot_latency._backlog_fixture", side_effect=empty), \
+             self.assertRaisesRegex(RuntimeError, "Insufficient repair backlog"):
+            latency_window(DEFAULT_PROFILE, False, 104, "read_snapshot", count=8, groups=2)
 
     def test_failed_attempt_is_saved_and_large_inflation_does_not_pass_screen(self):
         with self.assertRaises(ValueError):

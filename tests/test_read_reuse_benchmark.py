@@ -50,7 +50,7 @@ class ReadReuseBenchmarkTests(unittest.TestCase):
     def test_live_monitoring_keeps_all_arrivals_and_both_process_pulses(self):
         for variant in ("redundant", "reuse"):
             with self.subTest(variant=variant):
-                result = latency_window(DEFAULT_PROFILE, False, 212, "read_snapshot", count=8, groups=2,
+                result = latency_window(DEFAULT_PROFILE, False, 212, "read_snapshot", count=8, groups=64,
                                         variant=variant, monitored=True)
                 self.assertTrue(result["foreground"]["healthy"])
                 self.assertEqual(len(result["foreground"]["requests"]), 16)
