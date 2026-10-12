@@ -38,7 +38,7 @@ def category(filename, name):
     if base == "worker_authority.py":
         return "worker_control"
     if base == "storage.py":
-        return "source_integrity" if name == "_valid_rows" else "authority_orchestration"
+        return "source_integrity" if name in ("_valid_rows", "_validated_content") else "authority_orchestration"
     if base == "baseline.py":
         return "scheduler"
     if base in ("cpu_attribution.py", "measurement_diagnostics.py"):

@@ -253,7 +253,8 @@ class Authority(WorkerAuthority):
             self._io(db, slot, b"retired fixture"[:self._get(db, "slot_size")])
             db.execute("UPDATE slots SET status='RETIRED',incarnation=incarnation+1 WHERE key=?", (slot["key"],))
 
-    def _valid_rows(self, db, name: str) -> tuple[dict, dict[int, bytes]]:
+    def _validated_content(self, db, name: str) -> tuple[dict, dict[int, bytes], bytes]:
+        """Authenticate all live rows and the complete reconstructed identity."""
         spec = db.execute("SELECT * FROM stripes WHERE name=?", (name,)).fetchone()
         if spec is None:
             raise Rejected("Unknown content identity")
@@ -275,12 +276,16 @@ class Authority(WorkerAuthority):
         content, recovered = recover(rows, spec["length"], spec["profile"])
         if digest(content) != spec["content_digest"] or [digest(row) for row in recovered] != expected:
             raise Rejected("Source content identity mismatch")
-        return dict(spec), rows
+        return dict(spec), rows, content
+
+    def _valid_rows(self, db, name: str) -> tuple[dict, dict[int, bytes]]:
+        # Preserve the row interface used by repair, worker preparation and audit.
+        spec, rows, _ = self._validated_content(db, name)
+        return spec, rows
 
     def read(self, name: str) -> bytes:
         with self._transaction() as db:
-            spec, rows = self._valid_rows(db, name)
-            return recover(rows, spec["length"], spec["profile"])[0]
+            return self._validated_content(db, name)[2]
 
     @contextmanager
     def _read_transaction(self):
@@ -306,8 +311,7 @@ class Authority(WorkerAuthority):
         """
         try:
             with self._read_transaction() as db:
-                spec, rows = self._valid_rows(db, name)
-                return recover(rows, spec["length"], spec["profile"])[0]
+                return self._validated_content(db, name)[2]
         except Rejected:
             return self.read(name)
 

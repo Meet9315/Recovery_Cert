@@ -315,6 +315,10 @@ def main():
     latency.add_argument("--report", default="evidence/results/snapshot-latency.json")
     latency.add_argument("--runs", type=int, default=10)
     latency.add_argument("--seed", type=int, default=20261012)
+    reuse = commands.add_parser("read-reuse-benchmark", help="Compare authenticated read CPU and monitored foreground diagnostics")
+    reuse.add_argument("--report", default="evidence/results/read-reuse.json")
+    reuse.add_argument("--runs", type=int, default=10)
+    reuse.add_argument("--seed", type=int, default=20261012)
     for name in ("resume", "cancel"):
         operation = commands.add_parser(name, help=f"{name.capitalize()} an existing admitted plan")
         operation.add_argument("--root", required=True)
@@ -371,6 +375,17 @@ def main():
         report = snapshot_latency(args.runs, args.seed, checkpoint)
         print(json.dumps({"report": str(Path(args.report).resolve()), "status": report["status"],
                           "configurations": len(report["configurations"])}))
+        return 0 if report["status"] == "completed" else 1
+    if args.command == "read-reuse-benchmark":
+        from .read_reuse import read_reuse_benchmark, progress
+        metadata = environment()
+        def checkpoint(report):
+            write_report(args.report, {"environment": metadata, **report})
+        report = read_reuse_benchmark(args.runs, args.seed, checkpoint)
+        progress(report, json.dumps({"report": str(Path(args.report).resolve()), "status": report["status"],
+                                    "cpu_configurations": len(report["cpu_configurations"]),
+                                    "foreground_diagnostics": len(report["foreground_diagnostics"])}))
+        checkpoint(report)  # Retain a final console-output error too.
         return 0 if report["status"] == "completed" else 1
     return operate(args)
 

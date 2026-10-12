@@ -75,7 +75,7 @@ Build a bounded reference model and a local durable storage prototype first. Ver
 
 ## Next actions
 
-1. Reuse the already reconstructed/authenticated content in read APIs instead of decoding the same in-memory rows again. Retain all row, coding/padding and content-identity checks, then register a fresh comparison. Add host-liveness monitoring and explicit interruption reporting; the current local 2+1 result has material environmental uncertainty.
+1. Milestone 9 in progress: both read APIs now reuse the authenticated reconstructed result. Repair/worker callers retain their two-item row interface and all original checks. Eight new focused tests passed, including missing-row identity, extra-row consistency, edge-case content, comparator decode counts, real monitored arrivals, failure/timer handling and gap retention. Freeze the [read CPU/diagnostic protocol](experiments/read_reuse_protocol.md), collect eight ten-pair CPU configurations and eight monitored foreground windows, then full regressions. Timing outcomes are pending; historical reports are preserved.
 2. Provide the same snapshot/read optimization to conventional and selective controllers in future comparisons. Then register fault/retry and scoped-contention performance. The logical span subset excludes physical verification and is not the complete G6 verification-CPU metric.
 3. Keep conventional caching as default; preserve the measured slowdowns and selective/shadow modes for investigation. Require fresh registered confirmation for any optimization.
 4. Extend local worker processes to authenticated remote daemons and test actual device/host fault boundaries separately.

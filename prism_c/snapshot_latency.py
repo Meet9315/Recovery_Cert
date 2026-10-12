@@ -16,17 +16,25 @@ from .controller_benchmark import FOREGROUND, _fixture, p99
 from .measurement_diagnostics import _backlog_fixture
 from .profiles import DEFAULT_PROFILE, FOUR_PLUS_TWO
 from .storage import Authority
+from .liveness import Pulse, pulse_report
 
 PROTOCOL = Path(__file__).resolve().parent.parent / "experiments/snapshot_latency_protocol.md"
 APIS = ("read", "read_snapshot")
 
 
 def _arrival_reader(root, api, origins, ready, control_go, control_done, load_go, arrivals_done, abort, output,
-                    count=400, rate=100):
+                    count=400, rate=100, variant="reuse", monitored=False):
     records, errors, fallbacks = [], [], []
-    work, service = queue.Queue(maxsize=count), None
+    work, service, pulse = queue.Queue(maxsize=count), None, None
     try:
         store = Authority(root)
+        if variant == "redundant":
+            from .read_reuse import redundant_reads
+            redundant_reads(store)
+        elif variant != "reuse":
+            raise ValueError("Invalid read variant")
+        if monitored:
+            pulse = Pulse().start()
         original_read = store.read
         if api == "read_snapshot":
             def fallback(name):
@@ -83,8 +91,11 @@ def _arrival_reader(root, api, origins, ready, control_go, control_done, load_go
         ready.set()
         control_done.set()
         arrivals_done.set()
+    if pulse is not None:
+        pulse.stop()
     output.send({"requests": records, "errors": errors, "fallback_times_ns": fallbacks,
-                 "process_cpu_ns": time.process_time_ns()})
+                 "process_cpu_ns": time.process_time_ns(),
+                 "liveness_samples": pulse.samples if pulse is not None else []})
     output.close()
 
 
@@ -112,8 +123,8 @@ def summarize(observations, stop_ns, expected=400):
     return result
 
 
-def latency_window(profile, workers, seed, api, *, count=400, rate=100, groups=64):
-    if api not in APIS or count < 1 or rate <= 0 or groups < 1:
+def latency_window(profile, workers, seed, api, *, count=400, rate=100, groups=64, variant="reuse", monitored=False):
+    if api not in APIS or variant not in ("redundant", "reuse") or count < 1 or rate <= 0 or groups < 1:
         raise ValueError("Invalid fixed-arrival workload")
     with tempfile.TemporaryDirectory(prefix="prism-arrivals-") as tmp:
         setup = time.perf_counter_ns()
@@ -125,13 +136,15 @@ def latency_window(profile, workers, seed, api, *, count=400, rate=100, groups=6
         ready, control_go, control_done, load_go, arrivals_done, abort = (ctx.Event() for _ in range(6))
         receive, send = ctx.Pipe(duplex=False)
         reader = ctx.Process(target=_arrival_reader, args=(str(store.root), api, origins, ready, control_go,
-                             control_done, load_go, arrivals_done, abort, send, count, rate))
+                             control_done, load_go, arrivals_done, abort, send, count, rate, variant, monitored))
         reader.start()
         send.close()
-        completed = []
+        completed, pulse = [], None
         try:
             if not ready.wait(20):
                 raise RuntimeError("Arrival reader failed to start")
+            if monitored:
+                pulse = Pulse().start()
             origins[0] = time.perf_counter_ns()
             control_go.set()
             if not control_done.wait(60):
@@ -160,6 +173,8 @@ def latency_window(profile, workers, seed, api, *, count=400, rate=100, groups=6
                 raise RuntimeError("Loaded requests did not drain")
             observations = receive.recv()
             drain_end = time.perf_counter_ns()
+            if pulse is not None:
+                pulse.stop()
             reader.join(10)
             if reader.is_alive() or reader.exitcode != 0:
                 raise RuntimeError("Arrival reader did not exit cleanly")
@@ -179,8 +194,14 @@ def latency_window(profile, workers, seed, api, *, count=400, rate=100, groups=6
                     "control_wall_ns": control_end - origins[0], "load_wall_ns": load_stop - origins[1],
                     "drain_wall_ns": drain_end - load_stop, "arrival_rate": rate, "offered_per_phase": count,
                     "foreground": foreground, "audit": audit, "managed_capacity_bytes": capacity,
-                    "completed_group_targets_and_all_readbacks_match": True}
+                    "completed_group_targets_and_all_readbacks_match": True,
+                    "read_variant": variant,
+                    "liveness": {"controller": pulse.report(origins[0], drain_end),
+                                 "reader": pulse_report(observations["liveness_samples"], origins[0], drain_end)}
+                                if pulse is not None else None}
         finally:
+            if pulse is not None and pulse.thread.is_alive():
+                pulse.stop()
             abort.set()
             control_go.set()
             load_go.set()

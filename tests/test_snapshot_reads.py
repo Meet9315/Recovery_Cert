@@ -97,7 +97,7 @@ class SnapshotReadTests(unittest.TestCase):
             store, _ = make_store(Path(tmp) / "store")
             with self.assertRaises(Rejected):
                 store.read_snapshot("missing")
-            with patch.object(store, "_valid_rows", side_effect=OSError("device unavailable")), \
+            with patch.object(store, "_io", side_effect=OSError("device unavailable")), \
                  patch.object(store, "read", wraps=store.read) as fallback, self.assertRaises(OSError):
                 store.read_snapshot("A")
             self.assertEqual(fallback.call_count, 0)
