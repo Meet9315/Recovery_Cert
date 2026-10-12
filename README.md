@@ -107,7 +107,7 @@ Both read APIs return the content already reconstructed and authenticated by the
 
 The [registered protocol](experiments/read_reuse_protocol.md) preserves every authenticity check and provides the same common validator/controller to both variants. The [milestone 9 results](evidence/results/MILESTONE_09.md) show 44%–47% less read CPU for large objects, while small-object intervals span zero. Every measured window passed its byte/target/capacity checks; no 500 ms pulse gap was observed. These read costs are not continuation-verification CPU, and the single foreground windows do not complete the research gate or increase the patentability assessment. The prior campaign failure and all historical reports remain preserved.
 
-Local milestone 9 verification passed 129 methods and 318 subtests, with both finite campaigns observing zero violations/disagreements. Two short test backlogs were enlarged after measurement to fix a fast-Linux CI failure; an empty-backlog regression retains the collector's rejection policy. Measurement source is preserved in its frozen Git version, and the final verification records the corrected test hashes.
+Local milestone 9 verification passed 129 methods and 318 subtests, with both finite campaigns observing zero violations/disagreements. Two short test backlogs were enlarged after measurement to fix a fast-Linux CI failure; an empty-backlog regression retains the collector's rejection policy. Fresh [Ubuntu and Windows CI](https://github.com/Meet9315/Recovery_Cert/actions/runs/38265616092) both passed. Measurement source is preserved in its frozen Git version, and the final verification records the corrected test hashes.
 
 ## Repository verification
 
