@@ -8,15 +8,28 @@ from enum import Enum
 import hashlib
 import json
 
+from .profiles import CodeProfile, DEFAULT_PROFILE, PROFILES
+
 
 class Rejected(ValueError):
     """A state transition or witness does not satisfy the supported contract."""
+
+
+def profile_spec(name: str) -> CodeProfile:
+    if not isinstance(name, str) or name not in PROFILES:
+        raise Rejected("Unsupported coding profile")
+    return PROFILES[name]
 
 
 @dataclass(frozen=True)
 class Stripe:
     name: str
     eligible: tuple[str, ...]
+    profile: str = DEFAULT_PROFILE
+
+    @property
+    def code(self) -> CodeProfile:
+        return profile_spec(self.profile)
 
 
 @dataclass(frozen=True)
@@ -36,12 +49,17 @@ class State:
     offline: tuple[str, ...] = ()
 
     def fingerprint(self) -> str:
-        return hashlib.sha256(json.dumps(asdict(self), sort_keys=True).encode()).hexdigest()
+        value = asdict(self)
+        # Keep legacy 2+1 commitments intact; nondefault profiles are explicit.
+        for spec in value["stripes"]:
+            if spec["profile"] == DEFAULT_PROFILE:
+                del spec["profile"]
+        return hashlib.sha256(json.dumps(value, sort_keys=True).encode()).hexdigest()
 
     def target(self) -> bool:
         return all(
             {s.row for s in self.slots if s.status == "LIVE" and s.stripe == spec.name
-             and s.domain not in self.offline} == {0, 1, 2}
+             and s.domain not in self.offline} == set(range(spec.code.total_rows))
             for spec in self.stripes
         )
 
@@ -103,6 +121,9 @@ def validate_state(state: State) -> None:
     names = {spec.name for spec in state.stripes}
     if len(names) != len(state.stripes) or len({s.key for s in state.slots}) != len(state.slots):
         raise Rejected("Duplicate stripe or slot identity")
+    specs = {spec.name: spec for spec in state.stripes}
+    for spec in state.stripes:
+        profile_spec(spec.profile)
     for slot in state.slots:
         if slot.status not in {"FREE", "RESERVED", "STAGED", "LIVE", "RETIRED"}:
             raise Rejected("Unknown slot state")
@@ -111,7 +132,8 @@ def validate_state(state: State) -> None:
         if slot.status == "FREE" and (slot.stripe or slot.row != -1):
             raise Rejected("Free slot retains an allocation")
         if slot.status in {"RESERVED", "STAGED", "LIVE"}:
-            if slot.stripe not in names or slot.row not in {0, 1, 2}:
+            if (slot.stripe not in names or type(slot.row) is not int
+                    or slot.row not in range(specs[slot.stripe].code.total_rows)):
                 raise Rejected("Allocation has invalid stripe/row")
             spec = next(s for s in state.stripes if s.name == slot.stripe)
             if slot.domain not in spec.eligible:
@@ -119,7 +141,7 @@ def validate_state(state: State) -> None:
     for spec in state.stripes:
         live = [s for s in state.slots if s.stripe == spec.name and s.status == "LIVE"
                 and s.domain not in state.offline]
-        if len({s.row for s in live}) < 2:
+        if len({s.row for s in live}) < spec.code.data_rows:
             raise Rejected(f"Stripe {spec.name} is below its safety floor")
         if len({s.domain for s in live}) != len(live):
             raise Rejected("Live fragments co-located in a failure domain")
@@ -135,7 +157,8 @@ def transition(state: State, action: Action) -> State:
         raise Rejected("Stale slot incarnation")
     if action.kind == "reserve":
         spec = next((s for s in state.stripes if s.name == action.stripe), None)
-        if slot.status != "FREE" or spec is None or action.row not in {0, 1, 2}:
+        if (slot.status != "FREE" or spec is None or type(action.row) is not int
+                or action.row not in range(spec.code.total_rows)):
             raise Rejected("Invalid reservation")
         if slot.domain not in spec.eligible:
             raise Rejected("Ineligible destination")
@@ -173,7 +196,7 @@ def successors(state: State) -> list[tuple[Action, State]]:
     for slot in state.slots:
         if slot.status == "FREE":
             candidates.extend(Action("reserve", slot.key, spec.name, row, slot.incarnation)
-                              for spec in state.stripes for row in range(3))
+                              for spec in state.stripes for row in range(spec.code.total_rows))
         else:
             kind = {"RESERVED": "stage", "STAGED": "promote", "RETIRED": "reclaim"}.get(slot.status)
             if kind:

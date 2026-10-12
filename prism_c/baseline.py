@@ -16,7 +16,7 @@ def conventional_plan(state: State) -> Witness | None:
     # Initial staged/reserved data is outside this matching baseline's scope.
     if any(s.status in {"RESERVED", "STAGED"} for s in cleaned.slots):
         raise Rejected("Baseline requires a quiescent initial snapshot")
-    tasks = [(p, row) for p in cleaned.stripes for row in range(3)
+    tasks = [(p, row) for p in cleaned.stripes for row in range(p.code.total_rows)
              if not any(s.stripe == p.name and s.row == row and s.status == "LIVE"
                         and s.domain not in cleaned.offline for s in cleaned.slots)]
     free = [s for s in cleaned.slots if s.status == "FREE" and s.domain not in cleaned.offline]

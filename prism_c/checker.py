@@ -2,7 +2,7 @@
 
 from dataclasses import replace
 
-from .model import Action, Rejected, State, Witness
+from .model import Action, Rejected, State, Witness, profile_spec
 
 
 def replay(state: State, actions: tuple[Action, ...], require_target: bool = True) -> State:
@@ -11,6 +11,7 @@ def replay(state: State, actions: tuple[Action, ...], require_target: bool = Tru
     if len(records) != len(state.slots):
         raise Rejected("Duplicate slot")
     policies = {s.name: set(s.eligible) for s in state.stripes}
+    codes = {s.name: profile_spec(s.profile) for s in state.stripes}
     if len(policies) != len(state.stripes):
         raise Rejected("Duplicate stripe")
 
@@ -21,14 +22,15 @@ def replay(state: State, actions: tuple[Action, ...], require_target: bool = Tru
             if item["status"] == "FREE" and (item["stripe"] or item["row"] != -1):
                 raise Rejected("Free capacity contains an allocation identity")
             if item["status"] in {"RESERVED", "STAGED", "LIVE"}:
-                if item["stripe"] not in policies or item["row"] not in range(3):
+                if (item["stripe"] not in policies or type(item["row"]) is not int
+                        or item["row"] not in range(codes[item["stripe"]].total_rows)):
                     raise Rejected("Unknown allocated row")
                 if item["domain"] not in policies[item["stripe"]]:
                     raise Rejected("Policy violation")
         for name in policies:
             live = [r for r in records.values() if r["stripe"] == name and r["status"] == "LIVE"
                     and r["domain"] not in state.offline]
-            if len({r["row"] for r in live}) < 2:
+            if len({r["row"] for r in live}) < codes[name].data_rows:
                 raise Rejected("Decoding floor violated")
             if len({r["domain"] for r in live}) != len(live):
                 raise Rejected("Failure-domain placement violated")
@@ -41,7 +43,8 @@ def replay(state: State, actions: tuple[Action, ...], require_target: bool = Tru
         if record["domain"] in state.offline or record["incarnation"] != action.incarnation:
             raise Rejected("Offline or stale allocation")
         if action.kind == "reserve":
-            if record["status"] != "FREE" or action.stripe not in policies or action.row not in range(3):
+            if (record["status"] != "FREE" or action.stripe not in policies or type(action.row) is not int
+                    or action.row not in range(codes[action.stripe].total_rows)):
                 raise Rejected("Invalid capacity acquisition")
             if record["domain"] not in policies[action.stripe]:
                 raise Rejected("Ineligible capacity acquisition")
@@ -66,7 +69,7 @@ def replay(state: State, actions: tuple[Action, ...], require_target: bool = Tru
         for name in policies:
             rows = {r["row"] for r in records.values() if r["stripe"] == name
                     and r["status"] == "LIVE" and r["domain"] not in state.offline}
-            if rows != {0, 1, 2}:
+            if rows != set(range(codes[name].total_rows)):
                 raise Rejected("Incomplete terminal protection")
     return replace(state, slots=tuple(replace(s, **records[s.key]) for s in state.slots))
 

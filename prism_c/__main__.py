@@ -16,7 +16,9 @@ from . import __version__
 from .baseline import conventional_plan
 from .benchmark import benchmark
 from .campaign import run_campaign
+from .coding_campaign import run_coding_campaign
 from .checker import check
+from .profiles import FOUR_PLUS_TWO
 from .model import Rejected, SearchStatus, fixture, plan
 from .storage import Authority
 
@@ -142,6 +144,55 @@ def concurrent_demo(args):
                       "readback_matches": matches, "rejected_conflicts": len(rejected)}, indent=2))
 
 
+def four_plus_two_demo(args):
+    capacities = {f"D{i}": 2 for i in range(4)}
+    capacities.update(X=1, Y=1, Z=1)
+    authority = Authority.create(args.root, capacities, 128)
+    authority = Authority(authority.root, args.validation_mode)
+    fence = authority.takeover()
+    contents = {"A": bytes(range(256)) + b"4+2 mixed-profile demonstration\x00",
+                "B": b"legacy 2+1 object"}
+    authority.bootstrap("A", contents["A"], {0: "D0", 2: "D1", 4: "D2", 5: "D3"},
+                        ("D0", "D1", "D2", "D3", "X", "Y"), fence, FOUR_PLUS_TWO)
+    authority.bootstrap("B", contents["B"], {0: "D0", 1: "D1"}, ("D0", "D1", "Z"), fence)
+    authority.seed_retired("X", fence)
+    authority.enable_workers(fence)
+    initial = authority.snapshot()
+    witnesses = {}
+    for name, destinations in (("A", ("X:0", "Y:0")), ("B", ("Z:0",))):
+        state = authority.snapshot_for((name,), destinations)
+        witness = conventional_plan(state)
+        if witness is None:
+            raise AssertionError("4+2 demonstration unexpectedly infeasible")
+        check(state, witness)
+        authority.admit_scoped(witness, (name,), destinations, fence, name)
+        witnesses[name] = witness.to_dict()
+    trace = [{"event": "admitted", "ledger": authority.ledger(), "state": asdict(authority.snapshot())}]
+    # A repairs missing DATA rows 1 and 3 from authentic rows 0,2,4,5.
+    schedule = ("A", "B", "A", "B", "A", "B", "A", "A", "A", "A")
+    for name in schedule:
+        result = authority.step(name, fence)
+        authority.audit()
+        trace.append({"event": "step", "plan": name, "result": result,
+                      "ledger": authority.ledger(), "state": asdict(authority.snapshot())})
+        authority = Authority(authority.root, args.validation_mode)
+    matches = {name: authority.read(name) == data for name, data in contents.items()}
+    audit = authority.audit()
+    if not all(matches.values()) or not audit["target"] or authority.active_plans():
+        raise AssertionError("4+2 mixed-profile demonstration lost data")
+    report = {"environment": environment(), "scope": "Local mixed 4+2 and 2+1 scopes with separate repair workers",
+              "profile": FOUR_PLUS_TWO, "initial_42_rows": [0, 2, 4, 5], "repaired_42_rows": [1, 3],
+              "validation_mode": args.validation_mode, "initial": asdict(initial),
+              "witnesses": witnesses, "schedule": schedule, "trace": trace,
+              "audit": audit, "readback_matches": matches, "events": authority.events(),
+              "worker_receipts": [event["detail"]["receipt"] for event in authority.events()
+                                  if event["kind"] == "worker_ack"],
+              "patent_rating_changed": False, "performance_advantage_claimed": False}
+    write_report(args.report, report)
+    print(json.dumps({"report": str(Path(args.report).resolve()), "audit": audit,
+                      "readback_matches": matches, "repaired_42_rows": [1, 3]}, indent=2))
+
+
 class EvidenceResult(unittest.TextTestResult):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -174,22 +225,26 @@ def verify(args):
     result = unittest.TextTestRunner(verbosity=2, resultclass=EvidenceResult).run(suite)
     campaign = None
     campaign_error = None
+    coding_campaign = None
     if result.wasSuccessful():
         try:
             campaign = run_campaign(args.traces, args.seed)
+            coding_campaign = run_coding_campaign(args.seed)
         except Exception as error:
             campaign_error = repr(error)
-    report = {"environment": environment(), "success": result.wasSuccessful() and campaign is not None,
+    report = {"environment": environment(), "success": result.wasSuccessful() and campaign is not None and coding_campaign is not None,
               "test_methods": result.testsRun, "subtests": result.subtests,
               "failures": len(result.failures), "errors": len(result.errors), "tests": result.records,
               "campaign": campaign, "campaign_error": campaign_error,
+              "coding_campaign": coding_campaign,
               "total_seconds": time.perf_counter() - started,
               "limitations": ["Finite-model correctness is not an unbounded proof",
                                "Process exits are not power-loss tests",
                                "No comparative performance or novelty result is established"]}
     write_report(args.report, report)
     print(json.dumps({"report": str(Path(args.report).resolve()), "success": report["success"],
-                      "test_methods": result.testsRun, "campaign": campaign}, indent=2))
+                      "test_methods": result.testsRun, "campaign": campaign,
+                      "coding_campaign": coding_campaign}, indent=2))
     return 0 if report["success"] else 1
 
 
@@ -231,6 +286,11 @@ def main():
                             choices=("conventional_cached", "selective", "full", "shadow"))
     concurrent.add_argument("--storage-workers", action="store_true",
                             help="Run stage/reclaim in separate processes outside the authority writer transaction")
+    larger = commands.add_parser("four-plus-two-demo", help="Restore missing data rows in a mixed-profile worker store")
+    larger.add_argument("--root", required=True, help="New/empty directory for persistent state")
+    larger.add_argument("--report", default="evidence/results/four-plus-two-demo.json")
+    larger.add_argument("--validation-mode", default="conventional_cached",
+                        choices=("conventional_cached", "selective", "full", "shadow"))
     validation = commands.add_parser("verify", help="Run unit/integration/crash tests and seeded model traces")
     validation.add_argument("--report", default="evidence/results/verification.json")
     validation.add_argument("--traces", type=int, default=10_000)
@@ -259,6 +319,9 @@ def main():
         return 0
     if args.command == "concurrent-demo":
         concurrent_demo(args)
+        return 0
+    if args.command == "four-plus-two-demo":
+        four_plus_two_demo(args)
         return 0
     if args.command == "verify":
         return verify(args)

@@ -18,7 +18,8 @@ import uuid
 
 from .checker import check, replay
 from .coding import digest, encode, recover
-from .model import Action, Rejected, Slot, State, Stripe, Witness
+from .model import Action, Rejected, Slot, State, Stripe, Witness, profile_spec
+from .profiles import DEFAULT_PROFILE
 from .selective import ContinuationCache, WholeSuffixCache
 from .scope import PlanScope
 from .worker_authority import WorkerAuthority, WorkerRetry
@@ -28,7 +29,8 @@ SCHEMA = """
 CREATE TABLE IF NOT EXISTS settings(key TEXT PRIMARY KEY, value TEXT NOT NULL);
 CREATE TABLE IF NOT EXISTS stripes(
  name TEXT PRIMARY KEY, eligible TEXT NOT NULL, length INTEGER NOT NULL,
- content_digest TEXT NOT NULL, row_digests TEXT NOT NULL, fragment_size INTEGER NOT NULL);
+ content_digest TEXT NOT NULL, row_digests TEXT NOT NULL, fragment_size INTEGER NOT NULL,
+ profile TEXT NOT NULL DEFAULT 'xor-2+1-v1');
 CREATE TABLE IF NOT EXISTS slots(
  key TEXT PRIMARY KEY, domain TEXT NOT NULL, position INTEGER NOT NULL,
  status TEXT NOT NULL, stripe TEXT NOT NULL DEFAULT '', row INTEGER NOT NULL DEFAULT -1,
@@ -67,6 +69,8 @@ class Authority(WorkerAuthority):
             db.execute("CREATE TABLE IF NOT EXISTS slot_claims(slot TEXT PRIMARY KEY,plan TEXT NOT NULL)")
             db.execute("CREATE TABLE IF NOT EXISTS worker_intents(token TEXT PRIMARY KEY,plan TEXT NOT NULL,command TEXT NOT NULL,status TEXT NOT NULL)")
             db.execute("INSERT OR IGNORE INTO settings VALUES ('io_mode',?)", (json.dumps("local"),))
+            if "profile" not in {row["name"] for row in db.execute("PRAGMA table_info(stripes)")}:
+                db.execute("ALTER TABLE stripes ADD COLUMN profile TEXT NOT NULL DEFAULT 'xor-2+1-v1'")
 
     @classmethod
     def create(cls, root: str | Path, capacities: dict[str, int], slot_size: int = 4096) -> Authority:
@@ -165,7 +169,7 @@ class Authority(WorkerAuthority):
             return fence
 
     def _snapshot(self, db) -> State:
-        stripes = tuple(Stripe(r["name"], tuple(json.loads(r["eligible"])))
+        stripes = tuple(Stripe(r["name"], tuple(json.loads(r["eligible"])), r["profile"])
                         for r in db.execute("SELECT * FROM stripes ORDER BY name"))
         slots = tuple(Slot(r["key"], r["domain"], r["status"], r["stripe"], r["row"], r["incarnation"])
                       for r in db.execute("SELECT * FROM slots ORDER BY key"))
@@ -204,11 +208,13 @@ class Authority(WorkerAuthority):
             return data
 
     def bootstrap(self, name: str, data: bytes, placement: dict[int, str],
-                  eligible: tuple[str, ...], fence: int) -> None:
+                  eligible: tuple[str, ...], fence: int, profile: str = DEFAULT_PROFILE) -> None:
         """Trusted initial fixture import, before any plan has been admitted."""
-        encoded = encode(data)
-        if len(placement) < 2 or not set(placement) <= {0, 1, 2}:
-            raise Rejected("Initial stripe needs two distinct code rows")
+        code = profile_spec(profile)
+        encoded = encode(data, profile)
+        if (len(placement) < code.data_rows or any(type(row) is not int for row in placement)
+                or not set(placement) <= set(range(code.total_rows))):
+            raise Rejected("Initial stripe needs enough distinct rows for its coding profile")
         if len(set(placement.values())) != len(placement):
             raise Rejected("Initial fragments share a domain")
         with self._transaction() as db:
@@ -221,8 +227,9 @@ class Authority(WorkerAuthority):
                 raise Rejected("Ineligible initial placement")
             if len(encoded[0]) > self._get(db, "slot_size"):
                 raise Rejected("Content exceeds profile size")
-            db.execute("INSERT INTO stripes VALUES (?,?,?,?,?,?)", (name, json.dumps(eligible),
-                len(data), digest(data), json.dumps([digest(row) for row in encoded]), len(encoded[0])))
+            db.execute("INSERT INTO stripes(name,eligible,length,content_digest,row_digests,fragment_size,profile) "
+                       "VALUES (?,?,?,?,?,?,?)", (name, json.dumps(eligible), len(data), digest(data),
+                       json.dumps([digest(row) for row in encoded]), len(encoded[0]), profile))
             for row, domain in sorted(placement.items()):
                 slot = db.execute("SELECT * FROM slots WHERE domain=? AND status='FREE' ORDER BY key LIMIT 1",
                                   (domain,)).fetchone()
@@ -251,16 +258,21 @@ class Authority(WorkerAuthority):
         if spec is None:
             raise Rejected("Unknown content identity")
         expected = json.loads(spec["row_digests"])
+        code = profile_spec(spec["profile"])
+        if len(expected) != code.total_rows:
+            raise Rejected("Row digest count does not match coding profile")
         offline = self._get(db, "offline")
         rows = {}
         for record in db.execute("SELECT * FROM slots WHERE stripe=? AND status='LIVE'", (name,)):
             if record["domain"] in offline:
                 continue
+            if record["row"] not in range(code.total_rows):
+                raise Rejected("Source row is outside its coding profile")
             raw = self._io(db, record)[:spec["fragment_size"]]
             if digest(raw) != expected[record["row"]] or digest(raw) != record["digest"]:
                 raise Rejected("Live source digest mismatch")
             rows[record["row"]] = raw
-        content, recovered = recover(rows, spec["length"])
+        content, recovered = recover(rows, spec["length"], spec["profile"])
         if digest(content) != spec["content_digest"] or [digest(row) for row in recovered] != expected:
             raise Rejected("Source content identity mismatch")
         return dict(spec), rows
@@ -268,7 +280,7 @@ class Authority(WorkerAuthority):
     def read(self, name: str) -> bytes:
         with self._transaction() as db:
             spec, rows = self._valid_rows(db, name)
-            return recover(rows, spec["length"])[0]
+            return recover(rows, spec["length"], spec["profile"])[0]
 
     def admit(self, witness: Witness, fence: int, plan_id: str | None = None) -> str:
         """Legacy full-store admission; mutually exclusive with scoped plans."""
@@ -428,7 +440,7 @@ class Authority(WorkerAuthority):
                 db.execute("DELETE FROM holds WHERE slot=?", (action.slot,))
             elif action.kind == "stage":
                 spec, rows = self._valid_rows(db, action.stripe)
-                rebuilt = recover(rows, spec["length"])[1][action.row]
+                rebuilt = recover(rows, spec["length"], spec["profile"])[1][action.row]
                 if _receipt is None:
                     self._io(db, slot, rebuilt)
                 else:

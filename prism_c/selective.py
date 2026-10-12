@@ -5,13 +5,14 @@ import json
 
 from .checker import replay
 from .model import Action, Rejected, Slot, State, Stripe, Witness
+from .profiles import DEFAULT_PROFILE
 
 
 VERSION = 1
 
 
 def state_from_dict(value: dict) -> State:
-    return State(tuple(Stripe(s["name"], tuple(s["eligible"])) for s in value["stripes"]),
+    return State(tuple(Stripe(s["name"], tuple(s["eligible"]), s.get("profile", DEFAULT_PROFILE)) for s in value["stripes"]),
                  tuple(Slot(**s) for s in value["slots"]), tuple(value["offline"]))
 
 

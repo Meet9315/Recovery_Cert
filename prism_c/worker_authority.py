@@ -84,7 +84,7 @@ class WorkerAuthority:
             payload = b""
             if action.kind == "stage":
                 spec, rows = self._valid_rows(db, action.stripe)
-                payload = recover(rows, spec["length"])[1][action.row]
+                payload = recover(rows, spec["length"], spec["profile"])[1][action.row]
             command = {"store": self._get(db, "incarnation"), "plan": plan_id, "cursor": cursor,
                        "fence": fence, "witness": witness.digest(), "state": current.fingerprint(),
                        "worker": self._get(db, "domains").index(slot["domain"]), "kind": action.kind,

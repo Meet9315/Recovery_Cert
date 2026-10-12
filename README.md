@@ -15,6 +15,7 @@ python -m prism_c demo --root tmp/prototype-selective-demo --report evidence/res
 python -m prism_c concurrent-demo --root tmp/concurrent-demo-new --report evidence/results/concurrent-demo-new.json --validation-mode shadow
 python -m prism_c verify --report evidence/results/verification-milestone-03-new.json --traces 10000
 python -m prism_c concurrent-demo --root tmp/worker-demo-new --report evidence/results/worker-demo-new.json --validation-mode shadow --storage-workers
+python -m prism_c four-plus-two-demo --root tmp/four-plus-two-demo-new --report evidence/results/four-plus-two-demo-new.json --validation-mode shadow
 ```
 
 The demo root must be new or empty. Existing stores are never reset by the demo. Choose a new root name for another run. `verify` uses disposable temporary stores and preserves the report, test details, source hashes and model campaign counts.
@@ -25,7 +26,7 @@ To resume an interrupted plan: `python -m prism_c resume --root <store-directory
 
 - Immutable finite slot state, bounded breadth-first repair planner and independent witness replay checker.
 - Conventional capacity-aware matching baseline and an independent finite assignment oracle.
-- Real immutable content using a fixed 2-of-3 XOR coding profile.
+- Real immutable content using versioned 2+1 XOR and 4+2 GF(256) P/Q coding profiles, with an independent reconstruction oracle.
 - Preallocated fixed-size byte pools; durable stage writes; checksum-checked promotion; reclaim acknowledgement before slot release.
 - SQLite authority binding plan cursor, allocation transitions and manifest updates in one transaction.
 - Multiple active plans with exclusive whole-stripe and slot claims; destination holds, source pins, monotonically fenced takeover, idempotent step replay and isolated cancellation cleanup. Full-store legacy plans remain exclusive.
@@ -40,7 +41,13 @@ This is a trusted local single-authority embodiment. Domain labels are simulated
 
 Witnesses bind the complete terminal state of their admitted scope. Selective mode reuses validated component suffixes when their full projected dependencies and membership are unchanged. Related changes are replayed; coverage changes cause rebuilding. Exact terminal binding still rejects even otherwise-safe policy changes. Physical source checks are performed on every step. See [selective validation specification](spec/selective_validation.md).
 
-The logical benchmark compares full replay, component caching and a conventional exact-state guarded cache, including cache preparation and advancement. Results from this limited in-memory test cannot establish storage throughput or the project's overall CPU/latency targets. Network storage daemons, 4+2 coding, independent device failures and power-loss testing remain future work. No new patentability score follows from these tests.
+The logical benchmark compares full replay, component caching and a conventional exact-state guarded cache, including cache preparation and advancement. Results from this limited in-memory test cannot establish storage throughput or the project's overall CPU/latency targets. Network storage daemons, controller-level 4+2 performance, independent device failures and power-loss testing remain future work. No new patentability score follows from these tests.
+
+## Coding profiles
+
+Existing callers retain the default `xor-2+1-v1` profile. Import `FOUR_PLUS_TWO` from `prism_c.profiles` and pass `profile=FOUR_PLUS_TWO` to `Authority.bootstrap`, or use `encode(data, FOUR_PLUS_TWO)` and `recover(rows, original_length, FOUR_PLUS_TWO)` from `prism_c.coding`. A 4+2 stripe needs any four authentic rows for reconstruction and all six rows for the restoration target. Scoped plans support mixed profiles. Existing stores receive an additive profile-column migration; historical default-profile witnesses and pending worker intents remain valid.
+
+The [coding contract](spec/coding_profiles.md) defines row coefficients, canonical padding, digest checks and compatibility. The new demonstration repairs missing data rows using parity, runs two mixed-profile plans through storage workers and checks original content after reopening.
 
 ## Concurrent scoped plans
 
@@ -60,7 +67,7 @@ The [worker specification](spec/storage_workers.md) defines the lock order, fail
 
 ## Repository verification
 
-GitHub Actions runs the correctness/process-fault suite and 1,000 seeded model traces on Ubuntu and Windows with Python 3.11, and saves its verification report. The local milestone reports retain the larger 10,000-trace campaign. Runtime databases, worker secrets, byte pools, temporary extraction files and generated caches are excluded from version control; project source, specifications, disclosure/review documents and saved evidence reports are included.
+GitHub Actions runs the correctness/process-fault suite, 1,000 seeded model traces and the independent 4+2 campaign on Ubuntu and Windows with Python 3.11, and saves its verification report. The 4+2 campaign checks all 65,536 field products, 15 reconstruction subsets and 720 finite repair cases. The local milestone reports retain the larger 10,000-trace campaign. Runtime databases, worker secrets, byte pools, temporary extraction files and generated caches are excluded from version control; project source, specifications, disclosure/review documents and saved evidence reports are included.
 
 The first comparison found component caching slower than the conventional guarded cache, despite savings against full replay in larger groups. The confirmation comparison uses fresh snapshot records and the deployed cache implementations. See [milestone 2 results](evidence/results/MILESTONE_02.md) for the measured scope and interpretation.
 

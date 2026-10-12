@@ -1,0 +1,3481 @@
+{
+  "audit": {
+    "slots": 11,
+    "snapshot": "75f4c49e275d45532ab23d2ad6567001b3dffb2986db0d0fd45e02c289c852ff",
+    "stripes": 2,
+    "target": true
+  },
+  "environment": {
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python": "3.11.4 (tags/v3.11.4:d2340ef, Jun  7 2023, 05:45:37) [MSC v.1934 64 bit (AMD64)]",
+    "source_sha256": {
+      "prism_c/__init__.py": "5310acec652af6a86ebf1e86fe1547d37c6fbfa7cad6ab1afc446397761c8715",
+      "prism_c/__main__.py": "ee442c812a1e09eddde5e5ecd402582dcda4836912b4881d630388e07c7fa281",
+      "prism_c/baseline.py": "7f0fc2dfa251420bdc0df94360c2fb2394dc8100e5766747b9cbe056c069fbeb",
+      "prism_c/benchmark.py": "60979ea19ad1c3b21d61e0a078a871bd52d7616a8cd46a45a2cfe4ff9f5f7148",
+      "prism_c/campaign.py": "b226a09b8930d8fde711512e03e13a98046cc964efc6eee6fe21e15a37b5a353",
+      "prism_c/checker.py": "d19527697781f536b6dab235bf5b43211ec697d9803c200db9df225c4cef22fc",
+      "prism_c/coding.py": "c66cceedb4cda1a7322b600fdee901a4ec2a2425bb29518146560e75afdb47f1",
+      "prism_c/coding_campaign.py": "d326217706c60c8820ec5dbb2f79293b90283db4101c0c574d8f1f9737feb040",
+      "prism_c/coding_oracle.py": "cec06e7d252ce99112109a4b615a67ebbe3d9f16e175a6ab7e0b2f3b79158d06",
+      "prism_c/fault_worker.py": "67df4ff6d586c59568ae5fa8adc2f628fe650e658bcc2ff6ff9686fe7671efca",
+      "prism_c/model.py": "b6122e0c7766559111e0d0ec894e84d8d3a8666a26f961d90a555021ec3832a7",
+      "prism_c/profiles.py": "b831e77d0794303b8bd0ba2571c12c4071ae053fd924be08ff7de6025035f1b8",
+      "prism_c/scope.py": "7fc0e21beb9f45ed3abc757d0011567b1fa5d4a907c401255d343b3c4e855cba",
+      "prism_c/selective.py": "4d34288758ff683890be35b2313ef78f29052cd2b6ae97cb61abf6b4b791da95",
+      "prism_c/storage.py": "dca3494b2640b7bc6ec55cb7d11e1c590df44ea9786cef0c14f2c03e9ea528e5",
+      "prism_c/worker.py": "1ba7573861493edc090d4eadbb2a24edab08f6a2462e1eefe63ac25b2658c67d",
+      "prism_c/worker_authority.py": "0eb9e50de3219736da52e05d131f6f9620c68431a614f8f7a9df8b740b499f66",
+      "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tests/test_concurrent.py": "bf481e110b5d65a33c70ecba9d4549850437559f1182ce5daf2154ea24ade6f7",
+      "tests/test_four_plus_two.py": "45c7d240f276c2c94256e2c06cd6b289efa570621bd71d664cbaeff093ee5b31",
+      "tests/test_model.py": "cdd4d9832c160cf02f36a5b7db4f9c1f0e6a42012f8aa1fdb190c50bf5d427ea",
+      "tests/test_selective.py": "253c4bb72bbdcfd4093c3e624bf09171dfb325fa3a43af49c6cb86dc240d983e",
+      "tests/test_storage.py": "cb61782f540e462e348ca3bfaec6b3c4729fdc77a50829beac9c30f47d5f17da",
+      "tests/test_workers.py": "0012a227c8e6d4dc00d9148a9bbf087e339380d8b37c455e6761e8badf636049"
+    },
+    "sqlite": "3.42.0",
+    "utc": "2026-10-12T07:41:51.481334+00:00",
+    "version": "0.1.0"
+  },
+  "events": [
+    {
+      "detail": {
+        "fence": 1
+      },
+      "kind": "takeover",
+      "seq": 1
+    },
+    {
+      "detail": {
+        "content_digest": "3303550c70585bf9b46792c421c64803433c955f96fed86111ea7d6aff3ca49d",
+        "stripe": "A"
+      },
+      "kind": "bootstrap",
+      "seq": 2
+    },
+    {
+      "detail": {
+        "content_digest": "fe0bcc32d0a26f9a21421026741193d308bb2917340f1ea4f2f1d8d72d403403",
+        "stripe": "B"
+      },
+      "kind": "bootstrap",
+      "seq": 3
+    },
+    {
+      "detail": {
+        "domains": [
+          "D0",
+          "D1",
+          "D2",
+          "D3",
+          "X",
+          "Y",
+          "Z"
+        ]
+      },
+      "kind": "workers_enabled",
+      "seq": 4
+    },
+    {
+      "detail": {
+        "plan": "A",
+        "scope": {
+          "slots": [
+            "D0:0",
+            "D1:0",
+            "D2:0",
+            "D3:0",
+            "X:0",
+            "Y:0"
+          ],
+          "stripes": [
+            "A"
+          ]
+        },
+        "witness_digest": "26794075f5953bf76e9ce4cd6ed623e4b61907666ec73e0502a200bcf2e4189e"
+      },
+      "kind": "admit",
+      "seq": 5
+    },
+    {
+      "detail": {
+        "plan": "B",
+        "scope": {
+          "slots": [
+            "D0:1",
+            "D1:1",
+            "Z:0"
+          ],
+          "stripes": [
+            "B"
+          ]
+        },
+        "witness_digest": "e257511980e622e91d4e67b40dae0dcdea0376915b9611897de9155434c22abe"
+      },
+      "kind": "admit",
+      "seq": 6
+    },
+    {
+      "detail": {
+        "cursor": 0,
+        "kind": "reclaim",
+        "plan": "A",
+        "slot": "X:0",
+        "token": "d8ce54be4983422b823502a8671ca683"
+      },
+      "kind": "worker_prepared",
+      "seq": 7
+    },
+    {
+      "detail": {
+        "receipt": {
+          "command_digest": "37a273e93e69172bde0646d6174798a3e2f1befa3e851b161cc4ed709047737a",
+          "cursor": 0,
+          "fence": 1,
+          "incarnation": 1,
+          "kind": "reclaim",
+          "physical_digest": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca",
+          "plan": "A",
+          "signature": "dc6a393427292d9b1ef5c4c0ab6c1b2cb35747fbf3d1cc94e812323a9e7887ae",
+          "slot": "X:0",
+          "store": "c3a9f82d866c4105be9c957d01f50a17",
+          "token": "d8ce54be4983422b823502a8671ca683",
+          "worker": 4,
+          "worker_pid": 31860
+        },
+        "token": "d8ce54be4983422b823502a8671ca683"
+      },
+      "kind": "worker_ack",
+      "seq": 8
+    },
+    {
+      "detail": {
+        "action": {
+          "incarnation": 1,
+          "kind": "reclaim",
+          "row": -1,
+          "slot": "X:0",
+          "stripe": ""
+        },
+        "plan": "A",
+        "receipt_digest": "",
+        "step": 0,
+        "validation": {
+          "cache_rebuilt": false,
+          "coverage_rebuilds": 0,
+          "mode": "shadow",
+          "replayed_actions": 0,
+          "replayed_components": 0,
+          "reused_components": 1
+        }
+      },
+      "kind": "step",
+      "seq": 9
+    },
+    {
+      "detail": {
+        "action": {
+          "incarnation": 0,
+          "kind": "reserve",
+          "row": 2,
+          "slot": "Z:0",
+          "stripe": "B"
+        },
+        "plan": "B",
+        "receipt_digest": "",
+        "step": 0,
+        "validation": {
+          "cache_rebuilt": false,
+          "coverage_rebuilds": 0,
+          "mode": "shadow",
+          "replayed_actions": 0,
+          "replayed_components": 0,
+          "reused_components": 1
+        }
+      },
+      "kind": "step",
+      "seq": 10
+    },
+    {
+      "detail": {
+        "action": {
+          "incarnation": 1,
+          "kind": "reserve",
+          "row": 1,
+          "slot": "X:0",
+          "stripe": "A"
+        },
+        "plan": "A",
+        "receipt_digest": "",
+        "step": 1,
+        "validation": {
+          "cache_rebuilt": false,
+          "coverage_rebuilds": 0,
+          "mode": "shadow",
+          "replayed_actions": 0,
+          "replayed_components": 0,
+          "reused_components": 1
+        }
+      },
+      "kind": "step",
+      "seq": 11
+    },
+    {
+      "detail": {
+        "cursor": 1,
+        "kind": "stage",
+        "plan": "B",
+        "slot": "Z:0",
+        "token": "87c41b4e0926487aac90bc8e746ca4d1"
+      },
+      "kind": "worker_prepared",
+      "seq": 12
+    },
+    {
+      "detail": {
+        "receipt": {
+          "command_digest": "5fa00ca411543ab10abdb8561b2d9dbf040ea698ab2f4746427757a5cdc05070",
+          "cursor": 1,
+          "fence": 1,
+          "incarnation": 1,
+          "kind": "stage",
+          "physical_digest": "dd93b427b3b5b574e083ee4da82016290e7c0be55e1eac9963702ac7c565cee8",
+          "plan": "B",
+          "signature": "aa81c3d9e49dee6235fc5cb35bb4686940f345c6e0266546be55a797de90b96b",
+          "slot": "Z:0",
+          "store": "c3a9f82d866c4105be9c957d01f50a17",
+          "token": "87c41b4e0926487aac90bc8e746ca4d1",
+          "worker": 6,
+          "worker_pid": 21260
+        },
+        "token": "87c41b4e0926487aac90bc8e746ca4d1"
+      },
+      "kind": "worker_ack",
+      "seq": 13
+    },
+    {
+      "detail": {
+        "action": {
+          "incarnation": 1,
+          "kind": "stage",
+          "row": 2,
+          "slot": "Z:0",
+          "stripe": "B"
+        },
+        "plan": "B",
+        "receipt_digest": "97e814ff8080242dc06e39d933fe4eb5d214ebb5d743254605f2ce231f2d8276",
+        "step": 1,
+        "validation": {
+          "cache_rebuilt": false,
+          "coverage_rebuilds": 0,
+          "mode": "shadow",
+          "replayed_actions": 0,
+          "replayed_components": 0,
+          "reused_components": 1
+        }
+      },
+      "kind": "step",
+      "seq": 14
+    },
+    {
+      "detail": {
+        "cursor": 2,
+        "kind": "stage",
+        "plan": "A",
+        "slot": "X:0",
+        "token": "1269055821fd4935a0f7d544d72b0e04"
+      },
+      "kind": "worker_prepared",
+      "seq": 15
+    },
+    {
+      "detail": {
+        "receipt": {
+          "command_digest": "c67988afe5c4eba46c5d089d46d4680962fbfabf2e063c52c7b6e3b268a82d73",
+          "cursor": 2,
+          "fence": 1,
+          "incarnation": 2,
+          "kind": "stage",
+          "physical_digest": "ec174286b400e1abbb212d4643d9093804d9da6d9b7eed69cd18f65a72693272",
+          "plan": "A",
+          "signature": "c900421dacdc20dc2b2c517b19a13f223bfc111753b9326b47650465360d0568",
+          "slot": "X:0",
+          "store": "c3a9f82d866c4105be9c957d01f50a17",
+          "token": "1269055821fd4935a0f7d544d72b0e04",
+          "worker": 4,
+          "worker_pid": 29348
+        },
+        "token": "1269055821fd4935a0f7d544d72b0e04"
+      },
+      "kind": "worker_ack",
+      "seq": 16
+    },
+    {
+      "detail": {
+        "action": {
+          "incarnation": 2,
+          "kind": "stage",
+          "row": 1,
+          "slot": "X:0",
+          "stripe": "A"
+        },
+        "plan": "A",
+        "receipt_digest": "2e48a5873d8a224e00998ef41b91c31979e459ee836ae512eccaec16495bba97",
+        "step": 2,
+        "validation": {
+          "cache_rebuilt": false,
+          "coverage_rebuilds": 0,
+          "mode": "shadow",
+          "replayed_actions": 0,
+          "replayed_components": 0,
+          "reused_components": 1
+        }
+      },
+      "kind": "step",
+      "seq": 17
+    },
+    {
+      "detail": {
+        "action": {
+          "incarnation": 1,
+          "kind": "promote",
+          "row": 2,
+          "slot": "Z:0",
+          "stripe": "B"
+        },
+        "plan": "B",
+        "receipt_digest": "97e814ff8080242dc06e39d933fe4eb5d214ebb5d743254605f2ce231f2d8276",
+        "step": 2,
+        "validation": {
+          "cache_rebuilt": false,
+          "coverage_rebuilds": 0,
+          "mode": "shadow",
+          "replayed_actions": 0,
+          "replayed_components": 0,
+          "reused_components": 1
+        }
+      },
+      "kind": "step",
+      "seq": 18
+    },
+    {
+      "detail": {
+        "action": {
+          "incarnation": 2,
+          "kind": "promote",
+          "row": 1,
+          "slot": "X:0",
+          "stripe": "A"
+        },
+        "plan": "A",
+        "receipt_digest": "2e48a5873d8a224e00998ef41b91c31979e459ee836ae512eccaec16495bba97",
+        "step": 3,
+        "validation": {
+          "cache_rebuilt": false,
+          "coverage_rebuilds": 0,
+          "mode": "shadow",
+          "replayed_actions": 0,
+          "replayed_components": 0,
+          "reused_components": 1
+        }
+      },
+      "kind": "step",
+      "seq": 19
+    },
+    {
+      "detail": {
+        "action": {
+          "incarnation": 0,
+          "kind": "reserve",
+          "row": 3,
+          "slot": "Y:0",
+          "stripe": "A"
+        },
+        "plan": "A",
+        "receipt_digest": "",
+        "step": 4,
+        "validation": {
+          "cache_rebuilt": false,
+          "coverage_rebuilds": 0,
+          "mode": "shadow",
+          "replayed_actions": 0,
+          "replayed_components": 0,
+          "reused_components": 1
+        }
+      },
+      "kind": "step",
+      "seq": 20
+    },
+    {
+      "detail": {
+        "cursor": 5,
+        "kind": "stage",
+        "plan": "A",
+        "slot": "Y:0",
+        "token": "55b8efd706ea4c04977911e0b976ca4d"
+      },
+      "kind": "worker_prepared",
+      "seq": 21
+    },
+    {
+      "detail": {
+        "receipt": {
+          "command_digest": "0b2da982e4fb8cb88a59610a037dc181343d1d3aec8f66936bedbc71f2dcc810",
+          "cursor": 5,
+          "fence": 1,
+          "incarnation": 1,
+          "kind": "stage",
+          "physical_digest": "3f068e40dc43d1b889c3cd7be3ae93a0f9623013e6f8dc151f9f926865c4c52b",
+          "plan": "A",
+          "signature": "83aa776c945e3835eb63190cd0243f97389ee756695bfe298666a523a3a6913a",
+          "slot": "Y:0",
+          "store": "c3a9f82d866c4105be9c957d01f50a17",
+          "token": "55b8efd706ea4c04977911e0b976ca4d",
+          "worker": 5,
+          "worker_pid": 11488
+        },
+        "token": "55b8efd706ea4c04977911e0b976ca4d"
+      },
+      "kind": "worker_ack",
+      "seq": 22
+    },
+    {
+      "detail": {
+        "action": {
+          "incarnation": 1,
+          "kind": "stage",
+          "row": 3,
+          "slot": "Y:0",
+          "stripe": "A"
+        },
+        "plan": "A",
+        "receipt_digest": "da31a1150a0eb4640dfa43dab7a470685d3ab4f1775069627a63c40163c78e7e",
+        "step": 5,
+        "validation": {
+          "cache_rebuilt": false,
+          "coverage_rebuilds": 0,
+          "mode": "shadow",
+          "replayed_actions": 0,
+          "replayed_components": 0,
+          "reused_components": 1
+        }
+      },
+      "kind": "step",
+      "seq": 23
+    },
+    {
+      "detail": {
+        "action": {
+          "incarnation": 1,
+          "kind": "promote",
+          "row": 3,
+          "slot": "Y:0",
+          "stripe": "A"
+        },
+        "plan": "A",
+        "receipt_digest": "da31a1150a0eb4640dfa43dab7a470685d3ab4f1775069627a63c40163c78e7e",
+        "step": 6,
+        "validation": {
+          "cache_rebuilt": false,
+          "coverage_rebuilds": 0,
+          "mode": "shadow",
+          "replayed_actions": 0,
+          "replayed_components": 0,
+          "reused_components": 1
+        }
+      },
+      "kind": "step",
+      "seq": 24
+    }
+  ],
+  "initial": {
+    "offline": [],
+    "slots": [
+      {
+        "domain": "D0",
+        "incarnation": 1,
+        "key": "D0:0",
+        "row": 0,
+        "status": "LIVE",
+        "stripe": "A"
+      },
+      {
+        "domain": "D0",
+        "incarnation": 1,
+        "key": "D0:1",
+        "row": 0,
+        "status": "LIVE",
+        "stripe": "B"
+      },
+      {
+        "domain": "D1",
+        "incarnation": 1,
+        "key": "D1:0",
+        "row": 2,
+        "status": "LIVE",
+        "stripe": "A"
+      },
+      {
+        "domain": "D1",
+        "incarnation": 1,
+        "key": "D1:1",
+        "row": 1,
+        "status": "LIVE",
+        "stripe": "B"
+      },
+      {
+        "domain": "D2",
+        "incarnation": 1,
+        "key": "D2:0",
+        "row": 4,
+        "status": "LIVE",
+        "stripe": "A"
+      },
+      {
+        "domain": "D2",
+        "incarnation": 0,
+        "key": "D2:1",
+        "row": -1,
+        "status": "FREE",
+        "stripe": ""
+      },
+      {
+        "domain": "D3",
+        "incarnation": 1,
+        "key": "D3:0",
+        "row": 5,
+        "status": "LIVE",
+        "stripe": "A"
+      },
+      {
+        "domain": "D3",
+        "incarnation": 0,
+        "key": "D3:1",
+        "row": -1,
+        "status": "FREE",
+        "stripe": ""
+      },
+      {
+        "domain": "X",
+        "incarnation": 1,
+        "key": "X:0",
+        "row": -1,
+        "status": "RETIRED",
+        "stripe": ""
+      },
+      {
+        "domain": "Y",
+        "incarnation": 0,
+        "key": "Y:0",
+        "row": -1,
+        "status": "FREE",
+        "stripe": ""
+      },
+      {
+        "domain": "Z",
+        "incarnation": 0,
+        "key": "Z:0",
+        "row": -1,
+        "status": "FREE",
+        "stripe": ""
+      }
+    ],
+    "stripes": [
+      {
+        "eligible": [
+          "D0",
+          "D1",
+          "D2",
+          "D3",
+          "X",
+          "Y"
+        ],
+        "name": "A",
+        "profile": "pq-4+2-gf256-v1"
+      },
+      {
+        "eligible": [
+          "D0",
+          "D1",
+          "Z"
+        ],
+        "name": "B",
+        "profile": "xor-2+1-v1"
+      }
+    ]
+  },
+  "initial_42_rows": [
+    0,
+    2,
+    4,
+    5
+  ],
+  "patent_rating_changed": false,
+  "performance_advantage_claimed": false,
+  "profile": "pq-4+2-gf256-v1",
+  "readback_matches": {
+    "A": true,
+    "B": true
+  },
+  "repaired_42_rows": [
+    1,
+    3
+  ],
+  "schedule": [
+    "A",
+    "B",
+    "A",
+    "B",
+    "A",
+    "B",
+    "A",
+    "A",
+    "A",
+    "A"
+  ],
+  "scope": "Local mixed 4+2 and 2+1 scopes with separate repair workers",
+  "trace": [
+    {
+      "event": "admitted",
+      "ledger": {
+        "D0": {
+          "bytes": {
+            "FREE": 0,
+            "LIVE": 256,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 0,
+            "LIVE": 2,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        },
+        "D1": {
+          "bytes": {
+            "FREE": 0,
+            "LIVE": 256,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 0,
+            "LIVE": 2,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        },
+        "D2": {
+          "bytes": {
+            "FREE": 128,
+            "LIVE": 128,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 1,
+            "LIVE": 1,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        },
+        "D3": {
+          "bytes": {
+            "FREE": 128,
+            "LIVE": 128,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 1,
+            "LIVE": 1,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        },
+        "X": {
+          "bytes": {
+            "FREE": 0,
+            "LIVE": 0,
+            "RESERVED": 0,
+            "RETIRED": 128,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 0,
+            "LIVE": 0,
+            "RESERVED": 0,
+            "RETIRED": 1,
+            "STAGED": 0
+          }
+        },
+        "Y": {
+          "bytes": {
+            "FREE": 0,
+            "LIVE": 0,
+            "RESERVED": 128,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 0,
+            "LIVE": 0,
+            "RESERVED": 1,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        },
+        "Z": {
+          "bytes": {
+            "FREE": 0,
+            "LIVE": 0,
+            "RESERVED": 128,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 0,
+            "LIVE": 0,
+            "RESERVED": 1,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        }
+      },
+      "state": {
+        "offline": [],
+        "slots": [
+          {
+            "domain": "D0",
+            "incarnation": 1,
+            "key": "D0:0",
+            "row": 0,
+            "status": "LIVE",
+            "stripe": "A"
+          },
+          {
+            "domain": "D0",
+            "incarnation": 1,
+            "key": "D0:1",
+            "row": 0,
+            "status": "LIVE",
+            "stripe": "B"
+          },
+          {
+            "domain": "D1",
+            "incarnation": 1,
+            "key": "D1:0",
+            "row": 2,
+            "status": "LIVE",
+            "stripe": "A"
+          },
+          {
+            "domain": "D1",
+            "incarnation": 1,
+            "key": "D1:1",
+            "row": 1,
+            "status": "LIVE",
+            "stripe": "B"
+          },
+          {
+            "domain": "D2",
+            "incarnation": 1,
+            "key": "D2:0",
+            "row": 4,
+            "status": "LIVE",
+            "stripe": "A"
+          },
+          {
+            "domain": "D2",
+            "incarnation": 0,
+            "key": "D2:1",
+            "row": -1,
+            "status": "FREE",
+            "stripe": ""
+          },
+          {
+            "domain": "D3",
+            "incarnation": 1,
+            "key": "D3:0",
+            "row": 5,
+            "status": "LIVE",
+            "stripe": "A"
+          },
+          {
+            "domain": "D3",
+            "incarnation": 0,
+            "key": "D3:1",
+            "row": -1,
+            "status": "FREE",
+            "stripe": ""
+          },
+          {
+            "domain": "X",
+            "incarnation": 1,
+            "key": "X:0",
+            "row": -1,
+            "status": "RETIRED",
+            "stripe": ""
+          },
+          {
+            "domain": "Y",
+            "incarnation": 0,
+            "key": "Y:0",
+            "row": -1,
+            "status": "FREE",
+            "stripe": ""
+          },
+          {
+            "domain": "Z",
+            "incarnation": 0,
+            "key": "Z:0",
+            "row": -1,
+            "status": "FREE",
+            "stripe": ""
+          }
+        ],
+        "stripes": [
+          {
+            "eligible": [
+              "D0",
+              "D1",
+              "D2",
+              "D3",
+              "X",
+              "Y"
+            ],
+            "name": "A",
+            "profile": "pq-4+2-gf256-v1"
+          },
+          {
+            "eligible": [
+              "D0",
+              "D1",
+              "Z"
+            ],
+            "name": "B",
+            "profile": "xor-2+1-v1"
+          }
+        ]
+      }
+    },
+    {
+      "event": "step",
+      "ledger": {
+        "D0": {
+          "bytes": {
+            "FREE": 0,
+            "LIVE": 256,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 0,
+            "LIVE": 2,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        },
+        "D1": {
+          "bytes": {
+            "FREE": 0,
+            "LIVE": 256,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 0,
+            "LIVE": 2,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        },
+        "D2": {
+          "bytes": {
+            "FREE": 128,
+            "LIVE": 128,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 1,
+            "LIVE": 1,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        },
+        "D3": {
+          "bytes": {
+            "FREE": 128,
+            "LIVE": 128,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 1,
+            "LIVE": 1,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        },
+        "X": {
+          "bytes": {
+            "FREE": 0,
+            "LIVE": 0,
+            "RESERVED": 128,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 0,
+            "LIVE": 0,
+            "RESERVED": 1,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        },
+        "Y": {
+          "bytes": {
+            "FREE": 0,
+            "LIVE": 0,
+            "RESERVED": 128,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 0,
+            "LIVE": 0,
+            "RESERVED": 1,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        },
+        "Z": {
+          "bytes": {
+            "FREE": 0,
+            "LIVE": 0,
+            "RESERVED": 128,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 0,
+            "LIVE": 0,
+            "RESERVED": 1,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        }
+      },
+      "plan": "A",
+      "result": {
+        "cursor": 1,
+        "status": "APPLIED"
+      },
+      "state": {
+        "offline": [],
+        "slots": [
+          {
+            "domain": "D0",
+            "incarnation": 1,
+            "key": "D0:0",
+            "row": 0,
+            "status": "LIVE",
+            "stripe": "A"
+          },
+          {
+            "domain": "D0",
+            "incarnation": 1,
+            "key": "D0:1",
+            "row": 0,
+            "status": "LIVE",
+            "stripe": "B"
+          },
+          {
+            "domain": "D1",
+            "incarnation": 1,
+            "key": "D1:0",
+            "row": 2,
+            "status": "LIVE",
+            "stripe": "A"
+          },
+          {
+            "domain": "D1",
+            "incarnation": 1,
+            "key": "D1:1",
+            "row": 1,
+            "status": "LIVE",
+            "stripe": "B"
+          },
+          {
+            "domain": "D2",
+            "incarnation": 1,
+            "key": "D2:0",
+            "row": 4,
+            "status": "LIVE",
+            "stripe": "A"
+          },
+          {
+            "domain": "D2",
+            "incarnation": 0,
+            "key": "D2:1",
+            "row": -1,
+            "status": "FREE",
+            "stripe": ""
+          },
+          {
+            "domain": "D3",
+            "incarnation": 1,
+            "key": "D3:0",
+            "row": 5,
+            "status": "LIVE",
+            "stripe": "A"
+          },
+          {
+            "domain": "D3",
+            "incarnation": 0,
+            "key": "D3:1",
+            "row": -1,
+            "status": "FREE",
+            "stripe": ""
+          },
+          {
+            "domain": "X",
+            "incarnation": 1,
+            "key": "X:0",
+            "row": -1,
+            "status": "FREE",
+            "stripe": ""
+          },
+          {
+            "domain": "Y",
+            "incarnation": 0,
+            "key": "Y:0",
+            "row": -1,
+            "status": "FREE",
+            "stripe": ""
+          },
+          {
+            "domain": "Z",
+            "incarnation": 0,
+            "key": "Z:0",
+            "row": -1,
+            "status": "FREE",
+            "stripe": ""
+          }
+        ],
+        "stripes": [
+          {
+            "eligible": [
+              "D0",
+              "D1",
+              "D2",
+              "D3",
+              "X",
+              "Y"
+            ],
+            "name": "A",
+            "profile": "pq-4+2-gf256-v1"
+          },
+          {
+            "eligible": [
+              "D0",
+              "D1",
+              "Z"
+            ],
+            "name": "B",
+            "profile": "xor-2+1-v1"
+          }
+        ]
+      }
+    },
+    {
+      "event": "step",
+      "ledger": {
+        "D0": {
+          "bytes": {
+            "FREE": 0,
+            "LIVE": 256,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 0,
+            "LIVE": 2,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        },
+        "D1": {
+          "bytes": {
+            "FREE": 0,
+            "LIVE": 256,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 0,
+            "LIVE": 2,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        },
+        "D2": {
+          "bytes": {
+            "FREE": 128,
+            "LIVE": 128,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 1,
+            "LIVE": 1,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        },
+        "D3": {
+          "bytes": {
+            "FREE": 128,
+            "LIVE": 128,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 1,
+            "LIVE": 1,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        },
+        "X": {
+          "bytes": {
+            "FREE": 0,
+            "LIVE": 0,
+            "RESERVED": 128,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 0,
+            "LIVE": 0,
+            "RESERVED": 1,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        },
+        "Y": {
+          "bytes": {
+            "FREE": 0,
+            "LIVE": 0,
+            "RESERVED": 128,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 0,
+            "LIVE": 0,
+            "RESERVED": 1,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        },
+        "Z": {
+          "bytes": {
+            "FREE": 0,
+            "LIVE": 0,
+            "RESERVED": 128,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 0,
+            "LIVE": 0,
+            "RESERVED": 1,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        }
+      },
+      "plan": "B",
+      "result": {
+        "cursor": 1,
+        "status": "APPLIED"
+      },
+      "state": {
+        "offline": [],
+        "slots": [
+          {
+            "domain": "D0",
+            "incarnation": 1,
+            "key": "D0:0",
+            "row": 0,
+            "status": "LIVE",
+            "stripe": "A"
+          },
+          {
+            "domain": "D0",
+            "incarnation": 1,
+            "key": "D0:1",
+            "row": 0,
+            "status": "LIVE",
+            "stripe": "B"
+          },
+          {
+            "domain": "D1",
+            "incarnation": 1,
+            "key": "D1:0",
+            "row": 2,
+            "status": "LIVE",
+            "stripe": "A"
+          },
+          {
+            "domain": "D1",
+            "incarnation": 1,
+            "key": "D1:1",
+            "row": 1,
+            "status": "LIVE",
+            "stripe": "B"
+          },
+          {
+            "domain": "D2",
+            "incarnation": 1,
+            "key": "D2:0",
+            "row": 4,
+            "status": "LIVE",
+            "stripe": "A"
+          },
+          {
+            "domain": "D2",
+            "incarnation": 0,
+            "key": "D2:1",
+            "row": -1,
+            "status": "FREE",
+            "stripe": ""
+          },
+          {
+            "domain": "D3",
+            "incarnation": 1,
+            "key": "D3:0",
+            "row": 5,
+            "status": "LIVE",
+            "stripe": "A"
+          },
+          {
+            "domain": "D3",
+            "incarnation": 0,
+            "key": "D3:1",
+            "row": -1,
+            "status": "FREE",
+            "stripe": ""
+          },
+          {
+            "domain": "X",
+            "incarnation": 1,
+            "key": "X:0",
+            "row": -1,
+            "status": "FREE",
+            "stripe": ""
+          },
+          {
+            "domain": "Y",
+            "incarnation": 0,
+            "key": "Y:0",
+            "row": -1,
+            "status": "FREE",
+            "stripe": ""
+          },
+          {
+            "domain": "Z",
+            "incarnation": 1,
+            "key": "Z:0",
+            "row": 2,
+            "status": "RESERVED",
+            "stripe": "B"
+          }
+        ],
+        "stripes": [
+          {
+            "eligible": [
+              "D0",
+              "D1",
+              "D2",
+              "D3",
+              "X",
+              "Y"
+            ],
+            "name": "A",
+            "profile": "pq-4+2-gf256-v1"
+          },
+          {
+            "eligible": [
+              "D0",
+              "D1",
+              "Z"
+            ],
+            "name": "B",
+            "profile": "xor-2+1-v1"
+          }
+        ]
+      }
+    },
+    {
+      "event": "step",
+      "ledger": {
+        "D0": {
+          "bytes": {
+            "FREE": 0,
+            "LIVE": 256,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 0,
+            "LIVE": 2,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        },
+        "D1": {
+          "bytes": {
+            "FREE": 0,
+            "LIVE": 256,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 0,
+            "LIVE": 2,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        },
+        "D2": {
+          "bytes": {
+            "FREE": 128,
+            "LIVE": 128,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 1,
+            "LIVE": 1,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        },
+        "D3": {
+          "bytes": {
+            "FREE": 128,
+            "LIVE": 128,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 1,
+            "LIVE": 1,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        },
+        "X": {
+          "bytes": {
+            "FREE": 0,
+            "LIVE": 0,
+            "RESERVED": 128,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 0,
+            "LIVE": 0,
+            "RESERVED": 1,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        },
+        "Y": {
+          "bytes": {
+            "FREE": 0,
+            "LIVE": 0,
+            "RESERVED": 128,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 0,
+            "LIVE": 0,
+            "RESERVED": 1,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        },
+        "Z": {
+          "bytes": {
+            "FREE": 0,
+            "LIVE": 0,
+            "RESERVED": 128,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 0,
+            "LIVE": 0,
+            "RESERVED": 1,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        }
+      },
+      "plan": "A",
+      "result": {
+        "cursor": 2,
+        "status": "APPLIED"
+      },
+      "state": {
+        "offline": [],
+        "slots": [
+          {
+            "domain": "D0",
+            "incarnation": 1,
+            "key": "D0:0",
+            "row": 0,
+            "status": "LIVE",
+            "stripe": "A"
+          },
+          {
+            "domain": "D0",
+            "incarnation": 1,
+            "key": "D0:1",
+            "row": 0,
+            "status": "LIVE",
+            "stripe": "B"
+          },
+          {
+            "domain": "D1",
+            "incarnation": 1,
+            "key": "D1:0",
+            "row": 2,
+            "status": "LIVE",
+            "stripe": "A"
+          },
+          {
+            "domain": "D1",
+            "incarnation": 1,
+            "key": "D1:1",
+            "row": 1,
+            "status": "LIVE",
+            "stripe": "B"
+          },
+          {
+            "domain": "D2",
+            "incarnation": 1,
+            "key": "D2:0",
+            "row": 4,
+            "status": "LIVE",
+            "stripe": "A"
+          },
+          {
+            "domain": "D2",
+            "incarnation": 0,
+            "key": "D2:1",
+            "row": -1,
+            "status": "FREE",
+            "stripe": ""
+          },
+          {
+            "domain": "D3",
+            "incarnation": 1,
+            "key": "D3:0",
+            "row": 5,
+            "status": "LIVE",
+            "stripe": "A"
+          },
+          {
+            "domain": "D3",
+            "incarnation": 0,
+            "key": "D3:1",
+            "row": -1,
+            "status": "FREE",
+            "stripe": ""
+          },
+          {
+            "domain": "X",
+            "incarnation": 2,
+            "key": "X:0",
+            "row": 1,
+            "status": "RESERVED",
+            "stripe": "A"
+          },
+          {
+            "domain": "Y",
+            "incarnation": 0,
+            "key": "Y:0",
+            "row": -1,
+            "status": "FREE",
+            "stripe": ""
+          },
+          {
+            "domain": "Z",
+            "incarnation": 1,
+            "key": "Z:0",
+            "row": 2,
+            "status": "RESERVED",
+            "stripe": "B"
+          }
+        ],
+        "stripes": [
+          {
+            "eligible": [
+              "D0",
+              "D1",
+              "D2",
+              "D3",
+              "X",
+              "Y"
+            ],
+            "name": "A",
+            "profile": "pq-4+2-gf256-v1"
+          },
+          {
+            "eligible": [
+              "D0",
+              "D1",
+              "Z"
+            ],
+            "name": "B",
+            "profile": "xor-2+1-v1"
+          }
+        ]
+      }
+    },
+    {
+      "event": "step",
+      "ledger": {
+        "D0": {
+          "bytes": {
+            "FREE": 0,
+            "LIVE": 256,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 0,
+            "LIVE": 2,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        },
+        "D1": {
+          "bytes": {
+            "FREE": 0,
+            "LIVE": 256,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 0,
+            "LIVE": 2,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        },
+        "D2": {
+          "bytes": {
+            "FREE": 128,
+            "LIVE": 128,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 1,
+            "LIVE": 1,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        },
+        "D3": {
+          "bytes": {
+            "FREE": 128,
+            "LIVE": 128,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 1,
+            "LIVE": 1,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        },
+        "X": {
+          "bytes": {
+            "FREE": 0,
+            "LIVE": 0,
+            "RESERVED": 128,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 0,
+            "LIVE": 0,
+            "RESERVED": 1,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        },
+        "Y": {
+          "bytes": {
+            "FREE": 0,
+            "LIVE": 0,
+            "RESERVED": 128,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 0,
+            "LIVE": 0,
+            "RESERVED": 1,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        },
+        "Z": {
+          "bytes": {
+            "FREE": 0,
+            "LIVE": 0,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 128
+          },
+          "online": true,
+          "slots": {
+            "FREE": 0,
+            "LIVE": 0,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 1
+          }
+        }
+      },
+      "plan": "B",
+      "result": {
+        "cursor": 2,
+        "status": "APPLIED"
+      },
+      "state": {
+        "offline": [],
+        "slots": [
+          {
+            "domain": "D0",
+            "incarnation": 1,
+            "key": "D0:0",
+            "row": 0,
+            "status": "LIVE",
+            "stripe": "A"
+          },
+          {
+            "domain": "D0",
+            "incarnation": 1,
+            "key": "D0:1",
+            "row": 0,
+            "status": "LIVE",
+            "stripe": "B"
+          },
+          {
+            "domain": "D1",
+            "incarnation": 1,
+            "key": "D1:0",
+            "row": 2,
+            "status": "LIVE",
+            "stripe": "A"
+          },
+          {
+            "domain": "D1",
+            "incarnation": 1,
+            "key": "D1:1",
+            "row": 1,
+            "status": "LIVE",
+            "stripe": "B"
+          },
+          {
+            "domain": "D2",
+            "incarnation": 1,
+            "key": "D2:0",
+            "row": 4,
+            "status": "LIVE",
+            "stripe": "A"
+          },
+          {
+            "domain": "D2",
+            "incarnation": 0,
+            "key": "D2:1",
+            "row": -1,
+            "status": "FREE",
+            "stripe": ""
+          },
+          {
+            "domain": "D3",
+            "incarnation": 1,
+            "key": "D3:0",
+            "row": 5,
+            "status": "LIVE",
+            "stripe": "A"
+          },
+          {
+            "domain": "D3",
+            "incarnation": 0,
+            "key": "D3:1",
+            "row": -1,
+            "status": "FREE",
+            "stripe": ""
+          },
+          {
+            "domain": "X",
+            "incarnation": 2,
+            "key": "X:0",
+            "row": 1,
+            "status": "RESERVED",
+            "stripe": "A"
+          },
+          {
+            "domain": "Y",
+            "incarnation": 0,
+            "key": "Y:0",
+            "row": -1,
+            "status": "FREE",
+            "stripe": ""
+          },
+          {
+            "domain": "Z",
+            "incarnation": 1,
+            "key": "Z:0",
+            "row": 2,
+            "status": "STAGED",
+            "stripe": "B"
+          }
+        ],
+        "stripes": [
+          {
+            "eligible": [
+              "D0",
+              "D1",
+              "D2",
+              "D3",
+              "X",
+              "Y"
+            ],
+            "name": "A",
+            "profile": "pq-4+2-gf256-v1"
+          },
+          {
+            "eligible": [
+              "D0",
+              "D1",
+              "Z"
+            ],
+            "name": "B",
+            "profile": "xor-2+1-v1"
+          }
+        ]
+      }
+    },
+    {
+      "event": "step",
+      "ledger": {
+        "D0": {
+          "bytes": {
+            "FREE": 0,
+            "LIVE": 256,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 0,
+            "LIVE": 2,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        },
+        "D1": {
+          "bytes": {
+            "FREE": 0,
+            "LIVE": 256,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 0,
+            "LIVE": 2,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        },
+        "D2": {
+          "bytes": {
+            "FREE": 128,
+            "LIVE": 128,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 1,
+            "LIVE": 1,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        },
+        "D3": {
+          "bytes": {
+            "FREE": 128,
+            "LIVE": 128,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 1,
+            "LIVE": 1,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        },
+        "X": {
+          "bytes": {
+            "FREE": 0,
+            "LIVE": 0,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 128
+          },
+          "online": true,
+          "slots": {
+            "FREE": 0,
+            "LIVE": 0,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 1
+          }
+        },
+        "Y": {
+          "bytes": {
+            "FREE": 0,
+            "LIVE": 0,
+            "RESERVED": 128,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 0,
+            "LIVE": 0,
+            "RESERVED": 1,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        },
+        "Z": {
+          "bytes": {
+            "FREE": 0,
+            "LIVE": 0,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 128
+          },
+          "online": true,
+          "slots": {
+            "FREE": 0,
+            "LIVE": 0,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 1
+          }
+        }
+      },
+      "plan": "A",
+      "result": {
+        "cursor": 3,
+        "status": "APPLIED"
+      },
+      "state": {
+        "offline": [],
+        "slots": [
+          {
+            "domain": "D0",
+            "incarnation": 1,
+            "key": "D0:0",
+            "row": 0,
+            "status": "LIVE",
+            "stripe": "A"
+          },
+          {
+            "domain": "D0",
+            "incarnation": 1,
+            "key": "D0:1",
+            "row": 0,
+            "status": "LIVE",
+            "stripe": "B"
+          },
+          {
+            "domain": "D1",
+            "incarnation": 1,
+            "key": "D1:0",
+            "row": 2,
+            "status": "LIVE",
+            "stripe": "A"
+          },
+          {
+            "domain": "D1",
+            "incarnation": 1,
+            "key": "D1:1",
+            "row": 1,
+            "status": "LIVE",
+            "stripe": "B"
+          },
+          {
+            "domain": "D2",
+            "incarnation": 1,
+            "key": "D2:0",
+            "row": 4,
+            "status": "LIVE",
+            "stripe": "A"
+          },
+          {
+            "domain": "D2",
+            "incarnation": 0,
+            "key": "D2:1",
+            "row": -1,
+            "status": "FREE",
+            "stripe": ""
+          },
+          {
+            "domain": "D3",
+            "incarnation": 1,
+            "key": "D3:0",
+            "row": 5,
+            "status": "LIVE",
+            "stripe": "A"
+          },
+          {
+            "domain": "D3",
+            "incarnation": 0,
+            "key": "D3:1",
+            "row": -1,
+            "status": "FREE",
+            "stripe": ""
+          },
+          {
+            "domain": "X",
+            "incarnation": 2,
+            "key": "X:0",
+            "row": 1,
+            "status": "STAGED",
+            "stripe": "A"
+          },
+          {
+            "domain": "Y",
+            "incarnation": 0,
+            "key": "Y:0",
+            "row": -1,
+            "status": "FREE",
+            "stripe": ""
+          },
+          {
+            "domain": "Z",
+            "incarnation": 1,
+            "key": "Z:0",
+            "row": 2,
+            "status": "STAGED",
+            "stripe": "B"
+          }
+        ],
+        "stripes": [
+          {
+            "eligible": [
+              "D0",
+              "D1",
+              "D2",
+              "D3",
+              "X",
+              "Y"
+            ],
+            "name": "A",
+            "profile": "pq-4+2-gf256-v1"
+          },
+          {
+            "eligible": [
+              "D0",
+              "D1",
+              "Z"
+            ],
+            "name": "B",
+            "profile": "xor-2+1-v1"
+          }
+        ]
+      }
+    },
+    {
+      "event": "step",
+      "ledger": {
+        "D0": {
+          "bytes": {
+            "FREE": 0,
+            "LIVE": 256,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 0,
+            "LIVE": 2,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        },
+        "D1": {
+          "bytes": {
+            "FREE": 0,
+            "LIVE": 256,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 0,
+            "LIVE": 2,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        },
+        "D2": {
+          "bytes": {
+            "FREE": 128,
+            "LIVE": 128,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 1,
+            "LIVE": 1,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        },
+        "D3": {
+          "bytes": {
+            "FREE": 128,
+            "LIVE": 128,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 1,
+            "LIVE": 1,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        },
+        "X": {
+          "bytes": {
+            "FREE": 0,
+            "LIVE": 0,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 128
+          },
+          "online": true,
+          "slots": {
+            "FREE": 0,
+            "LIVE": 0,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 1
+          }
+        },
+        "Y": {
+          "bytes": {
+            "FREE": 0,
+            "LIVE": 0,
+            "RESERVED": 128,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 0,
+            "LIVE": 0,
+            "RESERVED": 1,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        },
+        "Z": {
+          "bytes": {
+            "FREE": 0,
+            "LIVE": 128,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 0,
+            "LIVE": 1,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        }
+      },
+      "plan": "B",
+      "result": {
+        "cursor": 3,
+        "status": "DONE"
+      },
+      "state": {
+        "offline": [],
+        "slots": [
+          {
+            "domain": "D0",
+            "incarnation": 1,
+            "key": "D0:0",
+            "row": 0,
+            "status": "LIVE",
+            "stripe": "A"
+          },
+          {
+            "domain": "D0",
+            "incarnation": 1,
+            "key": "D0:1",
+            "row": 0,
+            "status": "LIVE",
+            "stripe": "B"
+          },
+          {
+            "domain": "D1",
+            "incarnation": 1,
+            "key": "D1:0",
+            "row": 2,
+            "status": "LIVE",
+            "stripe": "A"
+          },
+          {
+            "domain": "D1",
+            "incarnation": 1,
+            "key": "D1:1",
+            "row": 1,
+            "status": "LIVE",
+            "stripe": "B"
+          },
+          {
+            "domain": "D2",
+            "incarnation": 1,
+            "key": "D2:0",
+            "row": 4,
+            "status": "LIVE",
+            "stripe": "A"
+          },
+          {
+            "domain": "D2",
+            "incarnation": 0,
+            "key": "D2:1",
+            "row": -1,
+            "status": "FREE",
+            "stripe": ""
+          },
+          {
+            "domain": "D3",
+            "incarnation": 1,
+            "key": "D3:0",
+            "row": 5,
+            "status": "LIVE",
+            "stripe": "A"
+          },
+          {
+            "domain": "D3",
+            "incarnation": 0,
+            "key": "D3:1",
+            "row": -1,
+            "status": "FREE",
+            "stripe": ""
+          },
+          {
+            "domain": "X",
+            "incarnation": 2,
+            "key": "X:0",
+            "row": 1,
+            "status": "STAGED",
+            "stripe": "A"
+          },
+          {
+            "domain": "Y",
+            "incarnation": 0,
+            "key": "Y:0",
+            "row": -1,
+            "status": "FREE",
+            "stripe": ""
+          },
+          {
+            "domain": "Z",
+            "incarnation": 1,
+            "key": "Z:0",
+            "row": 2,
+            "status": "LIVE",
+            "stripe": "B"
+          }
+        ],
+        "stripes": [
+          {
+            "eligible": [
+              "D0",
+              "D1",
+              "D2",
+              "D3",
+              "X",
+              "Y"
+            ],
+            "name": "A",
+            "profile": "pq-4+2-gf256-v1"
+          },
+          {
+            "eligible": [
+              "D0",
+              "D1",
+              "Z"
+            ],
+            "name": "B",
+            "profile": "xor-2+1-v1"
+          }
+        ]
+      }
+    },
+    {
+      "event": "step",
+      "ledger": {
+        "D0": {
+          "bytes": {
+            "FREE": 0,
+            "LIVE": 256,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 0,
+            "LIVE": 2,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        },
+        "D1": {
+          "bytes": {
+            "FREE": 0,
+            "LIVE": 256,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 0,
+            "LIVE": 2,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        },
+        "D2": {
+          "bytes": {
+            "FREE": 128,
+            "LIVE": 128,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 1,
+            "LIVE": 1,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        },
+        "D3": {
+          "bytes": {
+            "FREE": 128,
+            "LIVE": 128,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 1,
+            "LIVE": 1,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        },
+        "X": {
+          "bytes": {
+            "FREE": 0,
+            "LIVE": 128,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 0,
+            "LIVE": 1,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        },
+        "Y": {
+          "bytes": {
+            "FREE": 0,
+            "LIVE": 0,
+            "RESERVED": 128,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 0,
+            "LIVE": 0,
+            "RESERVED": 1,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        },
+        "Z": {
+          "bytes": {
+            "FREE": 0,
+            "LIVE": 128,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 0,
+            "LIVE": 1,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        }
+      },
+      "plan": "A",
+      "result": {
+        "cursor": 4,
+        "status": "APPLIED"
+      },
+      "state": {
+        "offline": [],
+        "slots": [
+          {
+            "domain": "D0",
+            "incarnation": 1,
+            "key": "D0:0",
+            "row": 0,
+            "status": "LIVE",
+            "stripe": "A"
+          },
+          {
+            "domain": "D0",
+            "incarnation": 1,
+            "key": "D0:1",
+            "row": 0,
+            "status": "LIVE",
+            "stripe": "B"
+          },
+          {
+            "domain": "D1",
+            "incarnation": 1,
+            "key": "D1:0",
+            "row": 2,
+            "status": "LIVE",
+            "stripe": "A"
+          },
+          {
+            "domain": "D1",
+            "incarnation": 1,
+            "key": "D1:1",
+            "row": 1,
+            "status": "LIVE",
+            "stripe": "B"
+          },
+          {
+            "domain": "D2",
+            "incarnation": 1,
+            "key": "D2:0",
+            "row": 4,
+            "status": "LIVE",
+            "stripe": "A"
+          },
+          {
+            "domain": "D2",
+            "incarnation": 0,
+            "key": "D2:1",
+            "row": -1,
+            "status": "FREE",
+            "stripe": ""
+          },
+          {
+            "domain": "D3",
+            "incarnation": 1,
+            "key": "D3:0",
+            "row": 5,
+            "status": "LIVE",
+            "stripe": "A"
+          },
+          {
+            "domain": "D3",
+            "incarnation": 0,
+            "key": "D3:1",
+            "row": -1,
+            "status": "FREE",
+            "stripe": ""
+          },
+          {
+            "domain": "X",
+            "incarnation": 2,
+            "key": "X:0",
+            "row": 1,
+            "status": "LIVE",
+            "stripe": "A"
+          },
+          {
+            "domain": "Y",
+            "incarnation": 0,
+            "key": "Y:0",
+            "row": -1,
+            "status": "FREE",
+            "stripe": ""
+          },
+          {
+            "domain": "Z",
+            "incarnation": 1,
+            "key": "Z:0",
+            "row": 2,
+            "status": "LIVE",
+            "stripe": "B"
+          }
+        ],
+        "stripes": [
+          {
+            "eligible": [
+              "D0",
+              "D1",
+              "D2",
+              "D3",
+              "X",
+              "Y"
+            ],
+            "name": "A",
+            "profile": "pq-4+2-gf256-v1"
+          },
+          {
+            "eligible": [
+              "D0",
+              "D1",
+              "Z"
+            ],
+            "name": "B",
+            "profile": "xor-2+1-v1"
+          }
+        ]
+      }
+    },
+    {
+      "event": "step",
+      "ledger": {
+        "D0": {
+          "bytes": {
+            "FREE": 0,
+            "LIVE": 256,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 0,
+            "LIVE": 2,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        },
+        "D1": {
+          "bytes": {
+            "FREE": 0,
+            "LIVE": 256,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 0,
+            "LIVE": 2,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        },
+        "D2": {
+          "bytes": {
+            "FREE": 128,
+            "LIVE": 128,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 1,
+            "LIVE": 1,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        },
+        "D3": {
+          "bytes": {
+            "FREE": 128,
+            "LIVE": 128,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 1,
+            "LIVE": 1,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        },
+        "X": {
+          "bytes": {
+            "FREE": 0,
+            "LIVE": 128,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 0,
+            "LIVE": 1,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        },
+        "Y": {
+          "bytes": {
+            "FREE": 0,
+            "LIVE": 0,
+            "RESERVED": 128,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 0,
+            "LIVE": 0,
+            "RESERVED": 1,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        },
+        "Z": {
+          "bytes": {
+            "FREE": 0,
+            "LIVE": 128,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 0,
+            "LIVE": 1,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        }
+      },
+      "plan": "A",
+      "result": {
+        "cursor": 5,
+        "status": "APPLIED"
+      },
+      "state": {
+        "offline": [],
+        "slots": [
+          {
+            "domain": "D0",
+            "incarnation": 1,
+            "key": "D0:0",
+            "row": 0,
+            "status": "LIVE",
+            "stripe": "A"
+          },
+          {
+            "domain": "D0",
+            "incarnation": 1,
+            "key": "D0:1",
+            "row": 0,
+            "status": "LIVE",
+            "stripe": "B"
+          },
+          {
+            "domain": "D1",
+            "incarnation": 1,
+            "key": "D1:0",
+            "row": 2,
+            "status": "LIVE",
+            "stripe": "A"
+          },
+          {
+            "domain": "D1",
+            "incarnation": 1,
+            "key": "D1:1",
+            "row": 1,
+            "status": "LIVE",
+            "stripe": "B"
+          },
+          {
+            "domain": "D2",
+            "incarnation": 1,
+            "key": "D2:0",
+            "row": 4,
+            "status": "LIVE",
+            "stripe": "A"
+          },
+          {
+            "domain": "D2",
+            "incarnation": 0,
+            "key": "D2:1",
+            "row": -1,
+            "status": "FREE",
+            "stripe": ""
+          },
+          {
+            "domain": "D3",
+            "incarnation": 1,
+            "key": "D3:0",
+            "row": 5,
+            "status": "LIVE",
+            "stripe": "A"
+          },
+          {
+            "domain": "D3",
+            "incarnation": 0,
+            "key": "D3:1",
+            "row": -1,
+            "status": "FREE",
+            "stripe": ""
+          },
+          {
+            "domain": "X",
+            "incarnation": 2,
+            "key": "X:0",
+            "row": 1,
+            "status": "LIVE",
+            "stripe": "A"
+          },
+          {
+            "domain": "Y",
+            "incarnation": 1,
+            "key": "Y:0",
+            "row": 3,
+            "status": "RESERVED",
+            "stripe": "A"
+          },
+          {
+            "domain": "Z",
+            "incarnation": 1,
+            "key": "Z:0",
+            "row": 2,
+            "status": "LIVE",
+            "stripe": "B"
+          }
+        ],
+        "stripes": [
+          {
+            "eligible": [
+              "D0",
+              "D1",
+              "D2",
+              "D3",
+              "X",
+              "Y"
+            ],
+            "name": "A",
+            "profile": "pq-4+2-gf256-v1"
+          },
+          {
+            "eligible": [
+              "D0",
+              "D1",
+              "Z"
+            ],
+            "name": "B",
+            "profile": "xor-2+1-v1"
+          }
+        ]
+      }
+    },
+    {
+      "event": "step",
+      "ledger": {
+        "D0": {
+          "bytes": {
+            "FREE": 0,
+            "LIVE": 256,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 0,
+            "LIVE": 2,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        },
+        "D1": {
+          "bytes": {
+            "FREE": 0,
+            "LIVE": 256,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 0,
+            "LIVE": 2,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        },
+        "D2": {
+          "bytes": {
+            "FREE": 128,
+            "LIVE": 128,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 1,
+            "LIVE": 1,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        },
+        "D3": {
+          "bytes": {
+            "FREE": 128,
+            "LIVE": 128,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 1,
+            "LIVE": 1,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        },
+        "X": {
+          "bytes": {
+            "FREE": 0,
+            "LIVE": 128,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 0,
+            "LIVE": 1,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        },
+        "Y": {
+          "bytes": {
+            "FREE": 0,
+            "LIVE": 0,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 128
+          },
+          "online": true,
+          "slots": {
+            "FREE": 0,
+            "LIVE": 0,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 1
+          }
+        },
+        "Z": {
+          "bytes": {
+            "FREE": 0,
+            "LIVE": 128,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 0,
+            "LIVE": 1,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        }
+      },
+      "plan": "A",
+      "result": {
+        "cursor": 6,
+        "status": "APPLIED"
+      },
+      "state": {
+        "offline": [],
+        "slots": [
+          {
+            "domain": "D0",
+            "incarnation": 1,
+            "key": "D0:0",
+            "row": 0,
+            "status": "LIVE",
+            "stripe": "A"
+          },
+          {
+            "domain": "D0",
+            "incarnation": 1,
+            "key": "D0:1",
+            "row": 0,
+            "status": "LIVE",
+            "stripe": "B"
+          },
+          {
+            "domain": "D1",
+            "incarnation": 1,
+            "key": "D1:0",
+            "row": 2,
+            "status": "LIVE",
+            "stripe": "A"
+          },
+          {
+            "domain": "D1",
+            "incarnation": 1,
+            "key": "D1:1",
+            "row": 1,
+            "status": "LIVE",
+            "stripe": "B"
+          },
+          {
+            "domain": "D2",
+            "incarnation": 1,
+            "key": "D2:0",
+            "row": 4,
+            "status": "LIVE",
+            "stripe": "A"
+          },
+          {
+            "domain": "D2",
+            "incarnation": 0,
+            "key": "D2:1",
+            "row": -1,
+            "status": "FREE",
+            "stripe": ""
+          },
+          {
+            "domain": "D3",
+            "incarnation": 1,
+            "key": "D3:0",
+            "row": 5,
+            "status": "LIVE",
+            "stripe": "A"
+          },
+          {
+            "domain": "D3",
+            "incarnation": 0,
+            "key": "D3:1",
+            "row": -1,
+            "status": "FREE",
+            "stripe": ""
+          },
+          {
+            "domain": "X",
+            "incarnation": 2,
+            "key": "X:0",
+            "row": 1,
+            "status": "LIVE",
+            "stripe": "A"
+          },
+          {
+            "domain": "Y",
+            "incarnation": 1,
+            "key": "Y:0",
+            "row": 3,
+            "status": "STAGED",
+            "stripe": "A"
+          },
+          {
+            "domain": "Z",
+            "incarnation": 1,
+            "key": "Z:0",
+            "row": 2,
+            "status": "LIVE",
+            "stripe": "B"
+          }
+        ],
+        "stripes": [
+          {
+            "eligible": [
+              "D0",
+              "D1",
+              "D2",
+              "D3",
+              "X",
+              "Y"
+            ],
+            "name": "A",
+            "profile": "pq-4+2-gf256-v1"
+          },
+          {
+            "eligible": [
+              "D0",
+              "D1",
+              "Z"
+            ],
+            "name": "B",
+            "profile": "xor-2+1-v1"
+          }
+        ]
+      }
+    },
+    {
+      "event": "step",
+      "ledger": {
+        "D0": {
+          "bytes": {
+            "FREE": 0,
+            "LIVE": 256,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 0,
+            "LIVE": 2,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        },
+        "D1": {
+          "bytes": {
+            "FREE": 0,
+            "LIVE": 256,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 0,
+            "LIVE": 2,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        },
+        "D2": {
+          "bytes": {
+            "FREE": 128,
+            "LIVE": 128,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 1,
+            "LIVE": 1,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        },
+        "D3": {
+          "bytes": {
+            "FREE": 128,
+            "LIVE": 128,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 1,
+            "LIVE": 1,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        },
+        "X": {
+          "bytes": {
+            "FREE": 0,
+            "LIVE": 128,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 0,
+            "LIVE": 1,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        },
+        "Y": {
+          "bytes": {
+            "FREE": 0,
+            "LIVE": 128,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 0,
+            "LIVE": 1,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        },
+        "Z": {
+          "bytes": {
+            "FREE": 0,
+            "LIVE": 128,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          },
+          "online": true,
+          "slots": {
+            "FREE": 0,
+            "LIVE": 1,
+            "RESERVED": 0,
+            "RETIRED": 0,
+            "STAGED": 0
+          }
+        }
+      },
+      "plan": "A",
+      "result": {
+        "cursor": 7,
+        "status": "DONE"
+      },
+      "state": {
+        "offline": [],
+        "slots": [
+          {
+            "domain": "D0",
+            "incarnation": 1,
+            "key": "D0:0",
+            "row": 0,
+            "status": "LIVE",
+            "stripe": "A"
+          },
+          {
+            "domain": "D0",
+            "incarnation": 1,
+            "key": "D0:1",
+            "row": 0,
+            "status": "LIVE",
+            "stripe": "B"
+          },
+          {
+            "domain": "D1",
+            "incarnation": 1,
+            "key": "D1:0",
+            "row": 2,
+            "status": "LIVE",
+            "stripe": "A"
+          },
+          {
+            "domain": "D1",
+            "incarnation": 1,
+            "key": "D1:1",
+            "row": 1,
+            "status": "LIVE",
+            "stripe": "B"
+          },
+          {
+            "domain": "D2",
+            "incarnation": 1,
+            "key": "D2:0",
+            "row": 4,
+            "status": "LIVE",
+            "stripe": "A"
+          },
+          {
+            "domain": "D2",
+            "incarnation": 0,
+            "key": "D2:1",
+            "row": -1,
+            "status": "FREE",
+            "stripe": ""
+          },
+          {
+            "domain": "D3",
+            "incarnation": 1,
+            "key": "D3:0",
+            "row": 5,
+            "status": "LIVE",
+            "stripe": "A"
+          },
+          {
+            "domain": "D3",
+            "incarnation": 0,
+            "key": "D3:1",
+            "row": -1,
+            "status": "FREE",
+            "stripe": ""
+          },
+          {
+            "domain": "X",
+            "incarnation": 2,
+            "key": "X:0",
+            "row": 1,
+            "status": "LIVE",
+            "stripe": "A"
+          },
+          {
+            "domain": "Y",
+            "incarnation": 1,
+            "key": "Y:0",
+            "row": 3,
+            "status": "LIVE",
+            "stripe": "A"
+          },
+          {
+            "domain": "Z",
+            "incarnation": 1,
+            "key": "Z:0",
+            "row": 2,
+            "status": "LIVE",
+            "stripe": "B"
+          }
+        ],
+        "stripes": [
+          {
+            "eligible": [
+              "D0",
+              "D1",
+              "D2",
+              "D3",
+              "X",
+              "Y"
+            ],
+            "name": "A",
+            "profile": "pq-4+2-gf256-v1"
+          },
+          {
+            "eligible": [
+              "D0",
+              "D1",
+              "Z"
+            ],
+            "name": "B",
+            "profile": "xor-2+1-v1"
+          }
+        ]
+      }
+    }
+  ],
+  "validation_mode": "shadow",
+  "witnesses": {
+    "A": {
+      "actions": [
+        {
+          "incarnation": 1,
+          "kind": "reclaim",
+          "row": -1,
+          "slot": "X:0",
+          "stripe": ""
+        },
+        {
+          "incarnation": 1,
+          "kind": "reserve",
+          "row": 1,
+          "slot": "X:0",
+          "stripe": "A"
+        },
+        {
+          "incarnation": 2,
+          "kind": "stage",
+          "row": 1,
+          "slot": "X:0",
+          "stripe": "A"
+        },
+        {
+          "incarnation": 2,
+          "kind": "promote",
+          "row": 1,
+          "slot": "X:0",
+          "stripe": "A"
+        },
+        {
+          "incarnation": 0,
+          "kind": "reserve",
+          "row": 3,
+          "slot": "Y:0",
+          "stripe": "A"
+        },
+        {
+          "incarnation": 1,
+          "kind": "stage",
+          "row": 3,
+          "slot": "Y:0",
+          "stripe": "A"
+        },
+        {
+          "incarnation": 1,
+          "kind": "promote",
+          "row": 3,
+          "slot": "Y:0",
+          "stripe": "A"
+        }
+      ],
+      "digest": "26794075f5953bf76e9ce4cd6ed623e4b61907666ec73e0502a200bcf2e4189e",
+      "initial": "c5f220716215a5b1e314c71933e7e43ae3f32057c0661e337b369ffa4fe287a2",
+      "terminal": "c713aacc021ed45e145d134d17e8be4d96eabe51a18e5b6157a28d7553085c14",
+      "version": 1
+    },
+    "B": {
+      "actions": [
+        {
+          "incarnation": 0,
+          "kind": "reserve",
+          "row": 2,
+          "slot": "Z:0",
+          "stripe": "B"
+        },
+        {
+          "incarnation": 1,
+          "kind": "stage",
+          "row": 2,
+          "slot": "Z:0",
+          "stripe": "B"
+        },
+        {
+          "incarnation": 1,
+          "kind": "promote",
+          "row": 2,
+          "slot": "Z:0",
+          "stripe": "B"
+        }
+      ],
+      "digest": "e257511980e622e91d4e67b40dae0dcdea0376915b9611897de9155434c22abe",
+      "initial": "2ca6af0672bee8f93e346137d735588f2504faf343437648004a064ee0a15621",
+      "terminal": "7ff909328c4fd46c20b75cf2d2313b95345cec0f175ca4857c666ec1f926d3b8",
+      "version": 1
+    }
+  },
+  "worker_receipts": [
+    {
+      "command_digest": "37a273e93e69172bde0646d6174798a3e2f1befa3e851b161cc4ed709047737a",
+      "cursor": 0,
+      "fence": 1,
+      "incarnation": 1,
+      "kind": "reclaim",
+      "physical_digest": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca",
+      "plan": "A",
+      "signature": "dc6a393427292d9b1ef5c4c0ab6c1b2cb35747fbf3d1cc94e812323a9e7887ae",
+      "slot": "X:0",
+      "store": "c3a9f82d866c4105be9c957d01f50a17",
+      "token": "d8ce54be4983422b823502a8671ca683",
+      "worker": 4,
+      "worker_pid": 31860
+    },
+    {
+      "command_digest": "5fa00ca411543ab10abdb8561b2d9dbf040ea698ab2f4746427757a5cdc05070",
+      "cursor": 1,
+      "fence": 1,
+      "incarnation": 1,
+      "kind": "stage",
+      "physical_digest": "dd93b427b3b5b574e083ee4da82016290e7c0be55e1eac9963702ac7c565cee8",
+      "plan": "B",
+      "signature": "aa81c3d9e49dee6235fc5cb35bb4686940f345c6e0266546be55a797de90b96b",
+      "slot": "Z:0",
+      "store": "c3a9f82d866c4105be9c957d01f50a17",
+      "token": "87c41b4e0926487aac90bc8e746ca4d1",
+      "worker": 6,
+      "worker_pid": 21260
+    },
+    {
+      "command_digest": "c67988afe5c4eba46c5d089d46d4680962fbfabf2e063c52c7b6e3b268a82d73",
+      "cursor": 2,
+      "fence": 1,
+      "incarnation": 2,
+      "kind": "stage",
+      "physical_digest": "ec174286b400e1abbb212d4643d9093804d9da6d9b7eed69cd18f65a72693272",
+      "plan": "A",
+      "signature": "c900421dacdc20dc2b2c517b19a13f223bfc111753b9326b47650465360d0568",
+      "slot": "X:0",
+      "store": "c3a9f82d866c4105be9c957d01f50a17",
+      "token": "1269055821fd4935a0f7d544d72b0e04",
+      "worker": 4,
+      "worker_pid": 29348
+    },
+    {
+      "command_digest": "0b2da982e4fb8cb88a59610a037dc181343d1d3aec8f66936bedbc71f2dcc810",
+      "cursor": 5,
+      "fence": 1,
+      "incarnation": 1,
+      "kind": "stage",
+      "physical_digest": "3f068e40dc43d1b889c3cd7be3ae93a0f9623013e6f8dc151f9f926865c4c52b",
+      "plan": "A",
+      "signature": "83aa776c945e3835eb63190cd0243f97389ee756695bfe298666a523a3a6913a",
+      "slot": "Y:0",
+      "store": "c3a9f82d866c4105be9c957d01f50a17",
+      "token": "55b8efd706ea4c04977911e0b976ca4d",
+      "worker": 5,
+      "worker_pid": 11488
+    }
+  ]
+}

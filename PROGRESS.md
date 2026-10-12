@@ -4,11 +4,11 @@ Updated: 12 October 2026
 
 ## Current status
 
-Milestones 1–4 are implemented and verified within the stated local scope: a runnable prototype, component continuation caching, a conventional guarded-cache reference, compatible active plans and opt-in durable storage-worker processes. The latest suite passed **85 test methods**, including 15 new worker tests. Stage/reclaim workers perform I/O outside the authority writer transaction and return checked durable receipts. I03 is PASS for the tested local process scope; remote daemons and independent hardware remain pending. Component caching was slower than the capable conventional cache on the measured workloads; conventional caching remains the default and worker mode is opt-in. This file is the persistent progress record; PASS refers only to the stated implementation scope, not completion of the 16-week research plan. The earlier 53/100 assessment and conditional 73/100 target are unchanged.
+Milestones 1–5 are implemented and verified within the stated local scope. Milestone 5 adds versioned 4+2 coding, an independent reconstruction oracle, mixed-profile repair and legacy-store migration. The full suite passed **96 test methods and 288 subtests**; both verification campaigns observed zero violations/disagreements. Stage/reclaim workers perform I/O outside the authority writer transaction and return checked durable receipts. I03 is PASS for the tested local process scope; remote daemons and independent hardware remain pending. Component caching was slower than the capable conventional cache on the measured workloads; conventional caching remains the default and worker mode is opt-in. This file is the persistent progress record; PASS refers only to the stated implementation scope, not completion of the 16-week research plan. The earlier 53/100 assessment and conditional 73/100 target are unchanged.
 
 ## Scope of this implementation
 
-Build a bounded reference model and a local durable storage prototype first. Initial coding profile: 2 data fragments plus XOR parity (2-of-3), immutable content, trusted local workers, one SQLite authority and fixed-size managed storage slots. Placement domains are simulated labels. Production distributed consensus, independent device/rack fault guarantees and the 4+2 profile remain outside this first implementation.
+Build a bounded reference model and a local durable storage prototype first. Versioned coding profiles: default 2 data fragments plus XOR parity (2-of-3), and 4 data fragments plus P/Q parity (4-of-6), immutable content, trusted local workers, one SQLite authority and fixed-size managed storage slots. Placement domains are simulated labels. Production distributed consensus, independent device/rack fault guarantees and controller-level 4+2 performance remain outside the verified scope.
 
 ## Milestones
 
@@ -22,7 +22,7 @@ Build a bounded reference model and a local durable storage prototype first. Ini
 | E01 | Reproducible demonstration/evidence runner | PASS for correctness milestone | [Verification](evidence/results/verification.json), [demo](evidence/results/demo.json) |
 | C02 | Selective dependency reuse | PASS for tested correctness scope | [Specification](spec/selective_validation.md), 52 tests and 46,282 full-reference comparisons |
 | I03 | Multiple concurrent plans and independent storage workers | PASS for tested local process scope | [Milestone 4](evidence/results/MILESTONE_04.md): scoped claims, separate repair workers, durable fences/revocations and receipts; remote/hardware extension pending |
-| E02 | Comparative performance and larger coding profile | PARTIAL; overall target not met | [Logical comparison](evidence/results/MILESTONE_02.md); no competent-baseline gain or 4+2 result |
+| E02 | Comparative performance and larger coding profile | PARTIAL; overall target not met | [4+2 correctness](evidence/results/MILESTONE_05.md) PASS for local scope; [logical comparison](evidence/results/MILESTONE_02.md) shows no competent-baseline gain; controller performance pending |
 | R01 | Final claim chart and inventive-step review | UNKNOWN | Preliminary sources only |
 | P01 | Contributions, public disclosures and priority | UNKNOWN | User records not available |
 | A01 | Fresh patentability assessment | PENDING | No new score earned |
@@ -57,13 +57,16 @@ Build a bounded reference model and a local durable storage prototype first. Ini
 - Milestone 4 full verification: **85 test methods passed**, **155 reported subtests**, **33 total actual process-exit cases**. The sequential 10,000-trace campaign again produced 46,282 selective/full suffix comparisons and zero observed invariant violations. Source hashes match the final code and tests. Evidence: [verification-milestone-04.json](evidence/results/verification-milestone-04.json).
 - Persistent shadow-mode worker demonstration: seven interleaved actions, three durable receipts from separate processes (one reclaim, two stages), both original objects recovered and both tested conflicts rejected. Evidence: [worker-demo-milestone-04.json](evidence/results/worker-demo-milestone-04.json); preserved store: `tmp/worker-demo-milestone-04`.
 - Added the worker lock/ownership specification, CI verification on Ubuntu/Windows and version-control exclusions for runtime databases, worker secrets, byte pools and temporary extraction. Source, patent review/disclosure documents, specifications and saved evidence reports are included. Publication is authorized to the user's **private** repository `https://github.com/Meet9315/Recovery_Cert.git`; push status is recorded below. No new performance result or patentability score is claimed.
+- Milestone 5: implemented the fixed versioned 4+2 GF(256) P/Q profile alongside default 2+1; generalized row ranges, decoding floors, restoration targets, durable source reconstruction and worker payload generation. Added profile-bound commitments with backward-compatible default fingerprints and additive stripe-column migration. A historical witness and an active legacy worker intent/cache survive migration.
+- Milestone 5 full verification: **96 test methods passed**, **288 subtests**, **37 total actual process-exit cases**. Independent coding checks cover all 65,536 field products, 15 nonzero matrix minors and 180 four-row reconstructions. The finite 4+2 campaign covers 720 cases (60 feasible, 660 infeasible), 810 distinct states, 420 actions, 840 cached/full comparisons and 840 stale-incarnation rejections, with zero disagreement. The separate 10,000-trace legacy campaign again has zero observed invariant violations. All 24 source/test hashes match. Evidence: [verification-milestone-05.json](evidence/results/verification-milestone-05.json).
+- Durable 4+2 tests restore from every four-row subset, tolerate every pair of simulated domain erasures, reject a third and cover all validation modes with local/worker execution. The persistent mixed-profile shadow demonstration repairs missing data rows 1 and 3, reclaims a retired destination and completes an independent 2+1 scope: ten actions, four durable worker receipts, both original objects recovered. Evidence: [milestone 5](evidence/results/MILESTONE_05.md), [demonstration](evidence/results/four-plus-two-demo-milestone-05.json). No controller-level performance improvement or new patentability score is claimed.
 
 ## Next actions
 
-1. Specify and implement the larger 4+2 coding profile and an independent reconstruction oracle, then generalize the currently fixed row/safety/target predicates. This is the next engineering task.
+1. Register and implement the controller-level comparison runner for both coding profiles, including persistence, source/payload checks, worker preparation and receipt reconciliation. Compare with the capable conventional cached controller on identical workloads; the logical benchmark does not pass G6.
 2. Keep conventional caching as default and preserve selective/shadow modes for further investigation; do not treat savings over uncached replay as meeting the competent-baseline target.
 3. Extend local worker processes to authenticated remote daemons and test actual device/host fault boundaries separately.
-4. Run controller-level registered experiments, including persistence and physical checks; the logical benchmark does not pass G6.
+4. Measure controller CPU, practical repair metrics and foreground p99 impact under the frozen protocol; retain unfavourable results too.
 5. Complete the claim chart and professional priority/inventorship review when the necessary human records are available.
 
 ## Reproduce
@@ -79,9 +82,11 @@ python -m prism_c concurrent-demo --root tmp/concurrent-demo-new --report eviden
 python -m prism_c status --root tmp/concurrent-demo-milestone-03 --plan A
 python -m prism_c verify --report evidence/results/verification-milestone-04-new.json --traces 10000 --seed 20261011
 python -m prism_c concurrent-demo --root tmp/worker-demo-new --report evidence/results/worker-demo-new.json --validation-mode shadow --storage-workers
+python -m prism_c verify --report evidence/results/verification-milestone-05-new.json --traces 10000 --seed 20261011
+python -m prism_c four-plus-two-demo --root tmp/four-plus-two-demo-new --report evidence/results/four-plus-two-demo-new.json --validation-mode shadow
 ```
 
-Use a new/empty demo root; existing stores are never silently reset. The verified initial demonstration is in `tmp/prototype-demo-final`; the concurrent demonstration is in `tmp/concurrent-demo-milestone-03`; the worker demonstration is in `tmp/worker-demo-milestone-04`. Read [README.md](README.md) for ownership-aware resume/cancel commands. These local runtime stores are ignored by Git; the saved evidence JSON reports are tracked.
+Use a new/empty demo root; existing stores are never silently reset. The verified initial demonstration is in `tmp/prototype-demo-final`; the concurrent demonstration is in `tmp/concurrent-demo-milestone-03`; the worker demonstration is in `tmp/worker-demo-milestone-04`; the mixed-profile demonstration is in `tmp/four-plus-two-demo-milestone-05`. Read [README.md](README.md) for ownership-aware resume/cancel commands. These local runtime stores are ignored by Git; the saved evidence JSON reports are tracked.
 
 ## Research gate assessment
 
@@ -89,7 +94,7 @@ G0 priority/disclosure: UNKNOWN. G1 novelty/inventive interaction: unresolved. G
 
 ## Open limitations
 
-Novelty and inventive step are unresolved. Single trusted local authority; simulated failure-domain labels; 2-of-3 XOR profile; serialized metadata/source checks and global takeover; opt-in local per-domain stage/reclaim processes only; disjoint whole-stripe/slot claims; exact terminal-state commitment; complete membership scanning; no authenticated network daemons or independent physical devices. Source-byte checking remains on every step, and worker preparation adds full suffix replay. Process-exit evidence does not establish host power-loss or device-failure durability. No controller-level performance benefit, production deployment or completed legal review is claimed.
+Novelty and inventive step are unresolved. Single trusted local authority; simulated failure-domain labels; two fixed 2+1 and 4+2 profiles; serialized metadata/source checks and global takeover; opt-in local per-domain stage/reclaim processes only; disjoint whole-stripe/slot claims; exact terminal-state commitment; complete membership scanning; no authenticated network daemons or independent physical devices. Source-byte checking remains on every step, and worker preparation adds full suffix replay. Process-exit evidence does not establish host power-loss or device-failure durability. No controller-level performance benefit, production deployment or completed legal review is claimed.
 
 ## Repository publication
 
