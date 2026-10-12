@@ -66,8 +66,8 @@ Build a bounded reference model and a local durable storage prototype first. Ver
 
 ## Next actions
 
-1. Register longer foreground control/repair windows and count boundary-spanning reads explicitly; the first reduced controller campaign has insufficient p99 evidence. This is the next measurement task.
-2. Profile verification and persistence costs separately, then register fault/retry and scoped-contention comparisons. The broad CPU proxy does not isolate verification CPU or complete G6.
+1. Milestone 7 in progress: freeze the [sampling/CPU diagnostic protocol](experiments/measurement_diagnostics_protocol.md), collect twelve longer foreground windows with boundary-read retention and twelve separate CPU profiles, and preserve raw observations. Seven focused tests cover live pause/drain, blocked reads, nested attribution, worker receipt profiling and partial-report failure preservation. Full diagnostics and regression results are pending.
+2. Use the diagnostics to register independent paired foreground confirmation, then fault/retry and scoped-contention comparisons. The logical span subset excludes physical verification and is not the complete G6 verification-CPU metric.
 3. Keep conventional caching as default; preserve the measured slowdowns and selective/shadow modes for investigation. Require fresh registered confirmation for any optimization.
 4. Extend local worker processes to authenticated remote daemons and test actual device/host fault boundaries separately.
 5. Complete the claim chart and professional priority/inventorship review when the necessary human records are available.
