@@ -20,6 +20,7 @@ python -m prism_c controller-benchmark --report evidence/results/controller-benc
 python -m prism_c measurement-diagnostics --report evidence/results/measurement-diagnostics-new.json --seed 20261012
 python -m prism_c snapshot-latency --report evidence/results/snapshot-latency-new.json --runs 10 --seed 20261012
 python -m prism_c read-reuse-benchmark --report evidence/results/read-reuse-new.json --runs 10 --seed 20261012
+python -m prism_c revision-demo --root tmp/revision-demo-new --report evidence/results/revision-demo-new.json --profile 4+2 --storage-workers --validation-mode shadow
 ```
 
 The demo root must be new or empty. Existing stores are never reset by the demo. Choose a new root name for another run. `verify` uses disposable temporary stores and preserves the report, test details, source hashes and model campaign counts.
@@ -38,6 +39,7 @@ To resume an interrupted plan: `python -m prism_c resume --root <store-directory
 - Durable component certificates, internally derived membership coverage, changed-component replay and safe rebuild when cache evidence is absent or incompatible.
 - Conventional cached, full, selective and shadow validation modes (`Authority(root, validation_mode="conventional_cached"|"full"|"selective"|"shadow")`). Shadow mode compares selective results with complete replay in every step. Default is conventional cached; component caching is experimental.
 - Opt-in stage/reclaim storage processes with committed intents, per-domain durable fences, grant revocation barriers and checked durable receipts. Repair I/O runs outside the authority writer transaction.
+- Conventional partial-state replanning and checked successor plans that retain authenticated staging, drain old worker grants, transfer complete claims and leave failed allocations charged. Includes saved CLI proposals, exact request retries, persistent lineage and an independent finite partial-recovery oracle.
 
 ## Scope
 
@@ -87,7 +89,7 @@ Separate process-CPU profiles retain every function's call counts and exclusive/
 
 The [milestone 10 results](evidence/results/MILESTONE_10.md) preserve 40 completed pairs, 80 measured repair groups, 40 actual worker exits and 840 successful authenticated content probes. All 40 contention groups have overlapping controller repair intervals. No configuration meets the 20% CPU or 10% restoration proxy threshold; the complete controller and patentability targets remain unresolved. Eight warmups and all raw timing variation remain retained.
 
-The subsequent [design-gap audit](evidence/results/DESIGN_GAP_AUDIT.md) explains why these successful traces provide no additional suffix-replay saving over the guarded conventional cache. Its untimed script checks 273 paired logical steps, eight real stores and relevant-change rejection; production source and the 132-method regression result remain unchanged. The next research hypothesis concerns preserving authenticated work during a checked interrupted-plan revision, with an equally capable conventional partial-state replanner implemented first. No improvement or novelty is established by that proposed redesign.
+The subsequent [design-gap audit](evidence/results/DESIGN_GAP_AUDIT.md) explains why these successful traces provide no additional suffix-replay saving over the guarded conventional cache. Its untimed script checks 273 paired logical steps, eight real stores and relevant-change rejection; the recorded 132-method result describes that historical source. The interrupted-plan revision redesign is now implemented for both controller modes. See the [successor contract and CLI](spec/plan_revision.md) and [registered work-retention gate](experiments/revision_protocol.md). Retaining staging does not by itself establish an advantage over an equally capable conventional replanner.
 
 The [diagnostic protocol](experiments/measurement_diagnostics_protocol.md) preserves the earlier registered controller comparison and its results. CLI failure preserves a partial report and names the failed measurement cell. Correctness tests cover actual SQLite-blocked reads, phase separation, nested spans, worker receipt profiling and failure preservation. Longer sampling and attribution do not change the patentability assessment; independent paired confirmation and fault/contention comparisons remain pending.
 

@@ -2,6 +2,8 @@
 
 Updated: 12 October 2026
 
+Milestone 11 implementation in progress: conventional partial-state matching, an independent finite recovery oracle, and versioned successor plans that transfer retained staging/claims only after checked admission and worker revocation. Both controller modes receive the same capabilities. Old plan identities are superseded rather than reused. Fault, concurrency, physical-byte and comparison evidence will be recorded before verification is claimed.
+
 Central-gap audit completed: [mechanism findings and redesign plan](evidence/results/DESIGN_GAP_AUDIT.md). Across 273 paired logical steps and eight actual stores, conventional caching already avoided suffix replay on every successful checked step. Scope isolation and ordinary read optimizations benefit both modes. The next hypothesis is checked in-place revision of interrupted recovery while retaining justified staged work, **after strengthening the conventional partial-state replanner first**. No new useful advantage or rating increase is established; this is an untimed design audit, not another performance campaign.
 
 ## Current status

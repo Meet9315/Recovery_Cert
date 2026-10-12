@@ -167,6 +167,6 @@ class WorkerAuthority:
             with self._transaction() as db:
                 self._fence(db, fence)
                 latest = db.execute("SELECT * FROM plans WHERE id=?", (plan_id,)).fetchone()
-                if latest and latest["status"] != "CANCELED" and latest["cursor"] > cursor:
+                if latest and latest["status"] not in {"CANCELED", "SUPERSEDED"} and latest["cursor"] > cursor:
                     return {"status": "ALREADY_APPLIED", "cursor": latest["cursor"]}
             raise

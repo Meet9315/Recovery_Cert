@@ -40,7 +40,8 @@ def replay(state: State, actions: tuple[Action, ...], require_target: bool = Tru
         if action.slot not in records:
             raise Rejected("Unknown slot")
         record = records[action.slot]
-        if record["domain"] in state.offline or record["incarnation"] != action.incarnation:
+        if ((record["domain"] in state.offline and action.kind != "abandon")
+                or record["incarnation"] != action.incarnation):
             raise Rejected("Offline or stale allocation")
         if action.kind == "reserve":
             if (record["status"] != "FREE" or action.stripe not in policies or type(action.row) is not int
@@ -57,6 +58,13 @@ def replay(state: State, actions: tuple[Action, ...], require_target: bool = Tru
         else:
             if (record["stripe"], record["row"]) != (action.stripe, action.row):
                 raise Rejected("Wrong fragment identity")
+            if action.kind == "abandon":
+                if not (record["status"] in {"RESERVED", "STAGED"}
+                        or record["status"] == "LIVE" and record["domain"] in state.offline):
+                    raise Rejected("Only pending or offline-live allocations may be abandoned")
+                record["status"] = "RETIRED"
+                safety()
+                continue
             rules = {"stage": ("RESERVED", "STAGED"), "promote": ("STAGED", "LIVE"),
                      "retire": ("LIVE", "RETIRED"), "reclaim": ("RETIRED", "FREE")}
             if action.kind not in rules or record["status"] != rules[action.kind][0]:

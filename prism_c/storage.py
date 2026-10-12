@@ -23,6 +23,7 @@ from .profiles import DEFAULT_PROFILE
 from .selective import ContinuationCache, WholeSuffixCache
 from .scope import PlanScope
 from .worker_authority import WorkerAuthority, WorkerRetry
+from .plan_revision import PlanRevision, REVISION_SCHEMA
 
 
 SCHEMA = """
@@ -50,7 +51,7 @@ CREATE TABLE IF NOT EXISTS worker_intents(token TEXT PRIMARY KEY, plan TEXT NOT 
 """
 
 
-class Authority(WorkerAuthority):
+class Authority(PlanRevision, WorkerAuthority):
     def __init__(self, root: str | Path, validation_mode: str = "conventional_cached"):
         self.root = Path(root).resolve()
         self.db_path = self.root / "metadata.sqlite3"
@@ -63,6 +64,7 @@ class Authority(WorkerAuthority):
         # Additive migration for earlier stores; witness and slot schemas
         # remain unchanged. No reusable evidence is inferred from old data.
         with self._transaction() as db:
+            db.execute(REVISION_SCHEMA)
             db.execute("CREATE TABLE IF NOT EXISTS validation_cache(plan TEXT PRIMARY KEY,value TEXT NOT NULL)")
             db.execute("CREATE TABLE IF NOT EXISTS plan_scopes(plan TEXT PRIMARY KEY,stripes TEXT NOT NULL,slots TEXT NOT NULL)")
             db.execute("CREATE TABLE IF NOT EXISTS stripe_claims(stripe TEXT PRIMARY KEY,plan TEXT NOT NULL)")
@@ -351,6 +353,7 @@ class Authority(WorkerAuthority):
                 cache = self.cache_type.build(snapshot, witness)
             for stripe in snapshot.stripes:
                 self._valid_rows(db, stripe.name)
+            self._verify_staged(db, snapshot, {a.slot for a in witness.actions if a.kind == "abandon"})
             identifier = plan_id or uuid.uuid4().hex
             db.execute("INSERT INTO plans VALUES (?,?,0,?,?)",
                        (identifier, json.dumps(witness.to_dict()),
@@ -383,7 +386,9 @@ class Authority(WorkerAuthority):
             if record is None:
                 raise Rejected("Unknown plan")
             scope = self._scope(db, plan_id)
-            return {**dict(record), "scope": asdict(scope) if scope else "FULL_STORE"}
+            lineage = db.execute("SELECT parent,revision,request FROM plan_revisions WHERE plan=?", (plan_id,)).fetchone()
+            return {**dict(record), "scope": asdict(scope) if scope else "FULL_STORE",
+                    "lineage": dict(lineage) if lineage else {"revision": 0}}
 
     def step(self, plan_id: str, fence: int, step_id: int | None = None,
              fault: Callable[[str], None] | None = None, *, _receipt: dict | None = None) -> dict:
@@ -406,7 +411,7 @@ class Authority(WorkerAuthority):
         with self._transaction() as db:
             self._fence(db, fence)
             record = db.execute("SELECT * FROM plans WHERE id=?", (plan_id,)).fetchone()
-            if record is None or record["fence"] != fence or record["status"] == "CANCELED":
+            if record is None or record["fence"] != fence or record["status"] in {"CANCELED", "SUPERSEDED"}:
                 raise Rejected("Inactive or wrong-owner plan")
             witness = Witness.from_dict(json.loads(record["witness"]))
             cursor = record["cursor"]
@@ -486,7 +491,7 @@ class Authority(WorkerAuthority):
                 if (digest(raw) != slot["digest"] or
                         digest(raw) != json.loads(spec["row_digests"])[action.row]):
                     raise Rejected("Invalid staged receipt or corrupted bytes")
-            elif action.kind == "retire":
+            elif action.kind in {"retire", "abandon"}:
                 # Pins owned by this same continuation are discharged only by
                 # an independently checked safe retirement. No external delete API.
                 db.execute("DELETE FROM pins WHERE slot=? AND plan=?", (action.slot, plan_id))

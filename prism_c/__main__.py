@@ -19,7 +19,8 @@ from .campaign import run_campaign
 from .coding_campaign import run_coding_campaign
 from .checker import check
 from .profiles import FOUR_PLUS_TWO
-from .model import Rejected, SearchStatus, fixture, plan
+from .model import Rejected, SearchStatus, Witness, fixture, plan
+from .partial_recovery import conventional_partial_plan
 from .storage import Authority
 
 
@@ -226,17 +227,21 @@ def verify(args):
     campaign = None
     campaign_error = None
     coding_campaign = None
+    partial_campaign = None
     if result.wasSuccessful():
         try:
             campaign = run_campaign(args.traces, args.seed)
             coding_campaign = run_coding_campaign(args.seed)
+            from .partial_campaign import run_partial_campaign
+            partial_campaign = run_partial_campaign()
         except Exception as error:
             campaign_error = repr(error)
-    report = {"environment": environment(), "success": result.wasSuccessful() and campaign is not None and coding_campaign is not None,
+    report = {"environment": environment(), "success": result.wasSuccessful() and campaign is not None and coding_campaign is not None and partial_campaign is not None,
               "test_methods": result.testsRun, "subtests": result.subtests,
               "failures": len(result.failures), "errors": len(result.errors), "tests": result.records,
               "campaign": campaign, "campaign_error": campaign_error,
               "coding_campaign": coding_campaign,
+              "partial_campaign": partial_campaign,
               "total_seconds": time.perf_counter() - started,
               "limitations": ["Finite-model correctness is not an unbounded proof",
                                "Process exits are not power-loss tests",
@@ -263,6 +268,28 @@ def operate(args):
             raise ValueError("Specify --fence or --takeover")
         if args.command == "resume":
             authority.execute(args.plan, fence)
+        elif args.command == "replan":
+            snapshot = authority.revision_snapshot(args.plan, args.destinations, fence)
+            result = conventional_partial_plan(snapshot, args.max_states)
+            value = {"parent": args.plan, "destinations": args.destinations, "fence": fence,
+                     "expected_digest": Witness.from_dict(json.loads(authority.plan_info(args.plan)["witness"])).digest(),
+                     "status": result.status.value, "reason": result.reason,
+                     "explored": result.explored,
+                     "witness": result.witness.to_dict() if result.witness else None}
+            write_report(args.report, value)
+            print(json.dumps({"report": str(Path(args.report).resolve()), **value}, indent=2))
+            return 0 if result.status == SearchStatus.FOUND else 2
+        elif args.command == "revise":
+            proposal = json.loads(Path(args.proposal).read_text(encoding="utf-8"))
+            if proposal["parent"] != args.plan or proposal["status"] != "FOUND":
+                raise Rejected("Proposal needs a found continuation for this parent")
+            successor = authority.revise(args.plan, Witness.from_dict(proposal["witness"]),
+                                         proposal["destinations"], fence, args.request_id,
+                                         proposal["expected_digest"])
+            value = {"successor": successor, "plan": authority.plan_info(successor), "fence": fence,
+                     "ledger": authority.ledger(), "audit": authority.audit()}
+            print(json.dumps(value, indent=2, sort_keys=True))
+            return 0
         else:
             authority.cancel(args.plan, fence)
         value = {"plan": authority.plan_info(args.plan), "fence": fence,
@@ -291,6 +318,29 @@ def main():
     larger.add_argument("--report", default="evidence/results/four-plus-two-demo.json")
     larger.add_argument("--validation-mode", default="conventional_cached",
                         choices=("conventional_cached", "selective", "full", "shadow"))
+    revision = commands.add_parser("revision-demo", help="Preserve authenticated staging after destination failure")
+    revision.add_argument("--root", required=True, help="New/empty directory for persistent state")
+    revision.add_argument("--report", default="evidence/results/revision-demo.json")
+    revision.add_argument("--profile", choices=("2+1", "4+2"), default="2+1")
+    revision.add_argument("--storage-workers", action="store_true")
+    revision.add_argument("--validation-mode", default="conventional_cached",
+                          choices=("conventional_cached", "selective", "full", "shadow"))
+    for name in ("replan", "revise"):
+        revision_op = commands.add_parser(name, help="Generate a partial-state proposal" if name == "replan" else
+                                          "Install an exact, retryable successor proposal")
+        revision_op.add_argument("--root", required=True)
+        revision_op.add_argument("--plan", required=True)
+        revision_op.add_argument("--fence", type=int)
+        revision_op.add_argument("--takeover", action="store_true")
+        revision_op.add_argument("--validation-mode", default="conventional_cached",
+                                 choices=("conventional_cached", "selective", "full", "shadow"))
+        if name == "replan":
+            revision_op.add_argument("--destinations", nargs="+", required=True)
+            revision_op.add_argument("--max-states", type=int, default=20000)
+            revision_op.add_argument("--report", required=True)
+        else:
+            revision_op.add_argument("--proposal", required=True)
+            revision_op.add_argument("--request-id", required=True)
     validation = commands.add_parser("verify", help="Run unit/integration/crash tests and seeded model traces")
     validation.add_argument("--report", default="evidence/results/verification.json")
     validation.add_argument("--traces", type=int, default=10_000)
@@ -400,6 +450,14 @@ def main():
         progress(report, json.dumps({"report": str(Path(args.report).resolve()), "status": report["status"]}))
         checkpoint(report)
         return 0 if report["status"] == "completed" else 1
+    if args.command == "revision-demo":
+        from .revision_demo import revision_demo
+        report = revision_demo(args.root, args.profile, args.storage_workers, args.validation_mode)
+        write_report(args.report, {"environment": environment(), **report})
+        print(json.dumps({"report": str(Path(args.report).resolve()), "audit": report["audit"],
+                          "retained_staged_slot": report["retained_staged_slot"],
+                          "readback_matches": report["readback_matches"]}, indent=2))
+        return 0
     return operate(args)
 
 

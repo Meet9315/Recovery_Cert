@@ -151,7 +151,7 @@ def transition(state: State, action: Action) -> State:
     """Planner transition function; checker.py supplies a separate replay."""
     validate_state(state)
     slot = next((s for s in state.slots if s.key == action.slot), None)
-    if slot is None or slot.domain in state.offline:
+    if slot is None or (slot.domain in state.offline and action.kind != "abandon"):
         raise Rejected("Missing or offline slot")
     if slot.incarnation != action.incarnation:
         raise Rejected("Stale slot incarnation")
@@ -175,6 +175,11 @@ def transition(state: State, action: Action) -> State:
         elif action.kind == "promote" and slot.status == "STAGED":
             updated = replace(slot, status="LIVE")
         elif action.kind == "retire" and slot.status == "LIVE":
+            updated = replace(slot, status="RETIRED")
+        elif action.kind == "abandon" and (slot.status in {"RESERVED", "STAGED"}
+                or slot.status == "LIVE" and slot.domain in state.offline):
+            # Logical retirement only. Physical bytes remain charged even if
+            # the pool is unavailable. Runtime must first revoke old grants.
             updated = replace(slot, status="RETIRED")
         elif action.kind == "reclaim" and slot.status == "RETIRED":
             updated = replace(slot, status="FREE", stripe="", row=-1)
