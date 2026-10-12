@@ -1,0 +1,96 @@
+# RCSD-PRISM-C implementation progress
+
+Updated: 12 October 2026
+
+## Current status
+
+Milestones 1–4 are implemented and verified within the stated local scope: a runnable prototype, component continuation caching, a conventional guarded-cache reference, compatible active plans and opt-in durable storage-worker processes. The latest suite passed **85 test methods**, including 15 new worker tests. Stage/reclaim workers perform I/O outside the authority writer transaction and return checked durable receipts. I03 is PASS for the tested local process scope; remote daemons and independent hardware remain pending. Component caching was slower than the capable conventional cache on the measured workloads; conventional caching remains the default and worker mode is opt-in. This file is the persistent progress record; PASS refers only to the stated implementation scope, not completion of the 16-week research plan. The earlier 53/100 assessment and conditional 73/100 target are unchanged.
+
+## Scope of this implementation
+
+Build a bounded reference model and a local durable storage prototype first. Initial coding profile: 2 data fragments plus XOR parity (2-of-3), immutable content, trusted local workers, one SQLite authority and fixed-size managed storage slots. Placement domains are simulated labels. Production distributed consensus, independent device/rack fault guarantees and the 4+2 profile remain outside this first implementation.
+
+## Milestones
+
+| ID | Work | Status | Evidence |
+|---|---|---|---|
+| S01 | State machine, capacity ledger and assumptions | PASS for local scope | [Specification](spec/implementation_scope.md) |
+| M01 | Finite planner and competent baseline | PASS for repair-only grammar | [Model](prism_c/model.py), [baseline](prism_c/baseline.py), 49 eligibility-pair tests |
+| C01 | Independent continuation checker | PASS for supported model | [Checker](prism_c/checker.py), malformed/snapshot/terminal rejection tests |
+| I01 | Durable storage authority, receipts and reclamation | PASS for local scope | [Storage](prism_c/storage.py), real content readback and reclaim trace |
+| I02 | Fenced takeover, retries and process interruption | PASS for tested process faults | 15 subprocess interruption cases; concurrency/takeover tests |
+| E01 | Reproducible demonstration/evidence runner | PASS for correctness milestone | [Verification](evidence/results/verification.json), [demo](evidence/results/demo.json) |
+| C02 | Selective dependency reuse | PASS for tested correctness scope | [Specification](spec/selective_validation.md), 52 tests and 46,282 full-reference comparisons |
+| I03 | Multiple concurrent plans and independent storage workers | PASS for tested local process scope | [Milestone 4](evidence/results/MILESTONE_04.md): scoped claims, separate repair workers, durable fences/revocations and receipts; remote/hardware extension pending |
+| E02 | Comparative performance and larger coding profile | PARTIAL; overall target not met | [Logical comparison](evidence/results/MILESTONE_02.md); no competent-baseline gain or 4+2 result |
+| R01 | Final claim chart and inventive-step review | UNKNOWN | Preliminary sources only |
+| P01 | Contributions, public disclosures and priority | UNKNOWN | User records not available |
+| A01 | Fresh patentability assessment | PENDING | No new score earned |
+
+## Session log
+
+- Inspected existing documents and Python 3.11 runtime. No implementation package or repository instructions were found in the workspace.
+- Selected a dependency-free Python prototype so the model and tests can run locally without package installation.
+- Confirmed SQLite write transaction and synchronization semantics using official documentation. Single-authority serialization will be stated explicitly.
+- Implemented immutable slot state and bounded BFS planning. Budget exhaustion returns UNKNOWN; INFEASIBLE is limited to the finite repair-only grammar.
+- Implemented independent witness replay and a conventional matching scheduler. The capable baseline solves both the constrained-placement and reclamation fixtures; these examples do not establish an inventive advantage.
+- Implemented fixed 2-of-3 encoding/reconstruction, preallocated byte pools, source validation, stage fsync, promotion verification and fsync-before-reclaim-release.
+- Implemented destination holds, source pins, coarse group exclusivity, durable plan cursor, fenced takeover, duplicate-step replay, cancellation and exact-incarnation cleanup.
+- Added demonstration, verification, status, resume and cancel CLI commands.
+- First test run: 29 tests passed. Added a transaction-versus-takeover race test and improved evidence reporting; final run: **30 test methods passed**.
+- Actual subprocess interruptions: **15 cases** covering reservation/staging/promotion boundaries, reclamation, and committed live retirement. Restarted stores completed restoration under a new fence.
+- Seeded model campaign: **10,000 traces**, **2,479 distinct initial configurations**, **3,772 distinct visited states**, **46,282 validated transitions**, **92,564 malformed-generation checks**, **zero observed invariant violations**. Repeated traces are explicitly counted; this is not exhaustive proof of all concurrent interleavings.
+- Durable demonstration completed seven steps after exploring 23 model states. Both stripes reached the 3-row target; exact original content readback matched for A and B after reopening the store.
+- Created contribution/disclosure/priority record templates with UNKNOWN status; no human facts were invented.
+- Milestone 2 started: internally derived complete component coverage, durable cache/cursor binding, changed-component replay, absent/malformed-cache rebuild and full/shadow reference modes implemented. Old stores use an additive cache-table migration.
+- Added relevant/irrelevant mutation, phantom membership, cache binding, source-corruption and restart tests. Fixed a test database-handle cleanup issue on Windows. Updated the CPU measurement protocol to batch short sequences rather than interpret zero-resolution readings.
+- Registered a three-way logical comparison including a conventional exact-state guarded suffix cache; no baseline advantage is assumed.
+- Initial comparison showed selective caching faster than full replay at 16 stripes but slower than the conventional guarded cache. Preserved the exploratory report, implemented the conventional cache as the runtime default, and retained selective/shadow modes for investigation.
+- Confirmation protocol uses freshly materialized snapshot records and the exact deployed cache classes, with identical workloads and predeclared thresholds. At 16 stripes, selective mode saved **42.5%–43.3%** logical CPU versus full replay but used **70.1%–84.8% more CPU** than the conventional cache (mean paired effects). At two stripes it was slower even than full replay. All six configurations, raw data and intervals are retained; no favourable-only subset is used to claim success.
+- Final correctness run: **52 test methods passed**, including three additional selective-cache subprocess interruption cases (18 total subprocess cases across the suite). The same 10,000 seeded model traces yielded **46,282 selective/full suffix comparisons**, **138,846 component reuses** and **zero observed disagreements/invariant violations**.
+- A fresh shadow-mode durable demonstration restored both original objects with full-reference agreement at every step. Its report is [demo-milestone-02.json](evidence/results/demo-milestone-02.json).
+- Milestone 3: defined authority-derived whole-stripe scopes, transactional stripe/slot claims, isolated cancellation/cleanup and per-scope terminal/cache validation. Focused run: **18 concurrency test methods passed**, including all **20 order-preserving interleavings** of the two 3-step fixture and **eight process-exit cases** with another active plan. Local controller processes can independently submit work; byte I/O still serializes and independent storage agents are not implemented.
+- Milestone 3 full verification: **70 test methods passed**, **139 reported subtests**, **26 total process-exit cases**. The existing **10,000 sequential model traces** again produced 46,282 selective/full comparisons and zero observed invariant violations. These model traces are not presented as concurrent schedules. Evidence: [verification-milestone-03.json](evidence/results/verification-milestone-03.json).
+- Persistent shadow-mode concurrent demonstration: both scopes admitted together; conflicting admission and external cleanup of a claimed retired destination rejected; seven interleaved actions restored both original objects. No cache rebuilding or changed-component suffix replay was needed; shadow still checked the full reference on each step. Evidence: [concurrent-demo-milestone-03.json](evidence/results/concurrent-demo-milestone-03.json); store: `tmp/concurrent-demo-milestone-03`.
+- Updated API/CLI documentation, compatibility/fault specification and experiment interpretation. Conventional scoped claims/caching remain the capable reference. No new performance result or patentability score is claimed.
+- Milestone 4: implemented committed stage/reclaim intents, separate per-domain storage processes, durable worker fences/revocation barriers and receipt reconciliation. Repair I/O occurs outside the authority writer transaction. **15 worker test methods passed**, including cancellation/takeover races, stale/altered receipts, independent-scope progress, duplicate staging and physical/controller process interruption.
+- Milestone 4 full verification: **85 test methods passed**, **155 reported subtests**, **33 total actual process-exit cases**. The sequential 10,000-trace campaign again produced 46,282 selective/full suffix comparisons and zero observed invariant violations. Source hashes match the final code and tests. Evidence: [verification-milestone-04.json](evidence/results/verification-milestone-04.json).
+- Persistent shadow-mode worker demonstration: seven interleaved actions, three durable receipts from separate processes (one reclaim, two stages), both original objects recovered and both tested conflicts rejected. Evidence: [worker-demo-milestone-04.json](evidence/results/worker-demo-milestone-04.json); preserved store: `tmp/worker-demo-milestone-04`.
+- Added the worker lock/ownership specification, CI verification on Ubuntu/Windows and version-control exclusions for runtime databases, worker secrets, byte pools and temporary extraction. Source, patent review/disclosure documents, specifications and saved evidence reports are included. Publication is authorized to the user's **private** repository `https://github.com/Meet9315/Recovery_Cert.git`; push status is recorded below. No new performance result or patentability score is claimed.
+
+## Next actions
+
+1. Specify and implement the larger 4+2 coding profile and an independent reconstruction oracle, then generalize the currently fixed row/safety/target predicates. This is the next engineering task.
+2. Keep conventional caching as default and preserve selective/shadow modes for further investigation; do not treat savings over uncached replay as meeting the competent-baseline target.
+3. Extend local worker processes to authenticated remote daemons and test actual device/host fault boundaries separately.
+4. Run controller-level registered experiments, including persistence and physical checks; the logical benchmark does not pass G6.
+5. Complete the claim chart and professional priority/inventorship review when the necessary human records are available.
+
+## Reproduce
+
+```powershell
+python -m prism_c verify --report evidence/results/verification.json --traces 10000 --seed 20261011
+python -m prism_c demo --root tmp/prototype-demo-new --report evidence/results/demo-new.json
+python -m prism_c status --root tmp/prototype-demo-final --plan demo-plan
+python -m prism_c verify --report evidence/results/verification-milestone-02.json --traces 10000 --seed 20261011
+python -m prism_c benchmark --report evidence/results/selective-benchmark.json --runs 10 --seed 20261011
+python -m prism_c verify --report evidence/results/verification-milestone-03-new.json --traces 10000 --seed 20261011
+python -m prism_c concurrent-demo --root tmp/concurrent-demo-new --report evidence/results/concurrent-demo-new.json --validation-mode shadow
+python -m prism_c status --root tmp/concurrent-demo-milestone-03 --plan A
+python -m prism_c verify --report evidence/results/verification-milestone-04-new.json --traces 10000 --seed 20261011
+python -m prism_c concurrent-demo --root tmp/worker-demo-new --report evidence/results/worker-demo-new.json --validation-mode shadow --storage-workers
+```
+
+Use a new/empty demo root; existing stores are never silently reset. The verified initial demonstration is in `tmp/prototype-demo-final`; the concurrent demonstration is in `tmp/concurrent-demo-milestone-03`; the worker demonstration is in `tmp/worker-demo-milestone-04`. Read [README.md](README.md) for ownership-aware resume/cancel commands. These local runtime stores are ignored by Git; the saved evidence JSON reports are tracked.
+
+## Research gate assessment
+
+G0 priority/disclosure: UNKNOWN. G1 novelty/inventive interaction: unresolved. G2 useful advantage over the strong baseline: not demonstrated. G3/G4/G5 have supporting correctness evidence only within this reduced local embodiment. The limited logical G6 comparison does not meet the competent-baseline target; controller-level evaluation and G7 patent readiness remain pending. Advancing engineering work was authorized by the user; the earlier proposal's research gates have not been relabelled as patentability passes.
+
+## Open limitations
+
+Novelty and inventive step are unresolved. Single trusted local authority; simulated failure-domain labels; 2-of-3 XOR profile; serialized metadata/source checks and global takeover; opt-in local per-domain stage/reclaim processes only; disjoint whole-stripe/slot claims; exact terminal-state commitment; complete membership scanning; no authenticated network daemons or independent physical devices. Source-byte checking remains on every step, and worker preparation adds full suffix replay. Process-exit evidence does not establish host power-loss or device-failure durability. No controller-level performance benefit, production deployment or completed legal review is claimed.
+
+## Repository publication
+
+User-authorized destination: [Meet9315/Recovery_Cert](https://github.com/Meet9315/Recovery_Cert), private repository, `main` branch. Remote inspection found no existing commits. Initial Git publication is being completed after the passing milestone-4 verification. Runtime stores/secrets are ignored; reproducible source, tests, specifications, disclosure/review documents and saved evidence are included. Local publication status will be updated after the remote commit is verified.

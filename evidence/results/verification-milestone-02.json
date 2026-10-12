@@ -1,0 +1,314 @@
+{
+  "campaign": {
+    "feasible_traces": 6351,
+    "infeasible_traces": 3649,
+    "invariant_violations": 0,
+    "malformed_generation_checks": 92564,
+    "scope": "Two stripes; fixed 2-of-3 rows; three destination domains; capacity one per destination; offline flags, retired slots and eligibility vary. Traces may repeat. Matching-only feasibility oracle; no process or power faults in this model campaign.",
+    "seed": 20261011,
+    "selective_component_reuses": 138846,
+    "selective_suffix_reference_comparisons": 46282,
+    "traces": 10000,
+    "unique_initial_configurations": 2479,
+    "unique_states_visited": 3772,
+    "validated_actions": 46282
+  },
+  "campaign_error": null,
+  "environment": {
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python": "3.11.4 (tags/v3.11.4:d2340ef, Jun  7 2023, 05:45:37) [MSC v.1934 64 bit (AMD64)]",
+    "source_sha256": {
+      "prism_c/__init__.py": "5310acec652af6a86ebf1e86fe1547d37c6fbfa7cad6ab1afc446397761c8715",
+      "prism_c/__main__.py": "54be724128a2244bfd63ada27265f0d6ae87790e4d1ef8558a0244854fc68777",
+      "prism_c/baseline.py": "7bd775a409ec1466abecc0cfe417657495638069d26324b8a545bdcb634aa590",
+      "prism_c/benchmark.py": "60979ea19ad1c3b21d61e0a078a871bd52d7616a8cd46a45a2cfe4ff9f5f7148",
+      "prism_c/campaign.py": "b226a09b8930d8fde711512e03e13a98046cc964efc6eee6fe21e15a37b5a353",
+      "prism_c/checker.py": "4baf97354caaeff575a2a215f7755e89d7f336e3f8c108e952908a1efb0a2cfb",
+      "prism_c/coding.py": "fb823722e39ac96bd7dfcee9dceb3aa523429e788813838b258791215ef72c1f",
+      "prism_c/fault_worker.py": "67df4ff6d586c59568ae5fa8adc2f628fe650e658bcc2ff6ff9686fe7671efca",
+      "prism_c/model.py": "5c91b999c9a60043535c054982c45c269fd8d4b4904288dabbbb95d241cfea36",
+      "prism_c/selective.py": "1953a254a09affe225be01b6f71883f432d7c6bed66a1900934ee4831d009a2d",
+      "prism_c/storage.py": "daaaba76ce9fecd0d961e849d9650e0e652ee46416de33effa7d6a820778abf6",
+      "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tests/test_model.py": "cdd4d9832c160cf02f36a5b7db4f9c1f0e6a42012f8aa1fdb190c50bf5d427ea",
+      "tests/test_selective.py": "253c4bb72bbdcfd4093c3e624bf09171dfb325fa3a43af49c6cb86dc240d983e",
+      "tests/test_storage.py": "cb61782f540e462e348ca3bfaec6b3c4729fdc77a50829beac9c30f47d5f17da"
+    },
+    "sqlite": "3.42.0",
+    "utc": "2026-10-11T09:33:39.460438+00:00",
+    "version": "0.1.0"
+  },
+  "errors": 0,
+  "failures": 0,
+  "limitations": [
+    "Finite-model correctness is not an unbounded proof",
+    "Process exits are not power-loss tests",
+    "No comparative performance or novelty result is established"
+  ],
+  "subtests": 95,
+  "success": true,
+  "test_methods": 52,
+  "tests": [
+    {
+      "seconds": 0.0010765999904833734,
+      "status": "PASS",
+      "test": "tests.test_model.ModelTests.test_budgets_never_claim_infeasibility"
+    },
+    {
+      "seconds": 0.00023189999046735466,
+      "status": "PASS",
+      "test": "tests.test_model.ModelTests.test_codec_all_two_row_combinations_and_odd_lengths"
+    },
+    {
+      "seconds": 0.0001449999981559813,
+      "status": "PASS",
+      "test": "tests.test_model.ModelTests.test_double_spending_and_future_free_space"
+    },
+    {
+      "seconds": 9.620000491850078e-05,
+      "status": "PASS",
+      "test": "tests.test_model.ModelTests.test_generation_and_row_identity_checked"
+    },
+    {
+      "seconds": 0.000768599973525852,
+      "status": "PASS",
+      "test": "tests.test_model.ModelTests.test_incomplete_terminal_rejected"
+    },
+    {
+      "seconds": 0.23762279999209568,
+      "status": "PASS",
+      "test": "tests.test_model.ModelTests.test_independent_matching_oracle_all_small_eligibility_pairs"
+    },
+    {
+      "seconds": 0.0005584000027738512,
+      "status": "PASS",
+      "test": "tests.test_model.ModelTests.test_infeasible_is_relative_to_complete_grammar"
+    },
+    {
+      "seconds": 7.639999967068434e-05,
+      "status": "PASS",
+      "test": "tests.test_model.ModelTests.test_live_retirement_below_floor_is_rejected"
+    },
+    {
+      "seconds": 0.0005197999998927116,
+      "status": "PASS",
+      "test": "tests.test_model.ModelTests.test_matching_baseline_avoids_greedy_dead_end"
+    },
+    {
+      "seconds": 0.0020764000073540956,
+      "status": "PASS",
+      "test": "tests.test_model.ModelTests.test_reclamation_is_an_explicit_predecessor"
+    },
+    {
+      "seconds": 0.0007681000279262662,
+      "status": "PASS",
+      "test": "tests.test_model.ModelTests.test_snapshot_and_version_conflict"
+    },
+    {
+      "seconds": 0.0005738000036217272,
+      "status": "PASS",
+      "test": "tests.test_model.ModelTests.test_tampered_serialized_digest"
+    },
+    {
+      "seconds": 0.005469800002174452,
+      "status": "PASS",
+      "test": "tests.test_selective.SelectiveModelTests.test_benchmark_modes_preserve_identical_target"
+    },
+    {
+      "seconds": 0.001998000021558255,
+      "status": "PASS",
+      "test": "tests.test_selective.SelectiveModelTests.test_cache_bound_to_witness_cursor_incarnation_version"
+    },
+    {
+      "seconds": 0.00119270000141114,
+      "status": "PASS",
+      "test": "tests.test_selective.SelectiveModelTests.test_changed_stripe_rechecked_while_other_stripe_reused"
+    },
+    {
+      "seconds": 0.0019801000016741455,
+      "status": "PASS",
+      "test": "tests.test_selective.SelectiveModelTests.test_coverage_cannot_be_omitted_from_cache"
+    },
+    {
+      "seconds": 0.0012012000079266727,
+      "status": "PASS",
+      "test": "tests.test_selective.SelectiveModelTests.test_duplicate_slot_and_unknown_stripe_fail_closed"
+    },
+    {
+      "seconds": 0.0027283999952487648,
+      "status": "PASS",
+      "test": "tests.test_selective.SelectiveModelTests.test_each_step_matches_complete_suffix"
+    },
+    {
+      "seconds": 0.001163899985840544,
+      "status": "PASS",
+      "test": "tests.test_selective.SelectiveModelTests.test_out_of_order_cache_advancement_rejected"
+    },
+    {
+      "seconds": 0.0011397000052966177,
+      "status": "PASS",
+      "test": "tests.test_selective.SelectiveModelTests.test_phantom_reservation_membership_rebuild"
+    },
+    {
+      "seconds": 0.011868800007505342,
+      "status": "PASS",
+      "test": "tests.test_selective.SelectiveModelTests.test_related_mutations_match_reference_rejection"
+    },
+    {
+      "seconds": 0.00013609998859465122,
+      "status": "PASS",
+      "test": "tests.test_selective.SelectiveModelTests.test_shared_action_slot_merges_dependency_groups"
+    },
+    {
+      "seconds": 0.0015696000191383064,
+      "status": "PASS",
+      "test": "tests.test_selective.SelectiveModelTests.test_untouched_slot_is_covered"
+    },
+    {
+      "seconds": 0.001308499980950728,
+      "status": "PASS",
+      "test": "tests.test_selective.SelectiveModelTests.test_warm_cache_reuses_all_components"
+    },
+    {
+      "seconds": 0.28554939999594353,
+      "status": "PASS",
+      "test": "tests.test_selective.SelectiveStorageTests.test_cache_persists_across_new_connection_and_takeover"
+    },
+    {
+      "seconds": 0.18449880002299324,
+      "status": "PASS",
+      "test": "tests.test_selective.SelectiveStorageTests.test_conventional_cache_rejects_relevant_change"
+    },
+    {
+      "seconds": 0.1532770000048913,
+      "status": "PASS",
+      "test": "tests.test_selective.SelectiveStorageTests.test_current_source_bytes_still_checked_with_warm_cache"
+    },
+    {
+      "seconds": 0.24291069997707382,
+      "status": "PASS",
+      "test": "tests.test_selective.SelectiveStorageTests.test_full_mode_remains_available"
+    },
+    {
+      "seconds": 0.23472740000579506,
+      "status": "PASS",
+      "test": "tests.test_selective.SelectiveStorageTests.test_missing_or_bad_cache_rebuilds_from_reference"
+    },
+    {
+      "seconds": 0.3493661000102293,
+      "status": "PASS",
+      "test": "tests.test_selective.SelectiveStorageTests.test_modes_can_switch_with_checked_cache_rebuild"
+    },
+    {
+      "seconds": 0.19883979999576695,
+      "status": "PASS",
+      "test": "tests.test_selective.SelectiveStorageTests.test_relevant_failure_blocks_cached_plan"
+    },
+    {
+      "seconds": 2.036840699991444,
+      "status": "PASS",
+      "test": "tests.test_selective.SelectiveStorageTests.test_selective_cache_and_cursor_commit_atomically_on_process_exit"
+    },
+    {
+      "seconds": 0.32640719998744316,
+      "status": "PASS",
+      "test": "tests.test_selective.SelectiveStorageTests.test_shadow_mode_matches_reference_in_durable_execution"
+    },
+    {
+      "seconds": 0.2083277000056114,
+      "status": "PASS",
+      "test": "tests.test_selective.SelectiveStorageTests.test_unrelated_annotation_reuses_certificates"
+    },
+    {
+      "seconds": 5.61109230000875,
+      "status": "PASS",
+      "test": "tests.test_storage.ProcessCrashTests.test_actual_process_exit_at_every_step_boundary"
+    },
+    {
+      "seconds": 0.6162567999854218,
+      "status": "PASS",
+      "test": "tests.test_storage.ProcessCrashTests.test_checked_live_retirement_restart_then_repair"
+    },
+    {
+      "seconds": 2.2649334000016097,
+      "status": "PASS",
+      "test": "tests.test_storage.ProcessCrashTests.test_reclaim_crash_retains_charge_until_committed_ack"
+    },
+    {
+      "seconds": 0.2837526999937836,
+      "status": "PASS",
+      "test": "tests.test_storage.StorageTests.test_already_protected_empty_plan_releases_group"
+    },
+    {
+      "seconds": 0.14518550000502728,
+      "status": "PASS",
+      "test": "tests.test_storage.StorageTests.test_bootstrap_is_sealed_after_first_plan"
+    },
+    {
+      "seconds": 0.24125829999684356,
+      "status": "PASS",
+      "test": "tests.test_storage.StorageTests.test_cancel_charges_partial_staging_until_cleanup"
+    },
+    {
+      "seconds": 0.19826090001151897,
+      "status": "PASS",
+      "test": "tests.test_storage.StorageTests.test_concurrent_connections_cannot_apply_same_step_twice"
+    },
+    {
+      "seconds": 0.12277480002376251,
+      "status": "PASS",
+      "test": "tests.test_storage.StorageTests.test_corrupt_live_source_prevents_admission"
+    },
+    {
+      "seconds": 0.1840012000175193,
+      "status": "PASS",
+      "test": "tests.test_storage.StorageTests.test_corrupt_staged_fragment_cannot_promote"
+    },
+    {
+      "seconds": 0.17081539999344386,
+      "status": "PASS",
+      "test": "tests.test_storage.StorageTests.test_domain_failure_invalidates_remaining_continuation"
+    },
+    {
+      "seconds": 0.3079753000056371,
+      "status": "PASS",
+      "test": "tests.test_storage.StorageTests.test_duplicate_and_out_of_order_steps"
+    },
+    {
+      "seconds": 0.14759170002071187,
+      "status": "PASS",
+      "test": "tests.test_storage.StorageTests.test_holds_charge_available_capacity_before_steps"
+    },
+    {
+      "seconds": 0.1625326000212226,
+      "status": "PASS",
+      "test": "tests.test_storage.StorageTests.test_mutual_exclusion_blocks_competing_admission"
+    },
+    {
+      "seconds": 0.26406210000277497,
+      "status": "PASS",
+      "test": "tests.test_storage.StorageTests.test_repair_real_bytes_and_read_after_restart"
+    },
+    {
+      "seconds": 0.32347909998497926,
+      "status": "PASS",
+      "test": "tests.test_storage.StorageTests.test_stale_cleanup_cannot_erase_reallocated_slot"
+    },
+    {
+      "seconds": 0.12409999998635612,
+      "status": "PASS",
+      "test": "tests.test_storage.StorageTests.test_stale_snapshot_admission_rejected"
+    },
+    {
+      "seconds": 0.2788235000043642,
+      "status": "PASS",
+      "test": "tests.test_storage.StorageTests.test_takeover_fences_old_writes"
+    },
+    {
+      "seconds": 0.2802846000122372,
+      "status": "PASS",
+      "test": "tests.test_storage.StorageTests.test_takeover_serializes_with_stage_io"
+    }
+  ],
+  "total_seconds": 47.375874299992574
+}

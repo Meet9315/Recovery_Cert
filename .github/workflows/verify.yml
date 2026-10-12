@@ -1,0 +1,22 @@
+name: Verify research prototype
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  correctness:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run correctness and process-fault verification
+        run: python -m prism_c verify --report artifacts/verification-ci.json --traces 1000 --seed 20261011
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: verification-${{ matrix.os }}
+          path: artifacts/verification-ci.json

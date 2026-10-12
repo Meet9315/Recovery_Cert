@@ -1,0 +1,3351 @@
+{
+  "configurations": [
+    {
+      "annotations": false,
+      "batch_repetitions": 128,
+      "calibration": {
+        "annotations": 0,
+        "batch_repetitions": 128,
+        "batch_total_cpu_ns": 62500000,
+        "batch_wall_ns": 62004200,
+        "mode": "conventional_cached",
+        "preparation_cpu_ns": 244140.625,
+        "replayed_suffix_actions": 0,
+        "reused_components": 0,
+        "step_cpu_ns": 244140.625,
+        "steps": 7,
+        "total_cpu_ns": 488281.25
+      },
+      "median_total_cpu_ns": {
+        "conventional_cached": 488281.25,
+        "full": 1342773.4375,
+        "selective": 1953125.0
+      },
+      "runs": [
+        {
+          "modes": {
+            "conventional_cached": {
+              "annotations": 0,
+              "batch_repetitions": 128,
+              "batch_total_cpu_ns": 62500000,
+              "batch_wall_ns": 62418800,
+              "mode": "conventional_cached",
+              "preparation_cpu_ns": 244140.625,
+              "replayed_suffix_actions": 0,
+              "reused_components": 0,
+              "step_cpu_ns": 244140.625,
+              "steps": 7,
+              "total_cpu_ns": 488281.25
+            },
+            "full": {
+              "annotations": 0,
+              "batch_repetitions": 128,
+              "batch_total_cpu_ns": 171875000,
+              "batch_wall_ns": 169763700,
+              "mode": "full",
+              "preparation_cpu_ns": 122070.3125,
+              "replayed_suffix_actions": 28,
+              "reused_components": 0,
+              "step_cpu_ns": 1220703.125,
+              "steps": 7,
+              "total_cpu_ns": 1342773.4375
+            },
+            "selective": {
+              "annotations": 0,
+              "batch_repetitions": 128,
+              "batch_total_cpu_ns": 250000000,
+              "batch_wall_ns": 249061500,
+              "mode": "selective",
+              "preparation_cpu_ns": 244140.625,
+              "replayed_suffix_actions": 0,
+              "reused_components": 14,
+              "step_cpu_ns": 1586914.0625,
+              "steps": 7,
+              "total_cpu_ns": 1953125.0
+            }
+          },
+          "order": [
+            "full",
+            "conventional_cached",
+            "selective"
+          ],
+          "run": 0
+        },
+        {
+          "modes": {
+            "conventional_cached": {
+              "annotations": 0,
+              "batch_repetitions": 128,
+              "batch_total_cpu_ns": 62500000,
+              "batch_wall_ns": 63329500,
+              "mode": "conventional_cached",
+              "preparation_cpu_ns": 244140.625,
+              "replayed_suffix_actions": 0,
+              "reused_components": 0,
+              "step_cpu_ns": 244140.625,
+              "steps": 7,
+              "total_cpu_ns": 488281.25
+            },
+            "full": {
+              "annotations": 0,
+              "batch_repetitions": 128,
+              "batch_total_cpu_ns": 171875000,
+              "batch_wall_ns": 170635800,
+              "mode": "full",
+              "preparation_cpu_ns": 244140.625,
+              "replayed_suffix_actions": 28,
+              "reused_components": 0,
+              "step_cpu_ns": 976562.5,
+              "steps": 7,
+              "total_cpu_ns": 1342773.4375
+            },
+            "selective": {
+              "annotations": 0,
+              "batch_repetitions": 128,
+              "batch_total_cpu_ns": 250000000,
+              "batch_wall_ns": 249939100,
+              "mode": "selective",
+              "preparation_cpu_ns": 366210.9375,
+              "replayed_suffix_actions": 0,
+              "reused_components": 14,
+              "step_cpu_ns": 1586914.0625,
+              "steps": 7,
+              "total_cpu_ns": 1953125.0
+            }
+          },
+          "order": [
+            "full",
+            "conventional_cached",
+            "selective"
+          ],
+          "run": 1
+        },
+        {
+          "modes": {
+            "conventional_cached": {
+              "annotations": 0,
+              "batch_repetitions": 128,
+              "batch_total_cpu_ns": 62500000,
+              "batch_wall_ns": 62005200,
+              "mode": "conventional_cached",
+              "preparation_cpu_ns": 366210.9375,
+              "replayed_suffix_actions": 0,
+              "reused_components": 0,
+              "step_cpu_ns": 122070.3125,
+              "steps": 7,
+              "total_cpu_ns": 488281.25
+            },
+            "full": {
+              "annotations": 0,
+              "batch_repetitions": 128,
+              "batch_total_cpu_ns": 171875000,
+              "batch_wall_ns": 173092100,
+              "mode": "full",
+              "preparation_cpu_ns": 122070.3125,
+              "replayed_suffix_actions": 28,
+              "reused_components": 0,
+              "step_cpu_ns": 976562.5,
+              "steps": 7,
+              "total_cpu_ns": 1342773.4375
+            },
+            "selective": {
+              "annotations": 0,
+              "batch_repetitions": 128,
+              "batch_total_cpu_ns": 250000000,
+              "batch_wall_ns": 265030200,
+              "mode": "selective",
+              "preparation_cpu_ns": 488281.25,
+              "replayed_suffix_actions": 0,
+              "reused_components": 14,
+              "step_cpu_ns": 1342773.4375,
+              "steps": 7,
+              "total_cpu_ns": 1953125.0
+            }
+          },
+          "order": [
+            "conventional_cached",
+            "full",
+            "selective"
+          ],
+          "run": 2
+        },
+        {
+          "modes": {
+            "conventional_cached": {
+              "annotations": 0,
+              "batch_repetitions": 128,
+              "batch_total_cpu_ns": 62500000,
+              "batch_wall_ns": 62414100,
+              "mode": "conventional_cached",
+              "preparation_cpu_ns": 122070.3125,
+              "replayed_suffix_actions": 0,
+              "reused_components": 0,
+              "step_cpu_ns": 122070.3125,
+              "steps": 7,
+              "total_cpu_ns": 488281.25
+            },
+            "full": {
+              "annotations": 0,
+              "batch_repetitions": 128,
+              "batch_total_cpu_ns": 171875000,
+              "batch_wall_ns": 168373900,
+              "mode": "full",
+              "preparation_cpu_ns": 122070.3125,
+              "replayed_suffix_actions": 28,
+              "reused_components": 0,
+              "step_cpu_ns": 1098632.8125,
+              "steps": 7,
+              "total_cpu_ns": 1342773.4375
+            },
+            "selective": {
+              "annotations": 0,
+              "batch_repetitions": 128,
+              "batch_total_cpu_ns": 250000000,
+              "batch_wall_ns": 252086700,
+              "mode": "selective",
+              "preparation_cpu_ns": 488281.25,
+              "replayed_suffix_actions": 0,
+              "reused_components": 14,
+              "step_cpu_ns": 1220703.125,
+              "steps": 7,
+              "total_cpu_ns": 1953125.0
+            }
+          },
+          "order": [
+            "conventional_cached",
+            "selective",
+            "full"
+          ],
+          "run": 3
+        },
+        {
+          "modes": {
+            "conventional_cached": {
+              "annotations": 0,
+              "batch_repetitions": 128,
+              "batch_total_cpu_ns": 62500000,
+              "batch_wall_ns": 64652700,
+              "mode": "conventional_cached",
+              "preparation_cpu_ns": 0.0,
+              "replayed_suffix_actions": 0,
+              "reused_components": 0,
+              "step_cpu_ns": 366210.9375,
+              "steps": 7,
+              "total_cpu_ns": 488281.25
+            },
+            "full": {
+              "annotations": 0,
+              "batch_repetitions": 128,
+              "batch_total_cpu_ns": 171875000,
+              "batch_wall_ns": 171049400,
+              "mode": "full",
+              "preparation_cpu_ns": 366210.9375,
+              "replayed_suffix_actions": 28,
+              "reused_components": 0,
+              "step_cpu_ns": 976562.5,
+              "steps": 7,
+              "total_cpu_ns": 1342773.4375
+            },
+            "selective": {
+              "annotations": 0,
+              "batch_repetitions": 128,
+              "batch_total_cpu_ns": 250000000,
+              "batch_wall_ns": 258558200,
+              "mode": "selective",
+              "preparation_cpu_ns": 366210.9375,
+              "replayed_suffix_actions": 0,
+              "reused_components": 14,
+              "step_cpu_ns": 1586914.0625,
+              "steps": 7,
+              "total_cpu_ns": 1953125.0
+            }
+          },
+          "order": [
+            "conventional_cached",
+            "full",
+            "selective"
+          ],
+          "run": 4
+        },
+        {
+          "modes": {
+            "conventional_cached": {
+              "annotations": 0,
+              "batch_repetitions": 128,
+              "batch_total_cpu_ns": 78125000,
+              "batch_wall_ns": 66443800,
+              "mode": "conventional_cached",
+              "preparation_cpu_ns": 122070.3125,
+              "replayed_suffix_actions": 0,
+              "reused_components": 0,
+              "step_cpu_ns": 366210.9375,
+              "steps": 7,
+              "total_cpu_ns": 610351.5625
+            },
+            "full": {
+              "annotations": 0,
+              "batch_repetitions": 128,
+              "batch_total_cpu_ns": 171875000,
+              "batch_wall_ns": 172043800,
+              "mode": "full",
+              "preparation_cpu_ns": 244140.625,
+              "replayed_suffix_actions": 28,
+              "reused_components": 0,
+              "step_cpu_ns": 1098632.8125,
+              "steps": 7,
+              "total_cpu_ns": 1342773.4375
+            },
+            "selective": {
+              "annotations": 0,
+              "batch_repetitions": 128,
+              "batch_total_cpu_ns": 250000000,
+              "batch_wall_ns": 248808500,
+              "mode": "selective",
+              "preparation_cpu_ns": 366210.9375,
+              "replayed_suffix_actions": 0,
+              "reused_components": 14,
+              "step_cpu_ns": 1342773.4375,
+              "steps": 7,
+              "total_cpu_ns": 1953125.0
+            }
+          },
+          "order": [
+            "selective",
+            "full",
+            "conventional_cached"
+          ],
+          "run": 5
+        },
+        {
+          "modes": {
+            "conventional_cached": {
+              "annotations": 0,
+              "batch_repetitions": 128,
+              "batch_total_cpu_ns": 62500000,
+              "batch_wall_ns": 64367900,
+              "mode": "conventional_cached",
+              "preparation_cpu_ns": 122070.3125,
+              "replayed_suffix_actions": 0,
+              "reused_components": 0,
+              "step_cpu_ns": 244140.625,
+              "steps": 7,
+              "total_cpu_ns": 488281.25
+            },
+            "full": {
+              "annotations": 0,
+              "batch_repetitions": 128,
+              "batch_total_cpu_ns": 171875000,
+              "batch_wall_ns": 183547900,
+              "mode": "full",
+              "preparation_cpu_ns": 366210.9375,
+              "replayed_suffix_actions": 28,
+              "reused_components": 0,
+              "step_cpu_ns": 854492.1875,
+              "steps": 7,
+              "total_cpu_ns": 1342773.4375
+            },
+            "selective": {
+              "annotations": 0,
+              "batch_repetitions": 128,
+              "batch_total_cpu_ns": 250000000,
+              "batch_wall_ns": 241648000,
+              "mode": "selective",
+              "preparation_cpu_ns": 244140.625,
+              "replayed_suffix_actions": 0,
+              "reused_components": 14,
+              "step_cpu_ns": 1708984.375,
+              "steps": 7,
+              "total_cpu_ns": 1953125.0
+            }
+          },
+          "order": [
+            "full",
+            "selective",
+            "conventional_cached"
+          ],
+          "run": 6
+        },
+        {
+          "modes": {
+            "conventional_cached": {
+              "annotations": 0,
+              "batch_repetitions": 128,
+              "batch_total_cpu_ns": 62500000,
+              "batch_wall_ns": 61835100,
+              "mode": "conventional_cached",
+              "preparation_cpu_ns": 366210.9375,
+              "replayed_suffix_actions": 0,
+              "reused_components": 0,
+              "step_cpu_ns": 122070.3125,
+              "steps": 7,
+              "total_cpu_ns": 488281.25
+            },
+            "full": {
+              "annotations": 0,
+              "batch_repetitions": 128,
+              "batch_total_cpu_ns": 171875000,
+              "batch_wall_ns": 174764000,
+              "mode": "full",
+              "preparation_cpu_ns": 0.0,
+              "replayed_suffix_actions": 28,
+              "reused_components": 0,
+              "step_cpu_ns": 1342773.4375,
+              "steps": 7,
+              "total_cpu_ns": 1342773.4375
+            },
+            "selective": {
+              "annotations": 0,
+              "batch_repetitions": 128,
+              "batch_total_cpu_ns": 250000000,
+              "batch_wall_ns": 250813300,
+              "mode": "selective",
+              "preparation_cpu_ns": 488281.25,
+              "replayed_suffix_actions": 0,
+              "reused_components": 14,
+              "step_cpu_ns": 1220703.125,
+              "steps": 7,
+              "total_cpu_ns": 1953125.0
+            }
+          },
+          "order": [
+            "selective",
+            "conventional_cached",
+            "full"
+          ],
+          "run": 7
+        },
+        {
+          "modes": {
+            "conventional_cached": {
+              "annotations": 0,
+              "batch_repetitions": 128,
+              "batch_total_cpu_ns": 62500000,
+              "batch_wall_ns": 64509700,
+              "mode": "conventional_cached",
+              "preparation_cpu_ns": 122070.3125,
+              "replayed_suffix_actions": 0,
+              "reused_components": 0,
+              "step_cpu_ns": 366210.9375,
+              "steps": 7,
+              "total_cpu_ns": 488281.25
+            },
+            "full": {
+              "annotations": 0,
+              "batch_repetitions": 128,
+              "batch_total_cpu_ns": 187500000,
+              "batch_wall_ns": 184277200,
+              "mode": "full",
+              "preparation_cpu_ns": 244140.625,
+              "replayed_suffix_actions": 28,
+              "reused_components": 0,
+              "step_cpu_ns": 1220703.125,
+              "steps": 7,
+              "total_cpu_ns": 1464843.75
+            },
+            "selective": {
+              "annotations": 0,
+              "batch_repetitions": 128,
+              "batch_total_cpu_ns": 250000000,
+              "batch_wall_ns": 244686900,
+              "mode": "selective",
+              "preparation_cpu_ns": 366210.9375,
+              "replayed_suffix_actions": 0,
+              "reused_components": 14,
+              "step_cpu_ns": 1464843.75,
+              "steps": 7,
+              "total_cpu_ns": 1953125.0
+            }
+          },
+          "order": [
+            "conventional_cached",
+            "full",
+            "selective"
+          ],
+          "run": 8
+        },
+        {
+          "modes": {
+            "conventional_cached": {
+              "annotations": 0,
+              "batch_repetitions": 128,
+              "batch_total_cpu_ns": 62500000,
+              "batch_wall_ns": 63203200,
+              "mode": "conventional_cached",
+              "preparation_cpu_ns": 366210.9375,
+              "replayed_suffix_actions": 0,
+              "reused_components": 0,
+              "step_cpu_ns": 122070.3125,
+              "steps": 7,
+              "total_cpu_ns": 488281.25
+            },
+            "full": {
+              "annotations": 0,
+              "batch_repetitions": 128,
+              "batch_total_cpu_ns": 171875000,
+              "batch_wall_ns": 174897200,
+              "mode": "full",
+              "preparation_cpu_ns": 122070.3125,
+              "replayed_suffix_actions": 28,
+              "reused_components": 0,
+              "step_cpu_ns": 1098632.8125,
+              "steps": 7,
+              "total_cpu_ns": 1342773.4375
+            },
+            "selective": {
+              "annotations": 0,
+              "batch_repetitions": 128,
+              "batch_total_cpu_ns": 250000000,
+              "batch_wall_ns": 248407500,
+              "mode": "selective",
+              "preparation_cpu_ns": 244140.625,
+              "replayed_suffix_actions": 0,
+              "reused_components": 14,
+              "step_cpu_ns": 1586914.0625,
+              "steps": 7,
+              "total_cpu_ns": 1953125.0
+            }
+          },
+          "order": [
+            "selective",
+            "conventional_cached",
+            "full"
+          ],
+          "run": 9
+        }
+      ],
+      "selective_vs_conventional_cached": {
+        "bootstrap_95_percent_interval": [
+          -300.0,
+          -276.0
+        ],
+        "mean_percent_cpu_reduction": -292.0,
+        "paired_percent_changes": [
+          -300.0,
+          -300.0,
+          -300.0,
+          -300.0,
+          -300.0,
+          -220.0,
+          -300.0,
+          -300.0,
+          -300.0,
+          -300.0
+        ]
+      },
+      "selective_vs_full": {
+        "bootstrap_95_percent_interval": [
+          -45.45454545454545,
+          -41.81818181818182
+        ],
+        "mean_percent_cpu_reduction": -44.24242424242424,
+        "paired_percent_changes": [
+          -45.45454545454545,
+          -45.45454545454545,
+          -45.45454545454545,
+          -45.45454545454545,
+          -45.45454545454545,
+          -45.45454545454545,
+          -45.45454545454545,
+          -45.45454545454545,
+          -33.333333333333336,
+          -45.45454545454545
+        ]
+      },
+      "stripes": 2
+    },
+    {
+      "annotations": true,
+      "batch_repetitions": 128,
+      "calibration": {
+        "annotations": 7,
+        "batch_repetitions": 128,
+        "batch_total_cpu_ns": 62500000,
+        "batch_wall_ns": 68496300,
+        "mode": "conventional_cached",
+        "preparation_cpu_ns": 244140.625,
+        "replayed_suffix_actions": 0,
+        "reused_components": 0,
+        "step_cpu_ns": 244140.625,
+        "steps": 7,
+        "total_cpu_ns": 488281.25
+      },
+      "median_total_cpu_ns": {
+        "conventional_cached": 488281.25,
+        "full": 1403808.59375,
+        "selective": 2075195.3125
+      },
+      "runs": [
+        {
+          "modes": {
+            "conventional_cached": {
+              "annotations": 7,
+              "batch_repetitions": 128,
+              "batch_total_cpu_ns": 78125000,
+              "batch_wall_ns": 71359400,
+              "mode": "conventional_cached",
+              "preparation_cpu_ns": 122070.3125,
+              "replayed_suffix_actions": 0,
+              "reused_components": 0,
+              "step_cpu_ns": 122070.3125,
+              "steps": 7,
+              "total_cpu_ns": 610351.5625
+            },
+            "full": {
+              "annotations": 7,
+              "batch_repetitions": 128,
+              "batch_total_cpu_ns": 171875000,
+              "batch_wall_ns": 175594000,
+              "mode": "full",
+              "preparation_cpu_ns": 0.0,
+              "replayed_suffix_actions": 28,
+              "reused_components": 0,
+              "step_cpu_ns": 1342773.4375,
+              "steps": 7,
+              "total_cpu_ns": 1342773.4375
+            },
+            "selective": {
+              "annotations": 7,
+              "batch_repetitions": 128,
+              "batch_total_cpu_ns": 265625000,
+              "batch_wall_ns": 257058600,
+              "mode": "selective",
+              "preparation_cpu_ns": 366210.9375,
+              "replayed_suffix_actions": 0,
+              "reused_components": 14,
+              "step_cpu_ns": 1708984.375,
+              "steps": 7,
+              "total_cpu_ns": 2075195.3125
+            }
+          },
+          "order": [
+            "selective",
+            "conventional_cached",
+            "full"
+          ],
+          "run": 0
+        },
+        {
+          "modes": {
+            "conventional_cached": {
+              "annotations": 7,
+              "batch_repetitions": 128,
+              "batch_total_cpu_ns": 62500000,
+              "batch_wall_ns": 63794100,
+              "mode": "conventional_cached",
+              "preparation_cpu_ns": 122070.3125,
+              "replayed_suffix_actions": 0,
+              "reused_components": 0,
+              "step_cpu_ns": 244140.625,
+              "steps": 7,
+              "total_cpu_ns": 488281.25
+            },
+            "full": {
+              "annotations": 7,
+              "batch_repetitions": 128,
+              "batch_total_cpu_ns": 187500000,
+              "batch_wall_ns": 185264200,
+              "mode": "full",
+              "preparation_cpu_ns": 488281.25,
+              "replayed_suffix_actions": 28,
+              "reused_components": 0,
+              "step_cpu_ns": 854492.1875,
+              "steps": 7,
+              "total_cpu_ns": 1464843.75
+            },
+            "selective": {
+              "annotations": 7,
+              "batch_repetitions": 128,
+              "batch_total_cpu_ns": 265625000,
+              "batch_wall_ns": 266016300,
+              "mode": "selective",
+              "preparation_cpu_ns": 366210.9375,
+              "replayed_suffix_actions": 0,
+              "reused_components": 14,
+              "step_cpu_ns": 1708984.375,
+              "steps": 7,
+              "total_cpu_ns": 2075195.3125
+            }
+          },
+          "order": [
+            "conventional_cached",
+            "selective",
+            "full"
+          ],
+          "run": 1
+        },
+        {
+          "modes": {
+            "conventional_cached": {
+              "annotations": 7,
+              "batch_repetitions": 128,
+              "batch_total_cpu_ns": 78125000,
+              "batch_wall_ns": 64137400,
+              "mode": "conventional_cached",
+              "preparation_cpu_ns": 122070.3125,
+              "replayed_suffix_actions": 0,
+              "reused_components": 0,
+              "step_cpu_ns": 488281.25,
+              "steps": 7,
+              "total_cpu_ns": 610351.5625
+            },
+            "full": {
+              "annotations": 7,
+              "batch_repetitions": 128,
+              "batch_total_cpu_ns": 171875000,
+              "batch_wall_ns": 180286500,
+              "mode": "full",
+              "preparation_cpu_ns": 244140.625,
+              "replayed_suffix_actions": 28,
+              "reused_components": 0,
+              "step_cpu_ns": 1098632.8125,
+              "steps": 7,
+              "total_cpu_ns": 1342773.4375
+            },
+            "selective": {
+              "annotations": 7,
+              "batch_repetitions": 128,
+              "batch_total_cpu_ns": 250000000,
+              "batch_wall_ns": 267505000,
+              "mode": "selective",
+              "preparation_cpu_ns": 366210.9375,
+              "replayed_suffix_actions": 0,
+              "reused_components": 14,
+              "step_cpu_ns": 1342773.4375,
+              "steps": 7,
+              "total_cpu_ns": 1953125.0
+            }
+          },
+          "order": [
+            "full",
+            "selective",
+            "conventional_cached"
+          ],
+          "run": 2
+        },
+        {
+          "modes": {
+            "conventional_cached": {
+              "annotations": 7,
+              "batch_repetitions": 128,
+              "batch_total_cpu_ns": 62500000,
+              "batch_wall_ns": 70505000,
+              "mode": "conventional_cached",
+              "preparation_cpu_ns": 366210.9375,
+              "replayed_suffix_actions": 0,
+              "reused_components": 0,
+              "step_cpu_ns": 0.0,
+              "steps": 7,
+              "total_cpu_ns": 488281.25
+            },
+            "full": {
+              "annotations": 7,
+              "batch_repetitions": 128,
+              "batch_total_cpu_ns": 156250000,
+              "batch_wall_ns": 171916700,
+              "mode": "full",
+              "preparation_cpu_ns": 244140.625,
+              "replayed_suffix_actions": 28,
+              "reused_components": 0,
+              "step_cpu_ns": 976562.5,
+              "steps": 7,
+              "total_cpu_ns": 1220703.125
+            },
+            "selective": {
+              "annotations": 7,
+              "batch_repetitions": 128,
+              "batch_total_cpu_ns": 265625000,
+              "batch_wall_ns": 251771100,
+              "mode": "selective",
+              "preparation_cpu_ns": 0.0,
+              "replayed_suffix_actions": 0,
+              "reused_components": 14,
+              "step_cpu_ns": 1831054.6875,
+              "steps": 7,
+              "total_cpu_ns": 2075195.3125
+            }
+          },
+          "order": [
+            "full",
+            "selective",
+            "conventional_cached"
+          ],
+          "run": 3
+        },
+        {
+          "modes": {
+            "conventional_cached": {
+              "annotations": 7,
+              "batch_repetitions": 128,
+              "batch_total_cpu_ns": 62500000,
+              "batch_wall_ns": 61407200,
+              "mode": "conventional_cached",
+              "preparation_cpu_ns": 244140.625,
+              "replayed_suffix_actions": 0,
+              "reused_components": 0,
+              "step_cpu_ns": 122070.3125,
+              "steps": 7,
+              "total_cpu_ns": 488281.25
+            },
+            "full": {
+              "annotations": 7,
+              "batch_repetitions": 128,
+              "batch_total_cpu_ns": 187500000,
+              "batch_wall_ns": 181667600,
+              "mode": "full",
+              "preparation_cpu_ns": 122070.3125,
+              "replayed_suffix_actions": 28,
+              "reused_components": 0,
+              "step_cpu_ns": 1220703.125,
+              "steps": 7,
+              "total_cpu_ns": 1464843.75
+            },
+            "selective": {
+              "annotations": 7,
+              "batch_repetitions": 128,
+              "batch_total_cpu_ns": 250000000,
+              "batch_wall_ns": 263981800,
+              "mode": "selective",
+              "preparation_cpu_ns": 366210.9375,
+              "replayed_suffix_actions": 0,
+              "reused_components": 14,
+              "step_cpu_ns": 1342773.4375,
+              "steps": 7,
+              "total_cpu_ns": 1953125.0
+            }
+          },
+          "order": [
+            "selective",
+            "conventional_cached",
+            "full"
+          ],
+          "run": 4
+        },
+        {
+          "modes": {
+            "conventional_cached": {
+              "annotations": 7,
+              "batch_repetitions": 128,
+              "batch_total_cpu_ns": 62500000,
+              "batch_wall_ns": 63822400,
+              "mode": "conventional_cached",
+              "preparation_cpu_ns": 122070.3125,
+              "replayed_suffix_actions": 0,
+              "reused_components": 0,
+              "step_cpu_ns": 366210.9375,
+              "steps": 7,
+              "total_cpu_ns": 488281.25
+            },
+            "full": {
+              "annotations": 7,
+              "batch_repetitions": 128,
+              "batch_total_cpu_ns": 171875000,
+              "batch_wall_ns": 175645800,
+              "mode": "full",
+              "preparation_cpu_ns": 122070.3125,
+              "replayed_suffix_actions": 28,
+              "reused_components": 0,
+              "step_cpu_ns": 1220703.125,
+              "steps": 7,
+              "total_cpu_ns": 1342773.4375
+            },
+            "selective": {
+              "annotations": 7,
+              "batch_repetitions": 128,
+              "batch_total_cpu_ns": 250000000,
+              "batch_wall_ns": 258397500,
+              "mode": "selective",
+              "preparation_cpu_ns": 244140.625,
+              "replayed_suffix_actions": 0,
+              "reused_components": 14,
+              "step_cpu_ns": 1708984.375,
+              "steps": 7,
+              "total_cpu_ns": 1953125.0
+            }
+          },
+          "order": [
+            "full",
+            "conventional_cached",
+            "selective"
+          ],
+          "run": 5
+        },
+        {
+          "modes": {
+            "conventional_cached": {
+              "annotations": 7,
+              "batch_repetitions": 128,
+              "batch_total_cpu_ns": 62500000,
+              "batch_wall_ns": 63579300,
+              "mode": "conventional_cached",
+              "preparation_cpu_ns": 488281.25,
+              "replayed_suffix_actions": 0,
+              "reused_components": 0,
+              "step_cpu_ns": 0.0,
+              "steps": 7,
+              "total_cpu_ns": 488281.25
+            },
+            "full": {
+              "annotations": 7,
+              "batch_repetitions": 128,
+              "batch_total_cpu_ns": 187500000,
+              "batch_wall_ns": 182725300,
+              "mode": "full",
+              "preparation_cpu_ns": 0.0,
+              "replayed_suffix_actions": 28,
+              "reused_components": 0,
+              "step_cpu_ns": 1098632.8125,
+              "steps": 7,
+              "total_cpu_ns": 1464843.75
+            },
+            "selective": {
+              "annotations": 7,
+              "batch_repetitions": 128,
+              "batch_total_cpu_ns": 265625000,
+              "batch_wall_ns": 267564100,
+              "mode": "selective",
+              "preparation_cpu_ns": 122070.3125,
+              "replayed_suffix_actions": 0,
+              "reused_components": 14,
+              "step_cpu_ns": 1831054.6875,
+              "steps": 7,
+              "total_cpu_ns": 2075195.3125
+            }
+          },
+          "order": [
+            "full",
+            "selective",
+            "conventional_cached"
+          ],
+          "run": 6
+        },
+        {
+          "modes": {
+            "conventional_cached": {
+              "annotations": 7,
+              "batch_repetitions": 128,
+              "batch_total_cpu_ns": 78125000,
+              "batch_wall_ns": 76917800,
+              "mode": "conventional_cached",
+              "preparation_cpu_ns": 488281.25,
+              "replayed_suffix_actions": 0,
+              "reused_components": 0,
+              "step_cpu_ns": 122070.3125,
+              "steps": 7,
+              "total_cpu_ns": 610351.5625
+            },
+            "full": {
+              "annotations": 7,
+              "batch_repetitions": 128,
+              "batch_total_cpu_ns": 187500000,
+              "batch_wall_ns": 181426100,
+              "mode": "full",
+              "preparation_cpu_ns": 122070.3125,
+              "replayed_suffix_actions": 28,
+              "reused_components": 0,
+              "step_cpu_ns": 1342773.4375,
+              "steps": 7,
+              "total_cpu_ns": 1464843.75
+            },
+            "selective": {
+              "annotations": 7,
+              "batch_repetitions": 128,
+              "batch_total_cpu_ns": 281250000,
+              "batch_wall_ns": 293400400,
+              "mode": "selective",
+              "preparation_cpu_ns": 244140.625,
+              "replayed_suffix_actions": 0,
+              "reused_components": 14,
+              "step_cpu_ns": 1953125.0,
+              "steps": 7,
+              "total_cpu_ns": 2197265.625
+            }
+          },
+          "order": [
+            "selective",
+            "full",
+            "conventional_cached"
+          ],
+          "run": 7
+        },
+        {
+          "modes": {
+            "conventional_cached": {
+              "annotations": 7,
+              "batch_repetitions": 128,
+              "batch_total_cpu_ns": 62500000,
+              "batch_wall_ns": 68030100,
+              "mode": "conventional_cached",
+              "preparation_cpu_ns": 366210.9375,
+              "replayed_suffix_actions": 0,
+              "reused_components": 0,
+              "step_cpu_ns": 0.0,
+              "steps": 7,
+              "total_cpu_ns": 488281.25
+            },
+            "full": {
+              "annotations": 7,
+              "batch_repetitions": 128,
+              "batch_total_cpu_ns": 203125000,
+              "batch_wall_ns": 208639100,
+              "mode": "full",
+              "preparation_cpu_ns": 244140.625,
+              "replayed_suffix_actions": 28,
+              "reused_components": 0,
+              "step_cpu_ns": 1220703.125,
+              "steps": 7,
+              "total_cpu_ns": 1586914.0625
+            },
+            "selective": {
+              "annotations": 7,
+              "batch_repetitions": 128,
+              "batch_total_cpu_ns": 281250000,
+              "batch_wall_ns": 291096100,
+              "mode": "selective",
+              "preparation_cpu_ns": 976562.5,
+              "replayed_suffix_actions": 0,
+              "reused_components": 14,
+              "step_cpu_ns": 1220703.125,
+              "steps": 7,
+              "total_cpu_ns": 2197265.625
+            }
+          },
+          "order": [
+            "conventional_cached",
+            "full",
+            "selective"
+          ],
+          "run": 8
+        },
+        {
+          "modes": {
+            "conventional_cached": {
+              "annotations": 7,
+              "batch_repetitions": 128,
+              "batch_total_cpu_ns": 78125000,
+              "batch_wall_ns": 76761600,
+              "mode": "conventional_cached",
+              "preparation_cpu_ns": 366210.9375,
+              "replayed_suffix_actions": 0,
+              "reused_components": 0,
+              "step_cpu_ns": 244140.625,
+              "steps": 7,
+              "total_cpu_ns": 610351.5625
+            },
+            "full": {
+              "annotations": 7,
+              "batch_repetitions": 128,
+              "batch_total_cpu_ns": 171875000,
+              "batch_wall_ns": 172963200,
+              "mode": "full",
+              "preparation_cpu_ns": 0.0,
+              "replayed_suffix_actions": 28,
+              "reused_components": 0,
+              "step_cpu_ns": 1098632.8125,
+              "steps": 7,
+              "total_cpu_ns": 1342773.4375
+            },
+            "selective": {
+              "annotations": 7,
+              "batch_repetitions": 128,
+              "batch_total_cpu_ns": 265625000,
+              "batch_wall_ns": 262517000,
+              "mode": "selective",
+              "preparation_cpu_ns": 488281.25,
+              "replayed_suffix_actions": 0,
+              "reused_components": 14,
+              "step_cpu_ns": 1464843.75,
+              "steps": 7,
+              "total_cpu_ns": 2075195.3125
+            }
+          },
+          "order": [
+            "conventional_cached",
+            "full",
+            "selective"
+          ],
+          "run": 9
+        }
+      ],
+      "selective_vs_conventional_cached": {
+        "bootstrap_95_percent_interval": [
+          -314.0,
+          -261.5
+        ],
+        "mean_percent_cpu_reduction": -288.5,
+        "paired_percent_changes": [
+          -240.0,
+          -325.0,
+          -220.0,
+          -325.0,
+          -300.0,
+          -300.0,
+          -325.0,
+          -260.0,
+          -350.0,
+          -240.0
+        ]
+      },
+      "selective_vs_full": {
+        "bootstrap_95_percent_interval": [
+          -53.89160839160839,
+          -41.73776223776224
+        ],
+        "mean_percent_cpu_reduction": -47.51282051282051,
+        "paired_percent_changes": [
+          -54.54545454545455,
+          -41.666666666666664,
+          -45.45454545454545,
+          -70.0,
+          -33.333333333333336,
+          -45.45454545454545,
+          -41.666666666666664,
+          -50.0,
+          -38.46153846153846,
+          -54.54545454545455
+        ]
+      },
+      "stripes": 2
+    },
+    {
+      "annotations": false,
+      "batch_repetitions": 16,
+      "calibration": {
+        "annotations": 0,
+        "batch_repetitions": 16,
+        "batch_total_cpu_ns": 62500000,
+        "batch_wall_ns": 83542600,
+        "mode": "conventional_cached",
+        "preparation_cpu_ns": 0.0,
+        "replayed_suffix_actions": 0,
+        "reused_components": 0,
+        "step_cpu_ns": 3906250.0,
+        "steps": 28,
+        "total_cpu_ns": 3906250.0
+      },
+      "median_total_cpu_ns": {
+        "conventional_cached": 4882812.5,
+        "full": 25390625.0,
+        "selective": 22460937.5
+      },
+      "runs": [
+        {
+          "modes": {
+            "conventional_cached": {
+              "annotations": 0,
+              "batch_repetitions": 16,
+              "batch_total_cpu_ns": 62500000,
+              "batch_wall_ns": 72894200,
+              "mode": "conventional_cached",
+              "preparation_cpu_ns": 976562.5,
+              "replayed_suffix_actions": 0,
+              "reused_components": 0,
+              "step_cpu_ns": 1953125.0,
+              "steps": 28,
+              "total_cpu_ns": 3906250.0
+            },
+            "full": {
+              "annotations": 0,
+              "batch_repetitions": 16,
+              "batch_total_cpu_ns": 421875000,
+              "batch_wall_ns": 427152100,
+              "mode": "full",
+              "preparation_cpu_ns": 976562.5,
+              "replayed_suffix_actions": 406,
+              "reused_components": 0,
+              "step_cpu_ns": 25390625.0,
+              "steps": 28,
+              "total_cpu_ns": 26367187.5
+            },
+            "selective": {
+              "annotations": 0,
+              "batch_repetitions": 16,
+              "batch_total_cpu_ns": 343750000,
+              "batch_wall_ns": 351118400,
+              "mode": "selective",
+              "preparation_cpu_ns": 1953125.0,
+              "replayed_suffix_actions": 0,
+              "reused_components": 224,
+              "step_cpu_ns": 19531250.0,
+              "steps": 28,
+              "total_cpu_ns": 21484375.0
+            }
+          },
+          "order": [
+            "selective",
+            "full",
+            "conventional_cached"
+          ],
+          "run": 0
+        },
+        {
+          "modes": {
+            "conventional_cached": {
+              "annotations": 0,
+              "batch_repetitions": 16,
+              "batch_total_cpu_ns": 78125000,
+              "batch_wall_ns": 78713400,
+              "mode": "conventional_cached",
+              "preparation_cpu_ns": 976562.5,
+              "replayed_suffix_actions": 0,
+              "reused_components": 0,
+              "step_cpu_ns": 3906250.0,
+              "steps": 28,
+              "total_cpu_ns": 4882812.5
+            },
+            "full": {
+              "annotations": 0,
+              "batch_repetitions": 16,
+              "batch_total_cpu_ns": 406250000,
+              "batch_wall_ns": 403717100,
+              "mode": "full",
+              "preparation_cpu_ns": 1953125.0,
+              "replayed_suffix_actions": 406,
+              "reused_components": 0,
+              "step_cpu_ns": 23437500.0,
+              "steps": 28,
+              "total_cpu_ns": 25390625.0
+            },
+            "selective": {
+              "annotations": 0,
+              "batch_repetitions": 16,
+              "batch_total_cpu_ns": 359375000,
+              "batch_wall_ns": 349402500,
+              "mode": "selective",
+              "preparation_cpu_ns": 0.0,
+              "replayed_suffix_actions": 0,
+              "reused_components": 224,
+              "step_cpu_ns": 21484375.0,
+              "steps": 28,
+              "total_cpu_ns": 22460937.5
+            }
+          },
+          "order": [
+            "full",
+            "selective",
+            "conventional_cached"
+          ],
+          "run": 1
+        },
+        {
+          "modes": {
+            "conventional_cached": {
+              "annotations": 0,
+              "batch_repetitions": 16,
+              "batch_total_cpu_ns": 78125000,
+              "batch_wall_ns": 80750700,
+              "mode": "conventional_cached",
+              "preparation_cpu_ns": 976562.5,
+              "replayed_suffix_actions": 0,
+              "reused_components": 0,
+              "step_cpu_ns": 3906250.0,
+              "steps": 28,
+              "total_cpu_ns": 4882812.5
+            },
+            "full": {
+              "annotations": 0,
+              "batch_repetitions": 16,
+              "batch_total_cpu_ns": 390625000,
+              "batch_wall_ns": 389213200,
+              "mode": "full",
+              "preparation_cpu_ns": 0.0,
+              "replayed_suffix_actions": 406,
+              "reused_components": 0,
+              "step_cpu_ns": 24414062.5,
+              "steps": 28,
+              "total_cpu_ns": 24414062.5
+            },
+            "selective": {
+              "annotations": 0,
+              "batch_repetitions": 16,
+              "batch_total_cpu_ns": 390625000,
+              "batch_wall_ns": 390403700,
+              "mode": "selective",
+              "preparation_cpu_ns": 2929687.5,
+              "replayed_suffix_actions": 0,
+              "reused_components": 224,
+              "step_cpu_ns": 21484375.0,
+              "steps": 28,
+              "total_cpu_ns": 24414062.5
+            }
+          },
+          "order": [
+            "conventional_cached",
+            "selective",
+            "full"
+          ],
+          "run": 2
+        },
+        {
+          "modes": {
+            "conventional_cached": {
+              "annotations": 0,
+              "batch_repetitions": 16,
+              "batch_total_cpu_ns": 62500000,
+              "batch_wall_ns": 72859400,
+              "mode": "conventional_cached",
+              "preparation_cpu_ns": 0.0,
+              "replayed_suffix_actions": 0,
+              "reused_components": 0,
+              "step_cpu_ns": 2929687.5,
+              "steps": 28,
+              "total_cpu_ns": 3906250.0
+            },
+            "full": {
+              "annotations": 0,
+              "batch_repetitions": 16,
+              "batch_total_cpu_ns": 406250000,
+              "batch_wall_ns": 404103300,
+              "mode": "full",
+              "preparation_cpu_ns": 1953125.0,
+              "replayed_suffix_actions": 406,
+              "reused_components": 0,
+              "step_cpu_ns": 23437500.0,
+              "steps": 28,
+              "total_cpu_ns": 25390625.0
+            },
+            "selective": {
+              "annotations": 0,
+              "batch_repetitions": 16,
+              "batch_total_cpu_ns": 343750000,
+              "batch_wall_ns": 344443800,
+              "mode": "selective",
+              "preparation_cpu_ns": 976562.5,
+              "replayed_suffix_actions": 0,
+              "reused_components": 224,
+              "step_cpu_ns": 20507812.5,
+              "steps": 28,
+              "total_cpu_ns": 21484375.0
+            }
+          },
+          "order": [
+            "full",
+            "conventional_cached",
+            "selective"
+          ],
+          "run": 3
+        },
+        {
+          "modes": {
+            "conventional_cached": {
+              "annotations": 0,
+              "batch_repetitions": 16,
+              "batch_total_cpu_ns": 78125000,
+              "batch_wall_ns": 74692000,
+              "mode": "conventional_cached",
+              "preparation_cpu_ns": 0.0,
+              "replayed_suffix_actions": 0,
+              "reused_components": 0,
+              "step_cpu_ns": 4882812.5,
+              "steps": 28,
+              "total_cpu_ns": 4882812.5
+            },
+            "full": {
+              "annotations": 0,
+              "batch_repetitions": 16,
+              "batch_total_cpu_ns": 406250000,
+              "batch_wall_ns": 405975300,
+              "mode": "full",
+              "preparation_cpu_ns": 1953125.0,
+              "replayed_suffix_actions": 406,
+              "reused_components": 0,
+              "step_cpu_ns": 23437500.0,
+              "steps": 28,
+              "total_cpu_ns": 25390625.0
+            },
+            "selective": {
+              "annotations": 0,
+              "batch_repetitions": 16,
+              "batch_total_cpu_ns": 343750000,
+              "batch_wall_ns": 352415700,
+              "mode": "selective",
+              "preparation_cpu_ns": 1953125.0,
+              "replayed_suffix_actions": 0,
+              "reused_components": 224,
+              "step_cpu_ns": 19531250.0,
+              "steps": 28,
+              "total_cpu_ns": 21484375.0
+            }
+          },
+          "order": [
+            "full",
+            "conventional_cached",
+            "selective"
+          ],
+          "run": 4
+        },
+        {
+          "modes": {
+            "conventional_cached": {
+              "annotations": 0,
+              "batch_repetitions": 16,
+              "batch_total_cpu_ns": 78125000,
+              "batch_wall_ns": 71149100,
+              "mode": "conventional_cached",
+              "preparation_cpu_ns": 1953125.0,
+              "replayed_suffix_actions": 0,
+              "reused_components": 0,
+              "step_cpu_ns": 2929687.5,
+              "steps": 28,
+              "total_cpu_ns": 4882812.5
+            },
+            "full": {
+              "annotations": 0,
+              "batch_repetitions": 16,
+              "batch_total_cpu_ns": 375000000,
+              "batch_wall_ns": 387345000,
+              "mode": "full",
+              "preparation_cpu_ns": 0.0,
+              "replayed_suffix_actions": 406,
+              "reused_components": 0,
+              "step_cpu_ns": 23437500.0,
+              "steps": 28,
+              "total_cpu_ns": 23437500.0
+            },
+            "selective": {
+              "annotations": 0,
+              "batch_repetitions": 16,
+              "batch_total_cpu_ns": 375000000,
+              "batch_wall_ns": 373341600,
+              "mode": "selective",
+              "preparation_cpu_ns": 3906250.0,
+              "replayed_suffix_actions": 0,
+              "reused_components": 224,
+              "step_cpu_ns": 19531250.0,
+              "steps": 28,
+              "total_cpu_ns": 23437500.0
+            }
+          },
+          "order": [
+            "full",
+            "conventional_cached",
+            "selective"
+          ],
+          "run": 5
+        },
+        {
+          "modes": {
+            "conventional_cached": {
+              "annotations": 0,
+              "batch_repetitions": 16,
+              "batch_total_cpu_ns": 78125000,
+              "batch_wall_ns": 71471500,
+              "mode": "conventional_cached",
+              "preparation_cpu_ns": 976562.5,
+              "replayed_suffix_actions": 0,
+              "reused_components": 0,
+              "step_cpu_ns": 2929687.5,
+              "steps": 28,
+              "total_cpu_ns": 4882812.5
+            },
+            "full": {
+              "annotations": 0,
+              "batch_repetitions": 16,
+              "batch_total_cpu_ns": 390625000,
+              "batch_wall_ns": 391910600,
+              "mode": "full",
+              "preparation_cpu_ns": 2929687.5,
+              "replayed_suffix_actions": 406,
+              "reused_components": 0,
+              "step_cpu_ns": 20507812.5,
+              "steps": 28,
+              "total_cpu_ns": 24414062.5
+            },
+            "selective": {
+              "annotations": 0,
+              "batch_repetitions": 16,
+              "batch_total_cpu_ns": 328125000,
+              "batch_wall_ns": 351312300,
+              "mode": "selective",
+              "preparation_cpu_ns": 1953125.0,
+              "replayed_suffix_actions": 0,
+              "reused_components": 224,
+              "step_cpu_ns": 18554687.5,
+              "steps": 28,
+              "total_cpu_ns": 20507812.5
+            }
+          },
+          "order": [
+            "selective",
+            "conventional_cached",
+            "full"
+          ],
+          "run": 6
+        },
+        {
+          "modes": {
+            "conventional_cached": {
+              "annotations": 0,
+              "batch_repetitions": 16,
+              "batch_total_cpu_ns": 78125000,
+              "batch_wall_ns": 76241100,
+              "mode": "conventional_cached",
+              "preparation_cpu_ns": 976562.5,
+              "replayed_suffix_actions": 0,
+              "reused_components": 0,
+              "step_cpu_ns": 3906250.0,
+              "steps": 28,
+              "total_cpu_ns": 4882812.5
+            },
+            "full": {
+              "annotations": 0,
+              "batch_repetitions": 16,
+              "batch_total_cpu_ns": 390625000,
+              "batch_wall_ns": 405954100,
+              "mode": "full",
+              "preparation_cpu_ns": 0.0,
+              "replayed_suffix_actions": 406,
+              "reused_components": 0,
+              "step_cpu_ns": 23437500.0,
+              "steps": 28,
+              "total_cpu_ns": 24414062.5
+            },
+            "selective": {
+              "annotations": 0,
+              "batch_repetitions": 16,
+              "batch_total_cpu_ns": 359375000,
+              "batch_wall_ns": 354701200,
+              "mode": "selective",
+              "preparation_cpu_ns": 2929687.5,
+              "replayed_suffix_actions": 0,
+              "reused_components": 224,
+              "step_cpu_ns": 19531250.0,
+              "steps": 28,
+              "total_cpu_ns": 22460937.5
+            }
+          },
+          "order": [
+            "selective",
+            "conventional_cached",
+            "full"
+          ],
+          "run": 7
+        },
+        {
+          "modes": {
+            "conventional_cached": {
+              "annotations": 0,
+              "batch_repetitions": 16,
+              "batch_total_cpu_ns": 62500000,
+              "batch_wall_ns": 75503100,
+              "mode": "conventional_cached",
+              "preparation_cpu_ns": 1953125.0,
+              "replayed_suffix_actions": 0,
+              "reused_components": 0,
+              "step_cpu_ns": 1953125.0,
+              "steps": 28,
+              "total_cpu_ns": 3906250.0
+            },
+            "full": {
+              "annotations": 0,
+              "batch_repetitions": 16,
+              "batch_total_cpu_ns": 406250000,
+              "batch_wall_ns": 400084300,
+              "mode": "full",
+              "preparation_cpu_ns": 976562.5,
+              "replayed_suffix_actions": 406,
+              "reused_components": 0,
+              "step_cpu_ns": 23437500.0,
+              "steps": 28,
+              "total_cpu_ns": 25390625.0
+            },
+            "selective": {
+              "annotations": 0,
+              "batch_repetitions": 16,
+              "batch_total_cpu_ns": 375000000,
+              "batch_wall_ns": 371189500,
+              "mode": "selective",
+              "preparation_cpu_ns": 1953125.0,
+              "replayed_suffix_actions": 0,
+              "reused_components": 224,
+              "step_cpu_ns": 19531250.0,
+              "steps": 28,
+              "total_cpu_ns": 23437500.0
+            }
+          },
+          "order": [
+            "selective",
+            "full",
+            "conventional_cached"
+          ],
+          "run": 8
+        },
+        {
+          "modes": {
+            "conventional_cached": {
+              "annotations": 0,
+              "batch_repetitions": 16,
+              "batch_total_cpu_ns": 62500000,
+              "batch_wall_ns": 71465400,
+              "mode": "conventional_cached",
+              "preparation_cpu_ns": 1953125.0,
+              "replayed_suffix_actions": 0,
+              "reused_components": 0,
+              "step_cpu_ns": 1953125.0,
+              "steps": 28,
+              "total_cpu_ns": 3906250.0
+            },
+            "full": {
+              "annotations": 0,
+              "batch_repetitions": 16,
+              "batch_total_cpu_ns": 406250000,
+              "batch_wall_ns": 394267900,
+              "mode": "full",
+              "preparation_cpu_ns": 1953125.0,
+              "replayed_suffix_actions": 406,
+              "reused_components": 0,
+              "step_cpu_ns": 23437500.0,
+              "steps": 28,
+              "total_cpu_ns": 25390625.0
+            },
+            "selective": {
+              "annotations": 0,
+              "batch_repetitions": 16,
+              "batch_total_cpu_ns": 406250000,
+              "batch_wall_ns": 410034900,
+              "mode": "selective",
+              "preparation_cpu_ns": 2929687.5,
+              "replayed_suffix_actions": 0,
+              "reused_components": 224,
+              "step_cpu_ns": 21484375.0,
+              "steps": 28,
+              "total_cpu_ns": 25390625.0
+            }
+          },
+          "order": [
+            "selective",
+            "conventional_cached",
+            "full"
+          ],
+          "run": 9
+        }
+      ],
+      "selective_vs_conventional_cached": {
+        "bootstrap_95_percent_interval": [
+          -455.0,
+          -370.0
+        ],
+        "mean_percent_cpu_reduction": -411.0,
+        "paired_percent_changes": [
+          -450.0,
+          -360.0,
+          -400.0,
+          -450.0,
+          -340.0,
+          -380.0,
+          -320.0,
+          -360.0,
+          -500.0,
+          -550.0
+        ]
+      },
+      "selective_vs_full": {
+        "bootstrap_95_percent_interval": [
+          5.0,
+          13.401709401709402
+        ],
+        "mean_percent_cpu_reduction": 9.251851851851852,
+        "paired_percent_changes": [
+          18.51851851851852,
+          11.538461538461538,
+          0.0,
+          15.384615384615385,
+          15.384615384615385,
+          0.0,
+          16.0,
+          8.0,
+          7.6923076923076925,
+          0.0
+        ]
+      },
+      "stripes": 8
+    },
+    {
+      "annotations": true,
+      "batch_repetitions": 16,
+      "calibration": {
+        "annotations": 28,
+        "batch_repetitions": 16,
+        "batch_total_cpu_ns": 62500000,
+        "batch_wall_ns": 71061900,
+        "mode": "conventional_cached",
+        "preparation_cpu_ns": 976562.5,
+        "replayed_suffix_actions": 0,
+        "reused_components": 0,
+        "step_cpu_ns": 1953125.0,
+        "steps": 28,
+        "total_cpu_ns": 3906250.0
+      },
+      "median_total_cpu_ns": {
+        "conventional_cached": 3906250.0,
+        "full": 25390625.0,
+        "selective": 22460937.5
+      },
+      "runs": [
+        {
+          "modes": {
+            "conventional_cached": {
+              "annotations": 28,
+              "batch_repetitions": 16,
+              "batch_total_cpu_ns": 62500000,
+              "batch_wall_ns": 74042900,
+              "mode": "conventional_cached",
+              "preparation_cpu_ns": 976562.5,
+              "replayed_suffix_actions": 0,
+              "reused_components": 0,
+              "step_cpu_ns": 1953125.0,
+              "steps": 28,
+              "total_cpu_ns": 3906250.0
+            },
+            "full": {
+              "annotations": 28,
+              "batch_repetitions": 16,
+              "batch_total_cpu_ns": 390625000,
+              "batch_wall_ns": 419259200,
+              "mode": "full",
+              "preparation_cpu_ns": 2929687.5,
+              "replayed_suffix_actions": 406,
+              "reused_components": 0,
+              "step_cpu_ns": 21484375.0,
+              "steps": 28,
+              "total_cpu_ns": 24414062.5
+            },
+            "selective": {
+              "annotations": 28,
+              "batch_repetitions": 16,
+              "batch_total_cpu_ns": 375000000,
+              "batch_wall_ns": 365463000,
+              "mode": "selective",
+              "preparation_cpu_ns": 4882812.5,
+              "replayed_suffix_actions": 0,
+              "reused_components": 224,
+              "step_cpu_ns": 17578125.0,
+              "steps": 28,
+              "total_cpu_ns": 23437500.0
+            }
+          },
+          "order": [
+            "conventional_cached",
+            "full",
+            "selective"
+          ],
+          "run": 0
+        },
+        {
+          "modes": {
+            "conventional_cached": {
+              "annotations": 28,
+              "batch_repetitions": 16,
+              "batch_total_cpu_ns": 93750000,
+              "batch_wall_ns": 86845400,
+              "mode": "conventional_cached",
+              "preparation_cpu_ns": 976562.5,
+              "replayed_suffix_actions": 0,
+              "reused_components": 0,
+              "step_cpu_ns": 4882812.5,
+              "steps": 28,
+              "total_cpu_ns": 5859375.0
+            },
+            "full": {
+              "annotations": 28,
+              "batch_repetitions": 16,
+              "batch_total_cpu_ns": 453125000,
+              "batch_wall_ns": 464749100,
+              "mode": "full",
+              "preparation_cpu_ns": 1953125.0,
+              "replayed_suffix_actions": 406,
+              "reused_components": 0,
+              "step_cpu_ns": 25390625.0,
+              "steps": 28,
+              "total_cpu_ns": 28320312.5
+            },
+            "selective": {
+              "annotations": 28,
+              "batch_repetitions": 16,
+              "batch_total_cpu_ns": 375000000,
+              "batch_wall_ns": 387072100,
+              "mode": "selective",
+              "preparation_cpu_ns": 1953125.0,
+              "replayed_suffix_actions": 0,
+              "reused_components": 224,
+              "step_cpu_ns": 21484375.0,
+              "steps": 28,
+              "total_cpu_ns": 23437500.0
+            }
+          },
+          "order": [
+            "full",
+            "conventional_cached",
+            "selective"
+          ],
+          "run": 1
+        },
+        {
+          "modes": {
+            "conventional_cached": {
+              "annotations": 28,
+              "batch_repetitions": 16,
+              "batch_total_cpu_ns": 62500000,
+              "batch_wall_ns": 79598000,
+              "mode": "conventional_cached",
+              "preparation_cpu_ns": 976562.5,
+              "replayed_suffix_actions": 0,
+              "reused_components": 0,
+              "step_cpu_ns": 1953125.0,
+              "steps": 28,
+              "total_cpu_ns": 3906250.0
+            },
+            "full": {
+              "annotations": 28,
+              "batch_repetitions": 16,
+              "batch_total_cpu_ns": 406250000,
+              "batch_wall_ns": 439404900,
+              "mode": "full",
+              "preparation_cpu_ns": 976562.5,
+              "replayed_suffix_actions": 406,
+              "reused_components": 0,
+              "step_cpu_ns": 24414062.5,
+              "steps": 28,
+              "total_cpu_ns": 25390625.0
+            },
+            "selective": {
+              "annotations": 28,
+              "batch_repetitions": 16,
+              "batch_total_cpu_ns": 328125000,
+              "batch_wall_ns": 354387500,
+              "mode": "selective",
+              "preparation_cpu_ns": 976562.5,
+              "replayed_suffix_actions": 0,
+              "reused_components": 224,
+              "step_cpu_ns": 19531250.0,
+              "steps": 28,
+              "total_cpu_ns": 20507812.5
+            }
+          },
+          "order": [
+            "full",
+            "conventional_cached",
+            "selective"
+          ],
+          "run": 2
+        },
+        {
+          "modes": {
+            "conventional_cached": {
+              "annotations": 28,
+              "batch_repetitions": 16,
+              "batch_total_cpu_ns": 78125000,
+              "batch_wall_ns": 73659500,
+              "mode": "conventional_cached",
+              "preparation_cpu_ns": 2929687.5,
+              "replayed_suffix_actions": 0,
+              "reused_components": 0,
+              "step_cpu_ns": 1953125.0,
+              "steps": 28,
+              "total_cpu_ns": 4882812.5
+            },
+            "full": {
+              "annotations": 28,
+              "batch_repetitions": 16,
+              "batch_total_cpu_ns": 390625000,
+              "batch_wall_ns": 393634500,
+              "mode": "full",
+              "preparation_cpu_ns": 976562.5,
+              "replayed_suffix_actions": 406,
+              "reused_components": 0,
+              "step_cpu_ns": 23437500.0,
+              "steps": 28,
+              "total_cpu_ns": 24414062.5
+            },
+            "selective": {
+              "annotations": 28,
+              "batch_repetitions": 16,
+              "batch_total_cpu_ns": 359375000,
+              "batch_wall_ns": 365613700,
+              "mode": "selective",
+              "preparation_cpu_ns": 1953125.0,
+              "replayed_suffix_actions": 0,
+              "reused_components": 224,
+              "step_cpu_ns": 20507812.5,
+              "steps": 28,
+              "total_cpu_ns": 22460937.5
+            }
+          },
+          "order": [
+            "full",
+            "selective",
+            "conventional_cached"
+          ],
+          "run": 3
+        },
+        {
+          "modes": {
+            "conventional_cached": {
+              "annotations": 28,
+              "batch_repetitions": 16,
+              "batch_total_cpu_ns": 78125000,
+              "batch_wall_ns": 71609900,
+              "mode": "conventional_cached",
+              "preparation_cpu_ns": 976562.5,
+              "replayed_suffix_actions": 0,
+              "reused_components": 0,
+              "step_cpu_ns": 2929687.5,
+              "steps": 28,
+              "total_cpu_ns": 4882812.5
+            },
+            "full": {
+              "annotations": 28,
+              "batch_repetitions": 16,
+              "batch_total_cpu_ns": 437500000,
+              "batch_wall_ns": 449077500,
+              "mode": "full",
+              "preparation_cpu_ns": 976562.5,
+              "replayed_suffix_actions": 406,
+              "reused_components": 0,
+              "step_cpu_ns": 26367187.5,
+              "steps": 28,
+              "total_cpu_ns": 27343750.0
+            },
+            "selective": {
+              "annotations": 28,
+              "batch_repetitions": 16,
+              "batch_total_cpu_ns": 343750000,
+              "batch_wall_ns": 352829900,
+              "mode": "selective",
+              "preparation_cpu_ns": 976562.5,
+              "replayed_suffix_actions": 0,
+              "reused_components": 224,
+              "step_cpu_ns": 19531250.0,
+              "steps": 28,
+              "total_cpu_ns": 21484375.0
+            }
+          },
+          "order": [
+            "conventional_cached",
+            "selective",
+            "full"
+          ],
+          "run": 4
+        },
+        {
+          "modes": {
+            "conventional_cached": {
+              "annotations": 28,
+              "batch_repetitions": 16,
+              "batch_total_cpu_ns": 62500000,
+              "batch_wall_ns": 71299200,
+              "mode": "conventional_cached",
+              "preparation_cpu_ns": 1953125.0,
+              "replayed_suffix_actions": 0,
+              "reused_components": 0,
+              "step_cpu_ns": 1953125.0,
+              "steps": 28,
+              "total_cpu_ns": 3906250.0
+            },
+            "full": {
+              "annotations": 28,
+              "batch_repetitions": 16,
+              "batch_total_cpu_ns": 390625000,
+              "batch_wall_ns": 401277500,
+              "mode": "full",
+              "preparation_cpu_ns": 1953125.0,
+              "replayed_suffix_actions": 406,
+              "reused_components": 0,
+              "step_cpu_ns": 21484375.0,
+              "steps": 28,
+              "total_cpu_ns": 24414062.5
+            },
+            "selective": {
+              "annotations": 28,
+              "batch_repetitions": 16,
+              "batch_total_cpu_ns": 328125000,
+              "batch_wall_ns": 360545200,
+              "mode": "selective",
+              "preparation_cpu_ns": 2929687.5,
+              "replayed_suffix_actions": 0,
+              "reused_components": 224,
+              "step_cpu_ns": 17578125.0,
+              "steps": 28,
+              "total_cpu_ns": 20507812.5
+            }
+          },
+          "order": [
+            "full",
+            "selective",
+            "conventional_cached"
+          ],
+          "run": 5
+        },
+        {
+          "modes": {
+            "conventional_cached": {
+              "annotations": 28,
+              "batch_repetitions": 16,
+              "batch_total_cpu_ns": 62500000,
+              "batch_wall_ns": 73026800,
+              "mode": "conventional_cached",
+              "preparation_cpu_ns": 976562.5,
+              "replayed_suffix_actions": 0,
+              "reused_components": 0,
+              "step_cpu_ns": 1953125.0,
+              "steps": 28,
+              "total_cpu_ns": 3906250.0
+            },
+            "full": {
+              "annotations": 28,
+              "batch_repetitions": 16,
+              "batch_total_cpu_ns": 437500000,
+              "batch_wall_ns": 427910600,
+              "mode": "full",
+              "preparation_cpu_ns": 0.0,
+              "replayed_suffix_actions": 406,
+              "reused_components": 0,
+              "step_cpu_ns": 26367187.5,
+              "steps": 28,
+              "total_cpu_ns": 27343750.0
+            },
+            "selective": {
+              "annotations": 28,
+              "batch_repetitions": 16,
+              "batch_total_cpu_ns": 359375000,
+              "batch_wall_ns": 356905600,
+              "mode": "selective",
+              "preparation_cpu_ns": 3906250.0,
+              "replayed_suffix_actions": 0,
+              "reused_components": 224,
+              "step_cpu_ns": 18554687.5,
+              "steps": 28,
+              "total_cpu_ns": 22460937.5
+            }
+          },
+          "order": [
+            "full",
+            "conventional_cached",
+            "selective"
+          ],
+          "run": 6
+        },
+        {
+          "modes": {
+            "conventional_cached": {
+              "annotations": 28,
+              "batch_repetitions": 16,
+              "batch_total_cpu_ns": 62500000,
+              "batch_wall_ns": 71529400,
+              "mode": "conventional_cached",
+              "preparation_cpu_ns": 0.0,
+              "replayed_suffix_actions": 0,
+              "reused_components": 0,
+              "step_cpu_ns": 2929687.5,
+              "steps": 28,
+              "total_cpu_ns": 3906250.0
+            },
+            "full": {
+              "annotations": 28,
+              "batch_repetitions": 16,
+              "batch_total_cpu_ns": 390625000,
+              "batch_wall_ns": 398996400,
+              "mode": "full",
+              "preparation_cpu_ns": 0.0,
+              "replayed_suffix_actions": 406,
+              "reused_components": 0,
+              "step_cpu_ns": 23437500.0,
+              "steps": 28,
+              "total_cpu_ns": 24414062.5
+            },
+            "selective": {
+              "annotations": 28,
+              "batch_repetitions": 16,
+              "batch_total_cpu_ns": 343750000,
+              "batch_wall_ns": 368545200,
+              "mode": "selective",
+              "preparation_cpu_ns": 976562.5,
+              "replayed_suffix_actions": 0,
+              "reused_components": 224,
+              "step_cpu_ns": 20507812.5,
+              "steps": 28,
+              "total_cpu_ns": 21484375.0
+            }
+          },
+          "order": [
+            "selective",
+            "conventional_cached",
+            "full"
+          ],
+          "run": 7
+        },
+        {
+          "modes": {
+            "conventional_cached": {
+              "annotations": 28,
+              "batch_repetitions": 16,
+              "batch_total_cpu_ns": 78125000,
+              "batch_wall_ns": 70205400,
+              "mode": "conventional_cached",
+              "preparation_cpu_ns": 1953125.0,
+              "replayed_suffix_actions": 0,
+              "reused_components": 0,
+              "step_cpu_ns": 2929687.5,
+              "steps": 28,
+              "total_cpu_ns": 4882812.5
+            },
+            "full": {
+              "annotations": 28,
+              "batch_repetitions": 16,
+              "batch_total_cpu_ns": 406250000,
+              "batch_wall_ns": 415708000,
+              "mode": "full",
+              "preparation_cpu_ns": 976562.5,
+              "replayed_suffix_actions": 406,
+              "reused_components": 0,
+              "step_cpu_ns": 24414062.5,
+              "steps": 28,
+              "total_cpu_ns": 25390625.0
+            },
+            "selective": {
+              "annotations": 28,
+              "batch_repetitions": 16,
+              "batch_total_cpu_ns": 359375000,
+              "batch_wall_ns": 358795700,
+              "mode": "selective",
+              "preparation_cpu_ns": 976562.5,
+              "replayed_suffix_actions": 0,
+              "reused_components": 224,
+              "step_cpu_ns": 21484375.0,
+              "steps": 28,
+              "total_cpu_ns": 22460937.5
+            }
+          },
+          "order": [
+            "full",
+            "selective",
+            "conventional_cached"
+          ],
+          "run": 8
+        },
+        {
+          "modes": {
+            "conventional_cached": {
+              "annotations": 28,
+              "batch_repetitions": 16,
+              "batch_total_cpu_ns": 62500000,
+              "batch_wall_ns": 70801000,
+              "mode": "conventional_cached",
+              "preparation_cpu_ns": 0.0,
+              "replayed_suffix_actions": 0,
+              "reused_components": 0,
+              "step_cpu_ns": 3906250.0,
+              "steps": 28,
+              "total_cpu_ns": 3906250.0
+            },
+            "full": {
+              "annotations": 28,
+              "batch_repetitions": 16,
+              "batch_total_cpu_ns": 468750000,
+              "batch_wall_ns": 477297600,
+              "mode": "full",
+              "preparation_cpu_ns": 976562.5,
+              "replayed_suffix_actions": 406,
+              "reused_components": 0,
+              "step_cpu_ns": 28320312.5,
+              "steps": 28,
+              "total_cpu_ns": 29296875.0
+            },
+            "selective": {
+              "annotations": 28,
+              "batch_repetitions": 16,
+              "batch_total_cpu_ns": 359375000,
+              "batch_wall_ns": 360081400,
+              "mode": "selective",
+              "preparation_cpu_ns": 976562.5,
+              "replayed_suffix_actions": 0,
+              "reused_components": 224,
+              "step_cpu_ns": 21484375.0,
+              "steps": 28,
+              "total_cpu_ns": 22460937.5
+            }
+          },
+          "order": [
+            "conventional_cached",
+            "full",
+            "selective"
+          ],
+          "run": 9
+        }
+      ],
+      "selective_vs_conventional_cached": {
+        "bootstrap_95_percent_interval": [
+          -448.5,
+          -371.5
+        ],
+        "mean_percent_cpu_reduction": -411.0,
+        "paired_percent_changes": [
+          -500.0,
+          -300.0,
+          -425.0,
+          -360.0,
+          -340.0,
+          -425.0,
+          -475.0,
+          -450.0,
+          -360.0,
+          -475.0
+        ]
+      },
+      "selective_vs_full": {
+        "bootstrap_95_percent_interval": [
+          11.37139067828723,
+          18.527838827838828
+        ],
+        "mean_percent_cpu_reduction": 15.062965769862322,
+        "paired_percent_changes": [
+          4.0,
+          17.24137931034483,
+          19.23076923076923,
+          8.0,
+          21.428571428571427,
+          16.0,
+          17.857142857142858,
+          12.0,
+          11.538461538461538,
+          23.333333333333332
+        ]
+      },
+      "stripes": 8
+    },
+    {
+      "annotations": false,
+      "batch_repetitions": 4,
+      "calibration": {
+        "annotations": 0,
+        "batch_repetitions": 4,
+        "batch_total_cpu_ns": 78125000,
+        "batch_wall_ns": 74831200,
+        "mode": "conventional_cached",
+        "preparation_cpu_ns": 7812500.0,
+        "replayed_suffix_actions": 0,
+        "reused_components": 0,
+        "step_cpu_ns": 11718750.0,
+        "steps": 56,
+        "total_cpu_ns": 19531250.0
+      },
+      "median_total_cpu_ns": {
+        "conventional_cached": 19531250.0,
+        "full": 167968750.0,
+        "selective": 93750000.0
+      },
+      "runs": [
+        {
+          "modes": {
+            "conventional_cached": {
+              "annotations": 0,
+              "batch_repetitions": 4,
+              "batch_total_cpu_ns": 93750000,
+              "batch_wall_ns": 91863900,
+              "mode": "conventional_cached",
+              "preparation_cpu_ns": 3906250.0,
+              "replayed_suffix_actions": 0,
+              "reused_components": 0,
+              "step_cpu_ns": 15625000.0,
+              "steps": 56,
+              "total_cpu_ns": 23437500.0
+            },
+            "full": {
+              "annotations": 0,
+              "batch_repetitions": 4,
+              "batch_total_cpu_ns": 703125000,
+              "batch_wall_ns": 733209400,
+              "mode": "full",
+              "preparation_cpu_ns": 7812500.0,
+              "replayed_suffix_actions": 1596,
+              "reused_components": 0,
+              "step_cpu_ns": 167968750.0,
+              "steps": 56,
+              "total_cpu_ns": 175781250.0
+            },
+            "selective": {
+              "annotations": 0,
+              "batch_repetitions": 4,
+              "batch_total_cpu_ns": 375000000,
+              "batch_wall_ns": 389653200,
+              "mode": "selective",
+              "preparation_cpu_ns": 0.0,
+              "replayed_suffix_actions": 0,
+              "reused_components": 896,
+              "step_cpu_ns": 93750000.0,
+              "steps": 56,
+              "total_cpu_ns": 93750000.0
+            }
+          },
+          "order": [
+            "conventional_cached",
+            "selective",
+            "full"
+          ],
+          "run": 0
+        },
+        {
+          "modes": {
+            "conventional_cached": {
+              "annotations": 0,
+              "batch_repetitions": 4,
+              "batch_total_cpu_ns": 78125000,
+              "batch_wall_ns": 77275500,
+              "mode": "conventional_cached",
+              "preparation_cpu_ns": 7812500.0,
+              "replayed_suffix_actions": 0,
+              "reused_components": 0,
+              "step_cpu_ns": 11718750.0,
+              "steps": 56,
+              "total_cpu_ns": 19531250.0
+            },
+            "full": {
+              "annotations": 0,
+              "batch_repetitions": 4,
+              "batch_total_cpu_ns": 671875000,
+              "batch_wall_ns": 662392200,
+              "mode": "full",
+              "preparation_cpu_ns": 3906250.0,
+              "replayed_suffix_actions": 1596,
+              "reused_components": 0,
+              "step_cpu_ns": 164062500.0,
+              "steps": 56,
+              "total_cpu_ns": 167968750.0
+            },
+            "selective": {
+              "annotations": 0,
+              "batch_repetitions": 4,
+              "batch_total_cpu_ns": 375000000,
+              "batch_wall_ns": 376690100,
+              "mode": "selective",
+              "preparation_cpu_ns": 3906250.0,
+              "replayed_suffix_actions": 0,
+              "reused_components": 896,
+              "step_cpu_ns": 82031250.0,
+              "steps": 56,
+              "total_cpu_ns": 93750000.0
+            }
+          },
+          "order": [
+            "full",
+            "selective",
+            "conventional_cached"
+          ],
+          "run": 1
+        },
+        {
+          "modes": {
+            "conventional_cached": {
+              "annotations": 0,
+              "batch_repetitions": 4,
+              "batch_total_cpu_ns": 62500000,
+              "batch_wall_ns": 69830800,
+              "mode": "conventional_cached",
+              "preparation_cpu_ns": 3906250.0,
+              "replayed_suffix_actions": 0,
+              "reused_components": 0,
+              "step_cpu_ns": 11718750.0,
+              "steps": 56,
+              "total_cpu_ns": 15625000.0
+            },
+            "full": {
+              "annotations": 0,
+              "batch_repetitions": 4,
+              "batch_total_cpu_ns": 656250000,
+              "batch_wall_ns": 661035200,
+              "mode": "full",
+              "preparation_cpu_ns": 3906250.0,
+              "replayed_suffix_actions": 1596,
+              "reused_components": 0,
+              "step_cpu_ns": 160156250.0,
+              "steps": 56,
+              "total_cpu_ns": 164062500.0
+            },
+            "selective": {
+              "annotations": 0,
+              "batch_repetitions": 4,
+              "batch_total_cpu_ns": 343750000,
+              "batch_wall_ns": 339134600,
+              "mode": "selective",
+              "preparation_cpu_ns": 3906250.0,
+              "replayed_suffix_actions": 0,
+              "reused_components": 896,
+              "step_cpu_ns": 78125000.0,
+              "steps": 56,
+              "total_cpu_ns": 85937500.0
+            }
+          },
+          "order": [
+            "selective",
+            "full",
+            "conventional_cached"
+          ],
+          "run": 2
+        },
+        {
+          "modes": {
+            "conventional_cached": {
+              "annotations": 0,
+              "batch_repetitions": 4,
+              "batch_total_cpu_ns": 78125000,
+              "batch_wall_ns": 79500400,
+              "mode": "conventional_cached",
+              "preparation_cpu_ns": 3906250.0,
+              "replayed_suffix_actions": 0,
+              "reused_components": 0,
+              "step_cpu_ns": 15625000.0,
+              "steps": 56,
+              "total_cpu_ns": 19531250.0
+            },
+            "full": {
+              "annotations": 0,
+              "batch_repetitions": 4,
+              "batch_total_cpu_ns": 734375000,
+              "batch_wall_ns": 763348100,
+              "mode": "full",
+              "preparation_cpu_ns": 3906250.0,
+              "replayed_suffix_actions": 1596,
+              "reused_components": 0,
+              "step_cpu_ns": 167968750.0,
+              "steps": 56,
+              "total_cpu_ns": 183593750.0
+            },
+            "selective": {
+              "annotations": 0,
+              "batch_repetitions": 4,
+              "batch_total_cpu_ns": 375000000,
+              "batch_wall_ns": 367504400,
+              "mode": "selective",
+              "preparation_cpu_ns": 3906250.0,
+              "replayed_suffix_actions": 0,
+              "reused_components": 896,
+              "step_cpu_ns": 89843750.0,
+              "steps": 56,
+              "total_cpu_ns": 93750000.0
+            }
+          },
+          "order": [
+            "full",
+            "selective",
+            "conventional_cached"
+          ],
+          "run": 3
+        },
+        {
+          "modes": {
+            "conventional_cached": {
+              "annotations": 0,
+              "batch_repetitions": 4,
+              "batch_total_cpu_ns": 78125000,
+              "batch_wall_ns": 74896300,
+              "mode": "conventional_cached",
+              "preparation_cpu_ns": 7812500.0,
+              "replayed_suffix_actions": 0,
+              "reused_components": 0,
+              "step_cpu_ns": 11718750.0,
+              "steps": 56,
+              "total_cpu_ns": 19531250.0
+            },
+            "full": {
+              "annotations": 0,
+              "batch_repetitions": 4,
+              "batch_total_cpu_ns": 625000000,
+              "batch_wall_ns": 683753300,
+              "mode": "full",
+              "preparation_cpu_ns": 3906250.0,
+              "replayed_suffix_actions": 1596,
+              "reused_components": 0,
+              "step_cpu_ns": 152343750.0,
+              "steps": 56,
+              "total_cpu_ns": 156250000.0
+            },
+            "selective": {
+              "annotations": 0,
+              "batch_repetitions": 4,
+              "batch_total_cpu_ns": 453125000,
+              "batch_wall_ns": 465885000,
+              "mode": "selective",
+              "preparation_cpu_ns": 3906250.0,
+              "replayed_suffix_actions": 0,
+              "reused_components": 896,
+              "step_cpu_ns": 109375000.0,
+              "steps": 56,
+              "total_cpu_ns": 113281250.0
+            }
+          },
+          "order": [
+            "conventional_cached",
+            "selective",
+            "full"
+          ],
+          "run": 4
+        },
+        {
+          "modes": {
+            "conventional_cached": {
+              "annotations": 0,
+              "batch_repetitions": 4,
+              "batch_total_cpu_ns": 78125000,
+              "batch_wall_ns": 73608600,
+              "mode": "conventional_cached",
+              "preparation_cpu_ns": 3906250.0,
+              "replayed_suffix_actions": 0,
+              "reused_components": 0,
+              "step_cpu_ns": 15625000.0,
+              "steps": 56,
+              "total_cpu_ns": 19531250.0
+            },
+            "full": {
+              "annotations": 0,
+              "batch_repetitions": 4,
+              "batch_total_cpu_ns": 703125000,
+              "batch_wall_ns": 708095400,
+              "mode": "full",
+              "preparation_cpu_ns": 3906250.0,
+              "replayed_suffix_actions": 1596,
+              "reused_components": 0,
+              "step_cpu_ns": 167968750.0,
+              "steps": 56,
+              "total_cpu_ns": 175781250.0
+            },
+            "selective": {
+              "annotations": 0,
+              "batch_repetitions": 4,
+              "batch_total_cpu_ns": 328125000,
+              "batch_wall_ns": 342258400,
+              "mode": "selective",
+              "preparation_cpu_ns": 3906250.0,
+              "replayed_suffix_actions": 0,
+              "reused_components": 896,
+              "step_cpu_ns": 78125000.0,
+              "steps": 56,
+              "total_cpu_ns": 82031250.0
+            }
+          },
+          "order": [
+            "full",
+            "selective",
+            "conventional_cached"
+          ],
+          "run": 5
+        },
+        {
+          "modes": {
+            "conventional_cached": {
+              "annotations": 0,
+              "batch_repetitions": 4,
+              "batch_total_cpu_ns": 78125000,
+              "batch_wall_ns": 72509700,
+              "mode": "conventional_cached",
+              "preparation_cpu_ns": 3906250.0,
+              "replayed_suffix_actions": 0,
+              "reused_components": 0,
+              "step_cpu_ns": 15625000.0,
+              "steps": 56,
+              "total_cpu_ns": 19531250.0
+            },
+            "full": {
+              "annotations": 0,
+              "batch_repetitions": 4,
+              "batch_total_cpu_ns": 625000000,
+              "batch_wall_ns": 632951500,
+              "mode": "full",
+              "preparation_cpu_ns": 7812500.0,
+              "replayed_suffix_actions": 1596,
+              "reused_components": 0,
+              "step_cpu_ns": 148437500.0,
+              "steps": 56,
+              "total_cpu_ns": 156250000.0
+            },
+            "selective": {
+              "annotations": 0,
+              "batch_repetitions": 4,
+              "batch_total_cpu_ns": 375000000,
+              "batch_wall_ns": 370836400,
+              "mode": "selective",
+              "preparation_cpu_ns": 7812500.0,
+              "replayed_suffix_actions": 0,
+              "reused_components": 896,
+              "step_cpu_ns": 85937500.0,
+              "steps": 56,
+              "total_cpu_ns": 93750000.0
+            }
+          },
+          "order": [
+            "selective",
+            "full",
+            "conventional_cached"
+          ],
+          "run": 6
+        },
+        {
+          "modes": {
+            "conventional_cached": {
+              "annotations": 0,
+              "batch_repetitions": 4,
+              "batch_total_cpu_ns": 78125000,
+              "batch_wall_ns": 76990300,
+              "mode": "conventional_cached",
+              "preparation_cpu_ns": 3906250.0,
+              "replayed_suffix_actions": 0,
+              "reused_components": 0,
+              "step_cpu_ns": 15625000.0,
+              "steps": 56,
+              "total_cpu_ns": 19531250.0
+            },
+            "full": {
+              "annotations": 0,
+              "batch_repetitions": 4,
+              "batch_total_cpu_ns": 703125000,
+              "batch_wall_ns": 712421000,
+              "mode": "full",
+              "preparation_cpu_ns": 11718750.0,
+              "replayed_suffix_actions": 1596,
+              "reused_components": 0,
+              "step_cpu_ns": 164062500.0,
+              "steps": 56,
+              "total_cpu_ns": 175781250.0
+            },
+            "selective": {
+              "annotations": 0,
+              "batch_repetitions": 4,
+              "batch_total_cpu_ns": 359375000,
+              "batch_wall_ns": 363089100,
+              "mode": "selective",
+              "preparation_cpu_ns": 3906250.0,
+              "replayed_suffix_actions": 0,
+              "reused_components": 896,
+              "step_cpu_ns": 85937500.0,
+              "steps": 56,
+              "total_cpu_ns": 89843750.0
+            }
+          },
+          "order": [
+            "selective",
+            "full",
+            "conventional_cached"
+          ],
+          "run": 7
+        },
+        {
+          "modes": {
+            "conventional_cached": {
+              "annotations": 0,
+              "batch_repetitions": 4,
+              "batch_total_cpu_ns": 78125000,
+              "batch_wall_ns": 70676000,
+              "mode": "conventional_cached",
+              "preparation_cpu_ns": 7812500.0,
+              "replayed_suffix_actions": 0,
+              "reused_components": 0,
+              "step_cpu_ns": 7812500.0,
+              "steps": 56,
+              "total_cpu_ns": 19531250.0
+            },
+            "full": {
+              "annotations": 0,
+              "batch_repetitions": 4,
+              "batch_total_cpu_ns": 640625000,
+              "batch_wall_ns": 663528400,
+              "mode": "full",
+              "preparation_cpu_ns": 0.0,
+              "replayed_suffix_actions": 1596,
+              "reused_components": 0,
+              "step_cpu_ns": 160156250.0,
+              "steps": 56,
+              "total_cpu_ns": 160156250.0
+            },
+            "selective": {
+              "annotations": 0,
+              "batch_repetitions": 4,
+              "batch_total_cpu_ns": 375000000,
+              "batch_wall_ns": 380520600,
+              "mode": "selective",
+              "preparation_cpu_ns": 0.0,
+              "replayed_suffix_actions": 0,
+              "reused_components": 896,
+              "step_cpu_ns": 89843750.0,
+              "steps": 56,
+              "total_cpu_ns": 93750000.0
+            }
+          },
+          "order": [
+            "full",
+            "conventional_cached",
+            "selective"
+          ],
+          "run": 8
+        },
+        {
+          "modes": {
+            "conventional_cached": {
+              "annotations": 0,
+              "batch_repetitions": 4,
+              "batch_total_cpu_ns": 78125000,
+              "batch_wall_ns": 72775800,
+              "mode": "conventional_cached",
+              "preparation_cpu_ns": 3906250.0,
+              "replayed_suffix_actions": 0,
+              "reused_components": 0,
+              "step_cpu_ns": 15625000.0,
+              "steps": 56,
+              "total_cpu_ns": 19531250.0
+            },
+            "full": {
+              "annotations": 0,
+              "batch_repetitions": 4,
+              "batch_total_cpu_ns": 671875000,
+              "batch_wall_ns": 706018200,
+              "mode": "full",
+              "preparation_cpu_ns": 3906250.0,
+              "replayed_suffix_actions": 1596,
+              "reused_components": 0,
+              "step_cpu_ns": 164062500.0,
+              "steps": 56,
+              "total_cpu_ns": 167968750.0
+            },
+            "selective": {
+              "annotations": 0,
+              "batch_repetitions": 4,
+              "batch_total_cpu_ns": 343750000,
+              "batch_wall_ns": 348458600,
+              "mode": "selective",
+              "preparation_cpu_ns": 7812500.0,
+              "replayed_suffix_actions": 0,
+              "reused_components": 896,
+              "step_cpu_ns": 78125000.0,
+              "steps": 56,
+              "total_cpu_ns": 85937500.0
+            }
+          },
+          "order": [
+            "conventional_cached",
+            "selective",
+            "full"
+          ],
+          "run": 9
+        }
+      ],
+      "selective_vs_conventional_cached": {
+        "bootstrap_95_percent_interval": [
+          -410.0,
+          -348.0
+        ],
+        "mean_percent_cpu_reduction": -377.0,
+        "paired_percent_changes": [
+          -300.0,
+          -380.0,
+          -450.0,
+          -380.0,
+          -480.0,
+          -320.0,
+          -380.0,
+          -360.0,
+          -380.0,
+          -340.0
+        ]
+      },
+      "selective_vs_full": {
+        "bootstrap_95_percent_interval": [
+          39.838201928530914,
+          48.37285199175594
+        ],
+        "mean_percent_cpu_reduction": 44.74307771688023,
+        "paired_percent_changes": [
+          46.666666666666664,
+          44.18604651162791,
+          47.61904761904762,
+          48.93617021276596,
+          27.5,
+          53.333333333333336,
+          40.0,
+          48.888888888888886,
+          41.46341463414634,
+          48.83720930232558
+        ]
+      },
+      "stripes": 16
+    },
+    {
+      "annotations": true,
+      "batch_repetitions": 4,
+      "calibration": {
+        "annotations": 56,
+        "batch_repetitions": 4,
+        "batch_total_cpu_ns": 78125000,
+        "batch_wall_ns": 72512000,
+        "mode": "conventional_cached",
+        "preparation_cpu_ns": 7812500.0,
+        "replayed_suffix_actions": 0,
+        "reused_components": 0,
+        "step_cpu_ns": 7812500.0,
+        "steps": 56,
+        "total_cpu_ns": 19531250.0
+      },
+      "median_total_cpu_ns": {
+        "conventional_cached": 19531250.0,
+        "full": 164062500.0,
+        "selective": 87890625.0
+      },
+      "runs": [
+        {
+          "modes": {
+            "conventional_cached": {
+              "annotations": 56,
+              "batch_repetitions": 4,
+              "batch_total_cpu_ns": 62500000,
+              "batch_wall_ns": 72509000,
+              "mode": "conventional_cached",
+              "preparation_cpu_ns": 3906250.0,
+              "replayed_suffix_actions": 0,
+              "reused_components": 0,
+              "step_cpu_ns": 11718750.0,
+              "steps": 56,
+              "total_cpu_ns": 15625000.0
+            },
+            "full": {
+              "annotations": 56,
+              "batch_repetitions": 4,
+              "batch_total_cpu_ns": 671875000,
+              "batch_wall_ns": 663622600,
+              "mode": "full",
+              "preparation_cpu_ns": 3906250.0,
+              "replayed_suffix_actions": 1596,
+              "reused_components": 0,
+              "step_cpu_ns": 164062500.0,
+              "steps": 56,
+              "total_cpu_ns": 167968750.0
+            },
+            "selective": {
+              "annotations": 56,
+              "batch_repetitions": 4,
+              "batch_total_cpu_ns": 390625000,
+              "batch_wall_ns": 386048900,
+              "mode": "selective",
+              "preparation_cpu_ns": 7812500.0,
+              "replayed_suffix_actions": 0,
+              "reused_components": 896,
+              "step_cpu_ns": 89843750.0,
+              "steps": 56,
+              "total_cpu_ns": 97656250.0
+            }
+          },
+          "order": [
+            "conventional_cached",
+            "selective",
+            "full"
+          ],
+          "run": 0
+        },
+        {
+          "modes": {
+            "conventional_cached": {
+              "annotations": 56,
+              "batch_repetitions": 4,
+              "batch_total_cpu_ns": 78125000,
+              "batch_wall_ns": 71949000,
+              "mode": "conventional_cached",
+              "preparation_cpu_ns": 7812500.0,
+              "replayed_suffix_actions": 0,
+              "reused_components": 0,
+              "step_cpu_ns": 11718750.0,
+              "steps": 56,
+              "total_cpu_ns": 19531250.0
+            },
+            "full": {
+              "annotations": 56,
+              "batch_repetitions": 4,
+              "batch_total_cpu_ns": 625000000,
+              "batch_wall_ns": 651249700,
+              "mode": "full",
+              "preparation_cpu_ns": 0.0,
+              "replayed_suffix_actions": 1596,
+              "reused_components": 0,
+              "step_cpu_ns": 156250000.0,
+              "steps": 56,
+              "total_cpu_ns": 156250000.0
+            },
+            "selective": {
+              "annotations": 56,
+              "batch_repetitions": 4,
+              "batch_total_cpu_ns": 328125000,
+              "batch_wall_ns": 338540900,
+              "mode": "selective",
+              "preparation_cpu_ns": 3906250.0,
+              "replayed_suffix_actions": 0,
+              "reused_components": 896,
+              "step_cpu_ns": 78125000.0,
+              "steps": 56,
+              "total_cpu_ns": 82031250.0
+            }
+          },
+          "order": [
+            "full",
+            "conventional_cached",
+            "selective"
+          ],
+          "run": 1
+        },
+        {
+          "modes": {
+            "conventional_cached": {
+              "annotations": 56,
+              "batch_repetitions": 4,
+              "batch_total_cpu_ns": 62500000,
+              "batch_wall_ns": 82131200,
+              "mode": "conventional_cached",
+              "preparation_cpu_ns": 3906250.0,
+              "replayed_suffix_actions": 0,
+              "reused_components": 0,
+              "step_cpu_ns": 11718750.0,
+              "steps": 56,
+              "total_cpu_ns": 15625000.0
+            },
+            "full": {
+              "annotations": 56,
+              "batch_repetitions": 4,
+              "batch_total_cpu_ns": 671875000,
+              "batch_wall_ns": 663266600,
+              "mode": "full",
+              "preparation_cpu_ns": 3906250.0,
+              "replayed_suffix_actions": 1596,
+              "reused_components": 0,
+              "step_cpu_ns": 164062500.0,
+              "steps": 56,
+              "total_cpu_ns": 167968750.0
+            },
+            "selective": {
+              "annotations": 56,
+              "batch_repetitions": 4,
+              "batch_total_cpu_ns": 343750000,
+              "batch_wall_ns": 348166700,
+              "mode": "selective",
+              "preparation_cpu_ns": 7812500.0,
+              "replayed_suffix_actions": 0,
+              "reused_components": 896,
+              "step_cpu_ns": 78125000.0,
+              "steps": 56,
+              "total_cpu_ns": 85937500.0
+            }
+          },
+          "order": [
+            "conventional_cached",
+            "selective",
+            "full"
+          ],
+          "run": 2
+        },
+        {
+          "modes": {
+            "conventional_cached": {
+              "annotations": 56,
+              "batch_repetitions": 4,
+              "batch_total_cpu_ns": 78125000,
+              "batch_wall_ns": 75837400,
+              "mode": "conventional_cached",
+              "preparation_cpu_ns": 3906250.0,
+              "replayed_suffix_actions": 0,
+              "reused_components": 0,
+              "step_cpu_ns": 15625000.0,
+              "steps": 56,
+              "total_cpu_ns": 19531250.0
+            },
+            "full": {
+              "annotations": 56,
+              "batch_repetitions": 4,
+              "batch_total_cpu_ns": 656250000,
+              "batch_wall_ns": 644923400,
+              "mode": "full",
+              "preparation_cpu_ns": 3906250.0,
+              "replayed_suffix_actions": 1596,
+              "reused_components": 0,
+              "step_cpu_ns": 156250000.0,
+              "steps": 56,
+              "total_cpu_ns": 164062500.0
+            },
+            "selective": {
+              "annotations": 56,
+              "batch_repetitions": 4,
+              "batch_total_cpu_ns": 328125000,
+              "batch_wall_ns": 342410800,
+              "mode": "selective",
+              "preparation_cpu_ns": 7812500.0,
+              "replayed_suffix_actions": 0,
+              "reused_components": 896,
+              "step_cpu_ns": 74218750.0,
+              "steps": 56,
+              "total_cpu_ns": 82031250.0
+            }
+          },
+          "order": [
+            "selective",
+            "full",
+            "conventional_cached"
+          ],
+          "run": 3
+        },
+        {
+          "modes": {
+            "conventional_cached": {
+              "annotations": 56,
+              "batch_repetitions": 4,
+              "batch_total_cpu_ns": 78125000,
+              "batch_wall_ns": 72466700,
+              "mode": "conventional_cached",
+              "preparation_cpu_ns": 3906250.0,
+              "replayed_suffix_actions": 0,
+              "reused_components": 0,
+              "step_cpu_ns": 11718750.0,
+              "steps": 56,
+              "total_cpu_ns": 19531250.0
+            },
+            "full": {
+              "annotations": 56,
+              "batch_repetitions": 4,
+              "batch_total_cpu_ns": 625000000,
+              "batch_wall_ns": 635378200,
+              "mode": "full",
+              "preparation_cpu_ns": 3906250.0,
+              "replayed_suffix_actions": 1596,
+              "reused_components": 0,
+              "step_cpu_ns": 152343750.0,
+              "steps": 56,
+              "total_cpu_ns": 156250000.0
+            },
+            "selective": {
+              "annotations": 56,
+              "batch_repetitions": 4,
+              "batch_total_cpu_ns": 359375000,
+              "batch_wall_ns": 364944400,
+              "mode": "selective",
+              "preparation_cpu_ns": 0.0,
+              "replayed_suffix_actions": 0,
+              "reused_components": 896,
+              "step_cpu_ns": 85937500.0,
+              "steps": 56,
+              "total_cpu_ns": 89843750.0
+            }
+          },
+          "order": [
+            "full",
+            "conventional_cached",
+            "selective"
+          ],
+          "run": 4
+        },
+        {
+          "modes": {
+            "conventional_cached": {
+              "annotations": 56,
+              "batch_repetitions": 4,
+              "batch_total_cpu_ns": 78125000,
+              "batch_wall_ns": 74502300,
+              "mode": "conventional_cached",
+              "preparation_cpu_ns": 3906250.0,
+              "replayed_suffix_actions": 0,
+              "reused_components": 0,
+              "step_cpu_ns": 15625000.0,
+              "steps": 56,
+              "total_cpu_ns": 19531250.0
+            },
+            "full": {
+              "annotations": 56,
+              "batch_repetitions": 4,
+              "batch_total_cpu_ns": 625000000,
+              "batch_wall_ns": 631479200,
+              "mode": "full",
+              "preparation_cpu_ns": 11718750.0,
+              "replayed_suffix_actions": 1596,
+              "reused_components": 0,
+              "step_cpu_ns": 144531250.0,
+              "steps": 56,
+              "total_cpu_ns": 156250000.0
+            },
+            "selective": {
+              "annotations": 56,
+              "batch_repetitions": 4,
+              "batch_total_cpu_ns": 406250000,
+              "batch_wall_ns": 392389400,
+              "mode": "selective",
+              "preparation_cpu_ns": 3906250.0,
+              "replayed_suffix_actions": 0,
+              "reused_components": 896,
+              "step_cpu_ns": 97656250.0,
+              "steps": 56,
+              "total_cpu_ns": 101562500.0
+            }
+          },
+          "order": [
+            "conventional_cached",
+            "full",
+            "selective"
+          ],
+          "run": 5
+        },
+        {
+          "modes": {
+            "conventional_cached": {
+              "annotations": 56,
+              "batch_repetitions": 4,
+              "batch_total_cpu_ns": 78125000,
+              "batch_wall_ns": 70591600,
+              "mode": "conventional_cached",
+              "preparation_cpu_ns": 11718750.0,
+              "replayed_suffix_actions": 0,
+              "reused_components": 0,
+              "step_cpu_ns": 7812500.0,
+              "steps": 56,
+              "total_cpu_ns": 19531250.0
+            },
+            "full": {
+              "annotations": 56,
+              "batch_repetitions": 4,
+              "batch_total_cpu_ns": 687500000,
+              "batch_wall_ns": 714456800,
+              "mode": "full",
+              "preparation_cpu_ns": 7812500.0,
+              "replayed_suffix_actions": 1596,
+              "reused_components": 0,
+              "step_cpu_ns": 164062500.0,
+              "steps": 56,
+              "total_cpu_ns": 171875000.0
+            },
+            "selective": {
+              "annotations": 56,
+              "batch_repetitions": 4,
+              "batch_total_cpu_ns": 328125000,
+              "batch_wall_ns": 340511100,
+              "mode": "selective",
+              "preparation_cpu_ns": 3906250.0,
+              "replayed_suffix_actions": 0,
+              "reused_components": 896,
+              "step_cpu_ns": 78125000.0,
+              "steps": 56,
+              "total_cpu_ns": 82031250.0
+            }
+          },
+          "order": [
+            "selective",
+            "full",
+            "conventional_cached"
+          ],
+          "run": 6
+        },
+        {
+          "modes": {
+            "conventional_cached": {
+              "annotations": 56,
+              "batch_repetitions": 4,
+              "batch_total_cpu_ns": 78125000,
+              "batch_wall_ns": 72477100,
+              "mode": "conventional_cached",
+              "preparation_cpu_ns": 3906250.0,
+              "replayed_suffix_actions": 0,
+              "reused_components": 0,
+              "step_cpu_ns": 15625000.0,
+              "steps": 56,
+              "total_cpu_ns": 19531250.0
+            },
+            "full": {
+              "annotations": 56,
+              "batch_repetitions": 4,
+              "batch_total_cpu_ns": 640625000,
+              "batch_wall_ns": 661302300,
+              "mode": "full",
+              "preparation_cpu_ns": 3906250.0,
+              "replayed_suffix_actions": 1596,
+              "reused_components": 0,
+              "step_cpu_ns": 156250000.0,
+              "steps": 56,
+              "total_cpu_ns": 160156250.0
+            },
+            "selective": {
+              "annotations": 56,
+              "batch_repetitions": 4,
+              "batch_total_cpu_ns": 343750000,
+              "batch_wall_ns": 348467800,
+              "mode": "selective",
+              "preparation_cpu_ns": 7812500.0,
+              "replayed_suffix_actions": 0,
+              "reused_components": 896,
+              "step_cpu_ns": 78125000.0,
+              "steps": 56,
+              "total_cpu_ns": 85937500.0
+            }
+          },
+          "order": [
+            "full",
+            "conventional_cached",
+            "selective"
+          ],
+          "run": 7
+        },
+        {
+          "modes": {
+            "conventional_cached": {
+              "annotations": 56,
+              "batch_repetitions": 4,
+              "batch_total_cpu_ns": 93750000,
+              "batch_wall_ns": 89052800,
+              "mode": "conventional_cached",
+              "preparation_cpu_ns": 7812500.0,
+              "replayed_suffix_actions": 0,
+              "reused_components": 0,
+              "step_cpu_ns": 15625000.0,
+              "steps": 56,
+              "total_cpu_ns": 23437500.0
+            },
+            "full": {
+              "annotations": 56,
+              "batch_repetitions": 4,
+              "batch_total_cpu_ns": 656250000,
+              "batch_wall_ns": 663571600,
+              "mode": "full",
+              "preparation_cpu_ns": 7812500.0,
+              "replayed_suffix_actions": 1596,
+              "reused_components": 0,
+              "step_cpu_ns": 156250000.0,
+              "steps": 56,
+              "total_cpu_ns": 164062500.0
+            },
+            "selective": {
+              "annotations": 56,
+              "batch_repetitions": 4,
+              "batch_total_cpu_ns": 484375000,
+              "batch_wall_ns": 485435600,
+              "mode": "selective",
+              "preparation_cpu_ns": 3906250.0,
+              "replayed_suffix_actions": 0,
+              "reused_components": 896,
+              "step_cpu_ns": 117187500.0,
+              "steps": 56,
+              "total_cpu_ns": 121093750.0
+            }
+          },
+          "order": [
+            "full",
+            "conventional_cached",
+            "selective"
+          ],
+          "run": 8
+        },
+        {
+          "modes": {
+            "conventional_cached": {
+              "annotations": 56,
+              "batch_repetitions": 4,
+              "batch_total_cpu_ns": 93750000,
+              "batch_wall_ns": 96123400,
+              "mode": "conventional_cached",
+              "preparation_cpu_ns": 7812500.0,
+              "replayed_suffix_actions": 0,
+              "reused_components": 0,
+              "step_cpu_ns": 15625000.0,
+              "steps": 56,
+              "total_cpu_ns": 23437500.0
+            },
+            "full": {
+              "annotations": 56,
+              "batch_repetitions": 4,
+              "batch_total_cpu_ns": 765625000,
+              "batch_wall_ns": 764111800,
+              "mode": "full",
+              "preparation_cpu_ns": 11718750.0,
+              "replayed_suffix_actions": 1596,
+              "reused_components": 0,
+              "step_cpu_ns": 179687500.0,
+              "steps": 56,
+              "total_cpu_ns": 191406250.0
+            },
+            "selective": {
+              "annotations": 56,
+              "batch_repetitions": 4,
+              "batch_total_cpu_ns": 437500000,
+              "batch_wall_ns": 436307500,
+              "mode": "selective",
+              "preparation_cpu_ns": 3906250.0,
+              "replayed_suffix_actions": 0,
+              "reused_components": 896,
+              "step_cpu_ns": 97656250.0,
+              "steps": 56,
+              "total_cpu_ns": 109375000.0
+            }
+          },
+          "order": [
+            "full",
+            "selective",
+            "conventional_cached"
+          ],
+          "run": 9
+        }
+      ],
+      "selective_vs_conventional_cached": {
+        "bootstrap_95_percent_interval": [
+          -426.6666666666667,
+          -347.6666666666667
+        ],
+        "mean_percent_cpu_reduction": -383.8333333333333,
+        "paired_percent_changes": [
+          -525.0,
+          -320.0,
+          -450.0,
+          -320.0,
+          -360.0,
+          -420.0,
+          -320.0,
+          -340.0,
+          -416.6666666666667,
+          -366.6666666666667
+        ]
+      },
+      "selective_vs_full": {
+        "bootstrap_95_percent_interval": [
+          38.279623477297896,
+          47.426306251887645
+        ],
+        "mean_percent_cpu_reduction": 43.335948415358516,
+        "paired_percent_changes": [
+          41.86046511627907,
+          47.5,
+          48.83720930232558,
+          50.0,
+          42.5,
+          35.0,
+          52.27272727272727,
+          46.34146341463415,
+          26.19047619047619,
+          42.857142857142854
+        ]
+      },
+      "stripes": 16
+    }
+  ],
+  "controller_target_established": false,
+  "environment": {
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python": "3.11.4 (tags/v3.11.4:d2340ef, Jun  7 2023, 05:45:37) [MSC v.1934 64 bit (AMD64)]",
+    "source_sha256": {
+      "prism_c/__init__.py": "5310acec652af6a86ebf1e86fe1547d37c6fbfa7cad6ab1afc446397761c8715",
+      "prism_c/__main__.py": "2e3be1c7bb08590547ff024b9f63adc301ab168b8f80e83fb69162bee5668a4b",
+      "prism_c/baseline.py": "7bd775a409ec1466abecc0cfe417657495638069d26324b8a545bdcb634aa590",
+      "prism_c/benchmark.py": "71c0a0823ceddc6ed0603e68805b3e6ec50844e123e91a22bc9b0429e703e3b4",
+      "prism_c/campaign.py": "b226a09b8930d8fde711512e03e13a98046cc964efc6eee6fe21e15a37b5a353",
+      "prism_c/checker.py": "4baf97354caaeff575a2a215f7755e89d7f336e3f8c108e952908a1efb0a2cfb",
+      "prism_c/coding.py": "fb823722e39ac96bd7dfcee9dceb3aa523429e788813838b258791215ef72c1f",
+      "prism_c/fault_worker.py": "a1cc4b23ece57b37c703eae6b42ff2a3f00c76040c693e364a27191614dddf88",
+      "prism_c/model.py": "5c91b999c9a60043535c054982c45c269fd8d4b4904288dabbbb95d241cfea36",
+      "prism_c/selective.py": "3cd58e5efc240611b0eaa695a0fc9188840c11218a5712568b44a0a9a65ec9c6",
+      "prism_c/storage.py": "f89b7a22b1740820d8ec31e8976231c24dc2a48a20668ac24e404ed0bc4931be",
+      "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tests/test_model.py": "cdd4d9832c160cf02f36a5b7db4f9c1f0e6a42012f8aa1fdb190c50bf5d427ea",
+      "tests/test_selective.py": "a3a86faef0194f5b0b4b6aef61752ba287123e6f0646dee916c61fd57cccc6e1",
+      "tests/test_storage.py": "cb61782f540e462e348ca3bfaec6b3c4729fdc77a50829beac9c30f47d5f17da"
+    },
+    "sqlite": "3.42.0",
+    "utc": "2026-10-11T09:29:21.353963+00:00",
+    "version": "0.1.0"
+  },
+  "paired_runs_per_configuration": 10,
+  "patent_rating_changed": false,
+  "scope": "Logical in-memory validation only, including admission/cache construction and all guards; one warm-up per mode per configuration; CPU process time; no byte I/O, SQLite, serialization, related faults, foreground load or independent failure domains.",
+  "seed": 20261011
+}
