@@ -2,11 +2,11 @@
 
 Updated: 12 October 2026
 
-Milestone 10 in progress: registered four fault/retry and scoped-contention configurations, ten pairs each, with the same read reuse in conventional and selective modes. Benchmark-only worker telemetry retains the CPU of an actual lost-acknowledgement exit; separate controllers use disjoint scopes in shared domains. Focused tests check cursor/charge preservation, durable receipt reuse and final restoration on both profiles/modes. Frozen source/protocol commit and raw measurement results will be recorded here. Foreground latency confirmation and the complete controller gate remain pending.
+Milestone 10 is implemented and verified. See [milestone 10](evidence/results/MILESTONE_10.md) for all paired effects, faults, timing boundaries and limitations.
 
 ## Current status
 
-Milestones 1–9 are implemented and verified within the stated scope. Milestone 9 removes duplicate read reconstruction while retaining all authenticity checks. Eight ten-pair CPU configurations show 44%–47% lower read CPU for large objects; small-object results remain inconclusive. Eight monitored foreground windows passed all collection/content/capacity checks with no observed 500 ms pulse gaps, but do not establish a new foreground gate pass. Earlier unmet proxy/foreground targets and the interrupted/supplemented milestone 8 collection remain preserved. The full suite passed **129 test methods and 318 subtests**; both correctness campaigns observed zero violations/disagreements. The fast-Linux test-backlog failure was corrected and fresh Ubuntu/Windows CI both passed. Conventional caching and serialized reads remain defaults; storage workers and snapshot reads are opt-in. PASS refers only to stated implementation scope, not completion of the 16-week research plan. The earlier 53/100 assessment and conditional 73/100 target are unchanged.
+Milestones 1–10 are implemented and verified within the stated scope. Milestone 10 completed **40 fault/contention pairs / 80 measured groups**, with 40 actual worker exits, 840 authentic foreground probes and overlapping controller repair intervals in all 40 contention attempts. No configuration meets the 20% CPU or 10% restoration proxy target versus conventional caching. Both modes receive the same milestone 9 read optimization; large-object read CPU savings remain a conventional improvement. Earlier unmet foreground targets and the interrupted/supplemented milestone 8 collection remain preserved. The full suite passed **132 methods and 326 subtests**, with 41 actual process-exit regression cases; both finite campaigns observed zero violations/disagreements. All 41 source/test hashes match frozen measurement and final verification. Ubuntu/Windows CI both passed for the milestone 10 source. Conventional caching and serialized reads remain defaults; storage workers and snapshot reads are opt-in. PASS refers only to stated implementation scope, not completion of the 16-week research plan. The earlier **53/100 assessment and conditional 73/100 target are unchanged**.
 
 ## Scope of this implementation
 
@@ -28,6 +28,7 @@ Build a bounded reference model and a local durable storage prototype first. Ver
 | E03 | Foreground sampling and CPU attribution | PASS for diagnostic method; cache-mode confirmation pending | [Milestone 7](evidence/results/MILESTONE_07.md): 12 sufficient windows, boundary reads retained, 12 separate instrumented profiles; foreground contention unresolved |
 | E04 | Authenticated snapshot reads and fixed-arrival pairs | PASS for implementation; 5% screen not met | [Milestone 8](evidence/results/MILESTONE_08.md): 40 supplemented pairs, 80 analyzed windows, 64,000 requests; original campaign failure retained; conventional read optimization, no selective advantage established |
 | E05 | Authenticated read-result reuse and liveness sampling | PASS for local implementation/read CPU; foreground gate pending | [Milestone 9](evidence/results/MILESTONE_09.md): 80 CPU pairs, large-object read savings 44%–47%, small effects inconclusive; 8 monitored foreground diagnostics; all checks retained |
+| E06 | Actual lost-receipt retry and scoped-contention comparison | PASS for tested local recovery/collection; proxy targets unmet | [Milestone 10](evidence/results/MILESTONE_10.md): 40 pairs, 40 measured worker exits, same optimized reads across modes; foreground latency gate not evaluated |
 | R01 | Final claim chart and inventive-step review | UNKNOWN | Preliminary sources only |
 | P01 | Contributions, public disclosures and priority | UNKNOWN | User records not available |
 | A01 | Fresh patentability assessment | PENDING | No new score earned |
@@ -83,7 +84,9 @@ Build a bounded reference model and a local durable storage prototype first. Ver
 
 ## Next actions
 
-1. Register fault/retry and scoped-contention performance, providing the same snapshot/read optimization to competent conventional and selective controllers. Retain liveness and actual fault outcomes. A fresh paired foreground confirmation remains pending; the logical span subset still excludes physical verification and is not the complete G6 verification-CPU metric.
+Milestone 10 froze source/protocol/tests in `f3cacf3e90e30d6dc57db9a7498a9ff48d884499` before collecting the [raw report](evidence/results/fault-contention-milestone-10.json). Eight warmups and all 80 measured groups completed without missing worker telemetry, failed content checks or observed 500 ms parent/controller pulse gaps. Paired initial/final ledgers and repair witnesses match across modes; all 41 raw source/test hashes match the frozen Git commit and [final verification](evidence/results/verification-milestone-10.json). Four warmup exits are retained separately from the 40 measured exits. Every fault preserves authority cursor/charge and reuses the exact committed receipt/token. No CPU/restoration proxy target is met; the foreground latency gate is not evaluated. Full local verification passed 132 methods/326 subtests and both campaigns with zero violations/disagreements; [Ubuntu and Windows CI](https://github.com/Meet9315/Recovery_Cert/actions/runs/38276513209) both passed for the frozen source. No rating change is claimed.
+
+1. Audit the strongest conventional baseline and worker-preparation costs after the retained milestone 10 negative/inconclusive effects. Register a larger workload only around a specific testable advantage. Fresh paired foreground confirmation must give both modes the same optimized reads and retain liveness observations; complete G6 verification-CPU attribution remains pending.
 2. Investigate ordinary source-validation/authority costs without removing physical checks, and require fresh registered confirmation for any optimization.
 3. Keep conventional caching as default; preserve the measured slowdowns and selective/shadow modes for investigation. Require fresh registered confirmation for any optimization.
 4. Extend local worker processes to authenticated remote daemons and test actual device/host fault boundaries separately.
@@ -112,6 +115,8 @@ python -m experiments.complete_snapshot_latency --original evidence/results/snap
 python -m prism_c verify --report evidence/results/verification-milestone-08-new.json --traces 10000 --seed 20261011
 python -m prism_c read-reuse-benchmark --report evidence/results/read-reuse-new.json --runs 10 --seed 20261012
 python -m prism_c verify --report evidence/results/verification-milestone-09-new.json --traces 10000 --seed 20261011
+python -m prism_c fault-contention-benchmark --report evidence/results/fault-contention-new.json --runs 10 --seed 20261012
+python -m prism_c verify --report evidence/results/verification-milestone-10-new.json --traces 10000 --seed 20261011
 ```
 
 Use a new/empty demo root; existing stores are never silently reset. The verified initial demonstration is in `tmp/prototype-demo-final`; the concurrent demonstration is in `tmp/concurrent-demo-milestone-03`; the worker demonstration is in `tmp/worker-demo-milestone-04`; the mixed-profile demonstration is in `tmp/four-plus-two-demo-milestone-05`. Read [README.md](README.md) for ownership-aware resume/cancel commands. These local runtime stores are ignored by Git; the saved evidence JSON reports are tracked.
