@@ -43,6 +43,8 @@ The 10,000-trace legacy campaign covered 2,479 initial configurations, 3,772 sta
 
 The frozen source/protocol commit `f3cacf3e90e30d6dc57db9a7498a9ff48d884499` has been pushed to the authorized repository, and its [CI verification](https://github.com/Meet9315/Recovery_Cert/actions/runs/38276513209) passed on both Ubuntu and Windows. Each CI job runs the process-fault/integrity suite, 1,000 legacy traces and the independent coding campaign. CI does not repeat the manual performance experiment. Production/benchmark/test source is unchanged from that passing commit.
 
+Results commit [9ef502b08c0e872bdb4d60ff0ffa0c081fcd3f16](https://github.com/Meet9315/Recovery_Cert/commit/9ef502b08c0e872bdb4d60ff0ffa0c081fcd3f16) was pushed and confirmed by GitHub's `main` ref API. GitHub now reports the repository as **public**, correcting earlier private-visibility descriptions; this task did not change that setting. See [the progress publication record](../../PROGRESS.md) for verification provenance. No patent filing or rating increase is claimed.
+
 This adds bounded recovery/contention evidence without establishing a selective advantage, inventive interaction, independent-device durability or production readiness. G2 and complete G6 remain unresolved. Next, audit the strongest conventional baseline and worker-preparation/source-check costs, register a larger workload only where a specific useful advantage is testable, and collect fresh paired foreground confirmation with the same read improvements in both modes. Remote workers, actual host/device/power-loss evidence and the patent prior-art/claim assessment remain separate requirements.
 
 Run fresh evidence into new paths:
