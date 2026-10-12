@@ -18,6 +18,7 @@ python -m prism_c concurrent-demo --root tmp/worker-demo-new --report evidence/r
 python -m prism_c four-plus-two-demo --root tmp/four-plus-two-demo-new --report evidence/results/four-plus-two-demo-new.json --validation-mode shadow
 python -m prism_c controller-benchmark --report evidence/results/controller-benchmark-new.json --runs 10 --seed 20261012
 python -m prism_c measurement-diagnostics --report evidence/results/measurement-diagnostics-new.json --seed 20261012
+python -m prism_c snapshot-latency --report evidence/results/snapshot-latency-new.json --runs 10 --seed 20261012
 ```
 
 The demo root must be new or empty. Existing stores are never reset by the demo. Choose a new root name for another run. `verify` uses disposable temporary stores and preserves the report, test details, source hashes and model campaign counts.
@@ -84,6 +85,18 @@ Separate process-CPU profiles retain every function's call counts and exclusive/
 The [diagnostic protocol](experiments/measurement_diagnostics_protocol.md) preserves the earlier registered controller comparison and its results. CLI failure preserves a partial report and names the failed measurement cell. Correctness tests cover actual SQLite-blocked reads, phase separation, nested spans, worker receipt profiling and failure preservation. Longer sampling and attribution do not change the patentability assessment; independent paired confirmation and fault/contention comparisons remain pending.
 
 The [milestone 7 results](evidence/results/MILESTONE_07.md) retain all twelve healthy windows and CPU profiles. Every window exceeded 400 reads in both phases; twelve reads ending after restoration were retained. Loaded p99 was 3.17–30.08 times control in these single observations, so foreground contention remains unresolved. The full correctness suite passed 107 methods and 288 subtests, with both finite campaigns reporting zero violations/disagreements. CPU quantization and profiler overhead prevent precise cost-share or speedup claims.
+
+## Opt-in snapshot reads and paired latency
+
+Call `Authority.read_snapshot(name)` to read immutable content from a committed metadata snapshot. SQLite WAL allows [simultaneous snapshot readers and a writer](https://www.sqlite.org/isolation.html); external pool bytes still require independent authenticity checks. This API performs the same row, regenerated-row, padding and original-content digest checks as `read`. If reconstruction rejects, it closes the snapshot and retries once through the existing serialized `read`. That handles placement/reclamation races without trusting stale physical bytes. Other database/I/O errors propagate. `read` remains the default; repair authority, workers, claims, fences and capacity accounting retain their existing paths. See the [snapshot-read contract](spec/snapshot_reads.md) for race, offline-state and fault limits.
+
+`snapshot-latency` compares those two APIs under the same conventional cached controller. Four configurations cover both coding profiles and local/worker paths, with ten seeded pairs each and randomized API order. A fixed schedule offers 400 requests per phase at 100 Hz independently of completion. Every queued call remains in the report, including calls served after restoration. End-to-end latency includes scheduling and queue delay; service latency is reported separately. Complete no-repair drain precedes repair, and all loaded requests drain afterward.
+
+The [registered paired protocol](experiments/snapshot_latency_protocol.md) preserves equal initial backlogs, all outcomes and source/protocol hashes. It reports paired loaded-p99 effects and each API's own loaded/control inflation. Improvement over serialized reads alone does not meet the original 5% foreground condition. This conventional database optimization applies equally to the baseline; it does not establish a selective-continuation advantage, overall research gate or new patentability rating. The manual confirmation campaign is separate from CI integrity tests.
+
+The [milestone 8 results](evidence/results/MILESTONE_08.md) preserve the original campaign failure after 35 pairs and its separately registered continuation. The supplemented forty-pair set contains 80 windows and 64,000 successful requests. Snapshot reads reduced mean paired loaded p99 by about 92% in both worker configurations and 67% in local 4+2; local 2+1 remains inconclusive, including a retained approximately 187-second interruption. None met the own-control 5% condition. Serialized reads remain default. The [continuation protocol](experiments/snapshot_latency_continuation_protocol.md) documents provenance, all retained/unused windows and failure handling; no original data is overwritten.
+
+Milestone 8 full verification passed 120 methods and 296 subtests, retaining 37 process-exit cases and both finite campaigns with zero observed violations/disagreements. The continuation helper's source hash is saved separately from the 34 package/test hashes, all matching their recorded versions.
 
 ## Repository verification
 
