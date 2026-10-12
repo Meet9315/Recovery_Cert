@@ -4,11 +4,11 @@ Updated: 12 October 2026
 
 ## Current status
 
-Milestones 1–5 are implemented and verified within the stated local scope. Milestone 5 adds versioned 4+2 coding, an independent reconstruction oracle, mixed-profile repair and legacy-store migration. The full suite passed **96 test methods and 288 subtests**; both verification campaigns observed zero violations/disagreements. Stage/reclaim workers perform I/O outside the authority writer transaction and return checked durable receipts. I03 is PASS for the tested local process scope; remote daemons and independent hardware remain pending. Component caching was slower than the capable conventional cache on the measured workloads; conventional caching remains the default and worker mode is opt-in. This file is the persistent progress record; PASS refers only to the stated implementation scope, not completion of the 16-week research plan. The earlier 53/100 assessment and conditional 73/100 target are unchanged.
+Milestones 1–6 are implemented and verified within the stated local scope. Milestone 6 adds the registered durable-controller comparison: eight configurations, 80 paired runs and 240 measured completed repair groups, with no failed attempts. None meets the CPU/restoration proxy targets against conventional caching; foreground p99 is insufficient throughout. The full suite passed **100 test methods and 288 subtests**; both correctness campaigns observed zero violations/disagreements. Conventional caching remains the default and worker mode is opt-in. The prototype supports versioned 2+1/4+2 coding, scoped concurrent plans, cache/reference modes and local storage-worker processes; remote daemons and independent hardware remain pending. This file is the persistent progress record; PASS refers only to the stated implementation scope, not completion of the 16-week research plan. The earlier 53/100 assessment and conditional 73/100 target are unchanged.
 
 ## Scope of this implementation
 
-Build a bounded reference model and a local durable storage prototype first. Versioned coding profiles: default 2 data fragments plus XOR parity (2-of-3), and 4 data fragments plus P/Q parity (4-of-6), immutable content, trusted local workers, one SQLite authority and fixed-size managed storage slots. Placement domains are simulated labels. Production distributed consensus, independent device/rack fault guarantees and controller-level 4+2 performance remain outside the verified scope.
+Build a bounded reference model and a local durable storage prototype first. Versioned coding profiles: default 2 data fragments plus XOR parity (2-of-3), and 4 data fragments plus P/Q parity (4-of-6), immutable content, trusted local workers, one SQLite authority and fixed-size managed storage slots. Placement domains are simulated labels. A registered reduced local controller comparison now covers both profiles; production distributed consensus, independent device/rack fault guarantees and the complete controller performance gate remain outside the verified scope.
 
 ## Milestones
 
@@ -22,14 +22,13 @@ Build a bounded reference model and a local durable storage prototype first. Ver
 | E01 | Reproducible demonstration/evidence runner | PASS for correctness milestone | [Verification](evidence/results/verification.json), [demo](evidence/results/demo.json) |
 | C02 | Selective dependency reuse | PASS for tested correctness scope | [Specification](spec/selective_validation.md), 52 tests and 46,282 full-reference comparisons |
 | I03 | Multiple concurrent plans and independent storage workers | PASS for tested local process scope | [Milestone 4](evidence/results/MILESTONE_04.md): scoped claims, separate repair workers, durable fences/revocations and receipts; remote/hardware extension pending |
-| E02 | Comparative performance and larger coding profile | PARTIAL; overall target not met | [4+2 correctness](evidence/results/MILESTONE_05.md) PASS for local scope; [logical comparison](evidence/results/MILESTONE_02.md) shows no competent-baseline gain; controller performance pending |
+| E02 | Comparative performance and larger coding profile | PARTIAL; overall target not met | [4+2 correctness](evidence/results/MILESTONE_05.md) PASS for local scope; [durable controller comparison](evidence/results/MILESTONE_06.md): 80 paired runs, no proxy-target improvement; foreground p99 insufficient |
 | R01 | Final claim chart and inventive-step review | UNKNOWN | Preliminary sources only |
 | P01 | Contributions, public disclosures and priority | UNKNOWN | User records not available |
 | A01 | Fresh patentability assessment | PENDING | No new score earned |
 
 ## Session log
 
-- Milestone 6 started: registered [controller comparison protocol](experiments/controller_protocol.md) before collecting results. Implemented actual-store benchmarking for both profiles and local/worker paths, randomized paired runs, benchmark-only child CPU accounting, concurrent foreground read controls, capacity observations, calibration and partial-report preservation. Four measurement-integrity tests passed, including real restoration and worker receipt-lookup CPU coverage. Comparative results and the full regression run are pending.
 - Inspected existing documents and Python 3.11 runtime. No implementation package or repository instructions were found in the workspace.
 - Selected a dependency-free Python prototype so the model and tests can run locally without package installation.
 - Confirmed SQLite write transaction and synchronization semantics using official documentation. Single-authority serialization will be stated explicitly.
@@ -61,13 +60,16 @@ Build a bounded reference model and a local durable storage prototype first. Ver
 - Milestone 5: implemented the fixed versioned 4+2 GF(256) P/Q profile alongside default 2+1; generalized row ranges, decoding floors, restoration targets, durable source reconstruction and worker payload generation. Added profile-bound commitments with backward-compatible default fingerprints and additive stripe-column migration. A historical witness and an active legacy worker intent/cache survive migration.
 - Milestone 5 full verification: **96 test methods passed**, **288 subtests**, **37 total actual process-exit cases**. Independent coding checks cover all 65,536 field products, 15 nonzero matrix minors and 180 four-row reconstructions. The finite 4+2 campaign covers 720 cases (60 feasible, 660 infeasible), 810 distinct states, 420 actions, 840 cached/full comparisons and 840 stale-incarnation rejections, with zero disagreement. The separate 10,000-trace legacy campaign again has zero observed invariant violations. All 24 source/test hashes match. Evidence: [verification-milestone-05.json](evidence/results/verification-milestone-05.json).
 - Durable 4+2 tests restore from every four-row subset, tolerate every pair of simulated domain erasures, reject a third and cover all validation modes with local/worker execution. The persistent mixed-profile shadow demonstration repairs missing data rows 1 and 3, reclaims a retired destination and completes an independent 2+1 scope: ten actions, four durable worker receipts, both original objects recovered. Evidence: [milestone 5](evidence/results/MILESTONE_05.md), [demonstration](evidence/results/four-plus-two-demo-milestone-05.json). No controller-level performance improvement or new patentability score is claimed.
+- Milestone 6: froze the [controller comparison protocol](experiments/controller_protocol.md) and runner in commit `e9d84f3f83f222d5c5918f4e7562cd29df23823a` before collecting results. Implemented actual-store benchmarking, randomized mode order, child CPU accounting including receipt lookup, separate foreground reader/control phases, equal ledger observations, calibration, readback/audit and failed partial-report preservation. Four measurement-integrity tests passed.
+- Registered controller campaign completed: **eight configurations, 80 paired runs, 240 measured completed repair groups, zero failed attempts**. All 27 source/test hashes and the protocol hash match. Twenty-four warm-ups and eight calibration attempts are retained separately; all calibrated batch sizes are one. No configuration meets the 20% broad CPU or 10% restoration proxy target versus conventional caching. The 4+2 local eight-stripe workload uses 4.81% more CPU (slowdown interval 1.42%–8.20%); the small 4+2 worker workload has a 6.04% restoration improvement, below target, with no CPU saving. Foreground p99 is insufficient in every configuration. Evidence: [results](evidence/results/MILESTONE_06.md), [raw paired data](evidence/results/controller-benchmark-milestone-06.json). G6 and the patentability rating remain unchanged.
+- Milestone 6 full verification: **100 test methods and 288 subtests passed**, with no failures/errors; all 37 process-exit regression cases retained. The separate 10,000-trace legacy and 720-case 4+2 campaigns again observed zero invariant violations/disagreements. Source hashes match the final 27 code/test files and the benchmark source versions. Evidence: [verification-milestone-06.json](evidence/results/verification-milestone-06.json).
 
 ## Next actions
 
-1. Register and implement the controller-level comparison runner for both coding profiles, including persistence, source/payload checks, worker preparation and receipt reconciliation. Compare with the capable conventional cached controller on identical workloads; the logical benchmark does not pass G6.
-2. Keep conventional caching as default and preserve selective/shadow modes for further investigation; do not treat savings over uncached replay as meeting the competent-baseline target.
-3. Extend local worker processes to authenticated remote daemons and test actual device/host fault boundaries separately.
-4. Measure controller CPU, practical repair metrics and foreground p99 impact under the frozen protocol; retain unfavourable results too.
+1. Register longer foreground control/repair windows and count boundary-spanning reads explicitly; the first reduced controller campaign has insufficient p99 evidence. This is the next measurement task.
+2. Profile verification and persistence costs separately, then register fault/retry and scoped-contention comparisons. The broad CPU proxy does not isolate verification CPU or complete G6.
+3. Keep conventional caching as default; preserve the measured slowdowns and selective/shadow modes for investigation. Require fresh registered confirmation for any optimization.
+4. Extend local worker processes to authenticated remote daemons and test actual device/host fault boundaries separately.
 5. Complete the claim chart and professional priority/inventorship review when the necessary human records are available.
 
 ## Reproduce
@@ -85,13 +87,14 @@ python -m prism_c verify --report evidence/results/verification-milestone-04-new
 python -m prism_c concurrent-demo --root tmp/worker-demo-new --report evidence/results/worker-demo-new.json --validation-mode shadow --storage-workers
 python -m prism_c verify --report evidence/results/verification-milestone-05-new.json --traces 10000 --seed 20261011
 python -m prism_c four-plus-two-demo --root tmp/four-plus-two-demo-new --report evidence/results/four-plus-two-demo-new.json --validation-mode shadow
+python -m prism_c controller-benchmark --report evidence/results/controller-benchmark-new.json --runs 10 --seed 20261012
 ```
 
 Use a new/empty demo root; existing stores are never silently reset. The verified initial demonstration is in `tmp/prototype-demo-final`; the concurrent demonstration is in `tmp/concurrent-demo-milestone-03`; the worker demonstration is in `tmp/worker-demo-milestone-04`; the mixed-profile demonstration is in `tmp/four-plus-two-demo-milestone-05`. Read [README.md](README.md) for ownership-aware resume/cancel commands. These local runtime stores are ignored by Git; the saved evidence JSON reports are tracked.
 
 ## Research gate assessment
 
-G0 priority/disclosure: UNKNOWN. G1 novelty/inventive interaction: unresolved. G2 useful advantage over the strong baseline: not demonstrated. G3/G4/G5 have supporting correctness evidence only within this reduced local embodiment. The limited logical G6 comparison does not meet the competent-baseline target; controller-level evaluation and G7 patent readiness remain pending. Advancing engineering work was authorized by the user; the earlier proposal's research gates have not been relabelled as patentability passes.
+G0 priority/disclosure: UNKNOWN. G1 novelty/inventive interaction: unresolved. G2 useful advantage over the strong baseline: not demonstrated. G3/G4/G5 have supporting correctness evidence only within this reduced local embodiment. Neither the logical comparison nor the reduced durable-controller comparison establishes the competent-baseline target. Complete G6 attribution/fault/foreground evaluation and G7 patent readiness remain pending. Advancing engineering work was authorized by the user; the earlier proposal's research gates have not been relabelled as patentability passes.
 
 ## Open limitations
 

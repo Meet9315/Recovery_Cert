@@ -16,6 +16,7 @@ python -m prism_c concurrent-demo --root tmp/concurrent-demo-new --report eviden
 python -m prism_c verify --report evidence/results/verification-milestone-03-new.json --traces 10000
 python -m prism_c concurrent-demo --root tmp/worker-demo-new --report evidence/results/worker-demo-new.json --validation-mode shadow --storage-workers
 python -m prism_c four-plus-two-demo --root tmp/four-plus-two-demo-new --report evidence/results/four-plus-two-demo-new.json --validation-mode shadow
+python -m prism_c controller-benchmark --report evidence/results/controller-benchmark-new.json --runs 10 --seed 20261012
 ```
 
 The demo root must be new or empty. Existing stores are never reset by the demo. Choose a new root name for another run. `verify` uses disposable temporary stores and preserves the report, test details, source hashes and model campaign counts.
@@ -41,7 +42,7 @@ This is a trusted local single-authority embodiment. Domain labels are simulated
 
 Witnesses bind the complete terminal state of their admitted scope. Selective mode reuses validated component suffixes when their full projected dependencies and membership are unchanged. Related changes are replayed; coverage changes cause rebuilding. Exact terminal binding still rejects even otherwise-safe policy changes. Physical source checks are performed on every step. See [selective validation specification](spec/selective_validation.md).
 
-The logical benchmark compares full replay, component caching and a conventional exact-state guarded cache, including cache preparation and advancement. Results from this limited in-memory test cannot establish storage throughput or the project's overall CPU/latency targets. Network storage daemons, controller-level 4+2 performance, independent device failures and power-loss testing remain future work. No new patentability score follows from these tests.
+The logical benchmark compares full replay, component caching and a conventional exact-state guarded cache, including cache preparation and advancement. Results from that in-memory test cannot establish storage throughput or the project's overall CPU/latency targets. The separate controller benchmark measures actual local persistence, reconstruction and worker RPC costs. Network storage daemons, independent device failures, power-loss testing and the complete research performance gate remain future work. No new patentability score follows from these tests.
 
 ## Coding profiles
 
@@ -64,6 +65,14 @@ For a prepared store, call `authority.enable_workers(fence)` before admitting it
 Advanced callers can use `prepare_worker_step(plan, fence)`, `execute_worker_intent(token)` and `complete_worker_step(receipt, fence)` separately. Between these phases, capacity stays charged and the plan cursor remains unchanged. The authority commits the allocation transition only after rechecking the current continuation, exact command identity, durable worker receipt and physical bytes. Receipt corruption, revoked grants, stale incarnations and delayed receipts under a new fence reject. Cancellation drains/revokes affected work before releasing claims; takeover drains/fences each domain worker before publishing the new global epoch.
 
 The [worker specification](spec/storage_workers.md) defines the lock order, failure/retry behaviour and reduced trust model. The processes operate on local files and have independent per-domain locks; they are not authenticated remote daemons or separate physical devices. Preparation currently performs full suffix replay. No worker throughput or CPU advantage is claimed. See [milestone 4 evidence](evidence/results/MILESTONE_04.md) and [PROGRESS.md](PROGRESS.md) for verification and pending work.
+
+## Controller comparison
+
+`controller-benchmark` runs eight registered configurations: both coding profiles, 2/8 repair stripes and local/worker paths. It uses ten seeded paired runs with randomized ordering of conventional cached, selective and full validation. Fresh stores have identical bytes, capacity, protection and conventional repair witnesses. Planning, admission, steps, persistence, source checks and worker reconciliation are timed; fixture creation and independent terminal/readback checks are excluded and disclosed. A benchmark-only envelope measures worker CPU without changing durable receipts or production worker commands.
+
+The [registered protocol](experiments/controller_protocol.md) defines calibration, time-to-restoration as the secondary metric, capacity observations, concurrent foreground reads and interval analysis. The report preserves raw attempts, latencies, setup costs, child RPC measurements, paired effects and the protocol/source hashes. Foreground p99 needs at least 200 samples per phase per attempt; insufficient samples stay labelled. Failed comparisons preserve a partial report and exit unsuccessfully. This reduced local no-fault/reclamation suite does not establish the full G6 gate, isolated verification CPU, independent hardware or production throughput.
+
+The [milestone 6 results](evidence/results/MILESTONE_06.md) retain all 80 paired runs and 240 measured completed repair groups. None of the eight configurations meets the CPU or restoration proxy targets versus conventional caching; foreground p99 is insufficient throughout. The four new regression tests check identical durable witnesses/readback across modes, child/receipt CPU accounting, sample inadequacy and zero-timer handling. The full performance campaign is a manual experiment; CI runs its integrity tests.
 
 ## Repository verification
 

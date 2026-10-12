@@ -51,3 +51,7 @@ Enumerate all 15 initial four-row subsets, three destination-eligibility choices
 Restore real bytes from each initial four-row subset in durable stores. Test local and worker paths in all four validation modes, mixed-profile concurrent scopes, all 15 two-domain failure combinations, corrupted sources, malformed/padded rows, profile downgrade rejection, historical witness replay and additive migration while a legacy worker intent is pending. Add four actual controller/worker process-exit boundaries for the 4+2 fixture. Preserve prior tests as regressions.
 
 The persistent mixed-profile demonstration starts the 4+2 stripe with rows 0, 2, 4 and 5, restores missing data rows 1 and 3 through workers, reclaims a retired destination and independently completes a default 2+1 stripe. Record receipts and original content readback after reopening. No performance threshold or patentability rating is changed by these correctness results.
+
+## Milestone 6 local controller comparison
+
+The separately frozen [controller protocol](controller_protocol.md) extends measurement to real durable stores, physical reconstruction/checks and worker RPCs, with a concurrent foreground reader and no-repair controls. Its versioned SHA-256 is saved with raw paired data. It retains the capable conventional cached baseline and unchanged research thresholds. This reduced no-fault/reclamation suite does not complete the original verification-CPU, saturation, fault-performance or independent-hardware research evaluation.
