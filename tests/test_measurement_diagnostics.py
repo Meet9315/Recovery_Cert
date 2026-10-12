@@ -121,11 +121,17 @@ class MeasurementDiagnosticsTests(unittest.TestCase):
                 receive.close()
 
     def test_controller_exclusive_costs_and_logical_subset_have_no_double_count(self):
-        result = cpu_profile(DEFAULT_PROFILE, False, 11, "selective")
+        # Short Windows process-CPU intervals may quantize to zero. Verify
+        # instrumentation still counts its calls under that exact condition.
+        with patch("prism_c.cpu_attribution.LogicalSpans",
+                   side_effect=lambda: LogicalSpans(clock=lambda: 0)):
+            result = cpu_profile(DEFAULT_PROFILE, False, 11, "selective")
         profile = result["controller_profile"]
         self.assertEqual(sum(profile["exclusive_categories_cpu_ns"].values()),
                          sum(entry["exclusive_cpu_ns"] for entry in profile["functions"]))
-        self.assertGreater(result["logical_verification_subset"]["outer_cpu_ns"], 0)
+        self.assertEqual(result["logical_verification_subset"]["outer_cpu_ns"], 0)
+        self.assertGreater(sum(record["outer_calls"] for record in
+                               result["logical_verification_subset"]["apis"].values()), 0)
         self.assertLessEqual(result["logical_verification_subset"]["outer_cpu_ns"], result["controller_cpu_ns"])
         self.assertTrue(any(entry["file"] == "prism_c/coding.py" and entry["function"] == "recover" for entry in profile["functions"]))
         self.assertEqual(result["worker_process_cpu_ns"], 0)
