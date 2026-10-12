@@ -1,0 +1,5781 @@
+{
+  "audit_script_sha256": "1de0e15a216d982076b4a133ac76121398d28f72756ea53fd73c4bb0ce5cbcce",
+  "benign_policy_case": {
+    "event": "Expand B eligibility; no placements or bytes changed",
+    "exact_terminal_commitment_differs": true,
+    "independent_suffix_replay_reaches_target": true,
+    "modes": {
+      "conventional_cached": {
+        "reason": "Guarded suffix does not reach committed terminal",
+        "rejected": true,
+        "stats": {
+          "guard_reused": false,
+          "replayed_actions": 6
+        }
+      },
+      "selective": {
+        "reason": "Cached terminal commitment mismatch",
+        "rejected": true,
+        "stats": {
+          "coverage_rebuilds": 0,
+          "replayed_actions": 3,
+          "replayed_components": 1,
+          "reused_components": 1
+        }
+      }
+    },
+    "scope": "Logical mutation probe; production has no eligibility-update API"
+  },
+  "destination_failure_cases": [
+    {
+      "cursor_after": 1,
+      "cursor_before": 1,
+      "event": "in-scope destination X offline",
+      "mode": "conventional_cached",
+      "original_content_still_decodable": true,
+      "profile": "xor-2+1-v1",
+      "reason": "Offline or stale allocation",
+      "rejected": true
+    },
+    {
+      "cursor_after": 1,
+      "cursor_before": 1,
+      "event": "in-scope destination X offline",
+      "mode": "selective",
+      "original_content_still_decodable": true,
+      "profile": "xor-2+1-v1",
+      "reason": "Offline or stale allocation",
+      "rejected": true
+    },
+    {
+      "cursor_after": 1,
+      "cursor_before": 1,
+      "event": "in-scope destination X offline",
+      "mode": "conventional_cached",
+      "original_content_still_decodable": true,
+      "profile": "pq-4+2-gf256-v1",
+      "reason": "Offline or stale allocation",
+      "rejected": true
+    },
+    {
+      "cursor_after": 1,
+      "cursor_before": 1,
+      "event": "in-scope destination X offline",
+      "mode": "selective",
+      "original_content_still_decodable": true,
+      "profile": "pq-4+2-gf256-v1",
+      "reason": "Offline or stale allocation",
+      "rejected": true
+    }
+  ],
+  "durable_cases": [
+    {
+      "all_contents_match": true,
+      "annotations": 7,
+      "mode": "conventional_cached",
+      "outside_scope_offline_domain": "F0",
+      "profile": "xor-2+1-v1",
+      "seed": 20261012,
+      "selected_scopes_restored": true,
+      "steps": [
+        {
+          "action": "reclaim",
+          "cursor": 0,
+          "plan": "stripe-00",
+          "validation": {
+            "cache_rebuilt": false,
+            "guard_reused": true,
+            "mode": "conventional_cached",
+            "replayed_actions": 0
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 0,
+          "plan": "stripe-01",
+          "validation": {
+            "cache_rebuilt": false,
+            "guard_reused": true,
+            "mode": "conventional_cached",
+            "replayed_actions": 0
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 1,
+          "plan": "stripe-00",
+          "validation": {
+            "cache_rebuilt": false,
+            "guard_reused": true,
+            "mode": "conventional_cached",
+            "replayed_actions": 0
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 1,
+          "plan": "stripe-01",
+          "validation": {
+            "cache_rebuilt": false,
+            "guard_reused": true,
+            "mode": "conventional_cached",
+            "replayed_actions": 0
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 2,
+          "plan": "stripe-00",
+          "validation": {
+            "cache_rebuilt": false,
+            "guard_reused": true,
+            "mode": "conventional_cached",
+            "replayed_actions": 0
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 2,
+          "plan": "stripe-01",
+          "validation": {
+            "cache_rebuilt": false,
+            "guard_reused": true,
+            "mode": "conventional_cached",
+            "replayed_actions": 0
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 3,
+          "plan": "stripe-00",
+          "validation": {
+            "cache_rebuilt": false,
+            "guard_reused": true,
+            "mode": "conventional_cached",
+            "replayed_actions": 0
+          }
+        }
+      ],
+      "takeover_and_reopen": true,
+      "whole_store_target": false,
+      "whole_store_target_explanation": "F0 belongs to unrelated foreground stripe; its outage deliberately leaves that stripe degraded",
+      "worker_preparation_suffix_calls": [],
+      "workers": false
+    },
+    {
+      "all_contents_match": true,
+      "annotations": 7,
+      "mode": "selective",
+      "outside_scope_offline_domain": "F0",
+      "profile": "xor-2+1-v1",
+      "seed": 20261012,
+      "selected_scopes_restored": true,
+      "steps": [
+        {
+          "action": "reclaim",
+          "cursor": 0,
+          "plan": "stripe-00",
+          "validation": {
+            "cache_rebuilt": false,
+            "coverage_rebuilds": 0,
+            "mode": "selective",
+            "replayed_actions": 0,
+            "replayed_components": 0,
+            "reused_components": 1
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 0,
+          "plan": "stripe-01",
+          "validation": {
+            "cache_rebuilt": false,
+            "coverage_rebuilds": 0,
+            "mode": "selective",
+            "replayed_actions": 0,
+            "replayed_components": 0,
+            "reused_components": 1
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 1,
+          "plan": "stripe-00",
+          "validation": {
+            "cache_rebuilt": false,
+            "coverage_rebuilds": 0,
+            "mode": "selective",
+            "replayed_actions": 0,
+            "replayed_components": 0,
+            "reused_components": 1
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 1,
+          "plan": "stripe-01",
+          "validation": {
+            "cache_rebuilt": false,
+            "coverage_rebuilds": 0,
+            "mode": "selective",
+            "replayed_actions": 0,
+            "replayed_components": 0,
+            "reused_components": 1
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 2,
+          "plan": "stripe-00",
+          "validation": {
+            "cache_rebuilt": false,
+            "coverage_rebuilds": 0,
+            "mode": "selective",
+            "replayed_actions": 0,
+            "replayed_components": 0,
+            "reused_components": 1
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 2,
+          "plan": "stripe-01",
+          "validation": {
+            "cache_rebuilt": false,
+            "coverage_rebuilds": 0,
+            "mode": "selective",
+            "replayed_actions": 0,
+            "replayed_components": 0,
+            "reused_components": 1
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 3,
+          "plan": "stripe-00",
+          "validation": {
+            "cache_rebuilt": false,
+            "coverage_rebuilds": 0,
+            "mode": "selective",
+            "replayed_actions": 0,
+            "replayed_components": 0,
+            "reused_components": 1
+          }
+        }
+      ],
+      "takeover_and_reopen": true,
+      "whole_store_target": false,
+      "whole_store_target_explanation": "F0 belongs to unrelated foreground stripe; its outage deliberately leaves that stripe degraded",
+      "worker_preparation_suffix_calls": [],
+      "workers": false
+    },
+    {
+      "all_contents_match": true,
+      "annotations": 7,
+      "mode": "conventional_cached",
+      "outside_scope_offline_domain": "F0",
+      "profile": "xor-2+1-v1",
+      "seed": 20261012,
+      "selected_scopes_restored": true,
+      "steps": [
+        {
+          "action": "reclaim",
+          "cursor": 0,
+          "plan": "stripe-00",
+          "validation": {
+            "cache_rebuilt": false,
+            "guard_reused": true,
+            "mode": "conventional_cached",
+            "replayed_actions": 0
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 0,
+          "plan": "stripe-01",
+          "validation": {
+            "cache_rebuilt": false,
+            "guard_reused": true,
+            "mode": "conventional_cached",
+            "replayed_actions": 0
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 1,
+          "plan": "stripe-00",
+          "validation": {
+            "cache_rebuilt": false,
+            "guard_reused": true,
+            "mode": "conventional_cached",
+            "replayed_actions": 0
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 1,
+          "plan": "stripe-01",
+          "validation": {
+            "cache_rebuilt": false,
+            "guard_reused": true,
+            "mode": "conventional_cached",
+            "replayed_actions": 0
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 2,
+          "plan": "stripe-00",
+          "validation": {
+            "cache_rebuilt": false,
+            "guard_reused": true,
+            "mode": "conventional_cached",
+            "replayed_actions": 0
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 2,
+          "plan": "stripe-01",
+          "validation": {
+            "cache_rebuilt": false,
+            "guard_reused": true,
+            "mode": "conventional_cached",
+            "replayed_actions": 0
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 3,
+          "plan": "stripe-00",
+          "validation": {
+            "cache_rebuilt": false,
+            "guard_reused": true,
+            "mode": "conventional_cached",
+            "replayed_actions": 0
+          }
+        }
+      ],
+      "takeover_and_reopen": true,
+      "whole_store_target": false,
+      "whole_store_target_explanation": "F0 belongs to unrelated foreground stripe; its outage deliberately leaves that stripe degraded",
+      "worker_preparation_suffix_calls": [
+        {
+          "state": "afaf983dc0155ca13bc794614d39e05ddde1423c8b565109a4b763898dec09ed",
+          "suffix_actions": 4
+        },
+        {
+          "state": "3a4a96b090a107b8bfd208f4db10d432156b17bc28c721dc5f34db34b4b09aa2",
+          "suffix_actions": 2
+        },
+        {
+          "state": "e1605d7a731d060f4cb4f510d9014b0db15977bc8e268cc078649247d22705de",
+          "suffix_actions": 2
+        }
+      ],
+      "workers": true
+    },
+    {
+      "all_contents_match": true,
+      "annotations": 7,
+      "mode": "selective",
+      "outside_scope_offline_domain": "F0",
+      "profile": "xor-2+1-v1",
+      "seed": 20261012,
+      "selected_scopes_restored": true,
+      "steps": [
+        {
+          "action": "reclaim",
+          "cursor": 0,
+          "plan": "stripe-00",
+          "validation": {
+            "cache_rebuilt": false,
+            "coverage_rebuilds": 0,
+            "mode": "selective",
+            "replayed_actions": 0,
+            "replayed_components": 0,
+            "reused_components": 1
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 0,
+          "plan": "stripe-01",
+          "validation": {
+            "cache_rebuilt": false,
+            "coverage_rebuilds": 0,
+            "mode": "selective",
+            "replayed_actions": 0,
+            "replayed_components": 0,
+            "reused_components": 1
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 1,
+          "plan": "stripe-00",
+          "validation": {
+            "cache_rebuilt": false,
+            "coverage_rebuilds": 0,
+            "mode": "selective",
+            "replayed_actions": 0,
+            "replayed_components": 0,
+            "reused_components": 1
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 1,
+          "plan": "stripe-01",
+          "validation": {
+            "cache_rebuilt": false,
+            "coverage_rebuilds": 0,
+            "mode": "selective",
+            "replayed_actions": 0,
+            "replayed_components": 0,
+            "reused_components": 1
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 2,
+          "plan": "stripe-00",
+          "validation": {
+            "cache_rebuilt": false,
+            "coverage_rebuilds": 0,
+            "mode": "selective",
+            "replayed_actions": 0,
+            "replayed_components": 0,
+            "reused_components": 1
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 2,
+          "plan": "stripe-01",
+          "validation": {
+            "cache_rebuilt": false,
+            "coverage_rebuilds": 0,
+            "mode": "selective",
+            "replayed_actions": 0,
+            "replayed_components": 0,
+            "reused_components": 1
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 3,
+          "plan": "stripe-00",
+          "validation": {
+            "cache_rebuilt": false,
+            "coverage_rebuilds": 0,
+            "mode": "selective",
+            "replayed_actions": 0,
+            "replayed_components": 0,
+            "reused_components": 1
+          }
+        }
+      ],
+      "takeover_and_reopen": true,
+      "whole_store_target": false,
+      "whole_store_target_explanation": "F0 belongs to unrelated foreground stripe; its outage deliberately leaves that stripe degraded",
+      "worker_preparation_suffix_calls": [
+        {
+          "state": "afaf983dc0155ca13bc794614d39e05ddde1423c8b565109a4b763898dec09ed",
+          "suffix_actions": 4
+        },
+        {
+          "state": "3a4a96b090a107b8bfd208f4db10d432156b17bc28c721dc5f34db34b4b09aa2",
+          "suffix_actions": 2
+        },
+        {
+          "state": "e1605d7a731d060f4cb4f510d9014b0db15977bc8e268cc078649247d22705de",
+          "suffix_actions": 2
+        }
+      ],
+      "workers": true
+    },
+    {
+      "all_contents_match": true,
+      "annotations": 14,
+      "mode": "conventional_cached",
+      "outside_scope_offline_domain": "F0",
+      "profile": "pq-4+2-gf256-v1",
+      "seed": 20261012,
+      "selected_scopes_restored": true,
+      "steps": [
+        {
+          "action": "reclaim",
+          "cursor": 0,
+          "plan": "stripe-00",
+          "validation": {
+            "cache_rebuilt": false,
+            "guard_reused": true,
+            "mode": "conventional_cached",
+            "replayed_actions": 0
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 0,
+          "plan": "stripe-01",
+          "validation": {
+            "cache_rebuilt": false,
+            "guard_reused": true,
+            "mode": "conventional_cached",
+            "replayed_actions": 0
+          }
+        },
+        {
+          "action": "reclaim",
+          "cursor": 1,
+          "plan": "stripe-00",
+          "validation": {
+            "cache_rebuilt": false,
+            "guard_reused": true,
+            "mode": "conventional_cached",
+            "replayed_actions": 0
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 1,
+          "plan": "stripe-01",
+          "validation": {
+            "cache_rebuilt": false,
+            "guard_reused": true,
+            "mode": "conventional_cached",
+            "replayed_actions": 0
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 2,
+          "plan": "stripe-00",
+          "validation": {
+            "cache_rebuilt": false,
+            "guard_reused": true,
+            "mode": "conventional_cached",
+            "replayed_actions": 0
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 2,
+          "plan": "stripe-01",
+          "validation": {
+            "cache_rebuilt": false,
+            "guard_reused": true,
+            "mode": "conventional_cached",
+            "replayed_actions": 0
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 3,
+          "plan": "stripe-00",
+          "validation": {
+            "cache_rebuilt": false,
+            "guard_reused": true,
+            "mode": "conventional_cached",
+            "replayed_actions": 0
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 3,
+          "plan": "stripe-01",
+          "validation": {
+            "cache_rebuilt": false,
+            "guard_reused": true,
+            "mode": "conventional_cached",
+            "replayed_actions": 0
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 4,
+          "plan": "stripe-00",
+          "validation": {
+            "cache_rebuilt": false,
+            "guard_reused": true,
+            "mode": "conventional_cached",
+            "replayed_actions": 0
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 4,
+          "plan": "stripe-01",
+          "validation": {
+            "cache_rebuilt": false,
+            "guard_reused": true,
+            "mode": "conventional_cached",
+            "replayed_actions": 0
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 5,
+          "plan": "stripe-00",
+          "validation": {
+            "cache_rebuilt": false,
+            "guard_reused": true,
+            "mode": "conventional_cached",
+            "replayed_actions": 0
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 5,
+          "plan": "stripe-01",
+          "validation": {
+            "cache_rebuilt": false,
+            "guard_reused": true,
+            "mode": "conventional_cached",
+            "replayed_actions": 0
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 6,
+          "plan": "stripe-00",
+          "validation": {
+            "cache_rebuilt": false,
+            "guard_reused": true,
+            "mode": "conventional_cached",
+            "replayed_actions": 0
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 7,
+          "plan": "stripe-00",
+          "validation": {
+            "cache_rebuilt": false,
+            "guard_reused": true,
+            "mode": "conventional_cached",
+            "replayed_actions": 0
+          }
+        }
+      ],
+      "takeover_and_reopen": true,
+      "whole_store_target": false,
+      "whole_store_target_explanation": "F0 belongs to unrelated foreground stripe; its outage deliberately leaves that stripe degraded",
+      "worker_preparation_suffix_calls": [],
+      "workers": false
+    },
+    {
+      "all_contents_match": true,
+      "annotations": 14,
+      "mode": "selective",
+      "outside_scope_offline_domain": "F0",
+      "profile": "pq-4+2-gf256-v1",
+      "seed": 20261012,
+      "selected_scopes_restored": true,
+      "steps": [
+        {
+          "action": "reclaim",
+          "cursor": 0,
+          "plan": "stripe-00",
+          "validation": {
+            "cache_rebuilt": false,
+            "coverage_rebuilds": 0,
+            "mode": "selective",
+            "replayed_actions": 0,
+            "replayed_components": 0,
+            "reused_components": 1
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 0,
+          "plan": "stripe-01",
+          "validation": {
+            "cache_rebuilt": false,
+            "coverage_rebuilds": 0,
+            "mode": "selective",
+            "replayed_actions": 0,
+            "replayed_components": 0,
+            "reused_components": 1
+          }
+        },
+        {
+          "action": "reclaim",
+          "cursor": 1,
+          "plan": "stripe-00",
+          "validation": {
+            "cache_rebuilt": false,
+            "coverage_rebuilds": 0,
+            "mode": "selective",
+            "replayed_actions": 0,
+            "replayed_components": 0,
+            "reused_components": 1
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 1,
+          "plan": "stripe-01",
+          "validation": {
+            "cache_rebuilt": false,
+            "coverage_rebuilds": 0,
+            "mode": "selective",
+            "replayed_actions": 0,
+            "replayed_components": 0,
+            "reused_components": 1
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 2,
+          "plan": "stripe-00",
+          "validation": {
+            "cache_rebuilt": false,
+            "coverage_rebuilds": 0,
+            "mode": "selective",
+            "replayed_actions": 0,
+            "replayed_components": 0,
+            "reused_components": 1
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 2,
+          "plan": "stripe-01",
+          "validation": {
+            "cache_rebuilt": false,
+            "coverage_rebuilds": 0,
+            "mode": "selective",
+            "replayed_actions": 0,
+            "replayed_components": 0,
+            "reused_components": 1
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 3,
+          "plan": "stripe-00",
+          "validation": {
+            "cache_rebuilt": false,
+            "coverage_rebuilds": 0,
+            "mode": "selective",
+            "replayed_actions": 0,
+            "replayed_components": 0,
+            "reused_components": 1
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 3,
+          "plan": "stripe-01",
+          "validation": {
+            "cache_rebuilt": false,
+            "coverage_rebuilds": 0,
+            "mode": "selective",
+            "replayed_actions": 0,
+            "replayed_components": 0,
+            "reused_components": 1
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 4,
+          "plan": "stripe-00",
+          "validation": {
+            "cache_rebuilt": false,
+            "coverage_rebuilds": 0,
+            "mode": "selective",
+            "replayed_actions": 0,
+            "replayed_components": 0,
+            "reused_components": 1
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 4,
+          "plan": "stripe-01",
+          "validation": {
+            "cache_rebuilt": false,
+            "coverage_rebuilds": 0,
+            "mode": "selective",
+            "replayed_actions": 0,
+            "replayed_components": 0,
+            "reused_components": 1
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 5,
+          "plan": "stripe-00",
+          "validation": {
+            "cache_rebuilt": false,
+            "coverage_rebuilds": 0,
+            "mode": "selective",
+            "replayed_actions": 0,
+            "replayed_components": 0,
+            "reused_components": 1
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 5,
+          "plan": "stripe-01",
+          "validation": {
+            "cache_rebuilt": false,
+            "coverage_rebuilds": 0,
+            "mode": "selective",
+            "replayed_actions": 0,
+            "replayed_components": 0,
+            "reused_components": 1
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 6,
+          "plan": "stripe-00",
+          "validation": {
+            "cache_rebuilt": false,
+            "coverage_rebuilds": 0,
+            "mode": "selective",
+            "replayed_actions": 0,
+            "replayed_components": 0,
+            "reused_components": 1
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 7,
+          "plan": "stripe-00",
+          "validation": {
+            "cache_rebuilt": false,
+            "coverage_rebuilds": 0,
+            "mode": "selective",
+            "replayed_actions": 0,
+            "replayed_components": 0,
+            "reused_components": 1
+          }
+        }
+      ],
+      "takeover_and_reopen": true,
+      "whole_store_target": false,
+      "whole_store_target_explanation": "F0 belongs to unrelated foreground stripe; its outage deliberately leaves that stripe degraded",
+      "worker_preparation_suffix_calls": [],
+      "workers": false
+    },
+    {
+      "all_contents_match": true,
+      "annotations": 14,
+      "mode": "conventional_cached",
+      "outside_scope_offline_domain": "F0",
+      "profile": "pq-4+2-gf256-v1",
+      "seed": 20261012,
+      "selected_scopes_restored": true,
+      "steps": [
+        {
+          "action": "reclaim",
+          "cursor": 0,
+          "plan": "stripe-00",
+          "validation": {
+            "cache_rebuilt": false,
+            "guard_reused": true,
+            "mode": "conventional_cached",
+            "replayed_actions": 0
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 0,
+          "plan": "stripe-01",
+          "validation": {
+            "cache_rebuilt": false,
+            "guard_reused": true,
+            "mode": "conventional_cached",
+            "replayed_actions": 0
+          }
+        },
+        {
+          "action": "reclaim",
+          "cursor": 1,
+          "plan": "stripe-00",
+          "validation": {
+            "cache_rebuilt": false,
+            "guard_reused": true,
+            "mode": "conventional_cached",
+            "replayed_actions": 0
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 1,
+          "plan": "stripe-01",
+          "validation": {
+            "cache_rebuilt": false,
+            "guard_reused": true,
+            "mode": "conventional_cached",
+            "replayed_actions": 0
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 2,
+          "plan": "stripe-00",
+          "validation": {
+            "cache_rebuilt": false,
+            "guard_reused": true,
+            "mode": "conventional_cached",
+            "replayed_actions": 0
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 2,
+          "plan": "stripe-01",
+          "validation": {
+            "cache_rebuilt": false,
+            "guard_reused": true,
+            "mode": "conventional_cached",
+            "replayed_actions": 0
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 3,
+          "plan": "stripe-00",
+          "validation": {
+            "cache_rebuilt": false,
+            "guard_reused": true,
+            "mode": "conventional_cached",
+            "replayed_actions": 0
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 3,
+          "plan": "stripe-01",
+          "validation": {
+            "cache_rebuilt": false,
+            "guard_reused": true,
+            "mode": "conventional_cached",
+            "replayed_actions": 0
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 4,
+          "plan": "stripe-00",
+          "validation": {
+            "cache_rebuilt": false,
+            "guard_reused": true,
+            "mode": "conventional_cached",
+            "replayed_actions": 0
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 4,
+          "plan": "stripe-01",
+          "validation": {
+            "cache_rebuilt": false,
+            "guard_reused": true,
+            "mode": "conventional_cached",
+            "replayed_actions": 0
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 5,
+          "plan": "stripe-00",
+          "validation": {
+            "cache_rebuilt": false,
+            "guard_reused": true,
+            "mode": "conventional_cached",
+            "replayed_actions": 0
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 5,
+          "plan": "stripe-01",
+          "validation": {
+            "cache_rebuilt": false,
+            "guard_reused": true,
+            "mode": "conventional_cached",
+            "replayed_actions": 0
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 6,
+          "plan": "stripe-00",
+          "validation": {
+            "cache_rebuilt": false,
+            "guard_reused": true,
+            "mode": "conventional_cached",
+            "replayed_actions": 0
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 7,
+          "plan": "stripe-00",
+          "validation": {
+            "cache_rebuilt": false,
+            "guard_reused": true,
+            "mode": "conventional_cached",
+            "replayed_actions": 0
+          }
+        }
+      ],
+      "takeover_and_reopen": true,
+      "whole_store_target": false,
+      "whole_store_target_explanation": "F0 belongs to unrelated foreground stripe; its outage deliberately leaves that stripe degraded",
+      "worker_preparation_suffix_calls": [
+        {
+          "state": "cf2d5f95056013292109d78972bdc5dec7f09781c6baf6cb19b1eeabad8fc863",
+          "suffix_actions": 8
+        },
+        {
+          "state": "81f580d3df6990dc80a68ab0cd1c3d06416a645fead163b6874771f7c6febb8c",
+          "suffix_actions": 7
+        },
+        {
+          "state": "66d9aca82df26340c8d5e318bb07567097f6ce9919166ffb445c5ec14e4beafd",
+          "suffix_actions": 5
+        },
+        {
+          "state": "d5ac4ed9299f188cb4a3987727f675d1a3deb4dcbd8a058e4e7f76a03e0ee077",
+          "suffix_actions": 5
+        },
+        {
+          "state": "6abea5760f011240f953625cbb1f5c739ed6714ce9f921d94b4d556d507793ff",
+          "suffix_actions": 2
+        },
+        {
+          "state": "5b000313404c01fc2b17b53e185e3e82b6712b963c9f6407409d5aebbb229377",
+          "suffix_actions": 2
+        }
+      ],
+      "workers": true
+    },
+    {
+      "all_contents_match": true,
+      "annotations": 14,
+      "mode": "selective",
+      "outside_scope_offline_domain": "F0",
+      "profile": "pq-4+2-gf256-v1",
+      "seed": 20261012,
+      "selected_scopes_restored": true,
+      "steps": [
+        {
+          "action": "reclaim",
+          "cursor": 0,
+          "plan": "stripe-00",
+          "validation": {
+            "cache_rebuilt": false,
+            "coverage_rebuilds": 0,
+            "mode": "selective",
+            "replayed_actions": 0,
+            "replayed_components": 0,
+            "reused_components": 1
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 0,
+          "plan": "stripe-01",
+          "validation": {
+            "cache_rebuilt": false,
+            "coverage_rebuilds": 0,
+            "mode": "selective",
+            "replayed_actions": 0,
+            "replayed_components": 0,
+            "reused_components": 1
+          }
+        },
+        {
+          "action": "reclaim",
+          "cursor": 1,
+          "plan": "stripe-00",
+          "validation": {
+            "cache_rebuilt": false,
+            "coverage_rebuilds": 0,
+            "mode": "selective",
+            "replayed_actions": 0,
+            "replayed_components": 0,
+            "reused_components": 1
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 1,
+          "plan": "stripe-01",
+          "validation": {
+            "cache_rebuilt": false,
+            "coverage_rebuilds": 0,
+            "mode": "selective",
+            "replayed_actions": 0,
+            "replayed_components": 0,
+            "reused_components": 1
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 2,
+          "plan": "stripe-00",
+          "validation": {
+            "cache_rebuilt": false,
+            "coverage_rebuilds": 0,
+            "mode": "selective",
+            "replayed_actions": 0,
+            "replayed_components": 0,
+            "reused_components": 1
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 2,
+          "plan": "stripe-01",
+          "validation": {
+            "cache_rebuilt": false,
+            "coverage_rebuilds": 0,
+            "mode": "selective",
+            "replayed_actions": 0,
+            "replayed_components": 0,
+            "reused_components": 1
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 3,
+          "plan": "stripe-00",
+          "validation": {
+            "cache_rebuilt": false,
+            "coverage_rebuilds": 0,
+            "mode": "selective",
+            "replayed_actions": 0,
+            "replayed_components": 0,
+            "reused_components": 1
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 3,
+          "plan": "stripe-01",
+          "validation": {
+            "cache_rebuilt": false,
+            "coverage_rebuilds": 0,
+            "mode": "selective",
+            "replayed_actions": 0,
+            "replayed_components": 0,
+            "reused_components": 1
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 4,
+          "plan": "stripe-00",
+          "validation": {
+            "cache_rebuilt": false,
+            "coverage_rebuilds": 0,
+            "mode": "selective",
+            "replayed_actions": 0,
+            "replayed_components": 0,
+            "reused_components": 1
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 4,
+          "plan": "stripe-01",
+          "validation": {
+            "cache_rebuilt": false,
+            "coverage_rebuilds": 0,
+            "mode": "selective",
+            "replayed_actions": 0,
+            "replayed_components": 0,
+            "reused_components": 1
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 5,
+          "plan": "stripe-00",
+          "validation": {
+            "cache_rebuilt": false,
+            "coverage_rebuilds": 0,
+            "mode": "selective",
+            "replayed_actions": 0,
+            "replayed_components": 0,
+            "reused_components": 1
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 5,
+          "plan": "stripe-01",
+          "validation": {
+            "cache_rebuilt": false,
+            "coverage_rebuilds": 0,
+            "mode": "selective",
+            "replayed_actions": 0,
+            "replayed_components": 0,
+            "reused_components": 1
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 6,
+          "plan": "stripe-00",
+          "validation": {
+            "cache_rebuilt": false,
+            "coverage_rebuilds": 0,
+            "mode": "selective",
+            "replayed_actions": 0,
+            "replayed_components": 0,
+            "reused_components": 1
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 7,
+          "plan": "stripe-00",
+          "validation": {
+            "cache_rebuilt": false,
+            "coverage_rebuilds": 0,
+            "mode": "selective",
+            "replayed_actions": 0,
+            "replayed_components": 0,
+            "reused_components": 1
+          }
+        }
+      ],
+      "takeover_and_reopen": true,
+      "whole_store_target": false,
+      "whole_store_target_explanation": "F0 belongs to unrelated foreground stripe; its outage deliberately leaves that stripe degraded",
+      "worker_preparation_suffix_calls": [
+        {
+          "state": "cf2d5f95056013292109d78972bdc5dec7f09781c6baf6cb19b1eeabad8fc863",
+          "suffix_actions": 8
+        },
+        {
+          "state": "81f580d3df6990dc80a68ab0cd1c3d06416a645fead163b6874771f7c6febb8c",
+          "suffix_actions": 7
+        },
+        {
+          "state": "66d9aca82df26340c8d5e318bb07567097f6ce9919166ffb445c5ec14e4beafd",
+          "suffix_actions": 5
+        },
+        {
+          "state": "d5ac4ed9299f188cb4a3987727f675d1a3deb4dcbd8a058e4e7f76a03e0ee077",
+          "suffix_actions": 5
+        },
+        {
+          "state": "6abea5760f011240f953625cbb1f5c739ed6714ce9f921d94b4d556d507793ff",
+          "suffix_actions": 2
+        },
+        {
+          "state": "5b000313404c01fc2b17b53e185e3e82b6712b963c9f6407409d5aebbb229377",
+          "suffix_actions": 2
+        }
+      ],
+      "workers": true
+    }
+  ],
+  "environment": {
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python": "3.11.4 (tags/v3.11.4:d2340ef, Jun  7 2023, 05:45:37) [MSC v.1934 64 bit (AMD64)]",
+    "source_sha256": {
+      "prism_c/__init__.py": "5310acec652af6a86ebf1e86fe1547d37c6fbfa7cad6ab1afc446397761c8715",
+      "prism_c/__main__.py": "9a14ad53769754bfd110c977813e9590f00c46293a0c7d091c86aa20886f6388",
+      "prism_c/baseline.py": "7f0fc2dfa251420bdc0df94360c2fb2394dc8100e5766747b9cbe056c069fbeb",
+      "prism_c/benchmark.py": "60979ea19ad1c3b21d61e0a078a871bd52d7616a8cd46a45a2cfe4ff9f5f7148",
+      "prism_c/campaign.py": "b226a09b8930d8fde711512e03e13a98046cc964efc6eee6fe21e15a37b5a353",
+      "prism_c/checker.py": "d19527697781f536b6dab235bf5b43211ec697d9803c200db9df225c4cef22fc",
+      "prism_c/coding.py": "c66cceedb4cda1a7322b600fdee901a4ec2a2425bb29518146560e75afdb47f1",
+      "prism_c/coding_campaign.py": "d326217706c60c8820ec5dbb2f79293b90283db4101c0c574d8f1f9737feb040",
+      "prism_c/coding_oracle.py": "cec06e7d252ce99112109a4b615a67ebbe3d9f16e175a6ab7e0b2f3b79158d06",
+      "prism_c/controller_benchmark.py": "c1db5f6fcf0237306e4447f36c3ac3adb091b200878e4ae55a05c37319733a43",
+      "prism_c/cpu_attribution.py": "414dd00206bd6cedcdd27a0112174198a5018b2836602f30e90745ecc60e96bd",
+      "prism_c/fault_contention.py": "cfc025ef742ec1f0e02fc1fe5c7c7be4c6b977e93062b12351e2e67b72a1170d",
+      "prism_c/fault_measured_worker.py": "5644b89c08c8c9938eca5658912458df82f556a38782d28f89b00d6a5d720047",
+      "prism_c/fault_worker.py": "67df4ff6d586c59568ae5fa8adc2f628fe650e658bcc2ff6ff9686fe7671efca",
+      "prism_c/liveness.py": "997dfcf18c9cc0fc6e1d37e33723cb7541102872263c7daffbbc67a73e5a36e5",
+      "prism_c/measured_worker.py": "fd046a6927db6fcc1cd4de43b8f7039da7767ba08ea3b539a75201a05fac3471",
+      "prism_c/measurement_diagnostics.py": "325501be0b7b7ef008708aeaa32b974041b65677bbd2532c5f71e92ac0983ebf",
+      "prism_c/model.py": "b6122e0c7766559111e0d0ec894e84d8d3a8666a26f961d90a555021ec3832a7",
+      "prism_c/profiles.py": "b831e77d0794303b8bd0ba2571c12c4071ae053fd924be08ff7de6025035f1b8",
+      "prism_c/read_reuse.py": "e52b72a4b2408c69a0e076dbdffcf8c70de416c7c079ef2d924af2a7a62c1614",
+      "prism_c/scope.py": "7fc0e21beb9f45ed3abc757d0011567b1fa5d4a907c401255d343b3c4e855cba",
+      "prism_c/selective.py": "4d34288758ff683890be35b2313ef78f29052cd2b6ae97cb61abf6b4b791da95",
+      "prism_c/snapshot_latency.py": "cf77e8ee7590941dc71294c5e3dfd655e95c34676988db3955de4334b9c9c0b5",
+      "prism_c/storage.py": "7bbd7f8fd5af153401c4a836be583f8aaf5c804fd2b18d136d27920fecdd877c",
+      "prism_c/worker.py": "1ba7573861493edc090d4eadbb2a24edab08f6a2462e1eefe63ac25b2658c67d",
+      "prism_c/worker_authority.py": "0eb9e50de3219736da52e05d131f6f9620c68431a614f8f7a9df8b740b499f66",
+      "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tests/test_concurrent.py": "bf481e110b5d65a33c70ecba9d4549850437559f1182ce5daf2154ea24ade6f7",
+      "tests/test_controller_benchmark.py": "771aa548674ef40fffcb7f992b1a84c3a45225cf7be683b5d582cc488fc5c5e6",
+      "tests/test_fault_contention.py": "98db614696d461af245aec8a4172c4101f924a2d6ec237e909825a24ba53ac52",
+      "tests/test_four_plus_two.py": "45c7d240f276c2c94256e2c06cd6b289efa570621bd71d664cbaeff093ee5b31",
+      "tests/test_measurement_diagnostics.py": "4267fc422974bcf34696a69dc9a1ac95a220e7046737887215a6a534b0571b0c",
+      "tests/test_model.py": "cdd4d9832c160cf02f36a5b7db4f9c1f0e6a42012f8aa1fdb190c50bf5d427ea",
+      "tests/test_read_reuse.py": "331e42d9539c79aff0fa8518d40163399f790e5e161946306af5e1e33c5ca985",
+      "tests/test_read_reuse_benchmark.py": "732eec7b0f9468e9c5ebfdd9a4c582ad97c1c5e9e37b0fec3b62df20aeb3e0de",
+      "tests/test_selective.py": "253c4bb72bbdcfd4093c3e624bf09171dfb325fa3a43af49c6cb86dc240d983e",
+      "tests/test_snapshot_latency.py": "690dca364a6a5bd83ecd8032a73bc1a5aa945c7495009b23488a62d6bf8d76ff",
+      "tests/test_snapshot_latency_completion.py": "384cfcb371b4e56192c9585ff1b7811eea37d6fc1001e6d72d8285998020be38",
+      "tests/test_snapshot_reads.py": "5a3ac6df5a3faa14282a21729a65bbe2aff9df2e41bc50ca977bc4b4425c999f",
+      "tests/test_storage.py": "cb61782f540e462e348ca3bfaec6b3c4729fdc77a50829beac9c30f47d5f17da",
+      "tests/test_workers.py": "0012a227c8e6d4dc00d9148a9bbf087e339380d8b37c455e6761e8badf636049"
+    },
+    "sqlite": "3.42.0",
+    "utc": "2026-10-12T17:47:13.544974+00:00",
+    "version": "0.1.0"
+  },
+  "kind": "untimed mechanism audit, not a performance campaign",
+  "logical_cases": [
+    {
+      "conventional_guard_hits": 7,
+      "conventional_replayed_suffix_actions": 0,
+      "profile": "xor-2+1-v1",
+      "selective_replayed_suffix_actions": 0,
+      "steps": [
+        {
+          "action": "reclaim",
+          "cursor": 0,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 2
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 1,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 2
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 2,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 2
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 3,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 2
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 4,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 2
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 5,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 2
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 6,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 2
+            }
+          }
+        }
+      ],
+      "stripes": 2,
+      "terminal_matches_reference": true
+    },
+    {
+      "conventional_guard_hits": 28,
+      "conventional_replayed_suffix_actions": 0,
+      "profile": "xor-2+1-v1",
+      "selective_replayed_suffix_actions": 0,
+      "steps": [
+        {
+          "action": "reclaim",
+          "cursor": 0,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "reclaim",
+          "cursor": 1,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "reclaim",
+          "cursor": 2,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "reclaim",
+          "cursor": 3,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 4,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 5,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 6,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 7,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 8,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 9,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 10,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 11,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 12,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 13,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 14,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 15,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 16,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 17,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 18,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 19,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 20,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 21,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 22,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 23,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 24,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 25,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 26,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 27,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        }
+      ],
+      "stripes": 8,
+      "terminal_matches_reference": true
+    },
+    {
+      "conventional_guard_hits": 56,
+      "conventional_replayed_suffix_actions": 0,
+      "profile": "xor-2+1-v1",
+      "selective_replayed_suffix_actions": 0,
+      "steps": [
+        {
+          "action": "reclaim",
+          "cursor": 0,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reclaim",
+          "cursor": 1,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reclaim",
+          "cursor": 2,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reclaim",
+          "cursor": 3,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reclaim",
+          "cursor": 4,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reclaim",
+          "cursor": 5,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reclaim",
+          "cursor": 6,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reclaim",
+          "cursor": 7,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 8,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 9,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 10,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 11,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 12,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 13,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 14,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 15,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 16,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 17,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 18,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 19,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 20,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 21,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 22,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 23,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 24,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 25,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 26,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 27,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 28,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 29,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 30,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 31,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 32,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 33,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 34,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 35,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 36,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 37,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 38,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 39,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 40,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 41,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 42,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 43,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 44,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 45,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 46,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 47,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 48,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 49,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 50,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 51,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 52,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 53,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 54,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 55,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        }
+      ],
+      "stripes": 16,
+      "terminal_matches_reference": true
+    },
+    {
+      "conventional_guard_hits": 14,
+      "conventional_replayed_suffix_actions": 0,
+      "profile": "pq-4+2-gf256-v1",
+      "selective_replayed_suffix_actions": 0,
+      "steps": [
+        {
+          "action": "reclaim",
+          "cursor": 0,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 2
+            }
+          }
+        },
+        {
+          "action": "reclaim",
+          "cursor": 1,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 2
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 2,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 2
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 3,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 2
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 4,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 2
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 5,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 2
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 6,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 2
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 7,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 2
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 8,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 2
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 9,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 2
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 10,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 2
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 11,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 2
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 12,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 2
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 13,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 2
+            }
+          }
+        }
+      ],
+      "stripes": 2,
+      "terminal_matches_reference": true
+    },
+    {
+      "conventional_guard_hits": 56,
+      "conventional_replayed_suffix_actions": 0,
+      "profile": "pq-4+2-gf256-v1",
+      "selective_replayed_suffix_actions": 0,
+      "steps": [
+        {
+          "action": "reclaim",
+          "cursor": 0,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "reclaim",
+          "cursor": 1,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "reclaim",
+          "cursor": 2,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "reclaim",
+          "cursor": 3,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "reclaim",
+          "cursor": 4,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "reclaim",
+          "cursor": 5,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "reclaim",
+          "cursor": 6,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "reclaim",
+          "cursor": 7,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 8,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 9,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 10,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 11,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 12,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 13,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 14,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 15,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 16,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 17,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 18,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 19,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 20,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 21,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 22,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 23,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 24,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 25,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 26,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 27,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 28,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 29,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 30,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 31,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 32,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 33,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 34,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 35,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 36,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 37,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 38,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 39,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 40,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 41,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 42,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 43,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 44,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 45,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 46,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 47,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 48,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 49,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 50,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 51,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 52,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 53,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 54,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 55,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 8
+            }
+          }
+        }
+      ],
+      "stripes": 8,
+      "terminal_matches_reference": true
+    },
+    {
+      "conventional_guard_hits": 112,
+      "conventional_replayed_suffix_actions": 0,
+      "profile": "pq-4+2-gf256-v1",
+      "selective_replayed_suffix_actions": 0,
+      "steps": [
+        {
+          "action": "reclaim",
+          "cursor": 0,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reclaim",
+          "cursor": 1,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reclaim",
+          "cursor": 2,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reclaim",
+          "cursor": 3,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reclaim",
+          "cursor": 4,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reclaim",
+          "cursor": 5,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reclaim",
+          "cursor": 6,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reclaim",
+          "cursor": 7,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reclaim",
+          "cursor": 8,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reclaim",
+          "cursor": 9,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reclaim",
+          "cursor": 10,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reclaim",
+          "cursor": 11,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reclaim",
+          "cursor": 12,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reclaim",
+          "cursor": 13,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reclaim",
+          "cursor": 14,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reclaim",
+          "cursor": 15,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 16,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 17,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 18,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 19,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 20,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 21,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 22,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 23,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 24,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 25,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 26,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 27,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 28,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 29,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 30,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 31,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 32,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 33,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 34,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 35,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 36,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 37,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 38,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 39,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 40,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 41,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 42,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 43,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 44,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 45,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 46,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 47,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 48,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 49,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 50,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 51,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 52,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 53,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 54,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 55,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 56,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 57,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 58,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 59,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 60,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 61,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 62,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 63,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 64,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 65,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 66,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 67,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 68,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 69,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 70,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 71,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 72,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 73,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 74,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 75,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 76,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 77,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 78,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 79,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 80,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 81,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 82,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 83,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 84,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 85,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 86,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 87,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 88,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 89,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 90,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 91,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 92,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 93,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 94,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 95,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 96,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 97,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 98,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 99,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 100,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 101,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 102,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 103,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 104,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 105,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 106,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 107,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 108,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "reserve",
+          "cursor": 109,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "stage",
+          "cursor": 110,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        },
+        {
+          "action": "promote",
+          "cursor": 111,
+          "modes": {
+            "conventional_cached": {
+              "guard_reused": true,
+              "replayed_actions": 0
+            },
+            "selective": {
+              "coverage_rebuilds": 0,
+              "replayed_actions": 0,
+              "replayed_components": 0,
+              "reused_components": 16
+            }
+          }
+        }
+      ],
+      "stripes": 16,
+      "terminal_matches_reference": true
+    }
+  ],
+  "patent_rating_changed": false,
+  "performance_advantage_established": false,
+  "production_git_commit": "b9f51fc33a84cd0429aa3e2b91193115ba5e23fc",
+  "seed": 20261012,
+  "status": "completed",
+  "summary": {
+    "conventional_durable_guard_hits": 42,
+    "conventional_logical_guard_hits": 273,
+    "conventional_logical_suffix_actions_replayed": 0,
+    "durable_steps": 84,
+    "durable_suffix_actions_replayed_at_completion": 0,
+    "logical_steps": 273,
+    "selective_logical_suffix_actions_replayed": 0,
+    "worker_preparation_full_suffix_calls": 18
+  }
+}

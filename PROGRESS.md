@@ -2,6 +2,8 @@
 
 Updated: 12 October 2026
 
+Central-gap audit completed: [mechanism findings and redesign plan](evidence/results/DESIGN_GAP_AUDIT.md). Across 273 paired logical steps and eight actual stores, conventional caching already avoided suffix replay on every successful checked step. Scope isolation and ordinary read optimizations benefit both modes. The next hypothesis is checked in-place revision of interrupted recovery while retaining justified staged work, **after strengthening the conventional partial-state replanner first**. No new useful advantage or rating increase is established; this is an untimed design audit, not another performance campaign.
+
 ## Current status
 
 Milestones 1–10 are implemented and verified within the stated scope. Milestone 10 completed **40 fault/contention pairs / 80 measured groups**, with 40 actual worker exits, 840 authentic foreground probes and overlapping controller repair intervals in all 40 contention attempts. No configuration meets the 20% CPU or 10% restoration proxy target versus conventional caching. Both modes receive the same milestone 9 read optimization; large-object read CPU savings remain a conventional improvement. Earlier unmet foreground targets and the interrupted/supplemented milestone 8 collection remain preserved. The full suite passed **132 methods and 326 subtests**, with 41 actual process-exit regression cases; both finite campaigns observed zero violations/disagreements. All 41 source/test hashes match frozen measurement and final verification. Ubuntu/Windows CI both passed for the milestone 10 source. Conventional caching and serialized reads remain defaults; storage workers and snapshot reads are opt-in. PASS refers only to stated implementation scope, not completion of the 16-week research plan. The earlier **53/100 assessment and conditional 73/100 target are unchanged**.
@@ -84,8 +86,8 @@ Milestone 10 froze source/protocol/tests in `f3cacf3e90e30d6dc57db9a7498a9ff48d8
 
 ## Next actions
 
-1. Audit the strongest conventional baseline and worker-preparation costs after the retained milestone 10 negative/inconclusive effects. Register a larger workload only around a specific testable advantage. Fresh paired foreground confirmation must give both modes the same optimized reads and retain liveness observations; complete G6 verification-CPU attribution remains pending.
-2. Investigate ordinary source-validation/authority costs without removing physical checks, and require fresh registered confirmation for any optimization.
+1. Specify interrupted-state recovery/revision semantics and build a capable conventional partial-state replanner before selecting a new comparative mechanism. Follow the [design-gap plan](evidence/results/DESIGN_GAP_AUDIT.md). Reject a hypothesis that has no advantage after baseline parity; larger copies of the unchanged workload do not expose additional suffix replay to remove.
+2. Test a concrete retained-work revision example against the independent oracle and strengthened baseline. Only an attributable surviving difference justifies a new performance registration. Keep source checks and supply ordinary worker-preparation/read optimizations to both modes. Fresh paired foreground and complete verification-CPU attribution remain pending.
 3. Keep conventional caching as default; preserve the measured slowdowns and selective/shadow modes for investigation. Require fresh registered confirmation for any optimization.
 4. Extend local worker processes to authenticated remote daemons and test actual device/host fault boundaries separately.
 5. Complete the claim chart and professional priority/inventorship review when the necessary human records are available.
@@ -115,6 +117,7 @@ python -m prism_c read-reuse-benchmark --report evidence/results/read-reuse-new.
 python -m prism_c verify --report evidence/results/verification-milestone-09-new.json --traces 10000 --seed 20261011
 python -m prism_c fault-contention-benchmark --report evidence/results/fault-contention-new.json --runs 10 --seed 20261012
 python -m prism_c verify --report evidence/results/verification-milestone-10-new.json --traces 10000 --seed 20261011
+python -m experiments.audit_conventional_advantage --report evidence/results/conventional-advantage-audit-new.json --seed 20261012
 ```
 
 Use a new/empty demo root; existing stores are never silently reset. The verified initial demonstration is in `tmp/prototype-demo-final`; the concurrent demonstration is in `tmp/concurrent-demo-milestone-03`; the worker demonstration is in `tmp/worker-demo-milestone-04`; the mixed-profile demonstration is in `tmp/four-plus-two-demo-milestone-05`. Read [README.md](README.md) for ownership-aware resume/cancel commands. These local runtime stores are ignored by Git; the saved evidence JSON reports are tracked.
