@@ -304,6 +304,10 @@ def main():
     comparison.add_argument("--report", default="evidence/results/selective-benchmark.json")
     comparison.add_argument("--runs", type=int, default=10)
     comparison.add_argument("--seed", type=int, default=20261011)
+    controller = commands.add_parser("controller-benchmark", help="Compare actual durable controller execution with concurrent foreground reads")
+    controller.add_argument("--report", default="evidence/results/controller-benchmark.json")
+    controller.add_argument("--runs", type=int, default=10)
+    controller.add_argument("--seed", type=int, default=20261012)
     for name in ("resume", "cancel"):
         operation = commands.add_parser(name, help=f"{name.capitalize()} an existing admitted plan")
         operation.add_argument("--root", required=True)
@@ -333,6 +337,15 @@ def main():
                              "selective_vs_full_percent": c["selective_vs_full"]["mean_percent_cpu_reduction"],
                              "selective_vs_cached_percent": c["selective_vs_conventional_cached"]["mean_percent_cpu_reduction"]}
                             for c in report["configurations"]]}, indent=2))
+        return 0
+    if args.command == "controller-benchmark":
+        from .controller_benchmark import controller_benchmark
+        metadata = environment()
+        def checkpoint(report):
+            write_report(args.report, {"environment": metadata, **report})
+        report = controller_benchmark(args.runs, args.seed, checkpoint)
+        print(json.dumps({"report": str(Path(args.report).resolve()), "status": report["status"],
+                          "configurations": len(report["configurations"])}))
         return 0
     return operate(args)
 

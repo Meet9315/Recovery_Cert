@@ -29,6 +29,7 @@ Build a bounded reference model and a local durable storage prototype first. Ver
 
 ## Session log
 
+- Milestone 6 started: registered [controller comparison protocol](experiments/controller_protocol.md) before collecting results. Implemented actual-store benchmarking for both profiles and local/worker paths, randomized paired runs, benchmark-only child CPU accounting, concurrent foreground read controls, capacity observations, calibration and partial-report preservation. Four measurement-integrity tests passed, including real restoration and worker receipt-lookup CPU coverage. Comparative results and the full regression run are pending.
 - Inspected existing documents and Python 3.11 runtime. No implementation package or repository instructions were found in the workspace.
 - Selected a dependency-free Python prototype so the model and tests can run locally without package installation.
 - Confirmed SQLite write transaction and synchronization semantics using official documentation. Single-authority serialization will be stated explicitly.
