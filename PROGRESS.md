@@ -2,6 +2,8 @@
 
 Updated: 12 October 2026
 
+Milestone 10 in progress: registered four fault/retry and scoped-contention configurations, ten pairs each, with the same read reuse in conventional and selective modes. Benchmark-only worker telemetry retains the CPU of an actual lost-acknowledgement exit; separate controllers use disjoint scopes in shared domains. Focused tests check cursor/charge preservation, durable receipt reuse and final restoration on both profiles/modes. Frozen source/protocol commit and raw measurement results will be recorded here. Foreground latency confirmation and the complete controller gate remain pending.
+
 ## Current status
 
 Milestones 1–9 are implemented and verified within the stated scope. Milestone 9 removes duplicate read reconstruction while retaining all authenticity checks. Eight ten-pair CPU configurations show 44%–47% lower read CPU for large objects; small-object results remain inconclusive. Eight monitored foreground windows passed all collection/content/capacity checks with no observed 500 ms pulse gaps, but do not establish a new foreground gate pass. Earlier unmet proxy/foreground targets and the interrupted/supplemented milestone 8 collection remain preserved. The full suite passed **129 test methods and 318 subtests**; both correctness campaigns observed zero violations/disagreements. The fast-Linux test-backlog failure was corrected and fresh Ubuntu/Windows CI both passed. Conventional caching and serialized reads remain defaults; storage workers and snapshot reads are opt-in. PASS refers only to stated implementation scope, not completion of the 16-week research plan. The earlier 53/100 assessment and conditional 73/100 target are unchanged.
