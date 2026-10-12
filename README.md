@@ -17,6 +17,7 @@ python -m prism_c verify --report evidence/results/verification-milestone-03-new
 python -m prism_c concurrent-demo --root tmp/worker-demo-new --report evidence/results/worker-demo-new.json --validation-mode shadow --storage-workers
 python -m prism_c four-plus-two-demo --root tmp/four-plus-two-demo-new --report evidence/results/four-plus-two-demo-new.json --validation-mode shadow
 python -m prism_c controller-benchmark --report evidence/results/controller-benchmark-new.json --runs 10 --seed 20261012
+python -m prism_c measurement-diagnostics --report evidence/results/measurement-diagnostics-new.json --seed 20261012
 ```
 
 The demo root must be new or empty. Existing stores are never reset by the demo. Choose a new root name for another run. `verify` uses disposable temporary stores and preserves the report, test details, source hashes and model campaign counts.
@@ -73,6 +74,16 @@ The [worker specification](spec/storage_workers.md) defines the lock order, fail
 The [registered protocol](experiments/controller_protocol.md) defines calibration, time-to-restoration as the secondary metric, capacity observations, concurrent foreground reads and interval analysis. The report preserves raw attempts, latencies, setup costs, child RPC measurements, paired effects and the protocol/source hashes. Foreground p99 needs at least 200 samples per phase per attempt; insufficient samples stay labelled. Failed comparisons preserve a partial report and exit unsuccessfully. This reduced local no-fault/reclamation suite does not establish the full G6 gate, isolated verification CPU, independent hardware or production throughput.
 
 The [milestone 6 results](evidence/results/MILESTONE_06.md) retain all 80 paired runs and 240 measured completed repair groups. None of the eight configurations meets the CPU or restoration proxy targets versus conventional caching; foreground p99 is insufficient throughout. The four new regression tests check identical durable witnesses/readback across modes, child/receipt CPU accounting, sample inadequacy and zero-timer handling. The full performance campaign is a manual experiment; CI runs its integrity tests.
+
+## Sampling and CPU diagnostics
+
+`measurement-diagnostics` runs twelve longer foreground windows and twelve separate CPU profiles across both profiles, local/worker paths and all three comparison modes. A prepared backlog keeps repair work available while the reader seeks 400 successful observations per phase. Control reads finish before repair starts; loaded reads that finish after repair stops are drained and retained. The report saves every request's phase, timestamps, outcome and latency, sample sufficiency, actual durations and stopping reason. The windows use a closed-loop reader and remain single diagnostic observations; they do not evaluate the 5% foreground threshold or paired effects.
+
+Separate process-CPU profiles retain every function's call counts and exclusive/inclusive costs, with exclusive category totals that count each function once. Nested spans identify a declared logical-verification subset without adding inner intervals again. Physical source, staged-byte and receipt checks remain outside that subset and visible in the profiler. Worker profiles include receipt lookup; whole-worker CPU is reported separately from controller CPU. Instrumentation and timer quantization affect these values, so they cannot establish production cost shares or speedups.
+
+The [diagnostic protocol](experiments/measurement_diagnostics_protocol.md) preserves the earlier registered controller comparison and its results. CLI failure preserves a partial report and names the failed measurement cell. Correctness tests cover actual SQLite-blocked reads, phase separation, nested spans, worker receipt profiling and failure preservation. Longer sampling and attribution do not change the patentability assessment; independent paired confirmation and fault/contention comparisons remain pending.
+
+The [milestone 7 results](evidence/results/MILESTONE_07.md) retain all twelve healthy windows and CPU profiles. Every window exceeded 400 reads in both phases; twelve reads ending after restoration were retained. Loaded p99 was 3.17–30.08 times control in these single observations, so foreground contention remains unresolved. The full correctness suite passed 107 methods and 288 subtests, with both finite campaigns reporting zero violations/disagreements. CPU quantization and profiler overhead prevent precise cost-share or speedup claims.
 
 ## Repository verification
 

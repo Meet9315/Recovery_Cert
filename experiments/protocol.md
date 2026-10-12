@@ -55,3 +55,7 @@ The persistent mixed-profile demonstration starts the 4+2 stripe with rows 0, 2,
 ## Milestone 6 local controller comparison
 
 The separately frozen [controller protocol](controller_protocol.md) extends measurement to real durable stores, physical reconstruction/checks and worker RPCs, with a concurrent foreground reader and no-repair controls. Its versioned SHA-256 is saved with raw paired data. It retains the capable conventional cached baseline and unchanged research thresholds. This reduced no-fault/reclamation suite does not complete the original verification-CPU, saturation, fault-performance or independent-hardware research evaluation.
+
+## Milestone 7 sampling and CPU diagnostics
+
+The separately frozen [measurement diagnostic protocol](measurement_diagnostics_protocol.md) retains loaded reads that finish after restoration, separates control from load with a pause/drain acknowledgement, and seeks 400 successful requests per phase using a prepared repair backlog. Twelve single windows and twelve separate instrumented CPU profiles are diagnostic observations, not paired confirmation. Per-function exclusive costs and outermost logical-verification spans provide two overlapping views of execution; they must not be added together. Physical verification is outside the span subset. Preserve insufficient samples, errors, raw requests, stopping reasons and profiler overhead limits. No research threshold or patentability rating changes in this milestone.
