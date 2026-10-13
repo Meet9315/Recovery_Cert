@@ -19,6 +19,8 @@
 
 **Reassessment amendment — 13 October 2026:** The quoted executive decision and section 14 score table preserve the original proposal's historical assessment. The [current interim reassessment](evidence/results/PATENT_REASSESSMENT_2026_10_13.md) is now **55/100**: implementation/technical support rises, inventive-step support falls after the equal-baseline findings. No 70+ score is earned. The [next research plan](RCSD_PRISM_C_Redesign_Plan.md) investigates an incarnation-bound frontier for joint repair and whole-zone reset. It is a proposed physical-contract change requiring an exact mechanism/claim screen and equal conventional comparator; no zoned implementation or novel contribution is asserted by this amendment.
 
+**Frontier execution amendment — 14 October 2026:** [R14-A](evidence/results/R14_EXECUTION.md) now checks the specified reset frontier against a separately implemented conventional counter index and full recomputation. All 38,848 decisions agree; the same generation guards and operation bounds suffice conventionally. The plan's first distinguishing gate fails, so later candidate/durable/platform/performance tasks are gated out. This bounded in-memory diagnostic does not implement native whole-zone reclamation or change the earlier byte-store embodiment. The current 55/100 remains unchanged; no inventive distinction is added to this disclosure.
+
 ---
 
 # 1. The invention in 60 seconds

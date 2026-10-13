@@ -2,6 +2,8 @@
 
 Version 0.1 — 13 October 2026. Status: **conditional research design; implementation pending**. Current interim readiness: **55/100**, from the [dated reassessment](evidence/results/PATENT_REASSESSMENT_2026_10_13.md). Historical target: 73/100. Revised illustrative scenario: 75/100 only if new evidence justifies it; neither target is an assessed score.
 
+**Execution amendment — 14 October 2026:** The original plan below is retained. [R14-A execution](evidence/results/R14_EXECUTION.md) now completes the exact source/mechanism screen and registered diagnostic: 1,256 snapshots and 36,336 mutations show equality with conventional guarded counters/full recomputation. No operational distinction survives the specified frontier algorithm. Its stop condition therefore gates out R14-B–G; these tasks are not completed. The [backup primary screen](evidence/results/R14_BACKUP_SOURCE_SCREEN.md) also lacks a sufficiently specified surviving mechanism. Full verification passes 170 methods/435 subtests and registered-source CI passes both platforms. No zoned native/durable adapter, new hardware/fault guarantee, CPU/write/foreground result or score increase is claimed. User-requested unknown human/priority fields remain unknown.
+
 ## 1. Change the technical question
 
 The current store treats slots as individually reclaimable. Investigate storage whose physical reclamation unit contains multiple fragments: a zoned device can require a whole-zone reset before old written space becomes appendable again. The existing slot ledger cannot be presented as a verified implementation of that physical contract.

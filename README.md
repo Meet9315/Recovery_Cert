@@ -4,6 +4,8 @@ A runnable local prototype of reservation-backed repair continuations and acknow
 
 Current research decision (13 October 2026): [updated patent-readiness assessment](evidence/results/PATENT_REASSESSMENT_2026_10_13.md) is **55/100**, a subjective readiness rubric, not grant probability. The [next redesign plan](RCSD_PRISM_C_Redesign_Plan.md) investigates joint repair and whole-zone reclamation after conventional controllers match the current tested hypotheses. This zoned extension is planned, not implemented; the 73/75 targets remain conditional.
 
+Execution update (14 October 2026): [R14-A results](evidence/results/R14_EXECUTION.md) reject the specified frontier as a distinguishing mechanism. The new in-memory diagnostic agrees with ordinary counters/full recomputation across 1,256 snapshots and 36,336 mutations; later conditional builds are gated out. Full local verification passes 170 methods/435 subtests and registered-source CI passes Ubuntu/Windows. Run the isolated screen with `python -m analysis.zoned_frontier_gate --report <fresh-report-path>`; it does not operate a zoned device or claim a patent advantage.
+
 ## Run
 
 From this workspace:

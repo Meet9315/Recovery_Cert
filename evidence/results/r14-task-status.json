@@ -1,0 +1,19 @@
+{
+  "completed_client_date": "2026-10-14",
+  "registered_source_commit": "bb11b4807e2f3b3cea4e326466bca7494bd3bc11",
+  "R14_A": {"status": "COMPLETE", "correctness": "PASS bounded diagnostic", "distinguishing_mechanism": "FAILED"},
+  "R14_B": {"status": "GATED_OUT", "implemented": false},
+  "R14_C": {"status": "GATED_OUT", "full_joint_planner_and_oracle_implemented": false},
+  "R14_D": {"status": "GATED_OUT", "candidate_controller_implemented": false, "reset_index_diagnostic_only": true},
+  "R14_E": {"status": "GATED_OUT", "durable_adapter_implemented": false},
+  "R14_F": {"status": "GATED_OUT", "performance_campaign_run": false},
+  "R14_G": {"status": "GATED_OUT", "native_platform_and_external_reproduction": false, "final_professional_review": "UNRESOLVED"},
+  "backup": {"source_screen": "COMPLETE", "candidate_mechanism": "NOT_SPECIFIED", "implementation": false},
+  "human_records": {"user_reports_earlier_application": "none", "priority_support": "UNKNOWN", "earliest_public_disclosure": "UNKNOWN", "inventorship": "UNKNOWN", "ownership": "UNKNOWN"},
+  "current_subjective_readiness": 55,
+  "conditional_targets_not_achieved": [73,75],
+  "counts": {"snapshots":1256,"mutations":36336,"decisions":38848,"stale_rejections":72672,"disagreements":0,"test_methods":170,"subtests":435},
+  "all_conditional_implementation_tasks_completed": false,
+  "plan_execution_decision": "Stop the specified candidate under R14-A; reopen only with a concrete distinguishing mechanism",
+  "report": "R14_EXECUTION.md"
+}
