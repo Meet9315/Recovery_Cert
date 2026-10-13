@@ -230,6 +230,7 @@ def verify(args):
     coding_campaign = None
     partial_campaign = None
     min_work_campaign = None
+    contingency_campaign = None
     if result.wasSuccessful():
         try:
             campaign = run_campaign(args.traces, args.seed)
@@ -238,15 +239,18 @@ def verify(args):
             partial_campaign = run_partial_campaign()
             from .min_work_campaign import run_min_work_campaign
             min_work_campaign = run_min_work_campaign()
+            from .contingency_campaign import run_contingency_campaign
+            contingency_campaign = run_contingency_campaign()
         except Exception as error:
             campaign_error = repr(error)
-    report = {"environment": environment(), "success": result.wasSuccessful() and campaign is not None and coding_campaign is not None and partial_campaign is not None and min_work_campaign is not None,
+    report = {"environment": environment(), "success": result.wasSuccessful() and campaign is not None and coding_campaign is not None and partial_campaign is not None and min_work_campaign is not None and contingency_campaign is not None,
               "test_methods": result.testsRun, "subtests": result.subtests,
               "failures": len(result.failures), "errors": len(result.errors), "tests": result.records,
               "campaign": campaign, "campaign_error": campaign_error,
               "coding_campaign": coding_campaign,
               "partial_campaign": partial_campaign,
               "min_work_campaign": min_work_campaign,
+              "contingency_campaign": contingency_campaign,
               "total_seconds": time.perf_counter() - started,
               "limitations": ["Finite-model correctness is not an unbounded proof",
                                "Process exits are not power-loss tests",
@@ -342,6 +346,17 @@ def main():
     min_demo.add_argument("--planner", choices=("first-feasible", "min-work"), default="min-work")
     min_demo.add_argument("--validation-mode", default="conventional_cached",
                           choices=("conventional_cached", "selective", "full", "shadow"))
+    contingency = commands.add_parser("contingency-demo", help="Exercise a client-checked 4+2 single-fault policy using existing authority APIs")
+    contingency.add_argument("--root", required=True)
+    contingency.add_argument("--report", default="evidence/results/contingency-demo.json")
+    contingency.add_argument("--storage-workers", action="store_true")
+    contingency.add_argument("--validation-mode", default="conventional_cached",
+                             choices=("conventional_cached", "selective", "full", "shadow"))
+    contingency.add_argument("--fault-domain", default="D0")
+    contingency.add_argument("--cursor", type=int, default=2)
+    contingency.add_argument("--selector", choices=("policy", "conventional"), default="policy")
+    gate = commands.add_parser("contingency-gate", help="Run the registered finite 4+2 one-additional-failure gate")
+    gate.add_argument("--report", default="evidence/results/contingency-gate.json")
     for name in ("replan", "revise"):
         revision_op = commands.add_parser(name, help="Generate a partial-state proposal" if name == "replan" else
                                           "Install an exact, retryable successor proposal")
@@ -486,6 +501,20 @@ def main():
                           "first_feasible_score": report["first_feasible_score"],
                           "minimum_work_score": report["minimum_work_score"],
                           "readback_matches": report["readback_matches"]}, indent=2))
+        return 0
+    if args.command == "contingency-demo":
+        from .contingency_demo import contingency_demo
+        report = contingency_demo(args.root, args.storage_workers, args.validation_mode,
+                                  args.fault_domain, args.cursor, args.selector)
+        write_report(args.report, {"environment": environment(), **report})
+        print(json.dumps({"report": str(Path(args.report).resolve()), "branch_coverage": report["branch_coverage"],
+                          "readback_matches": report["readback_matches"], "audit": report["audit"]}, indent=2))
+        return 0
+    if args.command == "contingency-gate":
+        from .contingency_evidence import contingency_evidence
+        report = contingency_evidence()
+        write_report(args.report, report)
+        print(json.dumps({"report": str(Path(args.report).resolve()), **report["summary"]}, indent=2))
         return 0
     return operate(args)
 
