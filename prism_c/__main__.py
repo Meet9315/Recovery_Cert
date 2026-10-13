@@ -21,6 +21,7 @@ from .checker import check
 from .profiles import FOUR_PLUS_TWO
 from .model import Rejected, SearchStatus, Witness, fixture, plan
 from .partial_recovery import conventional_partial_plan
+from .min_work import conventional_min_work_plan, work_score
 from .storage import Authority
 
 
@@ -228,20 +229,24 @@ def verify(args):
     campaign_error = None
     coding_campaign = None
     partial_campaign = None
+    min_work_campaign = None
     if result.wasSuccessful():
         try:
             campaign = run_campaign(args.traces, args.seed)
             coding_campaign = run_coding_campaign(args.seed)
             from .partial_campaign import run_partial_campaign
             partial_campaign = run_partial_campaign()
+            from .min_work_campaign import run_min_work_campaign
+            min_work_campaign = run_min_work_campaign()
         except Exception as error:
             campaign_error = repr(error)
-    report = {"environment": environment(), "success": result.wasSuccessful() and campaign is not None and coding_campaign is not None and partial_campaign is not None,
+    report = {"environment": environment(), "success": result.wasSuccessful() and campaign is not None and coding_campaign is not None and partial_campaign is not None and min_work_campaign is not None,
               "test_methods": result.testsRun, "subtests": result.subtests,
               "failures": len(result.failures), "errors": len(result.errors), "tests": result.records,
               "campaign": campaign, "campaign_error": campaign_error,
               "coding_campaign": coding_campaign,
               "partial_campaign": partial_campaign,
+              "min_work_campaign": min_work_campaign,
               "total_seconds": time.perf_counter() - started,
               "limitations": ["Finite-model correctness is not an unbounded proof",
                                "Process exits are not power-loss tests",
@@ -270,10 +275,14 @@ def operate(args):
             authority.execute(args.plan, fence)
         elif args.command == "replan":
             snapshot = authority.revision_snapshot(args.plan, args.destinations, fence)
-            result = conventional_partial_plan(snapshot, args.max_states)
+            planner = conventional_min_work_plan if args.planner == "min-work" else conventional_partial_plan
+            result = planner(snapshot, args.max_states)
             value = {"parent": args.plan, "destinations": args.destinations, "fence": fence,
                      "expected_digest": Witness.from_dict(json.loads(authority.plan_info(args.plan)["witness"])).digest(),
                      "status": result.status.value, "reason": result.reason,
+                     "planner": args.planner,
+                     "optimality_proven": args.planner == "min-work" and result.status == SearchStatus.FOUND,
+                     "objective": work_score(result.witness) if result.witness else None,
                      "explored": result.explored,
                      "witness": result.witness.to_dict() if result.witness else None}
             write_report(args.report, value)
@@ -325,6 +334,14 @@ def main():
     revision.add_argument("--storage-workers", action="store_true")
     revision.add_argument("--validation-mode", default="conventional_cached",
                           choices=("conventional_cached", "selective", "full", "shadow"))
+    min_demo = commands.add_parser("minimum-work-demo", help="Restore a first-feasible work-loss counterexample")
+    min_demo.add_argument("--root", required=True)
+    min_demo.add_argument("--report", default="evidence/results/minimum-work-demo.json")
+    min_demo.add_argument("--profile", choices=("2+1", "4+2"), default="2+1")
+    min_demo.add_argument("--storage-workers", action="store_true")
+    min_demo.add_argument("--planner", choices=("first-feasible", "min-work"), default="min-work")
+    min_demo.add_argument("--validation-mode", default="conventional_cached",
+                          choices=("conventional_cached", "selective", "full", "shadow"))
     for name in ("replan", "revise"):
         revision_op = commands.add_parser(name, help="Generate a partial-state proposal" if name == "replan" else
                                           "Install an exact, retryable successor proposal")
@@ -337,6 +354,7 @@ def main():
         if name == "replan":
             revision_op.add_argument("--destinations", nargs="+", required=True)
             revision_op.add_argument("--max-states", type=int, default=20000)
+            revision_op.add_argument("--planner", choices=("first-feasible", "min-work"), default="first-feasible")
             revision_op.add_argument("--report", required=True)
         else:
             revision_op.add_argument("--proposal", required=True)
@@ -456,6 +474,17 @@ def main():
         write_report(args.report, {"environment": environment(), **report})
         print(json.dumps({"report": str(Path(args.report).resolve()), "audit": report["audit"],
                           "retained_staged_slot": report["retained_staged_slot"],
+                          "readback_matches": report["readback_matches"]}, indent=2))
+        return 0
+    if args.command == "minimum-work-demo":
+        from .min_work_demo import min_work_demo
+        from .profiles import DEFAULT_PROFILE
+        report = min_work_demo(args.root, DEFAULT_PROFILE if args.profile == "2+1" else FOUR_PLUS_TWO,
+                               args.storage_workers, args.validation_mode, args.planner)
+        write_report(args.report, {"environment": environment(), **report})
+        print(json.dumps({"report": str(Path(args.report).resolve()), "audit": report["audit"],
+                          "first_feasible_score": report["first_feasible_score"],
+                          "minimum_work_score": report["minimum_work_score"],
                           "readback_matches": report["readback_matches"]}, indent=2))
         return 0
     return operate(args)

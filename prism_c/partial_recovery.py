@@ -49,7 +49,14 @@ def conventional_partial_plan(state, max_states=20_000):
     if not match(0, set(), set()):
         return SearchResult(SearchStatus.UNKNOWN if exhausted else SearchStatus.INFEASIBLE, None, explored,
                             "Assignment budget exhausted" if exhausted else "Partial assignment exhausted")
-    retained = {slot.key for spec, row, slot in assignment if matches(slot, spec, row)}
+    witness = assignment_witness(state, assignment)
+    return SearchResult(SearchStatus.FOUND, witness, explored, "Checked partial-state assignment")
+
+
+def assignment_witness(state, assignment):
+    """Materialize an assignment; independent replay checks its complete route."""
+    retained = {slot.key for spec, row, slot in assignment
+                if slot.status in {"RESERVED", "STAGED"} and (slot.stripe, slot.row) == (spec.name, row)}
     actions = [Action("abandon", s.key, s.stripe, s.row, s.incarnation) for s in state.slots
                if (s.status in {"RESERVED", "STAGED"} and s.key not in retained
                    or s.status == "LIVE" and s.domain in state.offline)]
@@ -72,7 +79,7 @@ def conventional_partial_plan(state, max_states=20_000):
         actions.extend(steps)
     witness = Witness(state.fingerprint(), tuple(actions), current.fingerprint())
     check(state, witness)
-    return SearchResult(SearchStatus.FOUND, witness, explored, "Checked partial-state assignment")
+    return witness
 
 
 def partial_oracle(state, max_states=20_000, max_steps=20):
