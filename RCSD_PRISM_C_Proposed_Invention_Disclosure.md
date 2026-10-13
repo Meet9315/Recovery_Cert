@@ -17,6 +17,8 @@
 
 > **Executive decision:** Investigate a narrower technical mechanism that couples an executable repair continuation with enforceable capacity reservations, retained source fragments, manifest transitions and deletion authority. The candidate contribution is the specific interaction and its implementation, not safe scheduling, reservations, erasure coding or certificates individually. The earlier **53/100 subjective readiness assessment remains the assessed position**. **73/100 is only an illustrative evidence target**, not the rating of this proposal.
 
+**Reassessment amendment — 13 October 2026:** The quoted executive decision and section 14 score table preserve the original proposal's historical assessment. The [current interim reassessment](evidence/results/PATENT_REASSESSMENT_2026_10_13.md) is now **55/100**: implementation/technical support rises, inventive-step support falls after the equal-baseline findings. No 70+ score is earned. The [next research plan](RCSD_PRISM_C_Redesign_Plan.md) investigates an incarnation-bound frontier for joint repair and whole-zone reset. It is a proposed physical-contract change requiring an exact mechanism/claim screen and equal conventional comparator; no zoned implementation or novel contribution is asserted by this amendment.
+
 ---
 
 # 1. The invention in 60 seconds

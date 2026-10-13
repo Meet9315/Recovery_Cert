@@ -2,6 +2,8 @@
 
 A runnable local prototype of reservation-backed repair continuations and acknowledged storage reclamation. Python 3.11 or later; standard library only. No installation or network access is required.
 
+Current research decision (13 October 2026): [updated patent-readiness assessment](evidence/results/PATENT_REASSESSMENT_2026_10_13.md) is **55/100**, a subjective readiness rubric, not grant probability. The [next redesign plan](RCSD_PRISM_C_Redesign_Plan.md) investigates joint repair and whole-zone reclamation after conventional controllers match the current tested hypotheses. This zoned extension is planned, not implemented; the 73/75 targets remain conditional.
+
 ## Run
 
 From this workspace:
