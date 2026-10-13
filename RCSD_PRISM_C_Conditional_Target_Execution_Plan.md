@@ -10,6 +10,8 @@
 
 **Baseline extension — 13 October 2026:** Milestone 12 finds and corrects a global work-retention limitation of first-feasible assignment. Minimum-work conventional planning becomes the stronger comparator for stage/action counts. All twelve matched sets still show selective parity. Savings against the weaker first-feasible control are recorded as an engineering correction and cannot be used to pass the invention or timing gate. See [results and limits](evidence/results/MILESTONE_12.md).
 
+**Additional-failure gate — 13 October 2026:** The proposed bounded contingency extension is now modeled and independently checked. Every declared precompletion failure branch must preserve the immediate floor and restore the target with held resources. Conventional cached alternatives match all 224 branches and all four actual-store pairs. The [gate report](evidence/results/MILESTONE_13.md) rejects the proposed policy representation as a demonstrated distinguishing contribution; a new durable policy-admission layer and timing confirmation remain gated out, not counted as completed production features.
+
 ## 1. What successful execution must establish
 
 The project must answer three questions with reproducible evidence:

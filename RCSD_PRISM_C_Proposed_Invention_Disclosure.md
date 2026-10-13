@@ -13,6 +13,8 @@
 
 **Planner extension — 13 October 2026:** [Minimum-work planning](spec/minimum_work.md) optimizes committed stage count, then action count, within the fixed-LIVE partial assignment problem. An independent graph oracle and 136-case matrix check its bounded objective. The [milestone 12 collection](evidence/results/MILESTONE_12.md) records fewer writes than first-feasible choices but identical work between minimum-work conventional and selective modes. This is a shared conventional improvement; it establishes no new inventive distinction or score increase.
 
+**Contingency gate — 13 October 2026:** The [one-additional-failure finite model](spec/contingency_policy.md) checks every declared failure at every precompletion boundary, with independent coverage replay and feasibility reference. [Milestone 13](evidence/results/MILESTONE_13.md) records 16 feasible/56 infeasible configurations, 224 equal conventional alternatives and four equal existing-API byte/claim smoke pairs. A new authority-owned durable policy guarantee is not implemented; this gate finds no distinguishing effect and does not justify further durable integration or a score increase.
+
 > **Executive decision:** Investigate a narrower technical mechanism that couples an executable repair continuation with enforceable capacity reservations, retained source fragments, manifest transitions and deletion authority. The candidate contribution is the specific interaction and its implementation, not safe scheduling, reservations, erasure coding or certificates individually. The earlier **53/100 subjective readiness assessment remains the assessed position**. **73/100 is only an illustrative evidence target**, not the rating of this proposal.
 
 ---
