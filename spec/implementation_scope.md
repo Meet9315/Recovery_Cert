@@ -12,6 +12,8 @@ Content is immutable; each stripe names a fixed versioned 2+1 XOR or 4+2 GF(256)
 
 Transitions: reserve -> stage -> promote; live -> retire -> reclaim; reserved/staged -> cancellation retirement -> reclaim. Free capacity cannot be spent twice. A reservation already contains the capacity charge; staging changes categories. Retirement does not release capacity. Absent or corrupt bytes must never be promoted. Retirement of live data must preserve the current safety floor.
 
+Milestone 11 adds independently checked `abandon` of an exact pending allocation or offline LIVE row to RETIRED. It performs no physical release. The [revision contract](plan_revision.md) adds conventional partial-state assignment and a fresh scoped successor witness, with authenticated retained staging, old worker-grant revocation, exact request retries and atomic claim transfer. Exact terminal binding remains; a changed state requires a newly checked commitment rather than ignoring fields in the old witness.
+
 ## Witness and authority
 
 A witness binds a complete model snapshot, ordered transitions and terminal state through a digest. Its snapshot is either the full store or an authority-derived whole-stripe scope. An independent checker replays its transitions without invoking the planner. Admission rejects snapshot conflicts and malformed or incomplete witnesses. Runtime supports complete replay and selective component evidence reuse on every authoritative step. [Selective validation](selective_validation.md) defines coverage, current-state guards and cache advancement. Source bytes are never trusted through that cache.

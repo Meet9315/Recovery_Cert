@@ -9,6 +9,8 @@
 **Engineering name:** RCSD-PRISM-C; “C” denotes continuation. Naming does not establish novelty.\
 **Basis:** RCSD-Place PDF, RCSD-PRISM-X enhanced disclosure, the accompanying patentability reviews, and the proposed capacity-constrained continuation pivot.
 
+**Implementation amendment — 12 October 2026:** The original proposal below is retained as a dated research specification. A bounded local implementation now exists, including checked successor plans for interrupted recovery and a conventional partial-state replanner. The [implemented contract](spec/plan_revision.md), [milestone 11 evidence](evidence/results/MILESTONE_11.md) and [refreshed mechanism chart](evidence/results/REVISION_PRIOR_ART_REVIEW.md) define the narrower supported embodiment. Domains are simulated labels; workers are trusted local processes. All twelve matched work-retention pairs show conventional parity, so this amendment establishes neither a novel distinction nor the conditional 73/100 target.
+
 > **Executive decision:** Investigate a narrower technical mechanism that couples an executable repair continuation with enforceable capacity reservations, retained source fragments, manifest transitions and deletion authority. The candidate contribution is the specific interaction and its implementation, not safe scheduling, reservations, erasure coding or certificates individually. The earlier **53/100 subjective readiness assessment remains the assessed position**. **73/100 is only an illustrative evidence target**, not the rating of this proposal.
 
 ---

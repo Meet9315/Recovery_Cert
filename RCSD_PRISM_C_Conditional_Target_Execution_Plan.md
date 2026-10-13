@@ -6,6 +6,8 @@
 **Current evidence:** Design documents and preliminary research; no integrated PRISM-C implementation or measured results.\
 **Score status:** 53/100 is the earlier PRISM-X assessment. PRISM-C has not earned a new assessed score. 73/100 remains a conditional planning target, not a predicted probability of patent grant.
 
+**Execution amendment — 12 October 2026:** This document retains its original planning baseline. Current implementation and completed experiments are tracked in [PROGRESS.md](PROGRESS.md). Interrupted-plan revision, equal conventional partial-state capabilities, real retained-byte enforcement, race/crash checks and an untimed matched comparison are implemented in milestone 11. All twelve pairs have equal retained work, so that hypothesis fails the mechanism-difference gate for these fixtures. Its larger timing confirmation is gated out, rather than counted as complete or successful. The remaining research plan, primary claim distinction, hardware evidence and human contribution/disclosure/priority records remain unresolved.
+
 ## 1. What successful execution must establish
 
 The project must answer three questions with reproducible evidence:

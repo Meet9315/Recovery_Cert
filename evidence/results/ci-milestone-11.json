@@ -1,0 +1,29 @@
+{
+  "retrieved_utc_date": "2026-10-13",
+  "repository": "Meet9315/Recovery_Cert",
+  "implementation_freeze": {
+    "head_sha": "cd46eb3caa64cf7a7fa80e5056c7f148e4d0a299",
+    "run_id": 38290394279,
+    "conclusion": "success",
+    "jobs": {"ubuntu-latest": "success", "windows-latest": "success"},
+    "url": "https://github.com/Meet9315/Recovery_Cert/actions/runs/38290394279"
+  },
+  "final_corrected_test_source": {
+    "head_sha": "4c33efe13c2ed7d0ece795a995060658ab97ae5f",
+    "run_id": 38291360181,
+    "status": "completed",
+    "conclusion": "success",
+    "jobs": {"ubuntu-latest": "success", "windows-latest": "success"},
+    "url": "https://github.com/Meet9315/Recovery_Cert/actions/runs/38291360181"
+  },
+  "historical_failure_preserved": {
+    "head_sha": "eb188afca8624845f38be450a31d715b607dbbc9",
+    "run_id": 38287271570,
+    "jobs": {"ubuntu-latest": "success", "windows-latest": "failure"},
+    "test": "tests.test_measurement_diagnostics.MeasurementDiagnosticsTests.test_controller_exclusive_costs_and_logical_subset_have_no_double_count",
+    "observed_assertion": "AssertionError: 0 not greater than 0",
+    "correction": "Inject a zero CPU clock and verify real outer call counts and zero duration; production code and measurement thresholds unchanged.",
+    "url": "https://github.com/Meet9315/Recovery_Cert/actions/runs/38287271570"
+  },
+  "scope": "CI correctness and finite campaigns; no manual paired performance campaign or novelty confirmation"
+}
