@@ -41,3 +41,5 @@ python -m prism_c resume --root <store> --plan <returned-successor> --fence <cur
 ```
 
 `replan` does not install the proposal; non-FOUND outcomes return exit status 2. The proposal includes the parent's witness digest, destinations and complete new witness. `revise` never replans implicitly, making exact proposal retries possible after the old parent becomes SUPERSEDED. The operator reads the current fence from `status` or uses the authority API takeover return value.
+
+Milestone 12 adds optional `replan --planner min-work` to minimize committed stage actions, then all actions, in the fixed-LIVE assignment problem. It emits a witness only after proving the bounded search optimum; exhausted optimization yields UNKNOWN and no proposal. This shared conventional planner changes neither revision authority nor physical validation. The [minimum-work contract](minimum_work.md) states its objective and independent graph-oracle limits. The default remains first-feasible.

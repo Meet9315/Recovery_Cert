@@ -1,0 +1,3736 @@
+{
+  "campaign": {
+    "feasible_traces": 6351,
+    "infeasible_traces": 3649,
+    "invariant_violations": 0,
+    "malformed_generation_checks": 92564,
+    "scope": "Two stripes; fixed 2-of-3 rows; three destination domains; capacity one per destination; offline flags, retired slots and eligibility vary. Traces may repeat. Matching-only feasibility oracle; no process or power faults in this model campaign.",
+    "seed": 20261011,
+    "selective_component_reuses": 138846,
+    "selective_suffix_reference_comparisons": 46282,
+    "traces": 10000,
+    "unique_initial_configurations": 2479,
+    "unique_states_visited": 3772,
+    "validated_actions": 46282
+  },
+  "campaign_error": null,
+  "coding_campaign": {
+    "cached_full_suffix_comparisons": 840,
+    "codec_vectors": 12,
+    "data_lengths": [
+      0,
+      1,
+      3,
+      4,
+      5,
+      15,
+      16,
+      17,
+      63,
+      255,
+      256,
+      513
+    ],
+    "distinct_states_visited": 810,
+    "feasible_repair_cases": 60,
+    "field_products_checked": 65536,
+    "finite_repair_cases": 720,
+    "four_row_reconstructions": 180,
+    "generator_minors": [
+      {
+        "determinant": 1,
+        "rows": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "determinant": 1,
+        "rows": [
+          0,
+          1,
+          2,
+          4
+        ]
+      },
+      {
+        "determinant": 8,
+        "rows": [
+          0,
+          1,
+          2,
+          5
+        ]
+      },
+      {
+        "determinant": 1,
+        "rows": [
+          0,
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "determinant": 4,
+        "rows": [
+          0,
+          1,
+          3,
+          5
+        ]
+      },
+      {
+        "determinant": 12,
+        "rows": [
+          0,
+          1,
+          4,
+          5
+        ]
+      },
+      {
+        "determinant": 1,
+        "rows": [
+          0,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "determinant": 2,
+        "rows": [
+          0,
+          2,
+          3,
+          5
+        ]
+      },
+      {
+        "determinant": 10,
+        "rows": [
+          0,
+          2,
+          4,
+          5
+        ]
+      },
+      {
+        "determinant": 6,
+        "rows": [
+          0,
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "determinant": 1,
+        "rows": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "determinant": 1,
+        "rows": [
+          1,
+          2,
+          3,
+          5
+        ]
+      },
+      {
+        "determinant": 9,
+        "rows": [
+          1,
+          2,
+          4,
+          5
+        ]
+      },
+      {
+        "determinant": 5,
+        "rows": [
+          1,
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "determinant": 3,
+        "rows": [
+          2,
+          3,
+          4,
+          5
+        ]
+      }
+    ],
+    "infeasible_repair_cases": 660,
+    "observed_disagreements": 0,
+    "profile": "pq-4+2-gf256-v1",
+    "scope": "All 15 four-row subsets, two unit destinations, eligibility/offline/retired flags; not general concurrency or hardware proof",
+    "seed": 20261011,
+    "stale_incarnation_checks": 840,
+    "validated_actions": 420
+  },
+  "environment": {
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python": "3.11.4 (tags/v3.11.4:d2340ef, Jun  7 2023, 05:45:37) [MSC v.1934 64 bit (AMD64)]",
+    "source_sha256": {
+      "prism_c/__init__.py": "5310acec652af6a86ebf1e86fe1547d37c6fbfa7cad6ab1afc446397761c8715",
+      "prism_c/__main__.py": "b48aa213ee723f4a25d6e5432f779ac9b9a207598a30ccef3d433f6f2d085ff4",
+      "prism_c/baseline.py": "7f0fc2dfa251420bdc0df94360c2fb2394dc8100e5766747b9cbe056c069fbeb",
+      "prism_c/benchmark.py": "60979ea19ad1c3b21d61e0a078a871bd52d7616a8cd46a45a2cfe4ff9f5f7148",
+      "prism_c/campaign.py": "b226a09b8930d8fde711512e03e13a98046cc964efc6eee6fe21e15a37b5a353",
+      "prism_c/checker.py": "1aab629ed2857f9130a5e4e905e7f44084e8281492add9b10a4e6b05900632d6",
+      "prism_c/coding.py": "c66cceedb4cda1a7322b600fdee901a4ec2a2425bb29518146560e75afdb47f1",
+      "prism_c/coding_campaign.py": "d326217706c60c8820ec5dbb2f79293b90283db4101c0c574d8f1f9737feb040",
+      "prism_c/coding_oracle.py": "cec06e7d252ce99112109a4b615a67ebbe3d9f16e175a6ab7e0b2f3b79158d06",
+      "prism_c/controller_benchmark.py": "c1db5f6fcf0237306e4447f36c3ac3adb091b200878e4ae55a05c37319733a43",
+      "prism_c/cpu_attribution.py": "414dd00206bd6cedcdd27a0112174198a5018b2836602f30e90745ecc60e96bd",
+      "prism_c/fault_contention.py": "cfc025ef742ec1f0e02fc1fe5c7c7be4c6b977e93062b12351e2e67b72a1170d",
+      "prism_c/fault_measured_worker.py": "5644b89c08c8c9938eca5658912458df82f556a38782d28f89b00d6a5d720047",
+      "prism_c/fault_worker.py": "67df4ff6d586c59568ae5fa8adc2f628fe650e658bcc2ff6ff9686fe7671efca",
+      "prism_c/liveness.py": "997dfcf18c9cc0fc6e1d37e33723cb7541102872263c7daffbbc67a73e5a36e5",
+      "prism_c/measured_worker.py": "fd046a6927db6fcc1cd4de43b8f7039da7767ba08ea3b539a75201a05fac3471",
+      "prism_c/measurement_diagnostics.py": "325501be0b7b7ef008708aeaa32b974041b65677bbd2532c5f71e92ac0983ebf",
+      "prism_c/min_work.py": "9aa95287e9592045a726f4384ee037239006ce50bc9a0848f007e0b216955709",
+      "prism_c/min_work_campaign.py": "be220af9a2a6b18e549c8aa69ec8f853ec25487963ddd5324e2ee8f1b38b0244",
+      "prism_c/min_work_demo.py": "43d6dd2ab38fd48895790c1ebe3d6646c73736d04cdd0d528f50182fac6ca92c",
+      "prism_c/model.py": "91a491dda7f3a83189c4e88e1c9141b6ef7bf549985aed82712410174d199810",
+      "prism_c/partial_campaign.py": "1a0c5d0c1303561b337a55609a2ed9dd05c6ff2a16d04477e8bb5bbafdf9f1df",
+      "prism_c/partial_recovery.py": "e5ddb7d21a03faeccad0ab882ba5a6f966dbbebf3d602e10386474d29b6f9203",
+      "prism_c/plan_revision.py": "efc954f92a8671ce0c4b1f6735b2a3963c48891d9c8130edd240375cd9e80b11",
+      "prism_c/profiles.py": "b831e77d0794303b8bd0ba2571c12c4071ae053fd924be08ff7de6025035f1b8",
+      "prism_c/read_reuse.py": "e52b72a4b2408c69a0e076dbdffcf8c70de416c7c079ef2d924af2a7a62c1614",
+      "prism_c/revision_demo.py": "17df5396fa42829be7bae3c2a2c8bd6ef4d0c84ce79eb4dbc617047f0f782f62",
+      "prism_c/revision_fault.py": "a024b298840598459e88f2fe6e393559c5c8cfc836bd3900317c127940018557",
+      "prism_c/revision_fixture.py": "b491d616e8d8e440dd045115eab682a1295a8c0541176ec3010071707ff5a4ad",
+      "prism_c/scope.py": "7fc0e21beb9f45ed3abc757d0011567b1fa5d4a907c401255d343b3c4e855cba",
+      "prism_c/selective.py": "4d34288758ff683890be35b2313ef78f29052cd2b6ae97cb61abf6b4b791da95",
+      "prism_c/snapshot_latency.py": "cf77e8ee7590941dc71294c5e3dfd655e95c34676988db3955de4334b9c9c0b5",
+      "prism_c/storage.py": "7a231644be60e0ed00f3c590e2de71e5334f719f4412253507ce58430c73e559",
+      "prism_c/worker.py": "1ba7573861493edc090d4eadbb2a24edab08f6a2462e1eefe63ac25b2658c67d",
+      "prism_c/worker_authority.py": "7d92fcb28358333bc451e227e9e304f9632a8b1b6bf8905999d2383197cbdab9",
+      "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tests/test_concurrent.py": "bf481e110b5d65a33c70ecba9d4549850437559f1182ce5daf2154ea24ade6f7",
+      "tests/test_controller_benchmark.py": "771aa548674ef40fffcb7f992b1a84c3a45225cf7be683b5d582cc488fc5c5e6",
+      "tests/test_fault_contention.py": "98db614696d461af245aec8a4172c4101f924a2d6ec237e909825a24ba53ac52",
+      "tests/test_four_plus_two.py": "45c7d240f276c2c94256e2c06cd6b289efa570621bd71d664cbaeff093ee5b31",
+      "tests/test_measurement_diagnostics.py": "5c7b7f66c42944cc3c8e7ff860f296d94973db16745c6082b8c2a42299abe131",
+      "tests/test_min_work.py": "43e827790434250f0c66174d0fa697d8be3f7daa7965aa8b0cea77958fc5ca52",
+      "tests/test_model.py": "cdd4d9832c160cf02f36a5b7db4f9c1f0e6a42012f8aa1fdb190c50bf5d427ea",
+      "tests/test_plan_revision.py": "6a3243ce272adb8e7ea8a7c87a7146b44235726907a0ac286c792212ba774155",
+      "tests/test_read_reuse.py": "331e42d9539c79aff0fa8518d40163399f790e5e161946306af5e1e33c5ca985",
+      "tests/test_read_reuse_benchmark.py": "732eec7b0f9468e9c5ebfdd9a4c582ad97c1c5e9e37b0fec3b62df20aeb3e0de",
+      "tests/test_selective.py": "253c4bb72bbdcfd4093c3e624bf09171dfb325fa3a43af49c6cb86dc240d983e",
+      "tests/test_snapshot_latency.py": "690dca364a6a5bd83ecd8032a73bc1a5aa945c7495009b23488a62d6bf8d76ff",
+      "tests/test_snapshot_latency_completion.py": "384cfcb371b4e56192c9585ff1b7811eea37d6fc1001e6d72d8285998020be38",
+      "tests/test_snapshot_reads.py": "5a3ac6df5a3faa14282a21729a65bbe2aff9df2e41bc50ca977bc4b4425c999f",
+      "tests/test_storage.py": "cb61782f540e462e348ca3bfaec6b3c4729fdc77a50829beac9c30f47d5f17da",
+      "tests/test_workers.py": "0012a227c8e6d4dc00d9148a9bbf087e339380d8b37c455e6761e8badf636049"
+    },
+    "sqlite": "3.42.0",
+    "utc": "2026-10-13T06:29:03.890554+00:00",
+    "version": "0.1.0"
+  },
+  "errors": 0,
+  "failures": 0,
+  "limitations": [
+    "Finite-model correctness is not an unbounded proof",
+    "Process exits are not power-loss tests",
+    "No comparative performance or novelty result is established"
+  ],
+  "min_work_campaign": {
+    "cases": [
+      {
+        "assignment_states": 2,
+        "case": 0,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": null,
+        "minimum_work": null,
+        "oracle_states": 7,
+        "oracle_work": null,
+        "snapshot": "8cf752d326dc42daaea1bc9066ed239a804cdfe97f935c2a699a7bbfe161122c",
+        "status": "INFEASIBLE"
+      },
+      {
+        "assignment_states": 1,
+        "case": 1,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": null,
+        "minimum_work": null,
+        "oracle_states": 1,
+        "oracle_work": null,
+        "snapshot": "1b673fbbd7911400227964444380e99371033dd49c297a3b3a996df355c93a6e",
+        "status": "INFEASIBLE"
+      },
+      {
+        "assignment_states": 2,
+        "case": 2,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": null,
+        "minimum_work": null,
+        "oracle_states": 14,
+        "oracle_work": null,
+        "snapshot": "fed0535441ba139ee16d1a09151031d07914c83c58ac4796769485a4082af771",
+        "status": "INFEASIBLE"
+      },
+      {
+        "assignment_states": 1,
+        "case": 3,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": null,
+        "minimum_work": null,
+        "oracle_states": 2,
+        "oracle_work": null,
+        "snapshot": "2e1b9b9f7d5b420d6847df47dd75d2abb8062561e8a08c13eacdb90966a115d3",
+        "status": "INFEASIBLE"
+      },
+      {
+        "assignment_states": 2,
+        "case": 4,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": null,
+        "minimum_work": null,
+        "oracle_states": 8,
+        "oracle_work": null,
+        "snapshot": "854668cda2807be8a8f4ff4df7d6da928687363b16c50fa1c4c64d3e798c2cd5",
+        "status": "INFEASIBLE"
+      },
+      {
+        "assignment_states": 1,
+        "case": 5,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": null,
+        "minimum_work": null,
+        "oracle_states": 1,
+        "oracle_work": null,
+        "snapshot": "55c4c305b1b3c77b3120552cc0413086004fa32a4e9842132d173b3d003252a8",
+        "status": "INFEASIBLE"
+      },
+      {
+        "assignment_states": 2,
+        "case": 6,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": null,
+        "minimum_work": null,
+        "oracle_states": 16,
+        "oracle_work": null,
+        "snapshot": "a0767f7013a8edb9f73aa8555f252c073e043080b4ddbacea41411b58990eb9b",
+        "status": "INFEASIBLE"
+      },
+      {
+        "assignment_states": 1,
+        "case": 7,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": null,
+        "minimum_work": null,
+        "oracle_states": 2,
+        "oracle_work": null,
+        "snapshot": "e59d285add2fdc640ba4377865c4d7541ca9007cfc552cec4f78fcf675d81b1f",
+        "status": "INFEASIBLE"
+      },
+      {
+        "assignment_states": 2,
+        "case": 8,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": null,
+        "minimum_work": null,
+        "oracle_states": 11,
+        "oracle_work": null,
+        "snapshot": "66dcefe974c2a7fcc3d185fa3cb07b08319c057428327f634c2bdfe4fc673530",
+        "status": "INFEASIBLE"
+      },
+      {
+        "assignment_states": 1,
+        "case": 9,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": null,
+        "minimum_work": null,
+        "oracle_states": 2,
+        "oracle_work": null,
+        "snapshot": "041d7b3bfdec979371ae37d195dae54423686642caee58faf2111e861e241a4f",
+        "status": "INFEASIBLE"
+      },
+      {
+        "assignment_states": 2,
+        "case": 10,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": null,
+        "minimum_work": null,
+        "oracle_states": 22,
+        "oracle_work": null,
+        "snapshot": "c7777f53bef8b740274877403ce0331f3613d0c539148b611b942468ebbb9c05",
+        "status": "INFEASIBLE"
+      },
+      {
+        "assignment_states": 1,
+        "case": 11,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": null,
+        "minimum_work": null,
+        "oracle_states": 4,
+        "oracle_work": null,
+        "snapshot": "b043f2c6a6f19af6fdb98f61a79c98d48447f8b64967d793b61ee88343b0c88d",
+        "status": "INFEASIBLE"
+      },
+      {
+        "assignment_states": 2,
+        "case": 12,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": null,
+        "minimum_work": null,
+        "oracle_states": 10,
+        "oracle_work": null,
+        "snapshot": "09b82de04e432a41579c680af06f808cfdedd53f96634e46acde465b06a94ebc",
+        "status": "INFEASIBLE"
+      },
+      {
+        "assignment_states": 1,
+        "case": 13,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": null,
+        "minimum_work": null,
+        "oracle_states": 2,
+        "oracle_work": null,
+        "snapshot": "17a1a93d8c93cb074baac5565cf89258e8422d3affb2185e7aecea0d94512e20",
+        "status": "INFEASIBLE"
+      },
+      {
+        "assignment_states": 2,
+        "case": 14,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": null,
+        "minimum_work": null,
+        "oracle_states": 20,
+        "oracle_work": null,
+        "snapshot": "f91090684d8e8aa0dd59807180115aee99dd1ada749b91d4a6f8fc9da75e4bc2",
+        "status": "INFEASIBLE"
+      },
+      {
+        "assignment_states": 1,
+        "case": 15,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": null,
+        "minimum_work": null,
+        "oracle_states": 4,
+        "oracle_work": null,
+        "snapshot": "c2ca6d1a68fae3b2c46221a54a14a8675f44bd546a7fbde04d498eb308965e30",
+        "status": "INFEASIBLE"
+      },
+      {
+        "assignment_states": 3,
+        "case": 16,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": [
+          2,
+          6
+        ],
+        "minimum_work": [
+          2,
+          6
+        ],
+        "oracle_states": 19,
+        "oracle_work": [
+          2,
+          6
+        ],
+        "snapshot": "43a634eeb087143964375092f58844ae1007f9e09f139d483f75588cd9011d25",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 1,
+        "case": 17,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": null,
+        "minimum_work": null,
+        "oracle_states": 4,
+        "oracle_work": null,
+        "snapshot": "0f3620632069cade92cfe924d1a838a1a9a6833b95fb2995ebd0ff645f9ad113",
+        "status": "INFEASIBLE"
+      },
+      {
+        "assignment_states": 3,
+        "case": 18,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": [
+          2,
+          6
+        ],
+        "minimum_work": [
+          2,
+          6
+        ],
+        "oracle_states": 37,
+        "oracle_work": [
+          2,
+          6
+        ],
+        "snapshot": "f486f4b701ec20ad5310e4229ec4a3df8343a79d59b621419d91933230ea6d74",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 1,
+        "case": 19,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": null,
+        "minimum_work": null,
+        "oracle_states": 8,
+        "oracle_work": null,
+        "snapshot": "50d9086c4ca2446f1267058a9816845427d31448dbdddb9f9be43d8e58d222f2",
+        "status": "INFEASIBLE"
+      },
+      {
+        "assignment_states": 3,
+        "case": 20,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": [
+          2,
+          7
+        ],
+        "minimum_work": [
+          2,
+          7
+        ],
+        "oracle_states": 23,
+        "oracle_work": [
+          2,
+          7
+        ],
+        "snapshot": "960a5a4b6c9530d3e04692addd5fb0ece3d2e7b151f7399d7523fa95c8c8dfc5",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 1,
+        "case": 21,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": null,
+        "minimum_work": null,
+        "oracle_states": 4,
+        "oracle_work": null,
+        "snapshot": "2df7811845672bfecd8dc0a440d4863fec58dbf77f53f941777c5ed7bb8c91ef",
+        "status": "INFEASIBLE"
+      },
+      {
+        "assignment_states": 3,
+        "case": 22,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": [
+          2,
+          7
+        ],
+        "minimum_work": [
+          2,
+          7
+        ],
+        "oracle_states": 45,
+        "oracle_work": [
+          2,
+          7
+        ],
+        "snapshot": "e126bdcb2f3ed6242c33405fb03bdeb9d691f95b85bb8404cc483d687b192e7e",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 1,
+        "case": 23,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": null,
+        "minimum_work": null,
+        "oracle_states": 8,
+        "oracle_work": null,
+        "snapshot": "c7b3b574749755a0380a363c63d1eb6c7f6881de79ddd1638fcdb0dd2e5198b9",
+        "status": "INFEASIBLE"
+      },
+      {
+        "assignment_states": 3,
+        "case": 24,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": [
+          2,
+          8
+        ],
+        "minimum_work": [
+          2,
+          8
+        ],
+        "oracle_states": 26,
+        "oracle_work": [
+          2,
+          8
+        ],
+        "snapshot": "c3e0b456d821ca71d214c870d1a7b0e6b8d037ad7cca07c4b10ab45c50f11513",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 1,
+        "case": 25,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": null,
+        "minimum_work": null,
+        "oracle_states": 5,
+        "oracle_work": null,
+        "snapshot": "89414aecc1c882928e49f2d4c2da9407a2b018624279fcc2e9831ec58f51914d",
+        "status": "INFEASIBLE"
+      },
+      {
+        "assignment_states": 3,
+        "case": 26,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": [
+          2,
+          8
+        ],
+        "minimum_work": [
+          2,
+          8
+        ],
+        "oracle_states": 51,
+        "oracle_work": [
+          2,
+          8
+        ],
+        "snapshot": "b5d9699d2f2a7e9844abe99dbfe789833d36135a607a6cea8561704237289d0c",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 1,
+        "case": 27,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": null,
+        "minimum_work": null,
+        "oracle_states": 10,
+        "oracle_work": null,
+        "snapshot": "baba11631556d9b84c69af114395822cfc3eca436c5aac7cfcc9d636aa840881",
+        "status": "INFEASIBLE"
+      },
+      {
+        "assignment_states": 3,
+        "case": 28,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": [
+          2,
+          8
+        ],
+        "minimum_work": [
+          2,
+          8
+        ],
+        "oracle_states": 25,
+        "oracle_work": [
+          2,
+          8
+        ],
+        "snapshot": "29d74739234ee52526bd61e39833287a005cd8e133ff9d7757a59b0caefde93b",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 1,
+        "case": 29,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": null,
+        "minimum_work": null,
+        "oracle_states": 5,
+        "oracle_work": null,
+        "snapshot": "4b3fafcaa65b059cfeb349260ba28624ce80e400e18f9248bfa3f8f8250c8686",
+        "status": "INFEASIBLE"
+      },
+      {
+        "assignment_states": 3,
+        "case": 30,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": [
+          2,
+          8
+        ],
+        "minimum_work": [
+          2,
+          8
+        ],
+        "oracle_states": 49,
+        "oracle_work": [
+          2,
+          8
+        ],
+        "snapshot": "1ecca1c29df8d2e03b249713d62c3bf48a1f385be1af7115053d60f5f48f9e06",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 1,
+        "case": 31,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": null,
+        "minimum_work": null,
+        "oracle_states": 10,
+        "oracle_work": null,
+        "snapshot": "ecb4326baa24fc5187a5630664744976a5a2b00fad0f58d0b3a96a9434067e27",
+        "status": "INFEASIBLE"
+      },
+      {
+        "assignment_states": 3,
+        "case": 32,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": [
+          2,
+          6
+        ],
+        "minimum_work": [
+          2,
+          6
+        ],
+        "oracle_states": 16,
+        "oracle_work": [
+          2,
+          6
+        ],
+        "snapshot": "855de2fadda7c1617cf1ba243eab79c61e96c3a2bf0f52b901bd4f1d10cac7e8",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 1,
+        "case": 33,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": null,
+        "minimum_work": null,
+        "oracle_states": 4,
+        "oracle_work": null,
+        "snapshot": "80cd6522c952555d05d55ffc4569908b08018dc73ea871905f423387bfdf828a",
+        "status": "INFEASIBLE"
+      },
+      {
+        "assignment_states": 3,
+        "case": 34,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": [
+          2,
+          7
+        ],
+        "minimum_work": [
+          2,
+          7
+        ],
+        "oracle_states": 20,
+        "oracle_work": [
+          2,
+          7
+        ],
+        "snapshot": "24164d9105652327edb2515f950bf00506bec4f58d19ab69da6e05d55b035b2d",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 1,
+        "case": 35,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": null,
+        "minimum_work": null,
+        "oracle_states": 5,
+        "oracle_work": null,
+        "snapshot": "093c565a5d6cd0c95488c8393a19e7328045abc5239a1dae96f980573303c213",
+        "status": "INFEASIBLE"
+      },
+      {
+        "assignment_states": 3,
+        "case": 36,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": [
+          2,
+          7
+        ],
+        "minimum_work": [
+          2,
+          7
+        ],
+        "oracle_states": 20,
+        "oracle_work": [
+          2,
+          7
+        ],
+        "snapshot": "353b8aabec5ed378ffc24ec3adcb601f0e39cb9fcdbda5a8aa4001eac9328193",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 1,
+        "case": 37,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": null,
+        "minimum_work": null,
+        "oracle_states": 4,
+        "oracle_work": null,
+        "snapshot": "cf0dde30cc0b8569703e0cf1fe601014c364e70a73100ff70f6991fa55e8507b",
+        "status": "INFEASIBLE"
+      },
+      {
+        "assignment_states": 3,
+        "case": 38,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": [
+          2,
+          8
+        ],
+        "minimum_work": [
+          2,
+          8
+        ],
+        "oracle_states": 25,
+        "oracle_work": [
+          2,
+          8
+        ],
+        "snapshot": "659e7785967085ba41662b567097c55e5894b74e379457ef9c5874eefcde378d",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 1,
+        "case": 39,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": null,
+        "minimum_work": null,
+        "oracle_states": 5,
+        "oracle_work": null,
+        "snapshot": "3d0c950e564d88de1c1d8fd5dfb47382db29af3c6bbaed812720c136db6fa2ea",
+        "status": "INFEASIBLE"
+      },
+      {
+        "assignment_states": 3,
+        "case": 40,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": [
+          2,
+          5
+        ],
+        "minimum_work": [
+          2,
+          5
+        ],
+        "oracle_states": 28,
+        "oracle_work": [
+          2,
+          5
+        ],
+        "snapshot": "4ff7137f2c08c6511aa5d1a54c88dbb3e7d0c49fa35a0111d483e472fc1602b4",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 1,
+        "case": 41,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": null,
+        "minimum_work": null,
+        "oracle_states": 8,
+        "oracle_work": null,
+        "snapshot": "93a0ed6dd7f573b918a5ce3c4d28fe761ff78cdadd399e7129dee57b97838c7f",
+        "status": "INFEASIBLE"
+      },
+      {
+        "assignment_states": 3,
+        "case": 42,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": [
+          2,
+          6
+        ],
+        "minimum_work": [
+          2,
+          6
+        ],
+        "oracle_states": 36,
+        "oracle_work": [
+          2,
+          6
+        ],
+        "snapshot": "1077c80a6c88ce6f3f3ae4df4ed98791d7eb94e54aacccc4d8e576ed77f7c42a",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 1,
+        "case": 43,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": null,
+        "minimum_work": null,
+        "oracle_states": 10,
+        "oracle_work": null,
+        "snapshot": "1cb2543d474029eedd670076625750f203e4298add0896759e4477c7e1caca3d",
+        "status": "INFEASIBLE"
+      },
+      {
+        "assignment_states": 3,
+        "case": 44,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": [
+          1,
+          4
+        ],
+        "minimum_work": [
+          1,
+          4
+        ],
+        "oracle_states": 17,
+        "oracle_work": [
+          1,
+          4
+        ],
+        "snapshot": "395b83c6cfe0ba211c413080c3ef9bdb19ac0037ed4ef4a3407b7a8894575e15",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 1,
+        "case": 45,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": null,
+        "minimum_work": null,
+        "oracle_states": 8,
+        "oracle_work": null,
+        "snapshot": "ce33359980dc533b1e90e87c184e37083b69920d90870d29948c7fd6aadea027",
+        "status": "INFEASIBLE"
+      },
+      {
+        "assignment_states": 3,
+        "case": 46,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": [
+          1,
+          5
+        ],
+        "minimum_work": [
+          1,
+          5
+        ],
+        "oracle_states": 23,
+        "oracle_work": [
+          1,
+          5
+        ],
+        "snapshot": "bfe951b28f6f2d3a5796dddbcd1d43a4bbb3b03f7286a39a58d8712b71b37acf",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 1,
+        "case": 47,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": null,
+        "minimum_work": null,
+        "oracle_states": 10,
+        "oracle_work": null,
+        "snapshot": "393c50af07d6301e9923cbcdec4812d9235bfa30cf48e09b5af17d102750edfb",
+        "status": "INFEASIBLE"
+      },
+      {
+        "assignment_states": 4,
+        "case": 48,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": [
+          2,
+          6
+        ],
+        "minimum_work": [
+          2,
+          6
+        ],
+        "oracle_states": 27,
+        "oracle_work": [
+          2,
+          6
+        ],
+        "snapshot": "82bc807615a31c2816944d8bfc07f0ab3e33538960881a00e0a55fe0590a0a80",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 3,
+        "case": 49,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": [
+          2,
+          6
+        ],
+        "minimum_work": [
+          2,
+          6
+        ],
+        "oracle_states": 16,
+        "oracle_work": [
+          2,
+          6
+        ],
+        "snapshot": "92491a539468ba3af0e86c84acc5c1830d1a5418319b971c809abce8b32f6e40",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 4,
+        "case": 50,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": [
+          2,
+          7
+        ],
+        "minimum_work": [
+          2,
+          7
+        ],
+        "oracle_states": 34,
+        "oracle_work": [
+          2,
+          7
+        ],
+        "snapshot": "eb74c1893934f3fcad9f57e63ac7e4aada26b714dcdbe77138263eb3229d9d62",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 3,
+        "case": 51,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": [
+          2,
+          7
+        ],
+        "minimum_work": [
+          2,
+          7
+        ],
+        "oracle_states": 20,
+        "oracle_work": [
+          2,
+          7
+        ],
+        "snapshot": "aac39ed0025deb6138ead2c31cf25f7f301c9a45ec50ae27ccfd98f7c323a175",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 4,
+        "case": 52,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": [
+          2,
+          6
+        ],
+        "minimum_work": [
+          2,
+          6
+        ],
+        "oracle_states": 42,
+        "oracle_work": [
+          2,
+          6
+        ],
+        "snapshot": "12b29092e65da5911c661d8ea6de9b96cd3663228c648d29659ebde47a0710b8",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 3,
+        "case": 53,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": [
+          2,
+          6
+        ],
+        "minimum_work": [
+          2,
+          6
+        ],
+        "oracle_states": 16,
+        "oracle_work": [
+          2,
+          6
+        ],
+        "snapshot": "5cad4860887eb7cf82fab6815a37bfddd6e7063739b3ee1c921cd945a3f04253",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 4,
+        "case": 54,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": [
+          2,
+          7
+        ],
+        "minimum_work": [
+          2,
+          7
+        ],
+        "oracle_states": 53,
+        "oracle_work": [
+          2,
+          7
+        ],
+        "snapshot": "1382380a001ec03761db85334a95a0f7072763dc484a3b2571a77002b66f25f8",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 3,
+        "case": 55,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": [
+          2,
+          7
+        ],
+        "minimum_work": [
+          2,
+          7
+        ],
+        "oracle_states": 20,
+        "oracle_work": [
+          2,
+          7
+        ],
+        "snapshot": "d148b931dfb83fb0ff6324b214311f557e336d9a6391707d763d84de7cc3c574",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 4,
+        "case": 56,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": [
+          2,
+          5
+        ],
+        "minimum_work": [
+          2,
+          5
+        ],
+        "oracle_states": 45,
+        "oracle_work": [
+          2,
+          5
+        ],
+        "snapshot": "7180dce72a95daf42e6af1c28923718289d291804281f948a572513984ccb1fa",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 3,
+        "case": 57,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": [
+          2,
+          7
+        ],
+        "minimum_work": [
+          2,
+          7
+        ],
+        "oracle_states": 20,
+        "oracle_work": [
+          2,
+          7
+        ],
+        "snapshot": "35d644499c632adfdbbefb0450e78e739eb232fb0c2ca5a6635f7b3a3f09bfb7",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 4,
+        "case": 58,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": [
+          2,
+          6
+        ],
+        "minimum_work": [
+          2,
+          6
+        ],
+        "oracle_states": 59,
+        "oracle_work": [
+          2,
+          6
+        ],
+        "snapshot": "5c3972e5ccf91321f6ac98d8e75e49940afcab15c2125787530614f952cfc27d",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 3,
+        "case": 59,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": [
+          2,
+          8
+        ],
+        "minimum_work": [
+          2,
+          8
+        ],
+        "oracle_states": 25,
+        "oracle_work": [
+          2,
+          8
+        ],
+        "snapshot": "cb0e79e2d9473409d1654a1832aad34efcf1070fb50c75feb21dd4d7b6ed4074",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 4,
+        "case": 60,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": [
+          1,
+          4
+        ],
+        "minimum_work": [
+          1,
+          4
+        ],
+        "oracle_states": 25,
+        "oracle_work": [
+          1,
+          4
+        ],
+        "snapshot": "907302001564eb78f314913267d5630799983f55839f8e88c0e1b66a1f230594",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 3,
+        "case": 61,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": [
+          2,
+          7
+        ],
+        "minimum_work": [
+          2,
+          7
+        ],
+        "oracle_states": 20,
+        "oracle_work": [
+          2,
+          7
+        ],
+        "snapshot": "81f8ffaec08f546ff449adfa2c9b872aaeeff01bac2da3f369696c122ab58eec",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 4,
+        "case": 62,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": [
+          1,
+          5
+        ],
+        "minimum_work": [
+          1,
+          5
+        ],
+        "oracle_states": 36,
+        "oracle_work": [
+          1,
+          5
+        ],
+        "snapshot": "76076a004c6214660edd6572071694ff1ef43f561625f3c45455a2c21bf234f4",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 3,
+        "case": 63,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": [
+          2,
+          8
+        ],
+        "minimum_work": [
+          2,
+          8
+        ],
+        "oracle_states": 25,
+        "oracle_work": [
+          2,
+          8
+        ],
+        "snapshot": "23f6efe9a995c8728cda1db82e2ae293ac237d6ca6576a9877f231d456f8919c",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 4,
+        "case": 64,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": [
+          2,
+          6
+        ],
+        "minimum_work": [
+          2,
+          6
+        ],
+        "oracle_states": 19,
+        "oracle_work": [
+          2,
+          6
+        ],
+        "snapshot": "ed109d9c82f53f25b74f41d0b9c6a75474727a4229068150ed83dc35f0a9f9c2",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 1,
+        "case": 65,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": null,
+        "minimum_work": null,
+        "oracle_states": 4,
+        "oracle_work": null,
+        "snapshot": "2027e09b6783c21f783190ebb711abdd8a22a3ba81d9b3ea867bef48356dc4e9",
+        "status": "INFEASIBLE"
+      },
+      {
+        "assignment_states": 4,
+        "case": 66,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": [
+          2,
+          7
+        ],
+        "minimum_work": [
+          2,
+          7
+        ],
+        "oracle_states": 26,
+        "oracle_work": [
+          2,
+          7
+        ],
+        "snapshot": "bd38431abc9032f9e2eb3aa0657bb4d70c7a18367aa4970781d55286b7e1a14c",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 1,
+        "case": 67,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": null,
+        "minimum_work": null,
+        "oracle_states": 5,
+        "oracle_work": null,
+        "snapshot": "147b1abe983281267afd9c93970dba34fa424e79a35112fd4e54f9c1977ecf2f",
+        "status": "INFEASIBLE"
+      },
+      {
+        "assignment_states": 4,
+        "case": 68,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": [
+          2,
+          7
+        ],
+        "minimum_work": [
+          2,
+          7
+        ],
+        "oracle_states": 23,
+        "oracle_work": [
+          2,
+          7
+        ],
+        "snapshot": "2aeb43e0bee481d5bedff5b02d2efa79e9c87933a8a6a439d478dbf1b049ec72",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 1,
+        "case": 69,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": null,
+        "minimum_work": null,
+        "oracle_states": 4,
+        "oracle_work": null,
+        "snapshot": "941222f3d19e2ec33ce1ea80ea0f085774ec1a2c6d4e632e20b751dcb22b2503",
+        "status": "INFEASIBLE"
+      },
+      {
+        "assignment_states": 4,
+        "case": 70,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": [
+          2,
+          8
+        ],
+        "minimum_work": [
+          2,
+          8
+        ],
+        "oracle_states": 31,
+        "oracle_work": [
+          2,
+          8
+        ],
+        "snapshot": "d7fc63d744963328e2256b7fe490cb3d26bfc7ced15628cd1a94026ab340fee9",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 1,
+        "case": 71,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": null,
+        "minimum_work": null,
+        "oracle_states": 5,
+        "oracle_work": null,
+        "snapshot": "8770afa3318d4b19a9af62c1c4576fedafec59472b5812a97c7edeb12c3471d3",
+        "status": "INFEASIBLE"
+      },
+      {
+        "assignment_states": 4,
+        "case": 72,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": [
+          2,
+          5
+        ],
+        "minimum_work": [
+          2,
+          5
+        ],
+        "oracle_states": 31,
+        "oracle_work": [
+          2,
+          5
+        ],
+        "snapshot": "86885967c1b2ad794cd044f966f4695a192a6fc6184b3ecd08ed536f0dc04290",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 1,
+        "case": 73,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": null,
+        "minimum_work": null,
+        "oracle_states": 8,
+        "oracle_work": null,
+        "snapshot": "e315bbdb704e5c6724aae308c39a15519edb66ffc88545b49c9fdb3c7e9d0be4",
+        "status": "INFEASIBLE"
+      },
+      {
+        "assignment_states": 4,
+        "case": 74,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": [
+          2,
+          6
+        ],
+        "minimum_work": [
+          2,
+          6
+        ],
+        "oracle_states": 42,
+        "oracle_work": [
+          2,
+          6
+        ],
+        "snapshot": "9be8dcb67bc37fefd0aa14357c223ceb5c36cb17afc52367b941a0d47813e13f",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 1,
+        "case": 75,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": null,
+        "minimum_work": null,
+        "oracle_states": 10,
+        "oracle_work": null,
+        "snapshot": "80c67fe76524ddcd03a0b38f86b4d7591fec6eddbb60277864abe3dc2b8dabf8",
+        "status": "INFEASIBLE"
+      },
+      {
+        "assignment_states": 4,
+        "case": 76,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": [
+          1,
+          4
+        ],
+        "minimum_work": [
+          1,
+          4
+        ],
+        "oracle_states": 19,
+        "oracle_work": [
+          1,
+          4
+        ],
+        "snapshot": "222e51d13d1128f13aa4881786afd4bca74b9450b7a295e356951ed7be89932a",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 1,
+        "case": 77,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": null,
+        "minimum_work": null,
+        "oracle_states": 8,
+        "oracle_work": null,
+        "snapshot": "5a722551c741a637bc99d00434b12778b0192829fea6d93fd0583ab9c2e61bdd",
+        "status": "INFEASIBLE"
+      },
+      {
+        "assignment_states": 4,
+        "case": 78,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": [
+          1,
+          5
+        ],
+        "minimum_work": [
+          1,
+          5
+        ],
+        "oracle_states": 27,
+        "oracle_work": [
+          1,
+          5
+        ],
+        "snapshot": "1a8431784a482ef2f96f7aca675433e2625d9b4705ec991aaf47b2269e37f64b",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 1,
+        "case": 79,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": null,
+        "minimum_work": null,
+        "oracle_states": 10,
+        "oracle_work": null,
+        "snapshot": "5654ef7d8b5fd71d429cfa091cf84b2b63299c191d55113f83423e61bacba5a4",
+        "status": "INFEASIBLE"
+      },
+      {
+        "assignment_states": 4,
+        "case": 80,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": [
+          2,
+          6
+        ],
+        "minimum_work": [
+          2,
+          6
+        ],
+        "oracle_states": 38,
+        "oracle_work": [
+          2,
+          6
+        ],
+        "snapshot": "004c50efbbb2d099d4d08d718a115a5ddc1d3e0a54e825c9b900eaac8c1e5498",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 3,
+        "case": 81,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": [
+          2,
+          6
+        ],
+        "minimum_work": [
+          2,
+          6
+        ],
+        "oracle_states": 16,
+        "oracle_work": [
+          2,
+          6
+        ],
+        "snapshot": "0a3bf50534be8919376e3f4cf94754509a96a0d46ce6e3e9d6d490c8b4249699",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 4,
+        "case": 82,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": [
+          2,
+          6
+        ],
+        "minimum_work": [
+          2,
+          6
+        ],
+        "oracle_states": 56,
+        "oracle_work": [
+          2,
+          6
+        ],
+        "snapshot": "528cc22d4a6b6e204c1a41daa9bc4a7d8ebad6858ce7d434fd6eb0d0c9a35d34",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 3,
+        "case": 83,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": [
+          2,
+          7
+        ],
+        "minimum_work": [
+          2,
+          7
+        ],
+        "oracle_states": 20,
+        "oracle_work": [
+          2,
+          7
+        ],
+        "snapshot": "fe39acfd2e418855757953330ca175d9f4a1e5119ecc0048e4a17b35e52aba1a",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 5,
+        "case": 84,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": [
+          2,
+          6
+        ],
+        "minimum_work": [
+          2,
+          6
+        ],
+        "oracle_states": 53,
+        "oracle_work": [
+          2,
+          6
+        ],
+        "snapshot": "9d700ced7b1cbf1f7895b14875cabb49627e6cfc276ae3fa369ff0c09395024a",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 3,
+        "case": 85,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": [
+          2,
+          6
+        ],
+        "minimum_work": [
+          2,
+          6
+        ],
+        "oracle_states": 16,
+        "oracle_work": [
+          2,
+          6
+        ],
+        "snapshot": "aac789da64d5cbb3a8991ab0b61b17b10d9752eb43b30ef4ddb4e9f5501853ae",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 4,
+        "case": 86,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": [
+          2,
+          7
+        ],
+        "minimum_work": [
+          2,
+          7
+        ],
+        "oracle_states": 75,
+        "oracle_work": [
+          2,
+          7
+        ],
+        "snapshot": "7161efc2d014c3f912757ae15b6a8bcf51d07a28663b042a3bf25aa98eb26825",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 3,
+        "case": 87,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": [
+          2,
+          7
+        ],
+        "minimum_work": [
+          2,
+          7
+        ],
+        "oracle_states": 20,
+        "oracle_work": [
+          2,
+          7
+        ],
+        "snapshot": "5b3c08d590a5151e8b0c219f2588a1fbda7cc23426d8e438e3671a4e1cc0f8b9",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 5,
+        "case": 88,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": [
+          2,
+          5
+        ],
+        "minimum_work": [
+          2,
+          5
+        ],
+        "oracle_states": 53,
+        "oracle_work": [
+          2,
+          5
+        ],
+        "snapshot": "04c87aa7cfd0ec721f36d10528ecd336b45fdf19f5906427df389321ab36f3f7",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 3,
+        "case": 89,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": [
+          2,
+          7
+        ],
+        "minimum_work": [
+          2,
+          7
+        ],
+        "oracle_states": 20,
+        "oracle_work": [
+          2,
+          7
+        ],
+        "snapshot": "ac2faf953665331ffe276b90d31e857aaf4439edb0999c32492fafdb0b3bd9c2",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 6,
+        "case": 90,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": [
+          2,
+          8
+        ],
+        "minimum_work": [
+          2,
+          6
+        ],
+        "oracle_states": 76,
+        "oracle_work": [
+          2,
+          6
+        ],
+        "snapshot": "8c607e71865a8dc56f2efde63e1d96687f3b9d55310115e1d2f67bff8b80792c",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 3,
+        "case": 91,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": [
+          2,
+          8
+        ],
+        "minimum_work": [
+          2,
+          8
+        ],
+        "oracle_states": 25,
+        "oracle_work": [
+          2,
+          8
+        ],
+        "snapshot": "517c725daa9e55c288747b2fd275472ac2f26320f302a51936aac09de464919c",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 5,
+        "case": 92,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": [
+          1,
+          4
+        ],
+        "minimum_work": [
+          1,
+          4
+        ],
+        "oracle_states": 28,
+        "oracle_work": [
+          1,
+          4
+        ],
+        "snapshot": "ec0f76b4c0aedbb98a4036a26f7187f080b0292b76a18ba2f16aed432bfe2a2d",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 3,
+        "case": 93,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": [
+          2,
+          7
+        ],
+        "minimum_work": [
+          2,
+          7
+        ],
+        "oracle_states": 20,
+        "oracle_work": [
+          2,
+          7
+        ],
+        "snapshot": "633ddd4d17a9c8ccbbc3674f5691ff70dac7acefc283b4d7994c2e1cd4f51cf3",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 6,
+        "case": 94,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": [
+          2,
+          8
+        ],
+        "minimum_work": [
+          1,
+          5
+        ],
+        "oracle_states": 44,
+        "oracle_work": [
+          1,
+          5
+        ],
+        "snapshot": "53bfd114b53719604a143b272c1eb510904bfeb8a82a7d34b7da437ea891eb7b",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 3,
+        "case": 95,
+        "family": "two-stripe-2+1",
+        "first_feasible_work": [
+          2,
+          8
+        ],
+        "minimum_work": [
+          2,
+          8
+        ],
+        "oracle_states": 25,
+        "oracle_work": [
+          2,
+          8
+        ],
+        "snapshot": "e6e0c9e63384f9cdcab1364d64119f6e387b6e73bc23a3b22d732bca5b2c72cf",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 2,
+        "case": 96,
+        "family": "single-stripe",
+        "first_feasible_work": [
+          1,
+          3
+        ],
+        "minimum_work": [
+          1,
+          3
+        ],
+        "oracle_states": 4,
+        "oracle_work": [
+          1,
+          3
+        ],
+        "snapshot": "ea5f2096364b97c493b69729ad77ceba850b75359642f19117b3bd8f7f0629e9",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 1,
+        "case": 97,
+        "family": "single-stripe",
+        "first_feasible_work": null,
+        "minimum_work": null,
+        "oracle_states": 1,
+        "oracle_work": null,
+        "snapshot": "bd48c84644caa02c354b047a46e578db81d93f86922cb9ba70c86be2382db9a4",
+        "status": "INFEASIBLE"
+      },
+      {
+        "assignment_states": 3,
+        "case": 98,
+        "family": "single-stripe",
+        "first_feasible_work": [
+          1,
+          3
+        ],
+        "minimum_work": [
+          1,
+          3
+        ],
+        "oracle_states": 6,
+        "oracle_work": [
+          1,
+          3
+        ],
+        "snapshot": "7acc5c5fc07c230b5e5c82286d08065981fc7ad72a71ad8fa95494277748e5b1",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 2,
+        "case": 99,
+        "family": "single-stripe",
+        "first_feasible_work": [
+          1,
+          3
+        ],
+        "minimum_work": [
+          1,
+          3
+        ],
+        "oracle_states": 4,
+        "oracle_work": [
+          1,
+          3
+        ],
+        "snapshot": "6a5acf65f409bc073ca489040d96679c0131aa433bca509a3563be216ff94dc9",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 2,
+        "case": 100,
+        "family": "single-stripe",
+        "first_feasible_work": [
+          1,
+          4
+        ],
+        "minimum_work": [
+          1,
+          4
+        ],
+        "oracle_states": 5,
+        "oracle_work": [
+          1,
+          4
+        ],
+        "snapshot": "b27442266844e4f78d3aea9e02ba5b42a904230839b6de66879196fef5fc0ae1",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 1,
+        "case": 101,
+        "family": "single-stripe",
+        "first_feasible_work": null,
+        "minimum_work": null,
+        "oracle_states": 1,
+        "oracle_work": null,
+        "snapshot": "a39dc4091f55b389a688b96a3827736bb1fd9cf69f3b4e15e48f9c147bb5400c",
+        "status": "INFEASIBLE"
+      },
+      {
+        "assignment_states": 3,
+        "case": 102,
+        "family": "single-stripe",
+        "first_feasible_work": [
+          1,
+          3
+        ],
+        "minimum_work": [
+          1,
+          3
+        ],
+        "oracle_states": 9,
+        "oracle_work": [
+          1,
+          3
+        ],
+        "snapshot": "26671ecb07958eead58b608afe3070d46c70e4fd22fa74e4797a93735d582daa",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 2,
+        "case": 103,
+        "family": "single-stripe",
+        "first_feasible_work": [
+          1,
+          3
+        ],
+        "minimum_work": [
+          1,
+          3
+        ],
+        "oracle_states": 4,
+        "oracle_work": [
+          1,
+          3
+        ],
+        "snapshot": "0ce162de3a731beea15ebc6533a6bd603e89afa83d53344a1788268285da9d6f",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 2,
+        "case": 104,
+        "family": "single-stripe",
+        "first_feasible_work": [
+          1,
+          2
+        ],
+        "minimum_work": [
+          1,
+          2
+        ],
+        "oracle_states": 6,
+        "oracle_work": [
+          1,
+          2
+        ],
+        "snapshot": "4f79498827bc8f81324a20ad35d7af109b145654f44912bc026a366d14156572",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 1,
+        "case": 105,
+        "family": "single-stripe",
+        "first_feasible_work": null,
+        "minimum_work": null,
+        "oracle_states": 2,
+        "oracle_work": null,
+        "snapshot": "9cea6b8c50e2f28e099de2e365ab3bff31122ae32bd7b2f3e450dc6c084811c0",
+        "status": "INFEASIBLE"
+      },
+      {
+        "assignment_states": 3,
+        "case": 106,
+        "family": "single-stripe",
+        "first_feasible_work": [
+          1,
+          2
+        ],
+        "minimum_work": [
+          1,
+          2
+        ],
+        "oracle_states": 8,
+        "oracle_work": [
+          1,
+          2
+        ],
+        "snapshot": "757f85ad01ae9e1225d6c2645f232ab825a67d008eb2aef2bd0ffeda5bf1995a",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 2,
+        "case": 107,
+        "family": "single-stripe",
+        "first_feasible_work": [
+          1,
+          4
+        ],
+        "minimum_work": [
+          1,
+          4
+        ],
+        "oracle_states": 5,
+        "oracle_work": [
+          1,
+          4
+        ],
+        "snapshot": "08a10d111b2bc48ec8b05f577a504a8d59f6bf92df446e77577d539af1f2c28a",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 2,
+        "case": 108,
+        "family": "single-stripe",
+        "first_feasible_work": [
+          0,
+          1
+        ],
+        "minimum_work": [
+          0,
+          1
+        ],
+        "oracle_states": 2,
+        "oracle_work": [
+          0,
+          1
+        ],
+        "snapshot": "d4959084e9271fadc4140440a6469c741531d937bf12d7a7a37c82effaadd73a",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 1,
+        "case": 109,
+        "family": "single-stripe",
+        "first_feasible_work": null,
+        "minimum_work": null,
+        "oracle_states": 2,
+        "oracle_work": null,
+        "snapshot": "492df0813876d074cad2737db073f979520b15ebad148306eea81bbd604410ec",
+        "status": "INFEASIBLE"
+      },
+      {
+        "assignment_states": 3,
+        "case": 110,
+        "family": "single-stripe",
+        "first_feasible_work": [
+          0,
+          1
+        ],
+        "minimum_work": [
+          0,
+          1
+        ],
+        "oracle_states": 2,
+        "oracle_work": [
+          0,
+          1
+        ],
+        "snapshot": "73f6a35a5635d427c300934716f4e126c213ea1ba8ea328c0b657612c995895e",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 2,
+        "case": 111,
+        "family": "single-stripe",
+        "first_feasible_work": [
+          1,
+          4
+        ],
+        "minimum_work": [
+          1,
+          4
+        ],
+        "oracle_states": 5,
+        "oracle_work": [
+          1,
+          4
+        ],
+        "snapshot": "66ccb62e9373316c7eb562ac5ae32e27b245861ea2940e87944ceb5dee7ac18d",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 1,
+        "case": 112,
+        "family": "single-stripe",
+        "first_feasible_work": [
+          0,
+          0
+        ],
+        "minimum_work": [
+          0,
+          0
+        ],
+        "oracle_states": 1,
+        "oracle_work": [
+          0,
+          0
+        ],
+        "snapshot": "bb9f036a489789ff63b7f1e17d2f08f0e368d91b5840bbeb908273eecb049bd2",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 1,
+        "case": 113,
+        "family": "single-stripe",
+        "first_feasible_work": null,
+        "minimum_work": null,
+        "oracle_states": 2,
+        "oracle_work": null,
+        "snapshot": "c0d1430295bde296b49e2cf7960c85105d7eb6e8a121b1f1b1a98cee0859f0c8",
+        "status": "INFEASIBLE"
+      },
+      {
+        "assignment_states": 1,
+        "case": 114,
+        "family": "single-stripe",
+        "first_feasible_work": [
+          0,
+          0
+        ],
+        "minimum_work": [
+          0,
+          0
+        ],
+        "oracle_states": 1,
+        "oracle_work": [
+          0,
+          0
+        ],
+        "snapshot": "f85ef4a99d45078ca9f3d9766b5bc8e7ae8ba4dc14fca32b53fca3ec9342a773",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 2,
+        "case": 115,
+        "family": "single-stripe",
+        "first_feasible_work": [
+          1,
+          4
+        ],
+        "minimum_work": [
+          1,
+          4
+        ],
+        "oracle_states": 5,
+        "oracle_work": [
+          1,
+          4
+        ],
+        "snapshot": "c8582a8f5a3c502a3ceb9281fe21ae74dbe40267bdda50db44e30b59c09070fe",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 2,
+        "case": 116,
+        "family": "single-stripe",
+        "first_feasible_work": [
+          1,
+          3
+        ],
+        "minimum_work": [
+          1,
+          3
+        ],
+        "oracle_states": 4,
+        "oracle_work": [
+          1,
+          3
+        ],
+        "snapshot": "50e05020caf9bd86d1e51d2695f5c95958d3aa7f34f93f1742da54247c13f1e2",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 1,
+        "case": 117,
+        "family": "single-stripe",
+        "first_feasible_work": null,
+        "minimum_work": null,
+        "oracle_states": 1,
+        "oracle_work": null,
+        "snapshot": "b18bb348f0a39c88bfc10b45eca1dbfb229ed0beeb94fb790d060243dc58b550",
+        "status": "INFEASIBLE"
+      },
+      {
+        "assignment_states": 3,
+        "case": 118,
+        "family": "single-stripe",
+        "first_feasible_work": [
+          1,
+          3
+        ],
+        "minimum_work": [
+          1,
+          3
+        ],
+        "oracle_states": 6,
+        "oracle_work": [
+          1,
+          3
+        ],
+        "snapshot": "eaa5e0fe93cb17d4f610c057ef5b0725c09a4738d607eef9ebac1358b282ece4",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 2,
+        "case": 119,
+        "family": "single-stripe",
+        "first_feasible_work": [
+          1,
+          3
+        ],
+        "minimum_work": [
+          1,
+          3
+        ],
+        "oracle_states": 4,
+        "oracle_work": [
+          1,
+          3
+        ],
+        "snapshot": "b1ef50f16570fb7f1a4f9f1c9ff76f0a04f8b3f64c46f9c3ddd252909faba497",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 2,
+        "case": 120,
+        "family": "single-stripe",
+        "first_feasible_work": [
+          1,
+          4
+        ],
+        "minimum_work": [
+          1,
+          4
+        ],
+        "oracle_states": 5,
+        "oracle_work": [
+          1,
+          4
+        ],
+        "snapshot": "b86f14619ca4cb9dafe205d0e71a0e1d301cdbeae235efff9cb85429a918ec5f",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 1,
+        "case": 121,
+        "family": "single-stripe",
+        "first_feasible_work": null,
+        "minimum_work": null,
+        "oracle_states": 1,
+        "oracle_work": null,
+        "snapshot": "ddef61bc92d0130c5d0f7cc1314cb5f23005bb0d7b20f2bf25d6fdd54a4f7007",
+        "status": "INFEASIBLE"
+      },
+      {
+        "assignment_states": 3,
+        "case": 122,
+        "family": "single-stripe",
+        "first_feasible_work": [
+          1,
+          3
+        ],
+        "minimum_work": [
+          1,
+          3
+        ],
+        "oracle_states": 9,
+        "oracle_work": [
+          1,
+          3
+        ],
+        "snapshot": "ed0b92e70602fbada1b282e768a756a7609dcb47bbd2d6b7085893d6dc6ab650",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 2,
+        "case": 123,
+        "family": "single-stripe",
+        "first_feasible_work": [
+          1,
+          3
+        ],
+        "minimum_work": [
+          1,
+          3
+        ],
+        "oracle_states": 4,
+        "oracle_work": [
+          1,
+          3
+        ],
+        "snapshot": "0888489c8e831d4e22de1ebaa761e0e2a0df9ab61a2bd375aa6f7f75785cfae4",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 2,
+        "case": 124,
+        "family": "single-stripe",
+        "first_feasible_work": [
+          1,
+          2
+        ],
+        "minimum_work": [
+          1,
+          2
+        ],
+        "oracle_states": 6,
+        "oracle_work": [
+          1,
+          2
+        ],
+        "snapshot": "2c0c06aa4da78e5aa0440ef643d3e6f5f783ecc7f27cc26cd40cc993109e3399",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 1,
+        "case": 125,
+        "family": "single-stripe",
+        "first_feasible_work": null,
+        "minimum_work": null,
+        "oracle_states": 2,
+        "oracle_work": null,
+        "snapshot": "a34d532d6878892756a4501d2b86aac2aba019ae781eb39d1ddf3a2d77b5b525",
+        "status": "INFEASIBLE"
+      },
+      {
+        "assignment_states": 3,
+        "case": 126,
+        "family": "single-stripe",
+        "first_feasible_work": [
+          1,
+          2
+        ],
+        "minimum_work": [
+          1,
+          2
+        ],
+        "oracle_states": 8,
+        "oracle_work": [
+          1,
+          2
+        ],
+        "snapshot": "41592abec0ee821027802eb52185fbee951e6cb0e4faf5519e6a84b35a6e31ac",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 2,
+        "case": 127,
+        "family": "single-stripe",
+        "first_feasible_work": [
+          1,
+          4
+        ],
+        "minimum_work": [
+          1,
+          4
+        ],
+        "oracle_states": 5,
+        "oracle_work": [
+          1,
+          4
+        ],
+        "snapshot": "0f73408a4922195082e9f81ed066c6c3f1ea8c9043a6ae3419fd660c1aa42632",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 2,
+        "case": 128,
+        "family": "single-stripe",
+        "first_feasible_work": [
+          0,
+          1
+        ],
+        "minimum_work": [
+          0,
+          1
+        ],
+        "oracle_states": 2,
+        "oracle_work": [
+          0,
+          1
+        ],
+        "snapshot": "2cc00584f1d276719883a063d08713d1871e39fb3d4566d40b19d567a77f2632",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 1,
+        "case": 129,
+        "family": "single-stripe",
+        "first_feasible_work": null,
+        "minimum_work": null,
+        "oracle_states": 2,
+        "oracle_work": null,
+        "snapshot": "752632a6d52fb6f8468b0c02d625d5a3d08429f73ce9152b1bedf73274b38c21",
+        "status": "INFEASIBLE"
+      },
+      {
+        "assignment_states": 3,
+        "case": 130,
+        "family": "single-stripe",
+        "first_feasible_work": [
+          0,
+          1
+        ],
+        "minimum_work": [
+          0,
+          1
+        ],
+        "oracle_states": 2,
+        "oracle_work": [
+          0,
+          1
+        ],
+        "snapshot": "5fc78a91735d45f400ba4ad9b15b693449affa495fb2de193042305c7d3ceac2",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 2,
+        "case": 131,
+        "family": "single-stripe",
+        "first_feasible_work": [
+          1,
+          4
+        ],
+        "minimum_work": [
+          1,
+          4
+        ],
+        "oracle_states": 5,
+        "oracle_work": [
+          1,
+          4
+        ],
+        "snapshot": "7de8281f797941b396672b9c29e13379a0504c3f43f046448519d7bef25141f4",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 1,
+        "case": 132,
+        "family": "single-stripe",
+        "first_feasible_work": [
+          0,
+          0
+        ],
+        "minimum_work": [
+          0,
+          0
+        ],
+        "oracle_states": 1,
+        "oracle_work": [
+          0,
+          0
+        ],
+        "snapshot": "6163c912776b2a4beb6697a74547524bb5fdaf0088871fd6737f7ba58d41fed6",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 1,
+        "case": 133,
+        "family": "single-stripe",
+        "first_feasible_work": null,
+        "minimum_work": null,
+        "oracle_states": 2,
+        "oracle_work": null,
+        "snapshot": "90d29b631453b971179bb9b1ef25daf6516e9e673c4b4539834c5260b55f49d5",
+        "status": "INFEASIBLE"
+      },
+      {
+        "assignment_states": 1,
+        "case": 134,
+        "family": "single-stripe",
+        "first_feasible_work": [
+          0,
+          0
+        ],
+        "minimum_work": [
+          0,
+          0
+        ],
+        "oracle_states": 1,
+        "oracle_work": [
+          0,
+          0
+        ],
+        "snapshot": "53a28570efc6affa4f1bf1ddcbe1a5c7a3ffdc6872f5843eb39c56e6d7cbf94c",
+        "status": "FOUND"
+      },
+      {
+        "assignment_states": 2,
+        "case": 135,
+        "family": "single-stripe",
+        "first_feasible_work": [
+          1,
+          4
+        ],
+        "minimum_work": [
+          1,
+          4
+        ],
+        "oracle_states": 5,
+        "oracle_work": [
+          1,
+          4
+        ],
+        "snapshot": "431ceaef8dde67a483ecce73ab7ac59e2b6cd101f959d85daa6ce8a459a34998",
+        "status": "FOUND"
+      }
+    ],
+    "configurations": 136,
+    "disagreements": 0,
+    "first_feasible_suboptimal_cases": 2,
+    "scope": "96 two-stripe 2+1 states plus 40 single-stripe states across both profiles; finite grammar",
+    "unknown": 0
+  },
+  "partial_campaign": {
+    "cases": [
+      {
+        "destination_offline": false,
+        "fallback_eligible": false,
+        "initial_destination_status": "FREE",
+        "matching_actions": 3,
+        "matching_states": 2,
+        "oracle_actions": 3,
+        "oracle_states": 4,
+        "profile": "xor-2+1-v1",
+        "status": "FOUND"
+      },
+      {
+        "destination_offline": true,
+        "fallback_eligible": false,
+        "initial_destination_status": "FREE",
+        "matching_actions": null,
+        "matching_states": 1,
+        "oracle_actions": null,
+        "oracle_states": 1,
+        "profile": "xor-2+1-v1",
+        "status": "INFEASIBLE"
+      },
+      {
+        "destination_offline": false,
+        "fallback_eligible": true,
+        "initial_destination_status": "FREE",
+        "matching_actions": 3,
+        "matching_states": 2,
+        "oracle_actions": 3,
+        "oracle_states": 6,
+        "profile": "xor-2+1-v1",
+        "status": "FOUND"
+      },
+      {
+        "destination_offline": true,
+        "fallback_eligible": true,
+        "initial_destination_status": "FREE",
+        "matching_actions": 3,
+        "matching_states": 2,
+        "oracle_actions": 3,
+        "oracle_states": 4,
+        "profile": "xor-2+1-v1",
+        "status": "FOUND"
+      },
+      {
+        "destination_offline": false,
+        "fallback_eligible": false,
+        "initial_destination_status": "RETIRED",
+        "matching_actions": 4,
+        "matching_states": 2,
+        "oracle_actions": 4,
+        "oracle_states": 5,
+        "profile": "xor-2+1-v1",
+        "status": "FOUND"
+      },
+      {
+        "destination_offline": true,
+        "fallback_eligible": false,
+        "initial_destination_status": "RETIRED",
+        "matching_actions": null,
+        "matching_states": 1,
+        "oracle_actions": null,
+        "oracle_states": 1,
+        "profile": "xor-2+1-v1",
+        "status": "INFEASIBLE"
+      },
+      {
+        "destination_offline": false,
+        "fallback_eligible": true,
+        "initial_destination_status": "RETIRED",
+        "matching_actions": 3,
+        "matching_states": 2,
+        "oracle_actions": 3,
+        "oracle_states": 9,
+        "profile": "xor-2+1-v1",
+        "status": "FOUND"
+      },
+      {
+        "destination_offline": true,
+        "fallback_eligible": true,
+        "initial_destination_status": "RETIRED",
+        "matching_actions": 3,
+        "matching_states": 2,
+        "oracle_actions": 3,
+        "oracle_states": 4,
+        "profile": "xor-2+1-v1",
+        "status": "FOUND"
+      },
+      {
+        "destination_offline": false,
+        "fallback_eligible": false,
+        "initial_destination_status": "RESERVED",
+        "matching_actions": 2,
+        "matching_states": 2,
+        "oracle_actions": 2,
+        "oracle_states": 4,
+        "profile": "xor-2+1-v1",
+        "status": "FOUND"
+      },
+      {
+        "destination_offline": true,
+        "fallback_eligible": false,
+        "initial_destination_status": "RESERVED",
+        "matching_actions": null,
+        "matching_states": 1,
+        "oracle_actions": null,
+        "oracle_states": 2,
+        "profile": "xor-2+1-v1",
+        "status": "INFEASIBLE"
+      },
+      {
+        "destination_offline": false,
+        "fallback_eligible": true,
+        "initial_destination_status": "RESERVED",
+        "matching_actions": 2,
+        "matching_states": 2,
+        "oracle_actions": 2,
+        "oracle_states": 4,
+        "profile": "xor-2+1-v1",
+        "status": "FOUND"
+      },
+      {
+        "destination_offline": true,
+        "fallback_eligible": true,
+        "initial_destination_status": "RESERVED",
+        "matching_actions": 4,
+        "matching_states": 2,
+        "oracle_actions": 4,
+        "oracle_states": 5,
+        "profile": "xor-2+1-v1",
+        "status": "FOUND"
+      },
+      {
+        "destination_offline": false,
+        "fallback_eligible": false,
+        "initial_destination_status": "STAGED",
+        "matching_actions": 1,
+        "matching_states": 2,
+        "oracle_actions": 1,
+        "oracle_states": 2,
+        "profile": "xor-2+1-v1",
+        "status": "FOUND"
+      },
+      {
+        "destination_offline": true,
+        "fallback_eligible": false,
+        "initial_destination_status": "STAGED",
+        "matching_actions": null,
+        "matching_states": 1,
+        "oracle_actions": null,
+        "oracle_states": 2,
+        "profile": "xor-2+1-v1",
+        "status": "INFEASIBLE"
+      },
+      {
+        "destination_offline": false,
+        "fallback_eligible": true,
+        "initial_destination_status": "STAGED",
+        "matching_actions": 1,
+        "matching_states": 2,
+        "oracle_actions": 1,
+        "oracle_states": 2,
+        "profile": "xor-2+1-v1",
+        "status": "FOUND"
+      },
+      {
+        "destination_offline": true,
+        "fallback_eligible": true,
+        "initial_destination_status": "STAGED",
+        "matching_actions": 4,
+        "matching_states": 2,
+        "oracle_actions": 4,
+        "oracle_states": 5,
+        "profile": "xor-2+1-v1",
+        "status": "FOUND"
+      },
+      {
+        "destination_offline": false,
+        "fallback_eligible": false,
+        "initial_destination_status": "LIVE",
+        "matching_actions": 0,
+        "matching_states": 1,
+        "oracle_actions": 0,
+        "oracle_states": 1,
+        "profile": "xor-2+1-v1",
+        "status": "FOUND"
+      },
+      {
+        "destination_offline": true,
+        "fallback_eligible": false,
+        "initial_destination_status": "LIVE",
+        "matching_actions": null,
+        "matching_states": 1,
+        "oracle_actions": null,
+        "oracle_states": 2,
+        "profile": "xor-2+1-v1",
+        "status": "INFEASIBLE"
+      },
+      {
+        "destination_offline": false,
+        "fallback_eligible": true,
+        "initial_destination_status": "LIVE",
+        "matching_actions": 0,
+        "matching_states": 1,
+        "oracle_actions": 0,
+        "oracle_states": 1,
+        "profile": "xor-2+1-v1",
+        "status": "FOUND"
+      },
+      {
+        "destination_offline": true,
+        "fallback_eligible": true,
+        "initial_destination_status": "LIVE",
+        "matching_actions": 4,
+        "matching_states": 2,
+        "oracle_actions": 4,
+        "oracle_states": 5,
+        "profile": "xor-2+1-v1",
+        "status": "FOUND"
+      },
+      {
+        "destination_offline": false,
+        "fallback_eligible": false,
+        "initial_destination_status": "FREE",
+        "matching_actions": 3,
+        "matching_states": 2,
+        "oracle_actions": 3,
+        "oracle_states": 4,
+        "profile": "pq-4+2-gf256-v1",
+        "status": "FOUND"
+      },
+      {
+        "destination_offline": true,
+        "fallback_eligible": false,
+        "initial_destination_status": "FREE",
+        "matching_actions": null,
+        "matching_states": 1,
+        "oracle_actions": null,
+        "oracle_states": 1,
+        "profile": "pq-4+2-gf256-v1",
+        "status": "INFEASIBLE"
+      },
+      {
+        "destination_offline": false,
+        "fallback_eligible": true,
+        "initial_destination_status": "FREE",
+        "matching_actions": 3,
+        "matching_states": 2,
+        "oracle_actions": 3,
+        "oracle_states": 6,
+        "profile": "pq-4+2-gf256-v1",
+        "status": "FOUND"
+      },
+      {
+        "destination_offline": true,
+        "fallback_eligible": true,
+        "initial_destination_status": "FREE",
+        "matching_actions": 3,
+        "matching_states": 2,
+        "oracle_actions": 3,
+        "oracle_states": 4,
+        "profile": "pq-4+2-gf256-v1",
+        "status": "FOUND"
+      },
+      {
+        "destination_offline": false,
+        "fallback_eligible": false,
+        "initial_destination_status": "RETIRED",
+        "matching_actions": 4,
+        "matching_states": 2,
+        "oracle_actions": 4,
+        "oracle_states": 5,
+        "profile": "pq-4+2-gf256-v1",
+        "status": "FOUND"
+      },
+      {
+        "destination_offline": true,
+        "fallback_eligible": false,
+        "initial_destination_status": "RETIRED",
+        "matching_actions": null,
+        "matching_states": 1,
+        "oracle_actions": null,
+        "oracle_states": 1,
+        "profile": "pq-4+2-gf256-v1",
+        "status": "INFEASIBLE"
+      },
+      {
+        "destination_offline": false,
+        "fallback_eligible": true,
+        "initial_destination_status": "RETIRED",
+        "matching_actions": 3,
+        "matching_states": 2,
+        "oracle_actions": 3,
+        "oracle_states": 9,
+        "profile": "pq-4+2-gf256-v1",
+        "status": "FOUND"
+      },
+      {
+        "destination_offline": true,
+        "fallback_eligible": true,
+        "initial_destination_status": "RETIRED",
+        "matching_actions": 3,
+        "matching_states": 2,
+        "oracle_actions": 3,
+        "oracle_states": 4,
+        "profile": "pq-4+2-gf256-v1",
+        "status": "FOUND"
+      },
+      {
+        "destination_offline": false,
+        "fallback_eligible": false,
+        "initial_destination_status": "RESERVED",
+        "matching_actions": 2,
+        "matching_states": 2,
+        "oracle_actions": 2,
+        "oracle_states": 4,
+        "profile": "pq-4+2-gf256-v1",
+        "status": "FOUND"
+      },
+      {
+        "destination_offline": true,
+        "fallback_eligible": false,
+        "initial_destination_status": "RESERVED",
+        "matching_actions": null,
+        "matching_states": 1,
+        "oracle_actions": null,
+        "oracle_states": 2,
+        "profile": "pq-4+2-gf256-v1",
+        "status": "INFEASIBLE"
+      },
+      {
+        "destination_offline": false,
+        "fallback_eligible": true,
+        "initial_destination_status": "RESERVED",
+        "matching_actions": 2,
+        "matching_states": 2,
+        "oracle_actions": 2,
+        "oracle_states": 4,
+        "profile": "pq-4+2-gf256-v1",
+        "status": "FOUND"
+      },
+      {
+        "destination_offline": true,
+        "fallback_eligible": true,
+        "initial_destination_status": "RESERVED",
+        "matching_actions": 4,
+        "matching_states": 2,
+        "oracle_actions": 4,
+        "oracle_states": 5,
+        "profile": "pq-4+2-gf256-v1",
+        "status": "FOUND"
+      },
+      {
+        "destination_offline": false,
+        "fallback_eligible": false,
+        "initial_destination_status": "STAGED",
+        "matching_actions": 1,
+        "matching_states": 2,
+        "oracle_actions": 1,
+        "oracle_states": 2,
+        "profile": "pq-4+2-gf256-v1",
+        "status": "FOUND"
+      },
+      {
+        "destination_offline": true,
+        "fallback_eligible": false,
+        "initial_destination_status": "STAGED",
+        "matching_actions": null,
+        "matching_states": 1,
+        "oracle_actions": null,
+        "oracle_states": 2,
+        "profile": "pq-4+2-gf256-v1",
+        "status": "INFEASIBLE"
+      },
+      {
+        "destination_offline": false,
+        "fallback_eligible": true,
+        "initial_destination_status": "STAGED",
+        "matching_actions": 1,
+        "matching_states": 2,
+        "oracle_actions": 1,
+        "oracle_states": 2,
+        "profile": "pq-4+2-gf256-v1",
+        "status": "FOUND"
+      },
+      {
+        "destination_offline": true,
+        "fallback_eligible": true,
+        "initial_destination_status": "STAGED",
+        "matching_actions": 4,
+        "matching_states": 2,
+        "oracle_actions": 4,
+        "oracle_states": 5,
+        "profile": "pq-4+2-gf256-v1",
+        "status": "FOUND"
+      },
+      {
+        "destination_offline": false,
+        "fallback_eligible": false,
+        "initial_destination_status": "LIVE",
+        "matching_actions": 0,
+        "matching_states": 1,
+        "oracle_actions": 0,
+        "oracle_states": 1,
+        "profile": "pq-4+2-gf256-v1",
+        "status": "FOUND"
+      },
+      {
+        "destination_offline": true,
+        "fallback_eligible": false,
+        "initial_destination_status": "LIVE",
+        "matching_actions": null,
+        "matching_states": 1,
+        "oracle_actions": null,
+        "oracle_states": 2,
+        "profile": "pq-4+2-gf256-v1",
+        "status": "INFEASIBLE"
+      },
+      {
+        "destination_offline": false,
+        "fallback_eligible": true,
+        "initial_destination_status": "LIVE",
+        "matching_actions": 0,
+        "matching_states": 1,
+        "oracle_actions": 0,
+        "oracle_states": 1,
+        "profile": "pq-4+2-gf256-v1",
+        "status": "FOUND"
+      },
+      {
+        "destination_offline": true,
+        "fallback_eligible": true,
+        "initial_destination_status": "LIVE",
+        "matching_actions": 4,
+        "matching_states": 2,
+        "oracle_actions": 4,
+        "oracle_states": 5,
+        "profile": "pq-4+2-gf256-v1",
+        "status": "FOUND"
+      }
+    ],
+    "configurations": 40,
+    "disagreements": 0,
+    "optimality_claimed": false,
+    "scope": "Exhaustive 40-case single-stripe matrix; not all partial-recovery states",
+    "unknown": 0
+  },
+  "subtests": 388,
+  "success": true,
+  "test_methods": 150,
+  "tests": [
+    {
+      "seconds": 0.524279999997816,
+      "status": "PASS",
+      "test": "tests.test_concurrent.ConcurrentPlanTests.test_cancel_and_cleanup_do_not_retire_or_invalidate_other_plan"
+    },
+    {
+      "seconds": 0.4469936000095913,
+      "status": "PASS",
+      "test": "tests.test_concurrent.ConcurrentPlanTests.test_claimed_retired_destination_cannot_be_cleaned_up"
+    },
+    {
+      "seconds": 0.40916850000212435,
+      "status": "PASS",
+      "test": "tests.test_concurrent.ConcurrentPlanTests.test_completion_releases_only_own_claims"
+    },
+    {
+      "seconds": 0.2561000999994576,
+      "status": "PASS",
+      "test": "tests.test_concurrent.ConcurrentPlanTests.test_conflicting_stripe_or_destination_rolls_back_all_claims"
+    },
+    {
+      "seconds": 1.6778125999990152,
+      "status": "PASS",
+      "test": "tests.test_concurrent.ConcurrentPlanTests.test_disjoint_admission_progress_and_readback_all_validation_modes"
+    },
+    {
+      "seconds": 6.91617560001032,
+      "status": "PASS",
+      "test": "tests.test_concurrent.ConcurrentPlanTests.test_every_order_preserving_two_plan_interleaving"
+    },
+    {
+      "seconds": 0.22970180000993423,
+      "status": "PASS",
+      "test": "tests.test_concurrent.ConcurrentPlanTests.test_full_and_scoped_admissions_exclude_each_other"
+    },
+    {
+      "seconds": 0.6308529999951134,
+      "status": "PASS",
+      "test": "tests.test_concurrent.ConcurrentPlanTests.test_independent_controller_processes_finish_both_plans"
+    },
+    {
+      "seconds": 0.2930696999974316,
+      "status": "PASS",
+      "test": "tests.test_concurrent.ConcurrentPlanTests.test_migration_of_existing_full_store_active_plan"
+    },
+    {
+      "seconds": 0.1805583000095794,
+      "status": "PASS",
+      "test": "tests.test_concurrent.ConcurrentPlanTests.test_missing_claim_and_phantom_membership_fail_before_io"
+    },
+    {
+      "seconds": 2.768114400008926,
+      "status": "PASS",
+      "test": "tests.test_concurrent.ConcurrentPlanTests.test_process_exit_in_one_plan_preserves_other_plan"
+    },
+    {
+      "seconds": 0.9830366999958642,
+      "status": "PASS",
+      "test": "tests.test_concurrent.ConcurrentPlanTests.test_reclaim_process_exit_preserves_other_plan_claims"
+    },
+    {
+      "seconds": 0.08043919999909122,
+      "status": "PASS",
+      "test": "tests.test_concurrent.ConcurrentPlanTests.test_scope_derives_complete_membership_and_rejects_bad_selection"
+    },
+    {
+      "seconds": 0.13497610000194982,
+      "status": "PASS",
+      "test": "tests.test_concurrent.ConcurrentPlanTests.test_shared_source_domain_failure_blocks_both_scopes"
+    },
+    {
+      "seconds": 0.2494524000067031,
+      "status": "PASS",
+      "test": "tests.test_concurrent.ConcurrentPlanTests.test_simultaneous_admissions_and_duplicate_step_races"
+    },
+    {
+      "seconds": 0.1608083000028273,
+      "status": "PASS",
+      "test": "tests.test_concurrent.ConcurrentPlanTests.test_simultaneous_conflicting_admission_has_single_winner"
+    },
+    {
+      "seconds": 0.20844420000503305,
+      "status": "PASS",
+      "test": "tests.test_concurrent.ConcurrentPlanTests.test_takeover_fences_all_active_plans_without_losing_claims"
+    },
+    {
+      "seconds": 0.17206159999477677,
+      "status": "PASS",
+      "test": "tests.test_concurrent.ConcurrentPlanTests.test_unrelated_destination_failure_does_not_block_other_scope"
+    },
+    {
+      "seconds": 6.209999264683574e-05,
+      "status": "PASS",
+      "test": "tests.test_controller_benchmark.ControllerBenchmarkTests.test_registration_rejects_underpowered_run_count"
+    },
+    {
+      "seconds": 10.99622860000818,
+      "status": "PASS",
+      "test": "tests.test_controller_benchmark.ControllerBenchmarkTests.test_same_durable_witness_across_modes_and_profiles"
+    },
+    {
+      "seconds": 0.035872100008418784,
+      "status": "PASS",
+      "test": "tests.test_controller_benchmark.ControllerBenchmarkTests.test_small_latency_samples_and_zero_cpu_do_not_create_success"
+    },
+    {
+      "seconds": 7.099851500010118,
+      "status": "PASS",
+      "test": "tests.test_controller_benchmark.ControllerBenchmarkTests.test_worker_cpu_and_receipt_lookup_are_included"
+    },
+    {
+      "seconds": 20.1430190000101,
+      "status": "PASS",
+      "test": "tests.test_fault_contention.FaultContentionTests.test_committed_receipt_process_exit_retry_both_profiles_and_modes"
+    },
+    {
+      "seconds": 16.595292399986647,
+      "status": "PASS",
+      "test": "tests.test_fault_contention.FaultContentionTests.test_independent_controllers_restore_disjoint_scopes_both_profiles"
+    },
+    {
+      "seconds": 0.011796799997682683,
+      "status": "PASS",
+      "test": "tests.test_fault_contention.FaultContentionTests.test_registration_and_failed_attempt_are_retained"
+    },
+    {
+      "seconds": 0.11838220000208821,
+      "status": "PASS",
+      "test": "tests.test_four_plus_two.FourPlusTwoTests.test_all_four_row_subsets_match_independent_codec_oracle"
+    },
+    {
+      "seconds": 1.876541100005852,
+      "status": "PASS",
+      "test": "tests.test_four_plus_two.FourPlusTwoTests.test_any_two_domain_erasures_recover_but_three_fail"
+    },
+    {
+      "seconds": 0.000334399999701418,
+      "status": "PASS",
+      "test": "tests.test_four_plus_two.FourPlusTwoTests.test_codec_rejects_invalid_rows_lengths_padding_and_extra_inconsistency"
+    },
+    {
+      "seconds": 0.08951859999797307,
+      "status": "PASS",
+      "test": "tests.test_four_plus_two.FourPlusTwoTests.test_corrupted_four_plus_two_source_is_never_trusted"
+    },
+    {
+      "seconds": 15.82310010000947,
+      "status": "PASS",
+      "test": "tests.test_four_plus_two.FourPlusTwoTests.test_four_plus_two_worker_and_controller_process_exit_recovery"
+    },
+    {
+      "seconds": 2.0282995000015944,
+      "status": "PASS",
+      "test": "tests.test_four_plus_two.FourPlusTwoTests.test_historical_witness_fingerprint_and_active_store_migration"
+    },
+    {
+      "seconds": 11.467598400005954,
+      "status": "PASS",
+      "test": "tests.test_four_plus_two.FourPlusTwoTests.test_local_and_worker_restoration_in_all_validation_modes"
+    },
+    {
+      "seconds": 2.8646291000040947,
+      "status": "PASS",
+      "test": "tests.test_four_plus_two.FourPlusTwoTests.test_mixed_profile_scopes_complete_independently"
+    },
+    {
+      "seconds": 0.07795580000674818,
+      "status": "PASS",
+      "test": "tests.test_four_plus_two.FourPlusTwoTests.test_profile_change_invalidates_witness_and_both_caches"
+    },
+    {
+      "seconds": 0.08367609999550041,
+      "status": "PASS",
+      "test": "tests.test_four_plus_two.FourPlusTwoTests.test_profile_floor_target_and_invalid_reservation_rows"
+    },
+    {
+      "seconds": 3.1855326000077184,
+      "status": "PASS",
+      "test": "tests.test_four_plus_two.FourPlusTwoTests.test_restoration_from_each_of_fifteen_initial_row_subsets"
+    },
+    {
+      "seconds": 0.8088118999876315,
+      "status": "PASS",
+      "test": "tests.test_measurement_diagnostics.MeasurementDiagnosticsTests.test_controller_exclusive_costs_and_logical_subset_have_no_double_count"
+    },
+    {
+      "seconds": 0.010814099994604476,
+      "status": "PASS",
+      "test": "tests.test_measurement_diagnostics.MeasurementDiagnosticsTests.test_failed_cpu_collection_preserves_prior_window_and_failure_context"
+    },
+    {
+      "seconds": 0.0004225000011501834,
+      "status": "PASS",
+      "test": "tests.test_measurement_diagnostics.MeasurementDiagnosticsTests.test_late_loaded_reads_and_errors_are_not_discarded"
+    },
+    {
+      "seconds": 0.9436052000091877,
+      "status": "PASS",
+      "test": "tests.test_measurement_diagnostics.MeasurementDiagnosticsTests.test_live_control_pause_and_scoped_repair_readback"
+    },
+    {
+      "seconds": 0.00031210000452119857,
+      "status": "PASS",
+      "test": "tests.test_measurement_diagnostics.MeasurementDiagnosticsTests.test_nested_spans_count_only_outer_interval_and_restore_on_error"
+    },
+    {
+      "seconds": 0.6102193999977317,
+      "status": "PASS",
+      "test": "tests.test_measurement_diagnostics.MeasurementDiagnosticsTests.test_real_blocked_read_finishing_after_stop_is_drained"
+    },
+    {
+      "seconds": 9.498517800006084,
+      "status": "PASS",
+      "test": "tests.test_measurement_diagnostics.MeasurementDiagnosticsTests.test_worker_handler_profiles_include_receipt_verification"
+    },
+    {
+      "seconds": 0.35570829999051057,
+      "status": "PASS",
+      "test": "tests.test_min_work.MinimumWorkTests.test_cli_minimum_work_proposal_and_unknown_are_explicit"
+    },
+    {
+      "seconds": 0.6334362000052352,
+      "status": "PASS",
+      "test": "tests.test_min_work.MinimumWorkTests.test_finite_campaign_objective_matches_independent_oracle"
+    },
+    {
+      "seconds": 0.02436870000383351,
+      "status": "PASS",
+      "test": "tests.test_min_work.MinimumWorkTests.test_global_retention_and_input_order_agree_with_graph_oracle"
+    },
+    {
+      "seconds": 0.0009747000003699213,
+      "status": "PASS",
+      "test": "tests.test_min_work.MinimumWorkTests.test_incumbent_is_not_misreported_as_optimal_on_budget_exhaustion"
+    },
+    {
+      "seconds": 0.0001320999872405082,
+      "status": "PASS",
+      "test": "tests.test_min_work.MinimumWorkTests.test_invalid_state_cannot_be_optimized"
+    },
+    {
+      "seconds": 39.085531699995045,
+      "status": "PASS",
+      "test": "tests.test_min_work.MinimumWorkTests.test_real_byte_revision_both_profiles_paths_and_validation_modes"
+    },
+    {
+      "seconds": 0.19101619999855757,
+      "status": "PASS",
+      "test": "tests.test_min_work.MinimumWorkTests.test_retention_optimization_does_not_adopt_corrupt_staging"
+    },
+    {
+      "seconds": 0.0010799000010592863,
+      "status": "PASS",
+      "test": "tests.test_model.ModelTests.test_budgets_never_claim_infeasibility"
+    },
+    {
+      "seconds": 0.0009005000028992072,
+      "status": "PASS",
+      "test": "tests.test_model.ModelTests.test_codec_all_two_row_combinations_and_odd_lengths"
+    },
+    {
+      "seconds": 0.00011920000542886555,
+      "status": "PASS",
+      "test": "tests.test_model.ModelTests.test_double_spending_and_future_free_space"
+    },
+    {
+      "seconds": 8.13999940874055e-05,
+      "status": "PASS",
+      "test": "tests.test_model.ModelTests.test_generation_and_row_identity_checked"
+    },
+    {
+      "seconds": 0.0005219000013312325,
+      "status": "PASS",
+      "test": "tests.test_model.ModelTests.test_incomplete_terminal_rejected"
+    },
+    {
+      "seconds": 0.2980883999989601,
+      "status": "PASS",
+      "test": "tests.test_model.ModelTests.test_independent_matching_oracle_all_small_eligibility_pairs"
+    },
+    {
+      "seconds": 0.0007384999917121604,
+      "status": "PASS",
+      "test": "tests.test_model.ModelTests.test_infeasible_is_relative_to_complete_grammar"
+    },
+    {
+      "seconds": 7.059999916236848e-05,
+      "status": "PASS",
+      "test": "tests.test_model.ModelTests.test_live_retirement_below_floor_is_rejected"
+    },
+    {
+      "seconds": 0.0006015000108163804,
+      "status": "PASS",
+      "test": "tests.test_model.ModelTests.test_matching_baseline_avoids_greedy_dead_end"
+    },
+    {
+      "seconds": 0.0025963000080082566,
+      "status": "PASS",
+      "test": "tests.test_model.ModelTests.test_reclamation_is_an_explicit_predecessor"
+    },
+    {
+      "seconds": 0.0006553999992320314,
+      "status": "PASS",
+      "test": "tests.test_model.ModelTests.test_snapshot_and_version_conflict"
+    },
+    {
+      "seconds": 0.0004949000140186399,
+      "status": "PASS",
+      "test": "tests.test_model.ModelTests.test_tampered_serialized_digest"
+    },
+    {
+      "seconds": 0.0007404000061796978,
+      "status": "PASS",
+      "test": "tests.test_plan_revision.PartialRecoveryTests.test_budget_exhaustion_and_abandon_are_fail_closed"
+    },
+    {
+      "seconds": 0.04050880001159385,
+      "status": "PASS",
+      "test": "tests.test_plan_revision.PartialRecoveryTests.test_finite_partial_matrix_agrees_with_independent_oracle"
+    },
+    {
+      "seconds": 0.003726800001459196,
+      "status": "PASS",
+      "test": "tests.test_plan_revision.PartialRecoveryTests.test_partial_matching_preserves_staging_and_can_discard_blocking_work"
+    },
+    {
+      "seconds": 37.283395400008885,
+      "status": "PASS",
+      "test": "tests.test_plan_revision.PlanRevisionTests.test_actual_process_exit_at_revision_boundaries_both_profiles_paths"
+    },
+    {
+      "seconds": 0.4299950000131503,
+      "status": "PASS",
+      "test": "tests.test_plan_revision.PlanRevisionTests.test_cli_proposal_install_retry_resume_and_additive_migration"
+    },
+    {
+      "seconds": 2.568589599992265,
+      "status": "PASS",
+      "test": "tests.test_plan_revision.PlanRevisionTests.test_concurrent_duplicate_revision_has_one_successor"
+    },
+    {
+      "seconds": 3.5520509999914793,
+      "status": "PASS",
+      "test": "tests.test_plan_revision.PlanRevisionTests.test_conflicts_stale_snapshots_fences_and_corruption_leave_parent_owned"
+    },
+    {
+      "seconds": 8.04666599999473,
+      "status": "PASS",
+      "test": "tests.test_plan_revision.PlanRevisionTests.test_late_receipts_commands_and_changed_request_payload_rejected"
+    },
+    {
+      "seconds": 31.165316300000995,
+      "status": "PASS",
+      "test": "tests.test_plan_revision.PlanRevisionTests.test_preserve_bytes_charges_and_claims_both_profiles_modes_paths"
+    },
+    {
+      "seconds": 0.3636541000014404,
+      "status": "PASS",
+      "test": "tests.test_plan_revision.PlanRevisionTests.test_repeated_revision_lineage_and_foreign_destination_claim"
+    },
+    {
+      "seconds": 4.7696572999993805,
+      "status": "PASS",
+      "test": "tests.test_plan_revision.PlanRevisionTests.test_revision_waits_for_inflight_write_and_old_command_cannot_write_again"
+    },
+    {
+      "seconds": 1.5560694000014337,
+      "status": "PASS",
+      "test": "tests.test_read_reuse.ReadReuseTests.test_authentic_but_inconsistent_extra_row_is_not_ignored"
+    },
+    {
+      "seconds": 1.3989028000069084,
+      "status": "PASS",
+      "test": "tests.test_read_reuse.ReadReuseTests.test_empty_odd_and_multislot_sized_contents_match_through_both_read_apis"
+    },
+    {
+      "seconds": 0.5811616999999387,
+      "status": "PASS",
+      "test": "tests.test_read_reuse.ReadReuseTests.test_missing_row_identity_is_checked_before_returning_decoded_content"
+    },
+    {
+      "seconds": 0.10737840000365395,
+      "status": "PASS",
+      "test": "tests.test_read_reuse_benchmark.ReadReuseBenchmarkTests.test_calibration_failure_is_preserved_with_traceback"
+    },
+    {
+      "seconds": 0.0007499000057578087,
+      "status": "PASS",
+      "test": "tests.test_read_reuse_benchmark.ReadReuseBenchmarkTests.test_failed_read_and_unresolved_cpu_cannot_pass_confirmation"
+    },
+    {
+      "seconds": 11.349653400000534,
+      "status": "PASS",
+      "test": "tests.test_read_reuse_benchmark.ReadReuseBenchmarkTests.test_live_monitoring_keeps_all_arrivals_and_both_process_pulses"
+    },
+    {
+      "seconds": 0.4959815000038361,
+      "status": "PASS",
+      "test": "tests.test_read_reuse_benchmark.ReadReuseBenchmarkTests.test_mechanism_comparator_preserves_class_and_counts_real_decodes"
+    },
+    {
+      "seconds": 5.679999594576657e-05,
+      "status": "PASS",
+      "test": "tests.test_read_reuse_benchmark.ReadReuseBenchmarkTests.test_pulse_gap_retains_clock_and_cpu_deltas_without_identifying_cause"
+    },
+    {
+      "seconds": 0.005532399998628534,
+      "status": "PASS",
+      "test": "tests.test_selective.SelectiveModelTests.test_benchmark_modes_preserve_identical_target"
+    },
+    {
+      "seconds": 0.0020065000135218725,
+      "status": "PASS",
+      "test": "tests.test_selective.SelectiveModelTests.test_cache_bound_to_witness_cursor_incarnation_version"
+    },
+    {
+      "seconds": 0.001480600010836497,
+      "status": "PASS",
+      "test": "tests.test_selective.SelectiveModelTests.test_changed_stripe_rechecked_while_other_stripe_reused"
+    },
+    {
+      "seconds": 0.002570900003775023,
+      "status": "PASS",
+      "test": "tests.test_selective.SelectiveModelTests.test_coverage_cannot_be_omitted_from_cache"
+    },
+    {
+      "seconds": 0.001724000001559034,
+      "status": "PASS",
+      "test": "tests.test_selective.SelectiveModelTests.test_duplicate_slot_and_unknown_stripe_fail_closed"
+    },
+    {
+      "seconds": 0.0026944999990519136,
+      "status": "PASS",
+      "test": "tests.test_selective.SelectiveModelTests.test_each_step_matches_complete_suffix"
+    },
+    {
+      "seconds": 0.0010828000085894018,
+      "status": "PASS",
+      "test": "tests.test_selective.SelectiveModelTests.test_out_of_order_cache_advancement_rejected"
+    },
+    {
+      "seconds": 0.0011992999934591353,
+      "status": "PASS",
+      "test": "tests.test_selective.SelectiveModelTests.test_phantom_reservation_membership_rebuild"
+    },
+    {
+      "seconds": 0.01135870000871364,
+      "status": "PASS",
+      "test": "tests.test_selective.SelectiveModelTests.test_related_mutations_match_reference_rejection"
+    },
+    {
+      "seconds": 7.54000066081062e-05,
+      "status": "PASS",
+      "test": "tests.test_selective.SelectiveModelTests.test_shared_action_slot_merges_dependency_groups"
+    },
+    {
+      "seconds": 0.0013484000082826242,
+      "status": "PASS",
+      "test": "tests.test_selective.SelectiveModelTests.test_untouched_slot_is_covered"
+    },
+    {
+      "seconds": 0.0012916999985463917,
+      "status": "PASS",
+      "test": "tests.test_selective.SelectiveModelTests.test_warm_cache_reuses_all_components"
+    },
+    {
+      "seconds": 0.2941469999932451,
+      "status": "PASS",
+      "test": "tests.test_selective.SelectiveStorageTests.test_cache_persists_across_new_connection_and_takeover"
+    },
+    {
+      "seconds": 0.1701247000019066,
+      "status": "PASS",
+      "test": "tests.test_selective.SelectiveStorageTests.test_conventional_cache_rejects_relevant_change"
+    },
+    {
+      "seconds": 0.15808649999962654,
+      "status": "PASS",
+      "test": "tests.test_selective.SelectiveStorageTests.test_current_source_bytes_still_checked_with_warm_cache"
+    },
+    {
+      "seconds": 0.225762100002612,
+      "status": "PASS",
+      "test": "tests.test_selective.SelectiveStorageTests.test_full_mode_remains_available"
+    },
+    {
+      "seconds": 0.2742301999969641,
+      "status": "PASS",
+      "test": "tests.test_selective.SelectiveStorageTests.test_missing_or_bad_cache_rebuilds_from_reference"
+    },
+    {
+      "seconds": 0.3173788000131026,
+      "status": "PASS",
+      "test": "tests.test_selective.SelectiveStorageTests.test_modes_can_switch_with_checked_cache_rebuild"
+    },
+    {
+      "seconds": 0.1717305999918608,
+      "status": "PASS",
+      "test": "tests.test_selective.SelectiveStorageTests.test_relevant_failure_blocks_cached_plan"
+    },
+    {
+      "seconds": 1.5144563000067137,
+      "status": "PASS",
+      "test": "tests.test_selective.SelectiveStorageTests.test_selective_cache_and_cursor_commit_atomically_on_process_exit"
+    },
+    {
+      "seconds": 0.22722549999889452,
+      "status": "PASS",
+      "test": "tests.test_selective.SelectiveStorageTests.test_shadow_mode_matches_reference_in_durable_execution"
+    },
+    {
+      "seconds": 0.1657365999999456,
+      "status": "PASS",
+      "test": "tests.test_selective.SelectiveStorageTests.test_unrelated_annotation_reuses_certificates"
+    },
+    {
+      "seconds": 0.7015733000007458,
+      "status": "PASS",
+      "test": "tests.test_snapshot_latency.SnapshotLatencyTests.test_actual_fixed_arrivals_queue_during_writer_and_drain_after_stop"
+    },
+    {
+      "seconds": 0.6769346999935806,
+      "status": "PASS",
+      "test": "tests.test_snapshot_latency.SnapshotLatencyTests.test_empty_repair_backlog_is_rejected_without_idle_padding"
+    },
+    {
+      "seconds": 0.028985099997953512,
+      "status": "PASS",
+      "test": "tests.test_snapshot_latency.SnapshotLatencyTests.test_failed_attempt_is_saved_and_large_inflation_does_not_pass_screen"
+    },
+    {
+      "seconds": 12.47243539999181,
+      "status": "PASS",
+      "test": "tests.test_snapshot_latency.SnapshotLatencyTests.test_live_pair_uses_identical_backlog_and_preserves_phase_membership"
+    },
+    {
+      "seconds": 0.001992000004975125,
+      "status": "PASS",
+      "test": "tests.test_snapshot_latency.SnapshotLatencyTests.test_missing_duplicate_and_failed_requests_cannot_be_sufficient"
+    },
+    {
+      "seconds": 0.7264022000017576,
+      "status": "PASS",
+      "test": "tests.test_snapshot_latency_completion.SnapshotContinuationTests.test_continuation_retains_only_completed_pairs_and_survives_console_errors"
+    },
+    {
+      "seconds": 0.013777600004686974,
+      "status": "PASS",
+      "test": "tests.test_snapshot_latency_completion.SnapshotContinuationTests.test_original_source_mismatch_is_rejected_and_json_hash_ignores_layout"
+    },
+    {
+      "seconds": 0.011650700005702674,
+      "status": "PASS",
+      "test": "tests.test_snapshot_latency_completion.SnapshotContinuationTests.test_retained_pair_identity_and_request_completeness_are_enforced"
+    },
+    {
+      "seconds": 0.3038837999920361,
+      "status": "PASS",
+      "test": "tests.test_snapshot_reads.SnapshotReadTests.test_actual_retire_reclaim_race_falls_back_after_closing_old_snapshot"
+    },
+    {
+      "seconds": 8.663208900004975,
+      "status": "PASS",
+      "test": "tests.test_snapshot_reads.SnapshotReadTests.test_both_coding_profiles_and_worker_paths_return_exact_bytes"
+    },
+    {
+      "seconds": 0.6035140999883879,
+      "status": "PASS",
+      "test": "tests.test_snapshot_reads.SnapshotReadTests.test_corruption_and_identity_mismatch_still_reject_with_one_fallback"
+    },
+    {
+      "seconds": 0.09263800000189804,
+      "status": "PASS",
+      "test": "tests.test_snapshot_reads.SnapshotReadTests.test_read_completes_during_writer_and_sees_only_committed_offline_state"
+    },
+    {
+      "seconds": 0.08084859998780303,
+      "status": "PASS",
+      "test": "tests.test_snapshot_reads.SnapshotReadTests.test_read_connection_rejects_writes_and_releases_snapshot"
+    },
+    {
+      "seconds": 0.07784600000013597,
+      "status": "PASS",
+      "test": "tests.test_snapshot_reads.SnapshotReadTests.test_unknown_content_rejects_and_other_io_errors_are_not_retried"
+    },
+    {
+      "seconds": 4.210627399996156,
+      "status": "PASS",
+      "test": "tests.test_storage.ProcessCrashTests.test_actual_process_exit_at_every_step_boundary"
+    },
+    {
+      "seconds": 0.46896270000434015,
+      "status": "PASS",
+      "test": "tests.test_storage.ProcessCrashTests.test_checked_live_retirement_restart_then_repair"
+    },
+    {
+      "seconds": 1.7656915999978082,
+      "status": "PASS",
+      "test": "tests.test_storage.ProcessCrashTests.test_reclaim_crash_retains_charge_until_committed_ack"
+    },
+    {
+      "seconds": 0.216283800007659,
+      "status": "PASS",
+      "test": "tests.test_storage.StorageTests.test_already_protected_empty_plan_releases_group"
+    },
+    {
+      "seconds": 0.10052310000173748,
+      "status": "PASS",
+      "test": "tests.test_storage.StorageTests.test_bootstrap_is_sealed_after_first_plan"
+    },
+    {
+      "seconds": 0.14738190000934992,
+      "status": "PASS",
+      "test": "tests.test_storage.StorageTests.test_cancel_charges_partial_staging_until_cleanup"
+    },
+    {
+      "seconds": 0.1262601999915205,
+      "status": "PASS",
+      "test": "tests.test_storage.StorageTests.test_concurrent_connections_cannot_apply_same_step_twice"
+    },
+    {
+      "seconds": 0.09141969999473076,
+      "status": "PASS",
+      "test": "tests.test_storage.StorageTests.test_corrupt_live_source_prevents_admission"
+    },
+    {
+      "seconds": 0.14233280000917148,
+      "status": "PASS",
+      "test": "tests.test_storage.StorageTests.test_corrupt_staged_fragment_cannot_promote"
+    },
+    {
+      "seconds": 0.10514300000795629,
+      "status": "PASS",
+      "test": "tests.test_storage.StorageTests.test_domain_failure_invalidates_remaining_continuation"
+    },
+    {
+      "seconds": 0.19717689999379218,
+      "status": "PASS",
+      "test": "tests.test_storage.StorageTests.test_duplicate_and_out_of_order_steps"
+    },
+    {
+      "seconds": 0.11152380000567064,
+      "status": "PASS",
+      "test": "tests.test_storage.StorageTests.test_holds_charge_available_capacity_before_steps"
+    },
+    {
+      "seconds": 0.13415379999787547,
+      "status": "PASS",
+      "test": "tests.test_storage.StorageTests.test_mutual_exclusion_blocks_competing_admission"
+    },
+    {
+      "seconds": 0.21227790000557434,
+      "status": "PASS",
+      "test": "tests.test_storage.StorageTests.test_repair_real_bytes_and_read_after_restart"
+    },
+    {
+      "seconds": 0.23713259999931324,
+      "status": "PASS",
+      "test": "tests.test_storage.StorageTests.test_stale_cleanup_cannot_erase_reallocated_slot"
+    },
+    {
+      "seconds": 0.09193539999250788,
+      "status": "PASS",
+      "test": "tests.test_storage.StorageTests.test_stale_snapshot_admission_rejected"
+    },
+    {
+      "seconds": 0.20303550000244286,
+      "status": "PASS",
+      "test": "tests.test_storage.StorageTests.test_takeover_fences_old_writes"
+    },
+    {
+      "seconds": 0.22622189999674447,
+      "status": "PASS",
+      "test": "tests.test_storage.StorageTests.test_takeover_serializes_with_stage_io"
+    },
+    {
+      "seconds": 2.3335768000106327,
+      "status": "PASS",
+      "test": "tests.test_workers.WorkerTests.test_cancel_revokes_grant_before_reclaim_and_slot_reuse"
+    },
+    {
+      "seconds": 1.705767499996,
+      "status": "PASS",
+      "test": "tests.test_workers.WorkerTests.test_cancel_waits_for_inflight_worker_and_revokes_waiting_commands"
+    },
+    {
+      "seconds": 12.987857700005407,
+      "status": "PASS",
+      "test": "tests.test_workers.WorkerTests.test_controller_exit_at_two_phase_boundaries_then_takeover"
+    },
+    {
+      "seconds": 1.3656562999967718,
+      "status": "PASS",
+      "test": "tests.test_workers.WorkerTests.test_duplicate_stage_controllers_only_commit_once"
+    },
+    {
+      "seconds": 2.1194694000005256,
+      "status": "PASS",
+      "test": "tests.test_workers.WorkerTests.test_forged_or_corrupted_acknowledgement_cannot_commit"
+    },
+    {
+      "seconds": 1.729657000003499,
+      "status": "PASS",
+      "test": "tests.test_workers.WorkerTests.test_prepared_and_physically_written_capacity_stays_charged"
+    },
+    {
+      "seconds": 2.73637489999237,
+      "status": "PASS",
+      "test": "tests.test_workers.WorkerTests.test_reclaim_ack_does_not_release_capacity_before_manifest_commit"
+    },
+    {
+      "seconds": 10.038431000008131,
+      "status": "PASS",
+      "test": "tests.test_workers.WorkerTests.test_scoped_worker_restoration_all_validation_modes"
+    },
+    {
+      "seconds": 3.009135599990259,
+      "status": "PASS",
+      "test": "tests.test_workers.WorkerTests.test_takeover_rejects_old_commands_and_delayed_receipts"
+    },
+    {
+      "seconds": 2.809905499991146,
+      "status": "PASS",
+      "test": "tests.test_workers.WorkerTests.test_takeover_waits_for_inflight_worker_before_publishing_fence"
+    },
+    {
+      "seconds": 1.713789800007362,
+      "status": "PASS",
+      "test": "tests.test_workers.WorkerTests.test_unrelated_plan_progress_does_not_invalidate_pending_receipt"
+    },
+    {
+      "seconds": 1.611722900008317,
+      "status": "PASS",
+      "test": "tests.test_workers.WorkerTests.test_worker_duplicate_execution_and_receipt_completion_are_idempotent"
+    },
+    {
+      "seconds": 2.350457799999276,
+      "status": "PASS",
+      "test": "tests.test_workers.WorkerTests.test_worker_fence_is_durable_and_cannot_regress"
+    },
+    {
+      "seconds": 1.7276665000099456,
+      "status": "PASS",
+      "test": "tests.test_workers.WorkerTests.test_worker_io_does_not_hold_authority_write_transaction"
+    },
+    {
+      "seconds": 5.459579699992901,
+      "status": "PASS",
+      "test": "tests.test_workers.WorkerTests.test_worker_process_exit_retries_or_reconciles_durable_receipt"
+    }
+  ],
+  "total_seconds": 387.3056138999964
+}

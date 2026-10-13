@@ -1,0 +1,17 @@
+# Minimum-work planning: focused technical source screen
+
+13 October 2026. This update screens the planner change; it is not an exhaustive novelty, infringement or Indian eligibility opinion. The earlier 53/100 assessment is unchanged.
+
+The implemented change searches globally for fewer committed stage operations, then fewer actions, while preserving already authenticated staging and the existing resource/fault contract. Branch and bound supplies a conventional optimizer; independent Dijkstra search supplies a finite objective oracle. It is shared by conventional cached and selective modes.
+
+| Primary source examined | Relevant material | Interpretation for this change |
+|---|---|---|
+| [NetworkX minimum-cost flow documentation](https://networkx.org/documentation/stable/reference/algorithms/generated/networkx.algorithms.flow.min_cost_flow.html), API definition | Costed graph optimization with demands, capacities and edge weights is an established algorithmic tool. | “Choose a cheaper feasible assignment” is not asserted as a new contribution. Our implementation uses bounded assignment search rather than NetworkX or a claimed flow reduction; no external library is added. This documentation is a technical reference, not evidence of its earliest publication date. |
+| [Fast Proactive Repair in Erasure-Coded Storage](https://ieeexplore.ieee.org/document/9721141/), publisher-indexed abstract, DOI 10.1109/TPDS.2022.3152817 | FastPR couples migration and reconstruction and solves a bipartite maximum-matching problem to schedule repair. Publisher metadata dates publication to 24 February 2022. | Matching-based repair planning already has direct storage context. FastPR's proactive failing-disk setting and parallel scheduling differ from our acknowledged partial-state objective. We reviewed the publisher abstract/indexed text, not a full algorithm implementation; it does not establish anticipation of every detail here. |
+| [US10740198B2, Parallel partial repair of storage](https://patents.google.com/patent/US10740198B2/en), claims 1 and 3–10 | Participant/destination choices consider cached chunks, availability, load, failure domains and I/O scheduling. | Cache-aware resource scheduling is close conventional context. Its “partial repair” denotes distributed reconstruction computations, whereas ours denotes incomplete allocation progress. A vocabulary change is not a technical distinction. |
+
+The broader [milestone 11 chart](REVISION_PRIOR_ART_REVIEW.md) remains relevant to reservations, staging, journals, reconfiguration and work reuse. Its 2026 LESS source concerns changing code construction to reduce repair data accesses and seeks; this milestone keeps the original XOR/PQ codes and makes no claim to improve those constructions.
+
+**Engineering interpretation:** any saving relative to a first-feasible scheduler must be offered equally to the strongest conventional comparator. Fewer stage operations prove a useful planner correction in the tested instances, not a selective-validation benefit. No timing target follows from operation counts. The [registered comparison](../../experiments/minimum_work_protocol.md) explicitly retains minimum-work conventional planning as the primary baseline.
+
+A novel claim distinction remains unestablished. This step strengthens the comparator and removes a potential source of misleading patentability evidence. A new mechanism would still need a precise technical difference, an independent baseline comparison and a final claim/combination analysis.

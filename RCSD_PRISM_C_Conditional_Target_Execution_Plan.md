@@ -8,6 +8,8 @@
 
 **Execution amendment — 12 October 2026:** This document retains its original planning baseline. Current implementation and completed experiments are tracked in [PROGRESS.md](PROGRESS.md). Interrupted-plan revision, equal conventional partial-state capabilities, real retained-byte enforcement, race/crash checks and an untimed matched comparison are implemented in milestone 11. All twelve pairs have equal retained work, so that hypothesis fails the mechanism-difference gate for these fixtures. Its larger timing confirmation is gated out, rather than counted as complete or successful. The remaining research plan, primary claim distinction, hardware evidence and human contribution/disclosure/priority records remain unresolved.
 
+**Baseline extension — 13 October 2026:** Milestone 12 finds and corrects a global work-retention limitation of first-feasible assignment. Minimum-work conventional planning becomes the stronger comparator for stage/action counts. All twelve matched sets still show selective parity. Savings against the weaker first-feasible control are recorded as an engineering correction and cannot be used to pass the invention or timing gate. See [results and limits](evidence/results/MILESTONE_12.md).
+
 ## 1. What successful execution must establish
 
 The project must answer three questions with reproducible evidence:

@@ -21,6 +21,7 @@ python -m prism_c measurement-diagnostics --report evidence/results/measurement-
 python -m prism_c snapshot-latency --report evidence/results/snapshot-latency-new.json --runs 10 --seed 20261012
 python -m prism_c read-reuse-benchmark --report evidence/results/read-reuse-new.json --runs 10 --seed 20261012
 python -m prism_c revision-demo --root tmp/revision-demo-new --report evidence/results/revision-demo-new.json --profile 4+2 --storage-workers --validation-mode shadow
+python -m prism_c minimum-work-demo --root tmp/minimum-work-new --report evidence/results/minimum-work-new.json --profile 4+2 --storage-workers --validation-mode shadow
 ```
 
 The demo root must be new or empty. Existing stores are never reset by the demo. Choose a new root name for another run. `verify` uses disposable temporary stores and preserves the report, test details, source hashes and model campaign counts.
@@ -40,6 +41,7 @@ To resume an interrupted plan: `python -m prism_c resume --root <store-directory
 - Conventional cached, full, selective and shadow validation modes (`Authority(root, validation_mode="conventional_cached"|"full"|"selective"|"shadow")`). Shadow mode compares selective results with complete replay in every step. Default is conventional cached; component caching is experimental.
 - Opt-in stage/reclaim storage processes with committed intents, per-domain durable fences, grant revocation barriers and checked durable receipts. Repair I/O runs outside the authority writer transaction.
 - Conventional partial-state replanning and checked successor plans that retain authenticated staging, drain old worker grants, transfer complete claims and leave failed allocations charged. Includes saved CLI proposals, exact request retries, persistent lineage and an independent finite partial-recovery oracle.
+- Opt-in conventional minimum-work partial planning: minimize committed stage actions, then all actions, within a bounded fixed-LIVE assignment. Exhausted optimization returns UNKNOWN without a proposal. `replan --planner min-work` exposes it; historical first-feasible planning remains the default. See the [objective/limits](spec/minimum_work.md).
 
 ## Scope
 
@@ -92,6 +94,8 @@ The [milestone 10 results](evidence/results/MILESTONE_10.md) preserve 40 complet
 The subsequent [design-gap audit](evidence/results/DESIGN_GAP_AUDIT.md) explains why these successful traces provide no additional suffix-replay saving over the guarded conventional cache. Its untimed script checks 273 paired logical steps, eight real stores and relevant-change rejection; the recorded 132-method result describes that historical source. The interrupted-plan revision redesign is now implemented for both controller modes. See the [successor contract and CLI](spec/plan_revision.md) and [registered work-retention gate](experiments/revision_protocol.md). Retaining staging does not by itself establish an advantage over an equally capable conventional replanner.
 
 [Milestone 11](evidence/results/MILESTONE_11.md) records 143 passing methods/360 subtests, 57 actual process-exit regression cases, independent partial-state/actual-fixture oracles and passing Ubuntu/Windows CI. All twelve paired work-retention comparisons are equal. The capability is useful shared recovery functionality; the hypothesis supplies no observed selective-mode distinction. The larger performance confirmation is gated out, and the patentability assessment is unchanged. [Primary-source mapping](evidence/results/REVISION_PRIOR_ART_REVIEW.md) separates the implemented combination from reservations, journals, reconfiguration, backfill and reconstruction already described elsewhere.
+
+[Milestone 12](evidence/results/MILESTONE_12.md) fixes globally wasteful first-feasible assignment. Minimum-work planning saves one committed stage in both tested interrupted fixtures—50% for 2+1 and 25% for 4+2—relative to that weaker control. All 12 matched sets / 36 stores restore exact bytes; minimum-work conventional and selective modes perform identical work. The independent oracle agrees across 136 finite cases and both actual fixtures; full verification passes 150 methods/388 subtests. These operation-count savings are a shared conventional planner improvement, not a measured latency/CPU or novelty result. The primary comparator now includes cost-aware planning.
 
 The [diagnostic protocol](experiments/measurement_diagnostics_protocol.md) preserves the earlier registered controller comparison and its results. CLI failure preserves a partial report and names the failed measurement cell. Correctness tests cover actual SQLite-blocked reads, phase separation, nested spans, worker receipt profiling and failure preservation. Longer sampling and attribution do not change the patentability assessment; independent paired confirmation and fault/contention comparisons remain pending.
 
