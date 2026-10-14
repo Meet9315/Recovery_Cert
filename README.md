@@ -2,11 +2,13 @@
 
 A runnable local prototype of reservation-backed repair continuations and acknowledged storage reclamation. Python 3.11 or later; standard library only. No installation or network access is required.
 
-Current research decision (13 October 2026): [updated patent-readiness assessment](evidence/results/PATENT_REASSESSMENT_2026_10_13.md) is **55/100**, a subjective readiness rubric, not grant probability. The [next redesign plan](RCSD_PRISM_C_Redesign_Plan.md) investigates joint repair and whole-zone reclamation after conventional controllers match the current tested hypotheses. This zoned extension is planned, not implemented; the 73/75 targets remain conditional.
+Current research decision (13 October 2026): [updated patent-readiness assessment](evidence/results/PATENT_REASSESSMENT_2026_10_13.md) is **55/100**, a subjective readiness rubric, not grant probability. The [redesign plan](RCSD_PRISM_C_Redesign_Plan.md) investigates joint repair and whole-zone reclamation after conventional controllers match the current tested hypotheses. Engineering implementation status is recorded below; the 73/75 patent targets remain conditional.
 
 Execution update (14 October 2026): [R14-A results](evidence/results/R14_EXECUTION.md) reject the specified frontier as a distinguishing mechanism. The new in-memory diagnostic agrees with ordinary counters/full recomputation across 1,256 snapshots and 36,336 mutations; later conditional builds are gated out. Full local verification passes 170 methods/435 subtests and registered-source CI passes Ubuntu/Windows. Run the isolated screen with `python -m analysis.zoned_frontier_gate --report <fresh-report-path>`; it does not operate a zoned device or claim a patent advantage.
 
 Engineering continuation (14 October 2026): [R15](evidence/results/R15_EXECUTION.md) implements the nominal joint zoned repair/GC model, conventional A* planner and independently implemented reference. All 32 cases agree; RAM byte replay has 280 exact readbacks. Full verification now passes 186 methods/452 subtests; source CI passes both platforms. Two small staged fixtures halve stage writes versus a restricted separated control; the joint conventional planner gets the benefit. This is a model/RAM extension, not a native/durable zoned adapter or new patent distinction.
+
+E16 source registration (14 October 2026): opt-in [zoned-file adapter](spec/zoned_file_store.md) adds real codeword files, prepared append/reset intents, authenticated adoption, conservative quarantine, persistent receipts/cursor and serialized takeover. Fourteen focused methods pass, including 30 actual process exits. [Registered file comparison](experiments/zoned_file_protocol.md) and full regression/CI collection are pending at this source freeze; no hardware, power-loss, timing or patent-score result is asserted.
 
 ## Run
 
@@ -31,11 +33,14 @@ python -m prism_c minimum-work-demo --root tmp/minimum-work-new --report evidenc
 python -m prism_c contingency-gate --report evidence/results/contingency-gate-new.json
 python -m prism_c contingency-demo --root tmp/contingency-new --report evidence/results/contingency-demo-new.json --storage-workers --validation-mode shadow --fault-domain D0 --cursor 2
 python -m prism_c.zoned_campaign --report evidence/results/zoned-joint-new.json
+python -m prism_c.zoned_file_campaign --root tmp/zoned-file-new --report evidence/results/zoned-file-new.json
 ```
 
 The demo root must be new or empty. Existing stores are never reset by the demo. Choose a new root name for another run. `verify` uses disposable temporary stores and preserves the report, test details, source hashes and model campaign counts.
 
 To resume an interrupted plan: `python -m prism_c resume --root <store-directory> --plan <plan-id> --takeover`. This advances the owner fence, invalidating older controllers. `cancel` accepts the same arguments and leaves materialized partial writes charged until reclamation; cancellation does not immediately free their capacity.
+
+Those resume/cancel commands apply to slot stores. The separate zoned-file adapter uses `ZonedFileStore(root)`, `takeover()` and `execute(fence)`; it has no cancellation or asynchronous worker API. Its creation/campaign paths must be nonexistent. Read the [contract](spec/zoned_file_store.md) before interpreting pending intents, quarantine or simulated reset outcomes.
 
 ## Implemented
 
