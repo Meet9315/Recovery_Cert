@@ -4,6 +4,8 @@ Execution: 13–14 October 2026; completed 14 October. [Plan](../../RCSD_PRISM_C
 
 **Outcome: the specified frontier fails the first distinguishing-mechanism gate.** A separately constructed conventional counter index provides the same reset decisions and operation bounds. Diagnostic correctness passes; that is a negative result for the proposed contribution. **55/100** is unchanged, and 73/75 remain unearned conditional scenarios.
 
+Later engineering continuation, 14 October 2026: after a renewed user instruction, [R15](R15_EXECUTION.md) separately implements nominal physical-model/joint-baseline/reference concepts. The task table below preserves the original R14 decision; it is not a current assertion that no conventional model exists. The failed frontier distinction is unchanged, and no durable/native candidate or performance result is added by R15.
+
 ## Implemented and collected
 
 Source/protocol registration: [`bb11b4807e2f3b3cea4e326466bca7494bd3bc11`](https://github.com/Meet9315/Recovery_Cert/commit/bb11b4807e2f3b3cea4e326466bca7494bd3bc11), before collection. The [raw report](zoned-frontier-gate-r14.json) preserves every initial case, mutation counts, outcomes and four diagnostic/test/contract/protocol hashes. It reports no physical controller and no timing campaign.

@@ -6,6 +6,8 @@ Current research decision (13 October 2026): [updated patent-readiness assessmen
 
 Execution update (14 October 2026): [R14-A results](evidence/results/R14_EXECUTION.md) reject the specified frontier as a distinguishing mechanism. The new in-memory diagnostic agrees with ordinary counters/full recomputation across 1,256 snapshots and 36,336 mutations; later conditional builds are gated out. Full local verification passes 170 methods/435 subtests and registered-source CI passes Ubuntu/Windows. Run the isolated screen with `python -m analysis.zoned_frontier_gate --report <fresh-report-path>`; it does not operate a zoned device or claim a patent advantage.
 
+Engineering continuation (14 October 2026): [R15](evidence/results/R15_EXECUTION.md) implements the nominal joint zoned repair/GC model, conventional A* planner and independently implemented reference. All 32 cases agree; RAM byte replay has 280 exact readbacks. Full verification now passes 186 methods/452 subtests; source CI passes both platforms. Two small staged fixtures halve stage writes versus a restricted separated control; the joint conventional planner gets the benefit. This is a model/RAM extension, not a native/durable zoned adapter or new patent distinction.
+
 ## Run
 
 From this workspace:
@@ -28,6 +30,7 @@ python -m prism_c revision-demo --root tmp/revision-demo-new --report evidence/r
 python -m prism_c minimum-work-demo --root tmp/minimum-work-new --report evidence/results/minimum-work-new.json --profile 4+2 --storage-workers --validation-mode shadow
 python -m prism_c contingency-gate --report evidence/results/contingency-gate-new.json
 python -m prism_c contingency-demo --root tmp/contingency-new --report evidence/results/contingency-demo-new.json --storage-workers --validation-mode shadow --fault-domain D0 --cursor 2
+python -m prism_c.zoned_campaign --report evidence/results/zoned-joint-new.json
 ```
 
 The demo root must be new or empty. Existing stores are never reset by the demo. Choose a new root name for another run. `verify` uses disposable temporary stores and preserves the report, test details, source hashes and model campaign counts.
