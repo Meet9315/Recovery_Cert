@@ -1,8 +1,10 @@
 # E16: durable zoned-file engineering delivery
 
-14 October 2026. **Implemented and collected the bounded serialized file embodiment**, following the user's next-step instruction. This is conventional engineering after R14's failed invention gate. Current previously assessed readiness remains **55/100**; conditional 73/75 targets remain unearned.
+14–15 October 2026. **Implemented and verified the bounded serialized file embodiment**, following the user's next-step instruction. This is conventional engineering after R14's failed invention gate. Current previously assessed readiness remains **55/100**; conditional 73/75 targets remain unearned.
 
 Registered source: [`402b2cb63ea0c37454932f47a1b054c5b75fb6ad`](https://github.com/Meet9315/Recovery_Cert/commit/402b2cb63ea0c37454932f47a1b054c5b75fb6ad), committed/pushed before final collection. [Contract](../../spec/zoned_file_store.md), [frozen protocol](../../experiments/zoned_file_protocol.md), [raw file comparison/faults](zoned-file-e16.json).
+
+Corrected-source freeze: [`d87264102c2f66569cb7a1fe6a3306ef056e7558`](https://github.com/Meet9315/Recovery_Cert/commit/d87264102c2f66569cb7a1fe6a3306ef056e7558). [Recollected raw file/fault evidence](zoned-file-e16-r2.json) reproduces every result under the corrected path test plus E17 measurement source. The actual E16 adapter is unchanged; original reports/failed CI remain intact.
 
 ## Results
 
@@ -41,7 +43,9 @@ Development focused verification: **14 methods PASS**, including **30 actual exi
 
 ## Verification status
 
-Initial local full verification passes **200 methods/494 subtests** with zero failures/errors: [original verification](verification-e16.json). [Initial exact-source CI](ci-e16-initial.json) passes Ubuntu but fails one Windows assertion comparing the resolved `runneradmin` temporary path to the alias `RUNNER~1`; all other 199 methods pass on Windows. The expected-path assertion is now corrected with `.resolve()`, with no adapter behavior change. Preserve the original reports and failed CI. A corrected-source recollection/full regression/source CI is pending; it will be recorded here before overall completion. The next [cost instrumentation pilot](../../experiments/zoned_cost_protocol.md) is registered separately in the corrected source.
+Initial local full verification passes **200 methods/494 subtests** with zero failures/errors: [original verification](verification-e16.json). [Initial exact-source CI](ci-e16-initial.json) passes Ubuntu but fails one Windows assertion comparing the resolved `runneradmin` temporary path to the alias `RUNNER~1`; all other 199 methods pass on Windows. The expected-path assertion is corrected with `.resolve()`, with no adapter behavior change. Original reports and failed CI are preserved.
+
+Corrected-source [full local verification](verification-e17.json) passes **205 methods/501 subtests**, no failures/errors, with 10,000 traces and all earlier campaigns. [Source CI](https://github.com/Meet9315/Recovery_Cert/actions/runs/38768388390) passes Ubuntu and Windows; [record](ci-e17.json), [Windows artifact](verification-e17-ci-windows.json). All 71 Windows artifact production/test byte hashes match local corrected-source file collection. This includes five new E17 measurement methods; CI verifies collector correctness but does not run/confirm the full timing pilot. Existing slot-store behavior remains unchanged.
 
 ## Task closure and next delivery
 
@@ -51,9 +55,9 @@ Initial local full verification passes **200 methods/494 subtests** with zero fa
 | E16-B | PASS: real 2+1/4+2 files, sequential append, whole-zone reset and authenticated readback |
 | E16-C | PASS in process-fault scope: 32 registered exits; conservative uncertainty, takeover and anti-stale checks |
 | E16-D | PASS for complete declared matrix: 24 matched route stores, positive/parity/infeasible outcomes retained |
-| E16-E | PENDING: registered complete-cost/foreground measurement with the strongest conventional joint comparator |
+| E16-E | Instrumentation/diagnostic pilot delivered in E17; confirmatory complete-cost/foreground result remains PENDING |
 | E16-F | PENDING: version-pinned native/device-emulator hook, external reproduction and final supported claims review |
 
-Next engineering work is E16-E: specify the actual offered foreground load and scaling geometry, register complete controller/metadata/fsync/reconstruction costs, validate timing/sample adequacy, then collect matched runs with the same joint optimum. A known scheduling gain over the restricted control cannot be promoted into a PRISM-specific result. Native hooks need device identity/write-pointer/reset-status reconciliation beyond an empty local file.
+E16-E instrumentation and registered diagnostic collection are now documented in [E17](E17_EXECUTION.md), with separate host-load context and a sequential follow-up. The next step is adequate-load/counter precision and confirmatory design, not declaring the pilot a timing-gate pass. A known scheduling gain over the restricted control cannot be promoted into a PRISM-specific result. Native hooks need device identity/write-pointer/reset-status reconciliation beyond an empty local file.
 
 Single local authority, simulated domains and trusted files. No asynchronous zoned workers, cancellation, mutable content, device reset acknowledgement, native protection, directory/power-loss durability or external reproduction. Signed human contributions, ownership, earliest disclosure/priority support remain UNKNOWN as instructed; user reports no earlier application. This milestone does not file a patent or resolve those facts.

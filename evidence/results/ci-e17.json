@@ -1,0 +1,20 @@
+{
+  "retrieved_client_date": "2026-10-15",
+  "repository": "Meet9315/Recovery_Cert",
+  "head_sha": "d87264102c2f66569cb7a1fe6a3306ef056e7558",
+  "run_id": 38768388390,
+  "status": "completed",
+  "conclusion": "success",
+  "jobs": {"ubuntu-latest": "success", "windows-latest": "success"},
+  "url": "https://github.com/Meet9315/Recovery_Cert/actions/runs/38768388390",
+  "windows_artifact_verification": {
+    "success": true,
+    "test_methods": 205,
+    "subtests": 501,
+    "failures": 0,
+    "errors": 0,
+    "matching_local_source_test_hashes": 71,
+    "report": "verification-e17-ci-windows.json"
+  },
+  "scope": "Corrected temporary-path assertion, E16 actual file/process regression and five new measurement methods. CI uses 1000 traces. It does not run or confirm the 48-window performance pilot. Initial path-alias CI failure is preserved separately."
+}

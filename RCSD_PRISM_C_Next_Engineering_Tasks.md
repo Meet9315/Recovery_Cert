@@ -2,7 +2,7 @@
 
 14 October 2026. R15's nominal model, joint conventional planner/reference and RAM execution are complete: [results](evidence/results/R15_EXECUTION.md). R14's frontier distinction remains failed. This is an **engineering** continuation, not approval of a patent candidate or new score.
 
-**E16 implementation amendment — 14 October 2026:** The original next-delivery list below is retained. [E16 file results](evidence/results/E16_EXECUTION.md) now implement E16-A through D in the [bounded serialized contract](spec/zoned_file_store.md): 24 fresh joint/control stores, 280 exact file prefix readbacks, 28 recovered process-exit outcomes and four conservatively quarantined outcomes. Full regression/source CI collection is pending at this drafting stage. E16-E/F remain pending; no native/power-loss/performance/patent-score result is inferred.
+**E16 implementation amendment — 14–15 October 2026:** The original next-delivery list below is retained. [E16 file results](evidence/results/E16_EXECUTION.md) now implement E16-A through D in the [bounded serialized contract](spec/zoned_file_store.md): 24 fresh joint/control stores, 280 exact file prefix readbacks, 28 recovered process-exit outcomes and four conservatively quarantined outcomes. Corrected-source full verification passes 205 methods/501 subtests and CI passes Ubuntu/Windows; the original path-only CI failure is retained. E16-E instrumentation is delivered in E17, but its confirmatory result and E16-F remain pending; no native/power-loss/patent-score result is inferred.
 
 ## Durable zoned-file emulator to implement next
 
@@ -28,3 +28,16 @@
 E16 was **not implemented/tested by R15**. Its later delivery is recorded in the amendment above. Uncertain-outcome handling is materially more than adding writes to a model. Existing storage defaults remain in force; the new file adapter is opt-in.
 
 Readiness remains **55/100**. Patent-directed work still needs a specific mechanism beyond the joint conventional planner, fresh claim/source comparison, supported effects and human/priority facts. Unknown facts remain unknown; no filing/inventorship is inferred.
+
+## Measurement work after E17 instrumentation
+
+The [registered cost pilot](experiments/zoned_cost_protocol.md) now implements the instrumentation portion of E16-E. [E17 results](evidence/results/E17_EXECUTION.md) and [collection context](evidence/results/E17_COLLECTION_CONTEXT.md) distinguish the initial shared-host-load pilot from the separate sequential follow-up. Both are descriptive, below confirmation sample floors.
+
+1. Inspect all eight strata and identical-joint repeats before proposing a speed claim. Distinguish controller-thread CPU from whole-process/foreground CPU, and post-verification/bootstrap from the restoration interval. Attribute action costs with scoped diagnostic spans before naming a decoding, locking or metadata bottleneck.
+2. Calibrate CPU batch precision and restoration backlog on disposable calibration stores. Save every attempt, including failed/insufficient ones. A merely nonzero/50-ms counter is not enough for a small relative-effect claim; the new confirmation protocol must set a larger measured CPU floor informed by observed clock increments and repeat variation.
+3. Supply enough actual repair work for at least 1,000 foreground arrivals before restoration in every compared arm, with all completions retained. Increase a realistic fixed workload rather than insert artificial waiting. Freeze workload choices before confirmation; record the active-zone budget needed for retained partial zones.
+4. Use at least ten complete matched sets per declared configuration, randomized saved order and the strongest conventional joint baseline. Register confidence/paired-effect analysis, complete controller costs and foreground criteria before outcomes. If no distinct candidate mechanism exists, report baseline characterization rather than invent a candidate advantage.
+5. For any proposed scope/caching or read-concurrency optimization, explicitly preserve source/row authenticity, complete affected membership, physical append uncertainty, reset incarnation and takeover rules. Give the conventional controller the same ordinary optimization. Check against full reference validation and actual fault cases before performance collection.
+6. Keep E16-F separate: choose and pin an actual device/emulator backend, implement authoritative write-pointer/reset-status/identity reconciliation, and run its supported failure model. Local file fsync/zero length does not establish native reset status or power-loss durability. External reproduction and supported claim review are additional outputs.
+
+This measurement plan does not alter R14's negative invention finding or complete the original conditional filing plan. The remaining inventive contribution and human facts cannot be supplied by collecting more identical-controller timings.
