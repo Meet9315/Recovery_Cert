@@ -14,6 +14,8 @@ E17 measurement delivery (15 October 2026): [cost/foreground collector](experime
 
 ## Run
 
+E18 source registration (15 October 2026): [scoped diagnosis/calibration/ten-set protocol](experiments/zoned_measurement_protocol.md) addresses E17's counter/sample limitations, while retaining the same ordinary controller. Eight focused methods pass. Full verification and collection are pending at registration; no candidate effect is claimed. Run its phases sequentially, with no other local test campaign overlapping.
+
 From this workspace:
 
 ```powershell
@@ -37,6 +39,9 @@ python -m prism_c contingency-demo --root tmp/contingency-new --report evidence/
 python -m prism_c.zoned_campaign --report evidence/results/zoned-joint-new.json
 python -m prism_c.zoned_file_campaign --root tmp/zoned-file-new --report evidence/results/zoned-file-new.json
 python -m prism_c.zoned_cost --root tmp/zoned-cost-new --report evidence/results/zoned-cost-new.json --pairs 2 --count 400 --rate 100 --seed 20261015
+python -m prism_c.zoned_measure profile --root tmp/zoned-profile-new --output evidence/results/zoned-profile-new
+python -m prism_c.zoned_measure calibrate --root tmp/zoned-calibration-new --output evidence/results/zoned-calibration-new
+python -m prism_c.zoned_measure confirm --root tmp/zoned-characterization-new --output evidence/results/zoned-characterization-new --calibration evidence/results/zoned-calibration-new/manifest.json
 ```
 
 The demo root must be new or empty. Existing stores are never reset by the demo. Choose a new root name for another run. `verify` uses disposable temporary stores and preserves the report, test details, source hashes and model campaign counts.

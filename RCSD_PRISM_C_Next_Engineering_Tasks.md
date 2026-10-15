@@ -31,6 +31,8 @@ Readiness remains **55/100**. Patent-directed work still needs a specific mechan
 
 ## Measurement work after E17 instrumentation
 
+**E18 registration — 15 October 2026:** [New protocol](experiments/zoned_measurement_protocol.md) implements the next measurement steps below: scoped planning/admission/action profiles, a predeclared 4/6/8-group calibration ladder, actual-enqueue/CPU floors and ten matched three-arm sets per four configurations. Eight focused methods pass. Full-source verification and collection remain pending at this registration point. No E17 result is deleted or converted into confirmation; any future adequate conventional characterization is not a new candidate advantage.
+
 The [registered cost pilot](experiments/zoned_cost_protocol.md) now implements the instrumentation portion of E16-E. [E17 results](evidence/results/E17_EXECUTION.md) and [collection context](evidence/results/E17_COLLECTION_CONTEXT.md) distinguish the initial shared-host-load pilot from the separate sequential follow-up. Both are descriptive, below confirmation sample floors.
 
 1. Inspect all eight strata and identical-joint repeats before proposing a speed claim. Distinguish controller-thread CPU from whole-process/foreground CPU, and post-verification/bootstrap from the restoration interval. Attribute action costs with scoped diagnostic spans before naming a decoding, locking or metadata bottleneck.
