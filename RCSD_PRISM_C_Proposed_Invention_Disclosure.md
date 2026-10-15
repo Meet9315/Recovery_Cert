@@ -23,6 +23,8 @@
 
 ---
 
+**File embodiment amendment — 14 October 2026:** [E16 engineering results](evidence/results/E16_EXECUTION.md) add real codeword files under a serialized local authority, prepared append/reset intents, authenticated reconciliation, retained uncertainty and anti-stale receipts/incarnations. Twenty-four fresh joint/control stores pass 280 prefix readbacks; 28 actual exit outcomes recover and four partial/invalid writes remain conservatively quarantined. The [contract](spec/zoned_file_store.md) defines trusted immutable scope and excludes native devices, power loss, asynchronous workers and cancellation. The capable conventional joint controller obtains the measured scheduling benefit. This amendment adds no new claim of novelty, inventive step or 70-plus readiness; the dated assessment remains 55/100.
+
 # 1. The invention in 60 seconds
 
 A repair can be individually safe and still consume the only suitable capacity required to finish another repair. This matters when storage is nearly full, placement rules restrict destination choices, and repairs compete with migration and garbage collection. Checking the current fragment set alone does not establish that the remaining recovery work can complete.

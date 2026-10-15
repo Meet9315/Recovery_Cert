@@ -8,6 +8,8 @@ Version 0.1 — 13 October 2026. Status: **conditional research design; implemen
 
 ## 1. Change the technical question
 
+**Durable engineering amendment — 14 October 2026:** [E16](evidence/results/E16_EXECUTION.md) now executes the joint conventional model in a separate serialized zoned-file authority. Registered comparison covers 24 actual stores/280 exact prefix readbacks and 32 real process exits, including four expected conservative quarantines. This satisfies bounded file engineering only: complete cost/foreground measurement and device/native/external work remain pending, and R14's failed distinction is unchanged. Readiness stays 55/100. [File contract](spec/zoned_file_store.md).
+
 The current store treats slots as individually reclaimable. Investigate storage whose physical reclamation unit contains multiple fragments: a zoned device can require a whole-zone reset before old written space becomes appendable again. The existing slot ledger cannot be presented as a verified implementation of that physical contract.
 
 Research question: **Can a specific representation of the joint repair/reset dependencies safely reduce the cost of selecting and validating a reclamation route, while keeping exact physical headroom and erasure-code protection, compared with an equally capable conventional controller?**

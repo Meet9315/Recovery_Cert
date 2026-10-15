@@ -2,6 +2,8 @@
 
 14 October 2026. R15's nominal model, joint conventional planner/reference and RAM execution are complete: [results](evidence/results/R15_EXECUTION.md). R14's frontier distinction remains failed. This is an **engineering** continuation, not approval of a patent candidate or new score.
 
+**E16 implementation amendment — 14 October 2026:** The original next-delivery list below is retained. [E16 file results](evidence/results/E16_EXECUTION.md) now implement E16-A through D in the [bounded serialized contract](spec/zoned_file_store.md): 24 fresh joint/control stores, 280 exact file prefix readbacks, 28 recovered process-exit outcomes and four conservatively quarantined outcomes. Full regression/source CI collection is pending at this drafting stage. E16-E/F remain pending; no native/power-loss/performance/patent-score result is inferred.
+
 ## Durable zoned-file emulator to implement next
 
 1. Specify a versioned persistent zone/object/plan schema and exclusive single-authority scope. Keep it opt-in; never silently reinterpret old slot databases.
@@ -23,6 +25,6 @@
 | E16-E | Registered complete costs/foreground workload after correctness; include intent/index/fallback costs and strongest joint baseline. |
 | E16-F | Version-pinned device emulator/native hook, external reproduction and final supported claim review. |
 
-E16 is **not implemented/tested** by R15. Uncertain-outcome handling is materially more than adding writes to a model. Existing storage defaults stay in force until the new adapter passes its own checks.
+E16 was **not implemented/tested by R15**. Its later delivery is recorded in the amendment above. Uncertain-outcome handling is materially more than adding writes to a model. Existing storage defaults remain in force; the new file adapter is opt-in.
 
 Readiness remains **55/100**. Patent-directed work still needs a specific mechanism beyond the joint conventional planner, fresh claim/source comparison, supported effects and human/priority facts. Unknown facts remain unknown; no filing/inventorship is inferred.

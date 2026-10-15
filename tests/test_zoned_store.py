@@ -250,7 +250,7 @@ class ZonedStoreTests(unittest.TestCase):
         initial = replace(initial, zones=tuple(replace(z, name=strange) if z.name == "A" else z for z in initial.zones),
                           reclaim=((strange, 1),))
         store = ZonedFileStore.create(self.root, initial, content(initial))
-        self.assertEqual(store.zone_path(strange).parent, self.root / "zones")
+        self.assertEqual(store.zone_path(strange).parent, (self.root / "zones").resolve())
         self.assertEqual(store.info()["format"], "prism-zoned-file-v1")
         self.assertEqual(set(store.info()["manifests"]["object"]), {"epoch", "profile", "length", "sha256", "rows"})
         with self.assertRaises(FileExistsError):

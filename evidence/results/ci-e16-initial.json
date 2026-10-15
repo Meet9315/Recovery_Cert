@@ -1,0 +1,12 @@
+{
+  "retrieved_client_date": "2026-10-15",
+  "repository": "Meet9315/Recovery_Cert",
+  "head_sha": "402b2cb63ea0c37454932f47a1b054c5b75fb6ad",
+  "run_id": 38599349011,
+  "status": "completed",
+  "conclusion": "failure",
+  "jobs": {"ubuntu-latest": "success", "windows-latest": "failure"},
+  "url": "https://github.com/Meet9315/Recovery_Cert/actions/runs/38599349011",
+  "failure": "test_fresh_root_controlled_paths_version_and_no_plaintext_fallback compared resolved runneradmin path to unresolved RUNNER~1 alias; other 199 methods pass on Windows, all 200 pass on Ubuntu and local Windows",
+  "correction": "Resolve the expected temporary-root path before comparing, preserving the hashed-file parent containment assertion. No production source behavior changes. Retain initial reports and recollect under the corrected source."
+}

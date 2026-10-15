@@ -8,7 +8,9 @@ Execution update (14 October 2026): [R14-A results](evidence/results/R14_EXECUTI
 
 Engineering continuation (14 October 2026): [R15](evidence/results/R15_EXECUTION.md) implements the nominal joint zoned repair/GC model, conventional A* planner and independently implemented reference. All 32 cases agree; RAM byte replay has 280 exact readbacks. Full verification now passes 186 methods/452 subtests; source CI passes both platforms. Two small staged fixtures halve stage writes versus a restricted separated control; the joint conventional planner gets the benefit. This is a model/RAM extension, not a native/durable zoned adapter or new patent distinction.
 
-E16 source registration (14 October 2026): opt-in [zoned-file adapter](spec/zoned_file_store.md) adds real codeword files, prepared append/reset intents, authenticated adoption, conservative quarantine, persistent receipts/cursor and serialized takeover. Fourteen focused methods pass, including 30 actual process exits. [Registered file comparison](experiments/zoned_file_protocol.md) and full regression/CI collection are pending at this source freeze; no hardware, power-loss, timing or patent-score result is asserted.
+E16 collection (14–15 October 2026): opt-in [zoned-file adapter](spec/zoned_file_store.md) adds real codeword files, prepared append/reset intents, authenticated adoption, conservative quarantine, persistent receipts/cursor and serialized takeover. Initial collection passes 24 real route stores/280 prefix reads and 32 exits; local full suite passes 200 methods/494 subtests. Ubuntu CI passes; Windows exposed a short/resolved temporary-path assertion, now corrected. [Results](evidence/results/E16_EXECUTION.md) preserve that failure and original evidence; corrected-source verification is pending at this freeze. No hardware/power-loss or patent-score result.
+
+E17 instrumentation registration (15 October 2026): [cost/foreground pilot](experiments/zoned_cost_protocol.md) measures the full deployed controller path and retains every fixed-arrival read, with identical-joint repeats exposing measurement variability. Five new measurement methods pass. The registered 48-window diagnostic collection and full corrected-source CI are pending; two pairs/400 requests do not establish the 5% p99 condition or a PRISM-specific advantage.
 
 ## Run
 
@@ -34,6 +36,7 @@ python -m prism_c contingency-gate --report evidence/results/contingency-gate-ne
 python -m prism_c contingency-demo --root tmp/contingency-new --report evidence/results/contingency-demo-new.json --storage-workers --validation-mode shadow --fault-domain D0 --cursor 2
 python -m prism_c.zoned_campaign --report evidence/results/zoned-joint-new.json
 python -m prism_c.zoned_file_campaign --root tmp/zoned-file-new --report evidence/results/zoned-file-new.json
+python -m prism_c.zoned_cost --root tmp/zoned-cost-new --report evidence/results/zoned-cost-new.json --pairs 2 --count 400 --rate 100 --seed 20261015
 ```
 
 The demo root must be new or empty. Existing stores are never reset by the demo. Choose a new root name for another run. `verify` uses disposable temporary stores and preserves the report, test details, source hashes and model campaign counts.

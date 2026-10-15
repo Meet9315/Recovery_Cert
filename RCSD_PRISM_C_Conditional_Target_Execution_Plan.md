@@ -20,6 +20,8 @@
 
 ## 1. What successful execution must establish
 
+**File engineering continuation — 14 October 2026:** [E16](evidence/results/E16_EXECUTION.md) now implements E16-A through D's bounded serialized zoned-file embodiment: 24 actual matched stores, 280 exact prefix reads and 32 process exits (28 resumed, four intentionally quarantined). Prepared identities, source authentication, capacity retention and stale reset protection are implemented in the [file contract](spec/zoned_file_store.md). E16-E complete cost/foreground experiments and E16-F native/external validation remain pending. Conventional joint planning achieves the work saving; current readiness remains 55/100 and unknown human facts remain unknown. This does not complete the conditional filing-evidence plan.
+
 The project must answer three questions with reproducible evidence:
 
 1. **What exact mechanism differs from known work?** A specific interaction between continuation validation, capacity ownership, storage reclamation and authoritative updates must survive an adversarial prior-art comparison.
