@@ -16,7 +16,7 @@ def digest(data: bytes) -> str:
 def xor(left: bytes, right: bytes) -> bytes:
     if len(left) != len(right):
         raise Rejected("Unequal fragment lengths")
-    return bytes(a ^ b for a, b in zip(left, right))
+    return (int.from_bytes(left, "little") ^ int.from_bytes(right, "little")).to_bytes(len(left), "little")
 
 
 # Primitive polynomial x^8 + x^4 + x^3 + x^2 + 1 (0x11d), alpha = 2.
@@ -60,13 +60,23 @@ def invert(matrix):
     return tuple(tuple(row[size:]) for row in rows)
 
 
+# Immutable field transforms: 64 KiB of payload, built once per interpreter.
+# These preserve the existing polynomial and all codeword bytes. Initialization
+# is included in E19's separate cold-module measurements, not hidden as free work.
+_MUL_TABLES = tuple(bytes(gf_mul(coefficient, value) for value in range(256))
+                    for coefficient in range(256))
+
+
 def combine(coefficients, fragments):
-    output = bytearray(len(fragments[0]))
-    for coefficient, fragment in zip(coefficients, fragments):
-        if coefficient:
-            for index, value in enumerate(fragment):
-                output[index] ^= gf_mul(coefficient, value)
-    return bytes(output)
+    size = len(fragments[0])
+    active = tuple((coefficient, fragment) for coefficient, fragment in zip(coefficients, fragments) if coefficient)
+    if len(active) == 1 and active[0][0] == 1 and len(active[0][1]) == size:
+        return active[0][1]  # Systematic rows already are immutable bytes.
+    output = 0
+    for coefficient, fragment in active:
+        transformed = fragment if coefficient == 1 else fragment.translate(_MUL_TABLES[coefficient])
+        output ^= int.from_bytes(transformed, "little")
+    return output.to_bytes(size, "little")
 
 
 def encode(data: bytes, profile: str = DEFAULT_PROFILE) -> tuple[bytes, ...]:

@@ -34,3 +34,7 @@ Runtime reconstruction validates precomputed row SHA-256 digests and the origina
 ## Supported limits
 
 Only these two fixed versioned profiles are accepted. Arbitrary generator matrices, configurable fields, mutable content and error correction are excluded. Two-domain erasure tests use simulated domain labels in one local store. They do not establish independent device, rack, power-loss or network fault tolerance. No 4+2 throughput result, controller improvement or patentability score follows from correctness verification.
+# Shared codec implementation amendment — 16 October 2026
+
+E19 keeps the same field polynomial, generators, row order, byte lengths and padding. Immutable 256-byte coefficient transforms (65536 payload bytes total per interpreter), whole-buffer integer XOR and systematic identity-row reuse remove Python multiplication loops from `combine`. All reconstruction consistency, padding, content/row digest and storage authority checks remain. This standard implementation optimization is shared by every controller arm; it is not claimed as a new erasure code or inventive distinction. Cold initialization and both small/large codec batches are measured separately under the [E19 protocol](../experiments/codec_optimization_protocol.md).
+
