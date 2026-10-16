@@ -23,16 +23,23 @@ class QemuZns:
     BAR = 0x10000000
     DATA = 0x200000
 
-    def __init__(self, root):
+    def __init__(self, root, zone_capacities=None):
         self.root = Path(root).resolve()
         self.root.mkdir(parents=True, exist_ok=False)
         self.binary = shutil.which("qemu-system-x86_64")
         if not self.binary:
             raise RuntimeError("QEMU unavailable")
         self.serial = "RCSD" + uuid.uuid4().hex[:16]
-        self.image = self.root / "owned-zns.raw"
-        with self.image.open("xb") as handle:
-            handle.truncate(64 * 1024 * 1024)
+        self.namespaces = {}
+        namespace_args = []
+        capacities = zone_capacities or {"smoke": 192}
+        for nsid, (name, units) in enumerate(capacities.items(), 1):
+            image = self.root / f"owned-ns-{nsid}.raw"
+            with image.open("xb") as handle:
+                handle.truncate(64 * 1024 * 1024 if zone_capacities is None else 1024 * 1024)
+            self.namespaces[name] = {"nsid": nsid, "capacity_units": units, "image": str(image)}
+            namespace_args += ["-drive", f"file={image},format=raw,if=none,id=znsdrive{nsid}",
+                "-device", f"nvme-ns,drive=znsdrive{nsid},bus=nvme0,nsid={nsid},zoned=on,zoned.zone_size=1M,zoned.zone_capacity={units*4096},zoned.max_open=1,zoned.max_active=1"]
         # Distribution QEMU lacks the qtest accelerator/clock_step command.
         # A tiny CLI/HLT loop leaves PCI configuration entirely to this driver
         # while TCG's virtual timers run normally. It boots no OS/user image.
@@ -46,9 +53,7 @@ class QemuZns:
         self.command = [self.binary, "-machine", "q35,accel=tcg", "-bios", str(bios), "-m", "64",
             "-display", "none", "-nodefaults", "-monitor", "none",
             "-qtest", f"unix:{self.socket_path},server=on,wait=off", "-qtest-log", str(self.root/"qtest.log"),
-            "-drive", f"file={self.image},format=raw,if=none,id=znsdrive",
-            "-device", f"nvme,id=nvme0,serial={self.serial},addr=04.0",
-            "-device", "nvme-ns,drive=znsdrive,bus=nvme0,nsid=1,zoned=on,zoned.zone_size=1M,zoned.zone_capacity=768K,zoned.max_open=2,zoned.max_active=4"]
+            "-device", f"nvme,id=nvme0,serial={self.serial},addr=04.0"] + namespace_args
         self.process = subprocess.Popen(self.command, stdin=subprocess.DEVNULL, stdout=subprocess.DEVNULL, stderr=self.error_log)
         self.sock = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
         self.sock.settimeout(5)
@@ -143,8 +148,8 @@ class QemuZns:
         self.submit(6, words={10: 1})
         return self.memory_read(self.DATA, 4096)[4:24].decode().strip()
 
-    def report(self, slba=0):
-        self.submit(0x7a, queue=1, nsid=1, words={10: slba, 12: 1023, 13: 0})
+    def report(self, slba=0, *, nsid=1):
+        self.submit(0x7a, queue=1, nsid=nsid, words={10: slba, 12: 1023, 13: 0})
         raw = self.memory_read(self.DATA, 4096)
         count = struct.unpack_from("<Q", raw)[0]
         if not count:
@@ -153,18 +158,18 @@ class QemuZns:
         return {"reported_zones": count, "type": raw[64] & 15, "condition": raw[65] >> 4,
                 "capacity_lba": capacity, "start_lba": start, "wp_lba": wp}
 
-    def manage(self, action, slba=0):
-        self.submit(0x79, queue=1, nsid=1, words={10: slba, 13: action})
+    def manage(self, action, slba=0, *, nsid=1):
+        self.submit(0x79, queue=1, nsid=nsid, words={10: slba, 13: action})
 
-    def write(self, payload, slba=0):
+    def write(self, payload, slba=0, *, nsid=1):
         if len(payload) != 4096:
             raise ValueError("Smoke writes exactly one 4096-byte PRP page")
         self.memory_write(self.DATA, payload)
-        self.submit(1, queue=1, nsid=1, words={10: slba, 12: 7})
+        self.submit(1, queue=1, nsid=nsid, words={10: slba, 12: 7})
 
-    def read(self, slba=0):
+    def read(self, slba=0, *, nsid=1):
         self.memory_write(self.DATA, bytes(4096))
-        self.submit(2, queue=1, nsid=1, words={10: slba, 12: 7})
+        self.submit(2, queue=1, nsid=nsid, words={10: slba, 12: 7})
         return self.memory_read(self.DATA, 4096)
 
     def close(self):
