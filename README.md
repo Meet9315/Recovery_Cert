@@ -14,7 +14,7 @@ E17 measurement delivery (15 October 2026): [cost/foreground collector](experime
 
 ## Run
 
-E18 status (16 October 2026): [scoped diagnosis/calibration/ten-set protocol](experiments/zoned_measurement_protocol.md) addresses E17's counter/sample limitations using the same ordinary controller. Full local verification and Ubuntu/Windows source CI pass **213 methods/501 subtests**; all eight profiles and 24 calibration windows pass. Characterization is **interrupted at 64/120 saved windows**, with no final manifest. [Execution record](evidence/results/E18_EXECUTION.md), [partial integrity audit](evidence/results/e18-checkpoint-audit.json), [remaining work](PROGRESS.md). No completed performance gate or candidate effect is claimed. Run phases sequentially with no overlapping local test campaign; a continuation of this interrupted attempt needs a declared protocol rather than silent observation replacement.
+E18 completed (16 October 2026): all eight profiles, 24 calibration windows and **120 characterization windows/144000 reads** pass integrity and sampling floors. A [predeclared two-session continuation](experiments/e18_continuation_protocol.md) preserves the original interrupted prefix. Identical-software 5% p99 repeatability is established in two of four configurations; both failures and session confounding remain. Source verification/Ubuntu/Windows CI pass **213 methods/501 subtests** with 73 matching source/test hashes. [Results](evidence/results/E18_EXECUTION.md), [final audit](evidence/results/e18-evidence-check.json), [remaining work](PROGRESS.md). Conventional scheduling effects do not establish a PRISM candidate advantage or native/power-loss result.
 
 From this workspace:
 

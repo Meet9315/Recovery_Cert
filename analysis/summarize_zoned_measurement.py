@@ -52,7 +52,9 @@ def build_summary():
             "offered_characterization_requests": len(characterization["records"])*characterization["count"],
             "characterization_adequate": characterization["summary"]["adequate"],
             "configurations": rows, "original_prism_gate_evaluated": False, "patent_rating_changed": False,
-            "scope": "All four fixed configurations. Profile elapsed shares include instrumentation/waits. Ten-set ratio intervals remain conditional on observed host conditions."}
+            "collection_sessions": 2 if "continuation" in characterization else 1,
+            "continuation": characterization.get("continuation"),
+            "scope": "All four fixed configurations. Profile elapsed shares include instrumentation/waits. Ten-set ratio intervals remain conditional on observed host conditions; the two-session continuation does not remove session confounding."}
 
 
 def main():

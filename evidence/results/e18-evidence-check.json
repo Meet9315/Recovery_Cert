@@ -1,0 +1,74 @@
+{
+  "audit_script_sha256": "e43859f0ae120ca4b1530579a1f98586228d9040e6a65a7febe7229fa3b39b44",
+  "broken_links": 0,
+  "characterization_adequate": true,
+  "collection_sessions": 2,
+  "continuation_git_head_at_start": "a5f3df9aa2dbc2e0fbfd94bdf6dc309074288a0d",
+  "date": "2026-10-16",
+  "identical_software_repeatability_screens": [
+    {
+      "established": false,
+      "extra": false,
+      "profile": "xor-2+1-v1"
+    },
+    {
+      "established": true,
+      "extra": true,
+      "profile": "xor-2+1-v1"
+    },
+    {
+      "established": false,
+      "extra": false,
+      "profile": "pq-4+2-gf256-v1"
+    },
+    {
+      "established": true,
+      "extra": true,
+      "profile": "pq-4+2-gf256-v1"
+    }
+  ],
+  "local_links_checked": 414,
+  "matching_runtime_source_test_hashes": 73,
+  "native_power_loss_durability_proven": false,
+  "original_64_window_prefix_unchanged": true,
+  "original_prism_gate_evaluated": false,
+  "patent_readiness": 55,
+  "protocol_hash_matches": true,
+  "requests": {
+    "calibration": 28800,
+    "characterization": 144000,
+    "profile": 0
+  },
+  "selected_workloads": [
+    {
+      "extra": false,
+      "groups": 4,
+      "profile": "xor-2+1-v1"
+    },
+    {
+      "extra": true,
+      "groups": 4,
+      "profile": "xor-2+1-v1"
+    },
+    {
+      "extra": false,
+      "groups": 4,
+      "profile": "pq-4+2-gf256-v1"
+    },
+    {
+      "extra": true,
+      "groups": 4,
+      "profile": "pq-4+2-gf256-v1"
+    }
+  ],
+  "session_confounding_removed": false,
+  "shard_digests_and_raw_derived_arithmetic": "PASS",
+  "source_commit": "e8ad2dba831f17749b0f8d27e5a32e63b1e9889a",
+  "summary_script_sha256": "b34d766faee47b8064a05d606b862d5b0c6aba93adc0146f40645c66cc588616",
+  "unchanged_e17_runtime_test_files": 71,
+  "windows": {
+    "calibration": 24,
+    "characterization": 120,
+    "profile": 8
+  }
+}

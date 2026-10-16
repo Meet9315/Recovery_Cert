@@ -1,0 +1,3789 @@
+{
+  "calibration_sha256": "52f21bf6bd0110808b390de637a67da11cc4e676e611140a8d6ddabbf7685ad7",
+  "candidate_mechanism_present": false,
+  "continuation": {
+    "amendment_sha256": "bffac2d48686f1c380cbf4122039faba6496c56c1ccedf80ff3a6229a3d48fcb",
+    "checkpoint": "evidence/results/e18-characterization/checkpoints/checkpoint-0065.json",
+    "checkpoint_sha256": "6e1b0322cf4937359e1a51e33fcbb5a0506424440e7e26e69a73ad6469e96de4",
+    "environment": {
+      "clocks": {
+        "perf_counter": {
+          "adjustable": false,
+          "implementation": "QueryPerformanceCounter()",
+          "monotonic": true,
+          "resolution": 1e-07
+        },
+        "process_time": {
+          "adjustable": false,
+          "implementation": "GetProcessTimes()",
+          "monotonic": true,
+          "resolution": 1e-07
+        },
+        "thread_time": {
+          "adjustable": false,
+          "implementation": "GetThreadTimes()",
+          "monotonic": true,
+          "resolution": 1e-07
+        }
+      },
+      "git_head": "a5f3df9aa2dbc2e0fbfd94bdf6dc309074288a0d",
+      "platform": "Windows-10-10.0.26200-SP0",
+      "protocol_sha256": "35e78e16b29555a1d7a7ebda9c77202f5e00ce4606fee6a9b3594ee104054b4f",
+      "python": "3.11.4 (tags/v3.11.4:d2340ef, Jun  7 2023, 05:45:37) [MSC v.1934 64 bit (AMD64)]",
+      "source_sha256": {
+        "prism_c/__init__.py": "5310acec652af6a86ebf1e86fe1547d37c6fbfa7cad6ab1afc446397761c8715",
+        "prism_c/__main__.py": "7701546bed7db375a4a30e68dfd3110f126dd62710e0a65e80d8a9637d2469b5",
+        "prism_c/baseline.py": "7f0fc2dfa251420bdc0df94360c2fb2394dc8100e5766747b9cbe056c069fbeb",
+        "prism_c/benchmark.py": "60979ea19ad1c3b21d61e0a078a871bd52d7616a8cd46a45a2cfe4ff9f5f7148",
+        "prism_c/campaign.py": "b226a09b8930d8fde711512e03e13a98046cc964efc6eee6fe21e15a37b5a353",
+        "prism_c/checker.py": "1aab629ed2857f9130a5e4e905e7f44084e8281492add9b10a4e6b05900632d6",
+        "prism_c/coding.py": "c66cceedb4cda1a7322b600fdee901a4ec2a2425bb29518146560e75afdb47f1",
+        "prism_c/coding_campaign.py": "d326217706c60c8820ec5dbb2f79293b90283db4101c0c574d8f1f9737feb040",
+        "prism_c/coding_oracle.py": "cec06e7d252ce99112109a4b615a67ebbe3d9f16e175a6ab7e0b2f3b79158d06",
+        "prism_c/contingency.py": "043d4ce8855bdb98c054a4fa8314f086b58fbe01380d317716591edd86f7968b",
+        "prism_c/contingency_campaign.py": "8f57e31f4fc5cc6d5fa2a813be6dc47afa2f0facb531ee9872077a1e0bc9822a",
+        "prism_c/contingency_check.py": "af378693235e649d5cec9e535657c9b05c56b3ae0205219e80a9d507f365bfca",
+        "prism_c/contingency_demo.py": "d8e55642795c6c23e89f1ac5c7ddac0ea1212e507fe6d8be178cb7018c945943",
+        "prism_c/contingency_evidence.py": "653422ed3eec29a623392fd720c92085bd0a76766640d284c701bcd7884b633d",
+        "prism_c/contingency_reference.py": "9a6c242d2f0d77d1010f2f98df2788178e69d7c5805d3fa6a6f40067e1374b01",
+        "prism_c/controller_benchmark.py": "c1db5f6fcf0237306e4447f36c3ac3adb091b200878e4ae55a05c37319733a43",
+        "prism_c/cpu_attribution.py": "414dd00206bd6cedcdd27a0112174198a5018b2836602f30e90745ecc60e96bd",
+        "prism_c/fault_contention.py": "cfc025ef742ec1f0e02fc1fe5c7c7be4c6b977e93062b12351e2e67b72a1170d",
+        "prism_c/fault_measured_worker.py": "5644b89c08c8c9938eca5658912458df82f556a38782d28f89b00d6a5d720047",
+        "prism_c/fault_worker.py": "67df4ff6d586c59568ae5fa8adc2f628fe650e658bcc2ff6ff9686fe7671efca",
+        "prism_c/liveness.py": "997dfcf18c9cc0fc6e1d37e33723cb7541102872263c7daffbbc67a73e5a36e5",
+        "prism_c/measured_worker.py": "fd046a6927db6fcc1cd4de43b8f7039da7767ba08ea3b539a75201a05fac3471",
+        "prism_c/measurement_diagnostics.py": "325501be0b7b7ef008708aeaa32b974041b65677bbd2532c5f71e92ac0983ebf",
+        "prism_c/min_work.py": "9aa95287e9592045a726f4384ee037239006ce50bc9a0848f007e0b216955709",
+        "prism_c/min_work_campaign.py": "be220af9a2a6b18e549c8aa69ec8f853ec25487963ddd5324e2ee8f1b38b0244",
+        "prism_c/min_work_demo.py": "43d6dd2ab38fd48895790c1ebe3d6646c73736d04cdd0d528f50182fac6ca92c",
+        "prism_c/model.py": "91a491dda7f3a83189c4e88e1c9141b6ef7bf549985aed82712410174d199810",
+        "prism_c/partial_campaign.py": "1a0c5d0c1303561b337a55609a2ed9dd05c6ff2a16d04477e8bb5bbafdf9f1df",
+        "prism_c/partial_recovery.py": "e5ddb7d21a03faeccad0ab882ba5a6f966dbbebf3d602e10386474d29b6f9203",
+        "prism_c/plan_revision.py": "efc954f92a8671ce0c4b1f6735b2a3963c48891d9c8130edd240375cd9e80b11",
+        "prism_c/profiles.py": "b831e77d0794303b8bd0ba2571c12c4071ae053fd924be08ff7de6025035f1b8",
+        "prism_c/read_reuse.py": "e52b72a4b2408c69a0e076dbdffcf8c70de416c7c079ef2d924af2a7a62c1614",
+        "prism_c/revision_demo.py": "17df5396fa42829be7bae3c2a2c8bd6ef4d0c84ce79eb4dbc617047f0f782f62",
+        "prism_c/revision_fault.py": "a024b298840598459e88f2fe6e393559c5c8cfc836bd3900317c127940018557",
+        "prism_c/revision_fixture.py": "b491d616e8d8e440dd045115eab682a1295a8c0541176ec3010071707ff5a4ad",
+        "prism_c/scope.py": "7fc0e21beb9f45ed3abc757d0011567b1fa5d4a907c401255d343b3c4e855cba",
+        "prism_c/selective.py": "4d34288758ff683890be35b2313ef78f29052cd2b6ae97cb61abf6b4b791da95",
+        "prism_c/snapshot_latency.py": "cf77e8ee7590941dc71294c5e3dfd655e95c34676988db3955de4334b9c9c0b5",
+        "prism_c/storage.py": "7a231644be60e0ed00f3c590e2de71e5334f719f4412253507ce58430c73e559",
+        "prism_c/worker.py": "1ba7573861493edc090d4eadbb2a24edab08f6a2462e1eefe63ac25b2658c67d",
+        "prism_c/worker_authority.py": "7d92fcb28358333bc451e227e9e304f9632a8b1b6bf8905999d2383197cbdab9",
+        "prism_c/zoned_baseline.py": "b1ff1ef65879a9cd102282840bb37f52534240012a9dc7c6b8e1275db9790078",
+        "prism_c/zoned_campaign.py": "c2564c315a978899260a5fe945c0c650a90451d80bb205d50a37bd2c4b8e713d",
+        "prism_c/zoned_cost.py": "a49f9ea865504d9e596a62c97a762132b85ce13ca43c80ab2274851480c0b094",
+        "prism_c/zoned_fault.py": "8f982f11e934ee47a02698adcb8187f83cd1ebd140e68fd746971623d6cc32f4",
+        "prism_c/zoned_file_campaign.py": "c95b93b611e88286146a916ed26b02fef909e4ae4ba726573e6a61ec582aa874",
+        "prism_c/zoned_measure.py": "1abeeb3490ffe6c4ef0b2a2a65e08ffaaa3d5ffecb4a0eec260ce531d8559241",
+        "prism_c/zoned_model.py": "6e771fddb42f3d49165439e5f2c99a9262c35f72096bc36d2110a51ba5762fcb",
+        "prism_c/zoned_oracle.py": "f7f55cd85d1a60e5d9e9649e2b4130c3212841b075b37a64eb4a1b6faa645874",
+        "prism_c/zoned_store.py": "7c73a3c8bb422f363548024f372dc1b0a16c70e4dbcc3f25e577fc1840b3b47f",
+        "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "tests/test_concurrent.py": "bf481e110b5d65a33c70ecba9d4549850437559f1182ce5daf2154ea24ade6f7",
+        "tests/test_contingency.py": "52d2208671e52b588321ca0f8df239d3fbdb05e2510019101b099aca9a458c29",
+        "tests/test_controller_benchmark.py": "771aa548674ef40fffcb7f992b1a84c3a45225cf7be683b5d582cc488fc5c5e6",
+        "tests/test_fault_contention.py": "98db614696d461af245aec8a4172c4101f924a2d6ec237e909825a24ba53ac52",
+        "tests/test_four_plus_two.py": "45c7d240f276c2c94256e2c06cd6b289efa570621bd71d664cbaeff093ee5b31",
+        "tests/test_measurement_diagnostics.py": "5c7b7f66c42944cc3c8e7ff860f296d94973db16745c6082b8c2a42299abe131",
+        "tests/test_min_work.py": "43e827790434250f0c66174d0fa697d8be3f7daa7965aa8b0cea77958fc5ca52",
+        "tests/test_model.py": "cdd4d9832c160cf02f36a5b7db4f9c1f0e6a42012f8aa1fdb190c50bf5d427ea",
+        "tests/test_plan_revision.py": "6a3243ce272adb8e7ea8a7c87a7146b44235726907a0ac286c792212ba774155",
+        "tests/test_read_reuse.py": "331e42d9539c79aff0fa8518d40163399f790e5e161946306af5e1e33c5ca985",
+        "tests/test_read_reuse_benchmark.py": "732eec7b0f9468e9c5ebfdd9a4c582ad97c1c5e9e37b0fec3b62df20aeb3e0de",
+        "tests/test_selective.py": "253c4bb72bbdcfd4093c3e624bf09171dfb325fa3a43af49c6cb86dc240d983e",
+        "tests/test_snapshot_latency.py": "690dca364a6a5bd83ecd8032a73bc1a5aa945c7495009b23488a62d6bf8d76ff",
+        "tests/test_snapshot_latency_completion.py": "384cfcb371b4e56192c9585ff1b7811eea37d6fc1001e6d72d8285998020be38",
+        "tests/test_snapshot_reads.py": "5a3ac6df5a3faa14282a21729a65bbe2aff9df2e41bc50ca977bc4b4425c999f",
+        "tests/test_storage.py": "cb61782f540e462e348ca3bfaec6b3c4729fdc77a50829beac9c30f47d5f17da",
+        "tests/test_workers.py": "0012a227c8e6d4dc00d9148a9bbf087e339380d8b37c455e6761e8badf636049",
+        "tests/test_zoned_cost.py": "95fd733363fbbfcc787cb79ca2b532e1269134f867b04f031ead79efd543b60f",
+        "tests/test_zoned_frontier_gate.py": "70bd6c0b34e0431be8273cf71b5fa1ab3cbef0fd8728548f517c5c8420c53117",
+        "tests/test_zoned_joint.py": "ec7869226882e91ecd6a998b3f58f7cd1277c766594ea1e8fcc5a61efee51852",
+        "tests/test_zoned_measure.py": "131b161d10bd14e07a7276c6e3a956030143c81bf3bec35f2dc25a191f322ada",
+        "tests/test_zoned_store.py": "fd6edc1af2df27eb5442c94b60cc547fbb2dc44ffbe8563205ee58c47b617f21"
+      },
+      "sqlite": "3.42.0",
+      "utc": "2026-10-16T06:11:02.828412+00:00",
+      "version": "0.1.0"
+    },
+    "helper_sha256": "bd24d13020f5eb732ee4d6374217d3f731dca5882a72f6b189933bf72cde0dce",
+    "original_incomplete_runtime_store_reused": false,
+    "session_confounding_removed": false,
+    "start_window": 64,
+    "two_sessions": true
+  },
+  "count": 1200,
+  "environment": {
+    "clocks": {
+      "perf_counter": {
+        "adjustable": false,
+        "implementation": "QueryPerformanceCounter()",
+        "monotonic": true,
+        "resolution": 1e-07
+      },
+      "process_time": {
+        "adjustable": false,
+        "implementation": "GetProcessTimes()",
+        "monotonic": true,
+        "resolution": 1e-07
+      },
+      "thread_time": {
+        "adjustable": false,
+        "implementation": "GetThreadTimes()",
+        "monotonic": true,
+        "resolution": 1e-07
+      }
+    },
+    "git_head": "e8ad2dba831f17749b0f8d27e5a32e63b1e9889a",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "protocol_sha256": "35e78e16b29555a1d7a7ebda9c77202f5e00ce4606fee6a9b3594ee104054b4f",
+    "python": "3.11.4 (tags/v3.11.4:d2340ef, Jun  7 2023, 05:45:37) [MSC v.1934 64 bit (AMD64)]",
+    "source_sha256": {
+      "prism_c/__init__.py": "5310acec652af6a86ebf1e86fe1547d37c6fbfa7cad6ab1afc446397761c8715",
+      "prism_c/__main__.py": "7701546bed7db375a4a30e68dfd3110f126dd62710e0a65e80d8a9637d2469b5",
+      "prism_c/baseline.py": "7f0fc2dfa251420bdc0df94360c2fb2394dc8100e5766747b9cbe056c069fbeb",
+      "prism_c/benchmark.py": "60979ea19ad1c3b21d61e0a078a871bd52d7616a8cd46a45a2cfe4ff9f5f7148",
+      "prism_c/campaign.py": "b226a09b8930d8fde711512e03e13a98046cc964efc6eee6fe21e15a37b5a353",
+      "prism_c/checker.py": "1aab629ed2857f9130a5e4e905e7f44084e8281492add9b10a4e6b05900632d6",
+      "prism_c/coding.py": "c66cceedb4cda1a7322b600fdee901a4ec2a2425bb29518146560e75afdb47f1",
+      "prism_c/coding_campaign.py": "d326217706c60c8820ec5dbb2f79293b90283db4101c0c574d8f1f9737feb040",
+      "prism_c/coding_oracle.py": "cec06e7d252ce99112109a4b615a67ebbe3d9f16e175a6ab7e0b2f3b79158d06",
+      "prism_c/contingency.py": "043d4ce8855bdb98c054a4fa8314f086b58fbe01380d317716591edd86f7968b",
+      "prism_c/contingency_campaign.py": "8f57e31f4fc5cc6d5fa2a813be6dc47afa2f0facb531ee9872077a1e0bc9822a",
+      "prism_c/contingency_check.py": "af378693235e649d5cec9e535657c9b05c56b3ae0205219e80a9d507f365bfca",
+      "prism_c/contingency_demo.py": "d8e55642795c6c23e89f1ac5c7ddac0ea1212e507fe6d8be178cb7018c945943",
+      "prism_c/contingency_evidence.py": "653422ed3eec29a623392fd720c92085bd0a76766640d284c701bcd7884b633d",
+      "prism_c/contingency_reference.py": "9a6c242d2f0d77d1010f2f98df2788178e69d7c5805d3fa6a6f40067e1374b01",
+      "prism_c/controller_benchmark.py": "c1db5f6fcf0237306e4447f36c3ac3adb091b200878e4ae55a05c37319733a43",
+      "prism_c/cpu_attribution.py": "414dd00206bd6cedcdd27a0112174198a5018b2836602f30e90745ecc60e96bd",
+      "prism_c/fault_contention.py": "cfc025ef742ec1f0e02fc1fe5c7c7be4c6b977e93062b12351e2e67b72a1170d",
+      "prism_c/fault_measured_worker.py": "5644b89c08c8c9938eca5658912458df82f556a38782d28f89b00d6a5d720047",
+      "prism_c/fault_worker.py": "67df4ff6d586c59568ae5fa8adc2f628fe650e658bcc2ff6ff9686fe7671efca",
+      "prism_c/liveness.py": "997dfcf18c9cc0fc6e1d37e33723cb7541102872263c7daffbbc67a73e5a36e5",
+      "prism_c/measured_worker.py": "fd046a6927db6fcc1cd4de43b8f7039da7767ba08ea3b539a75201a05fac3471",
+      "prism_c/measurement_diagnostics.py": "325501be0b7b7ef008708aeaa32b974041b65677bbd2532c5f71e92ac0983ebf",
+      "prism_c/min_work.py": "9aa95287e9592045a726f4384ee037239006ce50bc9a0848f007e0b216955709",
+      "prism_c/min_work_campaign.py": "be220af9a2a6b18e549c8aa69ec8f853ec25487963ddd5324e2ee8f1b38b0244",
+      "prism_c/min_work_demo.py": "43d6dd2ab38fd48895790c1ebe3d6646c73736d04cdd0d528f50182fac6ca92c",
+      "prism_c/model.py": "91a491dda7f3a83189c4e88e1c9141b6ef7bf549985aed82712410174d199810",
+      "prism_c/partial_campaign.py": "1a0c5d0c1303561b337a55609a2ed9dd05c6ff2a16d04477e8bb5bbafdf9f1df",
+      "prism_c/partial_recovery.py": "e5ddb7d21a03faeccad0ab882ba5a6f966dbbebf3d602e10386474d29b6f9203",
+      "prism_c/plan_revision.py": "efc954f92a8671ce0c4b1f6735b2a3963c48891d9c8130edd240375cd9e80b11",
+      "prism_c/profiles.py": "b831e77d0794303b8bd0ba2571c12c4071ae053fd924be08ff7de6025035f1b8",
+      "prism_c/read_reuse.py": "e52b72a4b2408c69a0e076dbdffcf8c70de416c7c079ef2d924af2a7a62c1614",
+      "prism_c/revision_demo.py": "17df5396fa42829be7bae3c2a2c8bd6ef4d0c84ce79eb4dbc617047f0f782f62",
+      "prism_c/revision_fault.py": "a024b298840598459e88f2fe6e393559c5c8cfc836bd3900317c127940018557",
+      "prism_c/revision_fixture.py": "b491d616e8d8e440dd045115eab682a1295a8c0541176ec3010071707ff5a4ad",
+      "prism_c/scope.py": "7fc0e21beb9f45ed3abc757d0011567b1fa5d4a907c401255d343b3c4e855cba",
+      "prism_c/selective.py": "4d34288758ff683890be35b2313ef78f29052cd2b6ae97cb61abf6b4b791da95",
+      "prism_c/snapshot_latency.py": "cf77e8ee7590941dc71294c5e3dfd655e95c34676988db3955de4334b9c9c0b5",
+      "prism_c/storage.py": "7a231644be60e0ed00f3c590e2de71e5334f719f4412253507ce58430c73e559",
+      "prism_c/worker.py": "1ba7573861493edc090d4eadbb2a24edab08f6a2462e1eefe63ac25b2658c67d",
+      "prism_c/worker_authority.py": "7d92fcb28358333bc451e227e9e304f9632a8b1b6bf8905999d2383197cbdab9",
+      "prism_c/zoned_baseline.py": "b1ff1ef65879a9cd102282840bb37f52534240012a9dc7c6b8e1275db9790078",
+      "prism_c/zoned_campaign.py": "c2564c315a978899260a5fe945c0c650a90451d80bb205d50a37bd2c4b8e713d",
+      "prism_c/zoned_cost.py": "a49f9ea865504d9e596a62c97a762132b85ce13ca43c80ab2274851480c0b094",
+      "prism_c/zoned_fault.py": "8f982f11e934ee47a02698adcb8187f83cd1ebd140e68fd746971623d6cc32f4",
+      "prism_c/zoned_file_campaign.py": "c95b93b611e88286146a916ed26b02fef909e4ae4ba726573e6a61ec582aa874",
+      "prism_c/zoned_measure.py": "1abeeb3490ffe6c4ef0b2a2a65e08ffaaa3d5ffecb4a0eec260ce531d8559241",
+      "prism_c/zoned_model.py": "6e771fddb42f3d49165439e5f2c99a9262c35f72096bc36d2110a51ba5762fcb",
+      "prism_c/zoned_oracle.py": "f7f55cd85d1a60e5d9e9649e2b4130c3212841b075b37a64eb4a1b6faa645874",
+      "prism_c/zoned_store.py": "7c73a3c8bb422f363548024f372dc1b0a16c70e4dbcc3f25e577fc1840b3b47f",
+      "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tests/test_concurrent.py": "bf481e110b5d65a33c70ecba9d4549850437559f1182ce5daf2154ea24ade6f7",
+      "tests/test_contingency.py": "52d2208671e52b588321ca0f8df239d3fbdb05e2510019101b099aca9a458c29",
+      "tests/test_controller_benchmark.py": "771aa548674ef40fffcb7f992b1a84c3a45225cf7be683b5d582cc488fc5c5e6",
+      "tests/test_fault_contention.py": "98db614696d461af245aec8a4172c4101f924a2d6ec237e909825a24ba53ac52",
+      "tests/test_four_plus_two.py": "45c7d240f276c2c94256e2c06cd6b289efa570621bd71d664cbaeff093ee5b31",
+      "tests/test_measurement_diagnostics.py": "5c7b7f66c42944cc3c8e7ff860f296d94973db16745c6082b8c2a42299abe131",
+      "tests/test_min_work.py": "43e827790434250f0c66174d0fa697d8be3f7daa7965aa8b0cea77958fc5ca52",
+      "tests/test_model.py": "cdd4d9832c160cf02f36a5b7db4f9c1f0e6a42012f8aa1fdb190c50bf5d427ea",
+      "tests/test_plan_revision.py": "6a3243ce272adb8e7ea8a7c87a7146b44235726907a0ac286c792212ba774155",
+      "tests/test_read_reuse.py": "331e42d9539c79aff0fa8518d40163399f790e5e161946306af5e1e33c5ca985",
+      "tests/test_read_reuse_benchmark.py": "732eec7b0f9468e9c5ebfdd9a4c582ad97c1c5e9e37b0fec3b62df20aeb3e0de",
+      "tests/test_selective.py": "253c4bb72bbdcfd4093c3e624bf09171dfb325fa3a43af49c6cb86dc240d983e",
+      "tests/test_snapshot_latency.py": "690dca364a6a5bd83ecd8032a73bc1a5aa945c7495009b23488a62d6bf8d76ff",
+      "tests/test_snapshot_latency_completion.py": "384cfcb371b4e56192c9585ff1b7811eea37d6fc1001e6d72d8285998020be38",
+      "tests/test_snapshot_reads.py": "5a3ac6df5a3faa14282a21729a65bbe2aff9df2e41bc50ca977bc4b4425c999f",
+      "tests/test_storage.py": "cb61782f540e462e348ca3bfaec6b3c4729fdc77a50829beac9c30f47d5f17da",
+      "tests/test_workers.py": "0012a227c8e6d4dc00d9148a9bbf087e339380d8b37c455e6761e8badf636049",
+      "tests/test_zoned_cost.py": "95fd733363fbbfcc787cb79ca2b532e1269134f867b04f031ead79efd543b60f",
+      "tests/test_zoned_frontier_gate.py": "70bd6c0b34e0431be8273cf71b5fa1ab3cbef0fd8728548f517c5c8420c53117",
+      "tests/test_zoned_joint.py": "ec7869226882e91ecd6a998b3f58f7cd1277c766594ea1e8fcc5a61efee51852",
+      "tests/test_zoned_measure.py": "131b161d10bd14e07a7276c6e3a956030143c81bf3bec35f2dc25a191f322ada",
+      "tests/test_zoned_store.py": "fd6edc1af2df27eb5442c94b60cc547fbb2dc44ffbe8563205ee58c47b617f21"
+    },
+    "sqlite": "3.42.0",
+    "utc": "2026-10-15T17:22:33.710071+00:00",
+    "version": "0.1.0"
+  },
+  "matched_sets": 10,
+  "original_prism_gate_evaluated": false,
+  "patent_rating_changed": false,
+  "phase": "confirm",
+  "rate": 500,
+  "records": [
+    {
+      "arm": "joint",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 2359375000,
+      "extra": false,
+      "file": "windows/window-0000.json",
+      "groups": 4,
+      "initial_sha256": "5bdb5529c5485b9fefd2a770e251a40e2fe7ff85119beb5fd96bf1573499c3a3",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "5208c1a34df6773b58280a540ba363fa7daa4ae4374541f30594dc7539f654bf",
+        "g1/object": "271d848861261c9178cad49cc61f2df0432c230c29a2d6025321ffbfb9f70231",
+        "g2/object": "09adffecaedeeab852db96da5ef11699d57fc737825240ed371522969a07399f",
+        "g3/object": "a0a1c662349df0680ec73017c41f136b001f4ae1496b868a03d6ed30f20443bb"
+      },
+      "order": [
+        "joint",
+        "joint_repeat",
+        "separated"
+      ],
+      "p99_ns": 9200742300,
+      "pair": 0,
+      "position": 0,
+      "profile": "xor-2+1-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 4037877900,
+      "sha256": "4a8a947c60fb0748387c79152dfb4d41f1dddf4b0880eb6df3355eeecc1f1959",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "joint_repeat",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 2437500000,
+      "extra": false,
+      "file": "windows/window-0001.json",
+      "groups": 4,
+      "initial_sha256": "5bdb5529c5485b9fefd2a770e251a40e2fe7ff85119beb5fd96bf1573499c3a3",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "5208c1a34df6773b58280a540ba363fa7daa4ae4374541f30594dc7539f654bf",
+        "g1/object": "271d848861261c9178cad49cc61f2df0432c230c29a2d6025321ffbfb9f70231",
+        "g2/object": "09adffecaedeeab852db96da5ef11699d57fc737825240ed371522969a07399f",
+        "g3/object": "a0a1c662349df0680ec73017c41f136b001f4ae1496b868a03d6ed30f20443bb"
+      },
+      "order": [
+        "joint",
+        "joint_repeat",
+        "separated"
+      ],
+      "p99_ns": 9829055800,
+      "pair": 0,
+      "position": 1,
+      "profile": "xor-2+1-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 2832451800,
+      "sha256": "8f67d3dac97b738b58a3c7d251f3f288bbeb6c492d8857cc277f67eb91a91681",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "separated",
+      "committed_stage_bytes": 32768,
+      "controller_thread_cpu_ns": 4046875000,
+      "extra": false,
+      "file": "windows/window-0002.json",
+      "groups": 4,
+      "initial_sha256": "5bdb5529c5485b9fefd2a770e251a40e2fe7ff85119beb5fd96bf1573499c3a3",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "5208c1a34df6773b58280a540ba363fa7daa4ae4374541f30594dc7539f654bf",
+        "g1/object": "271d848861261c9178cad49cc61f2df0432c230c29a2d6025321ffbfb9f70231",
+        "g2/object": "09adffecaedeeab852db96da5ef11699d57fc737825240ed371522969a07399f",
+        "g3/object": "a0a1c662349df0680ec73017c41f136b001f4ae1496b868a03d6ed30f20443bb"
+      },
+      "order": [
+        "joint",
+        "joint_repeat",
+        "separated"
+      ],
+      "p99_ns": 11341907000,
+      "pair": 0,
+      "position": 2,
+      "profile": "xor-2+1-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 5405061200,
+      "sha256": "fb04ae482d2f62d64755cd4b5e6f6fab6dc7b61fb1432338574f640d761c9bf6",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "joint_repeat",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 2406250000,
+      "extra": false,
+      "file": "windows/window-0003.json",
+      "groups": 4,
+      "initial_sha256": "5bdb5529c5485b9fefd2a770e251a40e2fe7ff85119beb5fd96bf1573499c3a3",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "5208c1a34df6773b58280a540ba363fa7daa4ae4374541f30594dc7539f654bf",
+        "g1/object": "271d848861261c9178cad49cc61f2df0432c230c29a2d6025321ffbfb9f70231",
+        "g2/object": "09adffecaedeeab852db96da5ef11699d57fc737825240ed371522969a07399f",
+        "g3/object": "a0a1c662349df0680ec73017c41f136b001f4ae1496b868a03d6ed30f20443bb"
+      },
+      "order": [
+        "joint_repeat",
+        "joint",
+        "separated"
+      ],
+      "p99_ns": 9502829600,
+      "pair": 1,
+      "position": 0,
+      "profile": "xor-2+1-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 3902509800,
+      "sha256": "32dfbc7c2dbc7e679e52b377da0b894e222f67567c0dfe96fe2477518741ef02",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "joint",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 2437500000,
+      "extra": false,
+      "file": "windows/window-0004.json",
+      "groups": 4,
+      "initial_sha256": "5bdb5529c5485b9fefd2a770e251a40e2fe7ff85119beb5fd96bf1573499c3a3",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "5208c1a34df6773b58280a540ba363fa7daa4ae4374541f30594dc7539f654bf",
+        "g1/object": "271d848861261c9178cad49cc61f2df0432c230c29a2d6025321ffbfb9f70231",
+        "g2/object": "09adffecaedeeab852db96da5ef11699d57fc737825240ed371522969a07399f",
+        "g3/object": "a0a1c662349df0680ec73017c41f136b001f4ae1496b868a03d6ed30f20443bb"
+      },
+      "order": [
+        "joint_repeat",
+        "joint",
+        "separated"
+      ],
+      "p99_ns": 9692519800,
+      "pair": 1,
+      "position": 1,
+      "profile": "xor-2+1-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 3200644400,
+      "sha256": "48ccf269da849bc75a51c69d8d573706aec40dae30d6a219a7d00519d8023e77",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "separated",
+      "committed_stage_bytes": 32768,
+      "controller_thread_cpu_ns": 4171875000,
+      "extra": false,
+      "file": "windows/window-0005.json",
+      "groups": 4,
+      "initial_sha256": "5bdb5529c5485b9fefd2a770e251a40e2fe7ff85119beb5fd96bf1573499c3a3",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "5208c1a34df6773b58280a540ba363fa7daa4ae4374541f30594dc7539f654bf",
+        "g1/object": "271d848861261c9178cad49cc61f2df0432c230c29a2d6025321ffbfb9f70231",
+        "g2/object": "09adffecaedeeab852db96da5ef11699d57fc737825240ed371522969a07399f",
+        "g3/object": "a0a1c662349df0680ec73017c41f136b001f4ae1496b868a03d6ed30f20443bb"
+      },
+      "order": [
+        "joint_repeat",
+        "joint",
+        "separated"
+      ],
+      "p99_ns": 11726321500,
+      "pair": 1,
+      "position": 2,
+      "profile": "xor-2+1-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 4785597900,
+      "sha256": "2f087087a187278794a5879cb6ebf29c57ac03b140491edc15836b40b2d04c19",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "separated",
+      "committed_stage_bytes": 32768,
+      "controller_thread_cpu_ns": 3953125000,
+      "extra": false,
+      "file": "windows/window-0006.json",
+      "groups": 4,
+      "initial_sha256": "5bdb5529c5485b9fefd2a770e251a40e2fe7ff85119beb5fd96bf1573499c3a3",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "5208c1a34df6773b58280a540ba363fa7daa4ae4374541f30594dc7539f654bf",
+        "g1/object": "271d848861261c9178cad49cc61f2df0432c230c29a2d6025321ffbfb9f70231",
+        "g2/object": "09adffecaedeeab852db96da5ef11699d57fc737825240ed371522969a07399f",
+        "g3/object": "a0a1c662349df0680ec73017c41f136b001f4ae1496b868a03d6ed30f20443bb"
+      },
+      "order": [
+        "separated",
+        "joint_repeat",
+        "joint"
+      ],
+      "p99_ns": 10665158200,
+      "pair": 2,
+      "position": 0,
+      "profile": "xor-2+1-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 8024189500,
+      "sha256": "c319e2c487cf03b454dc411c83862fecef8565c3ef3628c9986b68448177cf9a",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "joint_repeat",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 2406250000,
+      "extra": false,
+      "file": "windows/window-0007.json",
+      "groups": 4,
+      "initial_sha256": "5bdb5529c5485b9fefd2a770e251a40e2fe7ff85119beb5fd96bf1573499c3a3",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "5208c1a34df6773b58280a540ba363fa7daa4ae4374541f30594dc7539f654bf",
+        "g1/object": "271d848861261c9178cad49cc61f2df0432c230c29a2d6025321ffbfb9f70231",
+        "g2/object": "09adffecaedeeab852db96da5ef11699d57fc737825240ed371522969a07399f",
+        "g3/object": "a0a1c662349df0680ec73017c41f136b001f4ae1496b868a03d6ed30f20443bb"
+      },
+      "order": [
+        "separated",
+        "joint_repeat",
+        "joint"
+      ],
+      "p99_ns": 9132671200,
+      "pair": 2,
+      "position": 1,
+      "profile": "xor-2+1-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 5469959200,
+      "sha256": "d8553056f442b3fe2c69c0fec665b1cf0500e089264a712c5c41e23347263622",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "joint",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 2468750000,
+      "extra": false,
+      "file": "windows/window-0008.json",
+      "groups": 4,
+      "initial_sha256": "5bdb5529c5485b9fefd2a770e251a40e2fe7ff85119beb5fd96bf1573499c3a3",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "5208c1a34df6773b58280a540ba363fa7daa4ae4374541f30594dc7539f654bf",
+        "g1/object": "271d848861261c9178cad49cc61f2df0432c230c29a2d6025321ffbfb9f70231",
+        "g2/object": "09adffecaedeeab852db96da5ef11699d57fc737825240ed371522969a07399f",
+        "g3/object": "a0a1c662349df0680ec73017c41f136b001f4ae1496b868a03d6ed30f20443bb"
+      },
+      "order": [
+        "separated",
+        "joint_repeat",
+        "joint"
+      ],
+      "p99_ns": 9959847100,
+      "pair": 2,
+      "position": 2,
+      "profile": "xor-2+1-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 3169080200,
+      "sha256": "3dd7c352c3d72927dc2dbd09faf47fc597760b5c365a31ce927aad20821f5ee1",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "joint",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 2312500000,
+      "extra": false,
+      "file": "windows/window-0009.json",
+      "groups": 4,
+      "initial_sha256": "5bdb5529c5485b9fefd2a770e251a40e2fe7ff85119beb5fd96bf1573499c3a3",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "5208c1a34df6773b58280a540ba363fa7daa4ae4374541f30594dc7539f654bf",
+        "g1/object": "271d848861261c9178cad49cc61f2df0432c230c29a2d6025321ffbfb9f70231",
+        "g2/object": "09adffecaedeeab852db96da5ef11699d57fc737825240ed371522969a07399f",
+        "g3/object": "a0a1c662349df0680ec73017c41f136b001f4ae1496b868a03d6ed30f20443bb"
+      },
+      "order": [
+        "joint",
+        "joint_repeat",
+        "separated"
+      ],
+      "p99_ns": 9084503800,
+      "pair": 3,
+      "position": 0,
+      "profile": "xor-2+1-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 4369157300,
+      "sha256": "59cd39e9e211f9ec5ea004e03f213a6e006881f2b3f98de414217fd26aee3033",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "joint_repeat",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 2453125000,
+      "extra": false,
+      "file": "windows/window-0010.json",
+      "groups": 4,
+      "initial_sha256": "5bdb5529c5485b9fefd2a770e251a40e2fe7ff85119beb5fd96bf1573499c3a3",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "5208c1a34df6773b58280a540ba363fa7daa4ae4374541f30594dc7539f654bf",
+        "g1/object": "271d848861261c9178cad49cc61f2df0432c230c29a2d6025321ffbfb9f70231",
+        "g2/object": "09adffecaedeeab852db96da5ef11699d57fc737825240ed371522969a07399f",
+        "g3/object": "a0a1c662349df0680ec73017c41f136b001f4ae1496b868a03d6ed30f20443bb"
+      },
+      "order": [
+        "joint",
+        "joint_repeat",
+        "separated"
+      ],
+      "p99_ns": 9559580900,
+      "pair": 3,
+      "position": 1,
+      "profile": "xor-2+1-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 4680860100,
+      "sha256": "9022859cd2ecb203a36d349c1933ca1c8850f4336a70b001e5ff1a7c29a98a2d",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "separated",
+      "committed_stage_bytes": 32768,
+      "controller_thread_cpu_ns": 4078125000,
+      "extra": false,
+      "file": "windows/window-0011.json",
+      "groups": 4,
+      "initial_sha256": "5bdb5529c5485b9fefd2a770e251a40e2fe7ff85119beb5fd96bf1573499c3a3",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "5208c1a34df6773b58280a540ba363fa7daa4ae4374541f30594dc7539f654bf",
+        "g1/object": "271d848861261c9178cad49cc61f2df0432c230c29a2d6025321ffbfb9f70231",
+        "g2/object": "09adffecaedeeab852db96da5ef11699d57fc737825240ed371522969a07399f",
+        "g3/object": "a0a1c662349df0680ec73017c41f136b001f4ae1496b868a03d6ed30f20443bb"
+      },
+      "order": [
+        "joint",
+        "joint_repeat",
+        "separated"
+      ],
+      "p99_ns": 10909197000,
+      "pair": 3,
+      "position": 2,
+      "profile": "xor-2+1-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 6952547800,
+      "sha256": "cff6792c03d5a45dce1daba9e96d84259f79e037e3a52e1e05b55bddf5b21958",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "separated",
+      "committed_stage_bytes": 32768,
+      "controller_thread_cpu_ns": 4078125000,
+      "extra": false,
+      "file": "windows/window-0012.json",
+      "groups": 4,
+      "initial_sha256": "5bdb5529c5485b9fefd2a770e251a40e2fe7ff85119beb5fd96bf1573499c3a3",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "5208c1a34df6773b58280a540ba363fa7daa4ae4374541f30594dc7539f654bf",
+        "g1/object": "271d848861261c9178cad49cc61f2df0432c230c29a2d6025321ffbfb9f70231",
+        "g2/object": "09adffecaedeeab852db96da5ef11699d57fc737825240ed371522969a07399f",
+        "g3/object": "a0a1c662349df0680ec73017c41f136b001f4ae1496b868a03d6ed30f20443bb"
+      },
+      "order": [
+        "separated",
+        "joint",
+        "joint_repeat"
+      ],
+      "p99_ns": 11579220900,
+      "pair": 4,
+      "position": 0,
+      "profile": "xor-2+1-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 7775298100,
+      "sha256": "6f29511359defc9ae99d1e87122c7b4207368fcd1495bd9c6bb8e7eaaa0dc9cc",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "joint",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 2375000000,
+      "extra": false,
+      "file": "windows/window-0013.json",
+      "groups": 4,
+      "initial_sha256": "5bdb5529c5485b9fefd2a770e251a40e2fe7ff85119beb5fd96bf1573499c3a3",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "5208c1a34df6773b58280a540ba363fa7daa4ae4374541f30594dc7539f654bf",
+        "g1/object": "271d848861261c9178cad49cc61f2df0432c230c29a2d6025321ffbfb9f70231",
+        "g2/object": "09adffecaedeeab852db96da5ef11699d57fc737825240ed371522969a07399f",
+        "g3/object": "a0a1c662349df0680ec73017c41f136b001f4ae1496b868a03d6ed30f20443bb"
+      },
+      "order": [
+        "separated",
+        "joint",
+        "joint_repeat"
+      ],
+      "p99_ns": 9350484300,
+      "pair": 4,
+      "position": 1,
+      "profile": "xor-2+1-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 3798146400,
+      "sha256": "13016aa677365f384916ce8450a71a113dfd6ab9b045acdeb0dfbbd578ce63d1",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "joint_repeat",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 2421875000,
+      "extra": false,
+      "file": "windows/window-0014.json",
+      "groups": 4,
+      "initial_sha256": "5bdb5529c5485b9fefd2a770e251a40e2fe7ff85119beb5fd96bf1573499c3a3",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "5208c1a34df6773b58280a540ba363fa7daa4ae4374541f30594dc7539f654bf",
+        "g1/object": "271d848861261c9178cad49cc61f2df0432c230c29a2d6025321ffbfb9f70231",
+        "g2/object": "09adffecaedeeab852db96da5ef11699d57fc737825240ed371522969a07399f",
+        "g3/object": "a0a1c662349df0680ec73017c41f136b001f4ae1496b868a03d6ed30f20443bb"
+      },
+      "order": [
+        "separated",
+        "joint",
+        "joint_repeat"
+      ],
+      "p99_ns": 9290494600,
+      "pair": 4,
+      "position": 2,
+      "profile": "xor-2+1-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 4886610500,
+      "sha256": "9cb72e3684c45aff65be73a186c7d05c102047709efcd11b14b2e24e09cb6d5c",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "separated",
+      "committed_stage_bytes": 32768,
+      "controller_thread_cpu_ns": 4125000000,
+      "extra": false,
+      "file": "windows/window-0015.json",
+      "groups": 4,
+      "initial_sha256": "5bdb5529c5485b9fefd2a770e251a40e2fe7ff85119beb5fd96bf1573499c3a3",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "5208c1a34df6773b58280a540ba363fa7daa4ae4374541f30594dc7539f654bf",
+        "g1/object": "271d848861261c9178cad49cc61f2df0432c230c29a2d6025321ffbfb9f70231",
+        "g2/object": "09adffecaedeeab852db96da5ef11699d57fc737825240ed371522969a07399f",
+        "g3/object": "a0a1c662349df0680ec73017c41f136b001f4ae1496b868a03d6ed30f20443bb"
+      },
+      "order": [
+        "separated",
+        "joint",
+        "joint_repeat"
+      ],
+      "p99_ns": 11326689000,
+      "pair": 5,
+      "position": 0,
+      "profile": "xor-2+1-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 6327964600,
+      "sha256": "806becfd1a1919fc9144f98c362270c4376d14c4b6a301f71ddfb9752fd135bc",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "joint",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 2515625000,
+      "extra": false,
+      "file": "windows/window-0016.json",
+      "groups": 4,
+      "initial_sha256": "5bdb5529c5485b9fefd2a770e251a40e2fe7ff85119beb5fd96bf1573499c3a3",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "5208c1a34df6773b58280a540ba363fa7daa4ae4374541f30594dc7539f654bf",
+        "g1/object": "271d848861261c9178cad49cc61f2df0432c230c29a2d6025321ffbfb9f70231",
+        "g2/object": "09adffecaedeeab852db96da5ef11699d57fc737825240ed371522969a07399f",
+        "g3/object": "a0a1c662349df0680ec73017c41f136b001f4ae1496b868a03d6ed30f20443bb"
+      },
+      "order": [
+        "separated",
+        "joint",
+        "joint_repeat"
+      ],
+      "p99_ns": 9436035400,
+      "pair": 5,
+      "position": 1,
+      "profile": "xor-2+1-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 4435022700,
+      "sha256": "d4ecc5ec97720007cb320c8bbf4b25ecd7f1fa2a667d0eb9be1cc92cd0fc05b8",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "joint_repeat",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 2500000000,
+      "extra": false,
+      "file": "windows/window-0017.json",
+      "groups": 4,
+      "initial_sha256": "5bdb5529c5485b9fefd2a770e251a40e2fe7ff85119beb5fd96bf1573499c3a3",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "5208c1a34df6773b58280a540ba363fa7daa4ae4374541f30594dc7539f654bf",
+        "g1/object": "271d848861261c9178cad49cc61f2df0432c230c29a2d6025321ffbfb9f70231",
+        "g2/object": "09adffecaedeeab852db96da5ef11699d57fc737825240ed371522969a07399f",
+        "g3/object": "a0a1c662349df0680ec73017c41f136b001f4ae1496b868a03d6ed30f20443bb"
+      },
+      "order": [
+        "separated",
+        "joint",
+        "joint_repeat"
+      ],
+      "p99_ns": 9992681800,
+      "pair": 5,
+      "position": 2,
+      "profile": "xor-2+1-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 2891467400,
+      "sha256": "8f3021724cb43061e2b8f156ee6c0387107584f09d6b1f2e85747610d361b73a",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "separated",
+      "committed_stage_bytes": 32768,
+      "controller_thread_cpu_ns": 4046875000,
+      "extra": false,
+      "file": "windows/window-0018.json",
+      "groups": 4,
+      "initial_sha256": "5bdb5529c5485b9fefd2a770e251a40e2fe7ff85119beb5fd96bf1573499c3a3",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "5208c1a34df6773b58280a540ba363fa7daa4ae4374541f30594dc7539f654bf",
+        "g1/object": "271d848861261c9178cad49cc61f2df0432c230c29a2d6025321ffbfb9f70231",
+        "g2/object": "09adffecaedeeab852db96da5ef11699d57fc737825240ed371522969a07399f",
+        "g3/object": "a0a1c662349df0680ec73017c41f136b001f4ae1496b868a03d6ed30f20443bb"
+      },
+      "order": [
+        "separated",
+        "joint_repeat",
+        "joint"
+      ],
+      "p99_ns": 10855926400,
+      "pair": 6,
+      "position": 0,
+      "profile": "xor-2+1-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 6815306400,
+      "sha256": "58018c834da6903f44090f4907e8fd868b759e3113b26c320fb7ad501ba93da6",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "joint_repeat",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 2390625000,
+      "extra": false,
+      "file": "windows/window-0019.json",
+      "groups": 4,
+      "initial_sha256": "5bdb5529c5485b9fefd2a770e251a40e2fe7ff85119beb5fd96bf1573499c3a3",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "5208c1a34df6773b58280a540ba363fa7daa4ae4374541f30594dc7539f654bf",
+        "g1/object": "271d848861261c9178cad49cc61f2df0432c230c29a2d6025321ffbfb9f70231",
+        "g2/object": "09adffecaedeeab852db96da5ef11699d57fc737825240ed371522969a07399f",
+        "g3/object": "a0a1c662349df0680ec73017c41f136b001f4ae1496b868a03d6ed30f20443bb"
+      },
+      "order": [
+        "separated",
+        "joint_repeat",
+        "joint"
+      ],
+      "p99_ns": 9894411000,
+      "pair": 6,
+      "position": 1,
+      "profile": "xor-2+1-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 2878322700,
+      "sha256": "25639cac61dc8dbb63608561980b724f58509d3e68d4e5493f3198f95b16c87d",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "joint",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 2453125000,
+      "extra": false,
+      "file": "windows/window-0020.json",
+      "groups": 4,
+      "initial_sha256": "5bdb5529c5485b9fefd2a770e251a40e2fe7ff85119beb5fd96bf1573499c3a3",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "5208c1a34df6773b58280a540ba363fa7daa4ae4374541f30594dc7539f654bf",
+        "g1/object": "271d848861261c9178cad49cc61f2df0432c230c29a2d6025321ffbfb9f70231",
+        "g2/object": "09adffecaedeeab852db96da5ef11699d57fc737825240ed371522969a07399f",
+        "g3/object": "a0a1c662349df0680ec73017c41f136b001f4ae1496b868a03d6ed30f20443bb"
+      },
+      "order": [
+        "separated",
+        "joint_repeat",
+        "joint"
+      ],
+      "p99_ns": 9458969500,
+      "pair": 6,
+      "position": 2,
+      "profile": "xor-2+1-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 3359703200,
+      "sha256": "80a0e69ec1b29ce1ed7561937738ab9064ff5cb37d009a0d367816b685006e43",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "joint",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 2375000000,
+      "extra": false,
+      "file": "windows/window-0021.json",
+      "groups": 4,
+      "initial_sha256": "5bdb5529c5485b9fefd2a770e251a40e2fe7ff85119beb5fd96bf1573499c3a3",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "5208c1a34df6773b58280a540ba363fa7daa4ae4374541f30594dc7539f654bf",
+        "g1/object": "271d848861261c9178cad49cc61f2df0432c230c29a2d6025321ffbfb9f70231",
+        "g2/object": "09adffecaedeeab852db96da5ef11699d57fc737825240ed371522969a07399f",
+        "g3/object": "a0a1c662349df0680ec73017c41f136b001f4ae1496b868a03d6ed30f20443bb"
+      },
+      "order": [
+        "joint",
+        "separated",
+        "joint_repeat"
+      ],
+      "p99_ns": 9418778600,
+      "pair": 7,
+      "position": 0,
+      "profile": "xor-2+1-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 4013955400,
+      "sha256": "278ff105cee1e7229417fc365744f537d4e154847fb0adfb2382a00d871ab71d",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "separated",
+      "committed_stage_bytes": 32768,
+      "controller_thread_cpu_ns": 4046875000,
+      "extra": false,
+      "file": "windows/window-0022.json",
+      "groups": 4,
+      "initial_sha256": "5bdb5529c5485b9fefd2a770e251a40e2fe7ff85119beb5fd96bf1573499c3a3",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "5208c1a34df6773b58280a540ba363fa7daa4ae4374541f30594dc7539f654bf",
+        "g1/object": "271d848861261c9178cad49cc61f2df0432c230c29a2d6025321ffbfb9f70231",
+        "g2/object": "09adffecaedeeab852db96da5ef11699d57fc737825240ed371522969a07399f",
+        "g3/object": "a0a1c662349df0680ec73017c41f136b001f4ae1496b868a03d6ed30f20443bb"
+      },
+      "order": [
+        "joint",
+        "separated",
+        "joint_repeat"
+      ],
+      "p99_ns": 14096634200,
+      "pair": 7,
+      "position": 1,
+      "profile": "xor-2+1-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 6466740900,
+      "sha256": "eaa2d54bd630f40a3ace3cf3c8d706389db2d042cef512923cbf0468fc3de432",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "joint_repeat",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 2875000000,
+      "extra": false,
+      "file": "windows/window-0023.json",
+      "groups": 4,
+      "initial_sha256": "5bdb5529c5485b9fefd2a770e251a40e2fe7ff85119beb5fd96bf1573499c3a3",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "5208c1a34df6773b58280a540ba363fa7daa4ae4374541f30594dc7539f654bf",
+        "g1/object": "271d848861261c9178cad49cc61f2df0432c230c29a2d6025321ffbfb9f70231",
+        "g2/object": "09adffecaedeeab852db96da5ef11699d57fc737825240ed371522969a07399f",
+        "g3/object": "a0a1c662349df0680ec73017c41f136b001f4ae1496b868a03d6ed30f20443bb"
+      },
+      "order": [
+        "joint",
+        "separated",
+        "joint_repeat"
+      ],
+      "p99_ns": 12287017800,
+      "pair": 7,
+      "position": 2,
+      "profile": "xor-2+1-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 4237895600,
+      "sha256": "a59170d663a6a21b5b645cd345671fc93a33273fa903cbf255489ee4a64a712f",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "joint",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 2687500000,
+      "extra": false,
+      "file": "windows/window-0024.json",
+      "groups": 4,
+      "initial_sha256": "5bdb5529c5485b9fefd2a770e251a40e2fe7ff85119beb5fd96bf1573499c3a3",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "5208c1a34df6773b58280a540ba363fa7daa4ae4374541f30594dc7539f654bf",
+        "g1/object": "271d848861261c9178cad49cc61f2df0432c230c29a2d6025321ffbfb9f70231",
+        "g2/object": "09adffecaedeeab852db96da5ef11699d57fc737825240ed371522969a07399f",
+        "g3/object": "a0a1c662349df0680ec73017c41f136b001f4ae1496b868a03d6ed30f20443bb"
+      },
+      "order": [
+        "joint",
+        "joint_repeat",
+        "separated"
+      ],
+      "p99_ns": 10923087400,
+      "pair": 8,
+      "position": 0,
+      "profile": "xor-2+1-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 3325211800,
+      "sha256": "77485df06d7baf453387a5cf5987a6be08980fb65ac7eb6466bc761a43f5f2fd",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "joint_repeat",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 2609375000,
+      "extra": false,
+      "file": "windows/window-0025.json",
+      "groups": 4,
+      "initial_sha256": "5bdb5529c5485b9fefd2a770e251a40e2fe7ff85119beb5fd96bf1573499c3a3",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "5208c1a34df6773b58280a540ba363fa7daa4ae4374541f30594dc7539f654bf",
+        "g1/object": "271d848861261c9178cad49cc61f2df0432c230c29a2d6025321ffbfb9f70231",
+        "g2/object": "09adffecaedeeab852db96da5ef11699d57fc737825240ed371522969a07399f",
+        "g3/object": "a0a1c662349df0680ec73017c41f136b001f4ae1496b868a03d6ed30f20443bb"
+      },
+      "order": [
+        "joint",
+        "joint_repeat",
+        "separated"
+      ],
+      "p99_ns": 10997244100,
+      "pair": 8,
+      "position": 1,
+      "profile": "xor-2+1-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 3306397900,
+      "sha256": "5f200bf4815d33b2932c8534ad1a291010bbf054005316ca0beaa755fc866029",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "separated",
+      "committed_stage_bytes": 32768,
+      "controller_thread_cpu_ns": 4281250000,
+      "extra": false,
+      "file": "windows/window-0026.json",
+      "groups": 4,
+      "initial_sha256": "5bdb5529c5485b9fefd2a770e251a40e2fe7ff85119beb5fd96bf1573499c3a3",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "5208c1a34df6773b58280a540ba363fa7daa4ae4374541f30594dc7539f654bf",
+        "g1/object": "271d848861261c9178cad49cc61f2df0432c230c29a2d6025321ffbfb9f70231",
+        "g2/object": "09adffecaedeeab852db96da5ef11699d57fc737825240ed371522969a07399f",
+        "g3/object": "a0a1c662349df0680ec73017c41f136b001f4ae1496b868a03d6ed30f20443bb"
+      },
+      "order": [
+        "joint",
+        "joint_repeat",
+        "separated"
+      ],
+      "p99_ns": 12759412000,
+      "pair": 8,
+      "position": 2,
+      "profile": "xor-2+1-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 7116125800,
+      "sha256": "5ad13c7d60a5907478cb2ff209ee8f4d7a527f46234841044dea48258cfba7da",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "joint_repeat",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 2750000000,
+      "extra": false,
+      "file": "windows/window-0027.json",
+      "groups": 4,
+      "initial_sha256": "5bdb5529c5485b9fefd2a770e251a40e2fe7ff85119beb5fd96bf1573499c3a3",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "5208c1a34df6773b58280a540ba363fa7daa4ae4374541f30594dc7539f654bf",
+        "g1/object": "271d848861261c9178cad49cc61f2df0432c230c29a2d6025321ffbfb9f70231",
+        "g2/object": "09adffecaedeeab852db96da5ef11699d57fc737825240ed371522969a07399f",
+        "g3/object": "a0a1c662349df0680ec73017c41f136b001f4ae1496b868a03d6ed30f20443bb"
+      },
+      "order": [
+        "joint_repeat",
+        "separated",
+        "joint"
+      ],
+      "p99_ns": 10525713200,
+      "pair": 9,
+      "position": 0,
+      "profile": "xor-2+1-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 3583351100,
+      "sha256": "f279162b2a9fb4fcb81fe18e847cb011500bbcdb75a28f9f35a12ee386da2576",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "separated",
+      "committed_stage_bytes": 32768,
+      "controller_thread_cpu_ns": 4578125000,
+      "extra": false,
+      "file": "windows/window-0028.json",
+      "groups": 4,
+      "initial_sha256": "5bdb5529c5485b9fefd2a770e251a40e2fe7ff85119beb5fd96bf1573499c3a3",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "5208c1a34df6773b58280a540ba363fa7daa4ae4374541f30594dc7539f654bf",
+        "g1/object": "271d848861261c9178cad49cc61f2df0432c230c29a2d6025321ffbfb9f70231",
+        "g2/object": "09adffecaedeeab852db96da5ef11699d57fc737825240ed371522969a07399f",
+        "g3/object": "a0a1c662349df0680ec73017c41f136b001f4ae1496b868a03d6ed30f20443bb"
+      },
+      "order": [
+        "joint_repeat",
+        "separated",
+        "joint"
+      ],
+      "p99_ns": 12329948900,
+      "pair": 9,
+      "position": 1,
+      "profile": "xor-2+1-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 7971819800,
+      "sha256": "8afbd83ae8cf55c55aa335b66f785a3e7438e84aba9a3ba8fffca350acbc3eef",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "joint",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 2593750000,
+      "extra": false,
+      "file": "windows/window-0029.json",
+      "groups": 4,
+      "initial_sha256": "5bdb5529c5485b9fefd2a770e251a40e2fe7ff85119beb5fd96bf1573499c3a3",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "5208c1a34df6773b58280a540ba363fa7daa4ae4374541f30594dc7539f654bf",
+        "g1/object": "271d848861261c9178cad49cc61f2df0432c230c29a2d6025321ffbfb9f70231",
+        "g2/object": "09adffecaedeeab852db96da5ef11699d57fc737825240ed371522969a07399f",
+        "g3/object": "a0a1c662349df0680ec73017c41f136b001f4ae1496b868a03d6ed30f20443bb"
+      },
+      "order": [
+        "joint_repeat",
+        "separated",
+        "joint"
+      ],
+      "p99_ns": 9510289600,
+      "pair": 9,
+      "position": 2,
+      "profile": "xor-2+1-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 6217205000,
+      "sha256": "65c686c28770c773e16f410425638cf4995dee7a5eeba5252a6fc6b2b38cdac3",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "joint",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 2734375000,
+      "extra": true,
+      "file": "windows/window-0030.json",
+      "groups": 4,
+      "initial_sha256": "30fead60f073b74e04fd747dd9394e7e8c1e043bf6166a5ed047647a257cdf8c",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "5208c1a34df6773b58280a540ba363fa7daa4ae4374541f30594dc7539f654bf",
+        "g1/object": "271d848861261c9178cad49cc61f2df0432c230c29a2d6025321ffbfb9f70231",
+        "g2/object": "09adffecaedeeab852db96da5ef11699d57fc737825240ed371522969a07399f",
+        "g3/object": "a0a1c662349df0680ec73017c41f136b001f4ae1496b868a03d6ed30f20443bb"
+      },
+      "order": [
+        "joint",
+        "separated",
+        "joint_repeat"
+      ],
+      "p99_ns": 10631960900,
+      "pair": 0,
+      "position": 0,
+      "profile": "xor-2+1-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 4349418500,
+      "sha256": "9da02da916e5e4636d3d99db5062e2699a2d959a6b6fe4d0ef78a0b2254d1020",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "separated",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 3093750000,
+      "extra": true,
+      "file": "windows/window-0031.json",
+      "groups": 4,
+      "initial_sha256": "30fead60f073b74e04fd747dd9394e7e8c1e043bf6166a5ed047647a257cdf8c",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "5208c1a34df6773b58280a540ba363fa7daa4ae4374541f30594dc7539f654bf",
+        "g1/object": "271d848861261c9178cad49cc61f2df0432c230c29a2d6025321ffbfb9f70231",
+        "g2/object": "09adffecaedeeab852db96da5ef11699d57fc737825240ed371522969a07399f",
+        "g3/object": "a0a1c662349df0680ec73017c41f136b001f4ae1496b868a03d6ed30f20443bb"
+      },
+      "order": [
+        "joint",
+        "separated",
+        "joint_repeat"
+      ],
+      "p99_ns": 12400722200,
+      "pair": 0,
+      "position": 1,
+      "profile": "xor-2+1-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 4298295500,
+      "sha256": "7c74aae65252fcaf87f1becbbf348486821914f2fa11fcf4b5002b11caea7ec1",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "joint_repeat",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 2984375000,
+      "extra": true,
+      "file": "windows/window-0032.json",
+      "groups": 4,
+      "initial_sha256": "30fead60f073b74e04fd747dd9394e7e8c1e043bf6166a5ed047647a257cdf8c",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "5208c1a34df6773b58280a540ba363fa7daa4ae4374541f30594dc7539f654bf",
+        "g1/object": "271d848861261c9178cad49cc61f2df0432c230c29a2d6025321ffbfb9f70231",
+        "g2/object": "09adffecaedeeab852db96da5ef11699d57fc737825240ed371522969a07399f",
+        "g3/object": "a0a1c662349df0680ec73017c41f136b001f4ae1496b868a03d6ed30f20443bb"
+      },
+      "order": [
+        "joint",
+        "separated",
+        "joint_repeat"
+      ],
+      "p99_ns": 11367427300,
+      "pair": 0,
+      "position": 2,
+      "profile": "xor-2+1-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 3589606000,
+      "sha256": "1d3072f52bcfadf540e17385bfd0c56a023113ecfb03969b9f471158e1013ef3",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "separated",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 2718750000,
+      "extra": true,
+      "file": "windows/window-0033.json",
+      "groups": 4,
+      "initial_sha256": "30fead60f073b74e04fd747dd9394e7e8c1e043bf6166a5ed047647a257cdf8c",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "5208c1a34df6773b58280a540ba363fa7daa4ae4374541f30594dc7539f654bf",
+        "g1/object": "271d848861261c9178cad49cc61f2df0432c230c29a2d6025321ffbfb9f70231",
+        "g2/object": "09adffecaedeeab852db96da5ef11699d57fc737825240ed371522969a07399f",
+        "g3/object": "a0a1c662349df0680ec73017c41f136b001f4ae1496b868a03d6ed30f20443bb"
+      },
+      "order": [
+        "separated",
+        "joint_repeat",
+        "joint"
+      ],
+      "p99_ns": 9857964500,
+      "pair": 1,
+      "position": 0,
+      "profile": "xor-2+1-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 4628300800,
+      "sha256": "1aec28451761922be9db600e88ecd711ee631531d9762e62e6e6dc739cdcd14d",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "joint_repeat",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 2562500000,
+      "extra": true,
+      "file": "windows/window-0034.json",
+      "groups": 4,
+      "initial_sha256": "30fead60f073b74e04fd747dd9394e7e8c1e043bf6166a5ed047647a257cdf8c",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "5208c1a34df6773b58280a540ba363fa7daa4ae4374541f30594dc7539f654bf",
+        "g1/object": "271d848861261c9178cad49cc61f2df0432c230c29a2d6025321ffbfb9f70231",
+        "g2/object": "09adffecaedeeab852db96da5ef11699d57fc737825240ed371522969a07399f",
+        "g3/object": "a0a1c662349df0680ec73017c41f136b001f4ae1496b868a03d6ed30f20443bb"
+      },
+      "order": [
+        "separated",
+        "joint_repeat",
+        "joint"
+      ],
+      "p99_ns": 9505398000,
+      "pair": 1,
+      "position": 1,
+      "profile": "xor-2+1-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 4625720300,
+      "sha256": "40082a9b70af6d6b4cd500f8d2fcf8f098920470235df9f1267b3f1d503384a0",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "joint",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 2671875000,
+      "extra": true,
+      "file": "windows/window-0035.json",
+      "groups": 4,
+      "initial_sha256": "30fead60f073b74e04fd747dd9394e7e8c1e043bf6166a5ed047647a257cdf8c",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "5208c1a34df6773b58280a540ba363fa7daa4ae4374541f30594dc7539f654bf",
+        "g1/object": "271d848861261c9178cad49cc61f2df0432c230c29a2d6025321ffbfb9f70231",
+        "g2/object": "09adffecaedeeab852db96da5ef11699d57fc737825240ed371522969a07399f",
+        "g3/object": "a0a1c662349df0680ec73017c41f136b001f4ae1496b868a03d6ed30f20443bb"
+      },
+      "order": [
+        "separated",
+        "joint_repeat",
+        "joint"
+      ],
+      "p99_ns": 10428259400,
+      "pair": 1,
+      "position": 2,
+      "profile": "xor-2+1-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 3175570700,
+      "sha256": "6b0b63ec59735d4ee072b8806d356f5165e6edf5ad03724473fce9b16636660b",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "joint_repeat",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 2500000000,
+      "extra": true,
+      "file": "windows/window-0036.json",
+      "groups": 4,
+      "initial_sha256": "30fead60f073b74e04fd747dd9394e7e8c1e043bf6166a5ed047647a257cdf8c",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "5208c1a34df6773b58280a540ba363fa7daa4ae4374541f30594dc7539f654bf",
+        "g1/object": "271d848861261c9178cad49cc61f2df0432c230c29a2d6025321ffbfb9f70231",
+        "g2/object": "09adffecaedeeab852db96da5ef11699d57fc737825240ed371522969a07399f",
+        "g3/object": "a0a1c662349df0680ec73017c41f136b001f4ae1496b868a03d6ed30f20443bb"
+      },
+      "order": [
+        "joint_repeat",
+        "separated",
+        "joint"
+      ],
+      "p99_ns": 9978730800,
+      "pair": 2,
+      "position": 0,
+      "profile": "xor-2+1-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 5475862900,
+      "sha256": "c343e702896622a49e8000597e09434b1ceb5628a00c0b0f5346b276cdd67bb5",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "separated",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 2843750000,
+      "extra": true,
+      "file": "windows/window-0037.json",
+      "groups": 4,
+      "initial_sha256": "30fead60f073b74e04fd747dd9394e7e8c1e043bf6166a5ed047647a257cdf8c",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "5208c1a34df6773b58280a540ba363fa7daa4ae4374541f30594dc7539f654bf",
+        "g1/object": "271d848861261c9178cad49cc61f2df0432c230c29a2d6025321ffbfb9f70231",
+        "g2/object": "09adffecaedeeab852db96da5ef11699d57fc737825240ed371522969a07399f",
+        "g3/object": "a0a1c662349df0680ec73017c41f136b001f4ae1496b868a03d6ed30f20443bb"
+      },
+      "order": [
+        "joint_repeat",
+        "separated",
+        "joint"
+      ],
+      "p99_ns": 10402071200,
+      "pair": 2,
+      "position": 1,
+      "profile": "xor-2+1-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 3473079700,
+      "sha256": "211091a249d347bdf3da28c496ebdccb05def203438c7801fcb45167ea6e345f",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "joint",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 2609375000,
+      "extra": true,
+      "file": "windows/window-0038.json",
+      "groups": 4,
+      "initial_sha256": "30fead60f073b74e04fd747dd9394e7e8c1e043bf6166a5ed047647a257cdf8c",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "5208c1a34df6773b58280a540ba363fa7daa4ae4374541f30594dc7539f654bf",
+        "g1/object": "271d848861261c9178cad49cc61f2df0432c230c29a2d6025321ffbfb9f70231",
+        "g2/object": "09adffecaedeeab852db96da5ef11699d57fc737825240ed371522969a07399f",
+        "g3/object": "a0a1c662349df0680ec73017c41f136b001f4ae1496b868a03d6ed30f20443bb"
+      },
+      "order": [
+        "joint_repeat",
+        "separated",
+        "joint"
+      ],
+      "p99_ns": 9558018900,
+      "pair": 2,
+      "position": 2,
+      "profile": "xor-2+1-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 3987642700,
+      "sha256": "474c6558071bbb31b35230ea40fb5e789b75872ff40e841013bef104df559f5e",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "joint",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 2484375000,
+      "extra": true,
+      "file": "windows/window-0039.json",
+      "groups": 4,
+      "initial_sha256": "30fead60f073b74e04fd747dd9394e7e8c1e043bf6166a5ed047647a257cdf8c",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "5208c1a34df6773b58280a540ba363fa7daa4ae4374541f30594dc7539f654bf",
+        "g1/object": "271d848861261c9178cad49cc61f2df0432c230c29a2d6025321ffbfb9f70231",
+        "g2/object": "09adffecaedeeab852db96da5ef11699d57fc737825240ed371522969a07399f",
+        "g3/object": "a0a1c662349df0680ec73017c41f136b001f4ae1496b868a03d6ed30f20443bb"
+      },
+      "order": [
+        "joint",
+        "separated",
+        "joint_repeat"
+      ],
+      "p99_ns": 10359787300,
+      "pair": 3,
+      "position": 0,
+      "profile": "xor-2+1-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 2842189400,
+      "sha256": "57edcf2711d0167745d575fc3953f9d8b8238f2f38999046492268b60a1a1473",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "separated",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 2671875000,
+      "extra": true,
+      "file": "windows/window-0040.json",
+      "groups": 4,
+      "initial_sha256": "30fead60f073b74e04fd747dd9394e7e8c1e043bf6166a5ed047647a257cdf8c",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "5208c1a34df6773b58280a540ba363fa7daa4ae4374541f30594dc7539f654bf",
+        "g1/object": "271d848861261c9178cad49cc61f2df0432c230c29a2d6025321ffbfb9f70231",
+        "g2/object": "09adffecaedeeab852db96da5ef11699d57fc737825240ed371522969a07399f",
+        "g3/object": "a0a1c662349df0680ec73017c41f136b001f4ae1496b868a03d6ed30f20443bb"
+      },
+      "order": [
+        "joint",
+        "separated",
+        "joint_repeat"
+      ],
+      "p99_ns": 9584795700,
+      "pair": 3,
+      "position": 1,
+      "profile": "xor-2+1-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 4721208000,
+      "sha256": "02a66d873523ee2cde0c6c05668daa6738abd712cdd2f13ae8d6ff1cc02fe1c7",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "joint_repeat",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 2531250000,
+      "extra": true,
+      "file": "windows/window-0041.json",
+      "groups": 4,
+      "initial_sha256": "30fead60f073b74e04fd747dd9394e7e8c1e043bf6166a5ed047647a257cdf8c",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "5208c1a34df6773b58280a540ba363fa7daa4ae4374541f30594dc7539f654bf",
+        "g1/object": "271d848861261c9178cad49cc61f2df0432c230c29a2d6025321ffbfb9f70231",
+        "g2/object": "09adffecaedeeab852db96da5ef11699d57fc737825240ed371522969a07399f",
+        "g3/object": "a0a1c662349df0680ec73017c41f136b001f4ae1496b868a03d6ed30f20443bb"
+      },
+      "order": [
+        "joint",
+        "separated",
+        "joint_repeat"
+      ],
+      "p99_ns": 9822765200,
+      "pair": 3,
+      "position": 2,
+      "profile": "xor-2+1-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 3222257500,
+      "sha256": "658484bad671e3bd93857478b02358c1376fe1adb3c1b141d45a3a63bd8bef7f",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "separated",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 2984375000,
+      "extra": true,
+      "file": "windows/window-0042.json",
+      "groups": 4,
+      "initial_sha256": "30fead60f073b74e04fd747dd9394e7e8c1e043bf6166a5ed047647a257cdf8c",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "5208c1a34df6773b58280a540ba363fa7daa4ae4374541f30594dc7539f654bf",
+        "g1/object": "271d848861261c9178cad49cc61f2df0432c230c29a2d6025321ffbfb9f70231",
+        "g2/object": "09adffecaedeeab852db96da5ef11699d57fc737825240ed371522969a07399f",
+        "g3/object": "a0a1c662349df0680ec73017c41f136b001f4ae1496b868a03d6ed30f20443bb"
+      },
+      "order": [
+        "separated",
+        "joint_repeat",
+        "joint"
+      ],
+      "p99_ns": 10591330300,
+      "pair": 4,
+      "position": 0,
+      "profile": "xor-2+1-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 3383752900,
+      "sha256": "7c717b8c97baf54776c6cb33222680cb117e39049b857ed854763ac32ca7ef07",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "joint_repeat",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 2531250000,
+      "extra": true,
+      "file": "windows/window-0043.json",
+      "groups": 4,
+      "initial_sha256": "30fead60f073b74e04fd747dd9394e7e8c1e043bf6166a5ed047647a257cdf8c",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "5208c1a34df6773b58280a540ba363fa7daa4ae4374541f30594dc7539f654bf",
+        "g1/object": "271d848861261c9178cad49cc61f2df0432c230c29a2d6025321ffbfb9f70231",
+        "g2/object": "09adffecaedeeab852db96da5ef11699d57fc737825240ed371522969a07399f",
+        "g3/object": "a0a1c662349df0680ec73017c41f136b001f4ae1496b868a03d6ed30f20443bb"
+      },
+      "order": [
+        "separated",
+        "joint_repeat",
+        "joint"
+      ],
+      "p99_ns": 9843140200,
+      "pair": 4,
+      "position": 1,
+      "profile": "xor-2+1-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 3086596100,
+      "sha256": "5f18b58a15f4855dd5094796991633726a43c92d177de1902bb84ecd02dc7874",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "joint",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 2640625000,
+      "extra": true,
+      "file": "windows/window-0044.json",
+      "groups": 4,
+      "initial_sha256": "30fead60f073b74e04fd747dd9394e7e8c1e043bf6166a5ed047647a257cdf8c",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "5208c1a34df6773b58280a540ba363fa7daa4ae4374541f30594dc7539f654bf",
+        "g1/object": "271d848861261c9178cad49cc61f2df0432c230c29a2d6025321ffbfb9f70231",
+        "g2/object": "09adffecaedeeab852db96da5ef11699d57fc737825240ed371522969a07399f",
+        "g3/object": "a0a1c662349df0680ec73017c41f136b001f4ae1496b868a03d6ed30f20443bb"
+      },
+      "order": [
+        "separated",
+        "joint_repeat",
+        "joint"
+      ],
+      "p99_ns": 9873483700,
+      "pair": 4,
+      "position": 2,
+      "profile": "xor-2+1-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 3261305800,
+      "sha256": "c8e0879fab2305bd5c404bfa43ec94e2c6ed619364464a08080f6d786f2865fc",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "separated",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 2750000000,
+      "extra": true,
+      "file": "windows/window-0045.json",
+      "groups": 4,
+      "initial_sha256": "30fead60f073b74e04fd747dd9394e7e8c1e043bf6166a5ed047647a257cdf8c",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "5208c1a34df6773b58280a540ba363fa7daa4ae4374541f30594dc7539f654bf",
+        "g1/object": "271d848861261c9178cad49cc61f2df0432c230c29a2d6025321ffbfb9f70231",
+        "g2/object": "09adffecaedeeab852db96da5ef11699d57fc737825240ed371522969a07399f",
+        "g3/object": "a0a1c662349df0680ec73017c41f136b001f4ae1496b868a03d6ed30f20443bb"
+      },
+      "order": [
+        "separated",
+        "joint",
+        "joint_repeat"
+      ],
+      "p99_ns": 9438266100,
+      "pair": 5,
+      "position": 0,
+      "profile": "xor-2+1-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 6008448000,
+      "sha256": "743622bade37e8c5deee56f86f36dd75009cd77e13758234a2ecff523206437a",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "joint",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 2625000000,
+      "extra": true,
+      "file": "windows/window-0046.json",
+      "groups": 4,
+      "initial_sha256": "30fead60f073b74e04fd747dd9394e7e8c1e043bf6166a5ed047647a257cdf8c",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "5208c1a34df6773b58280a540ba363fa7daa4ae4374541f30594dc7539f654bf",
+        "g1/object": "271d848861261c9178cad49cc61f2df0432c230c29a2d6025321ffbfb9f70231",
+        "g2/object": "09adffecaedeeab852db96da5ef11699d57fc737825240ed371522969a07399f",
+        "g3/object": "a0a1c662349df0680ec73017c41f136b001f4ae1496b868a03d6ed30f20443bb"
+      },
+      "order": [
+        "separated",
+        "joint",
+        "joint_repeat"
+      ],
+      "p99_ns": 8697843800,
+      "pair": 5,
+      "position": 1,
+      "profile": "xor-2+1-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 8941025300,
+      "sha256": "3b1d15e91ddac4231ece4e6b14d95f01b7b667470a2c878adf0fd7c39ecf1133",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "joint_repeat",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 2531250000,
+      "extra": true,
+      "file": "windows/window-0047.json",
+      "groups": 4,
+      "initial_sha256": "30fead60f073b74e04fd747dd9394e7e8c1e043bf6166a5ed047647a257cdf8c",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "5208c1a34df6773b58280a540ba363fa7daa4ae4374541f30594dc7539f654bf",
+        "g1/object": "271d848861261c9178cad49cc61f2df0432c230c29a2d6025321ffbfb9f70231",
+        "g2/object": "09adffecaedeeab852db96da5ef11699d57fc737825240ed371522969a07399f",
+        "g3/object": "a0a1c662349df0680ec73017c41f136b001f4ae1496b868a03d6ed30f20443bb"
+      },
+      "order": [
+        "separated",
+        "joint",
+        "joint_repeat"
+      ],
+      "p99_ns": 9114254100,
+      "pair": 5,
+      "position": 2,
+      "profile": "xor-2+1-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 5905803500,
+      "sha256": "1a1031df338f638f65351ec6ee68634bff5b06187334673abade90bf8434707d",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "joint_repeat",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 2562500000,
+      "extra": true,
+      "file": "windows/window-0048.json",
+      "groups": 4,
+      "initial_sha256": "30fead60f073b74e04fd747dd9394e7e8c1e043bf6166a5ed047647a257cdf8c",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "5208c1a34df6773b58280a540ba363fa7daa4ae4374541f30594dc7539f654bf",
+        "g1/object": "271d848861261c9178cad49cc61f2df0432c230c29a2d6025321ffbfb9f70231",
+        "g2/object": "09adffecaedeeab852db96da5ef11699d57fc737825240ed371522969a07399f",
+        "g3/object": "a0a1c662349df0680ec73017c41f136b001f4ae1496b868a03d6ed30f20443bb"
+      },
+      "order": [
+        "joint_repeat",
+        "joint",
+        "separated"
+      ],
+      "p99_ns": 9700928200,
+      "pair": 6,
+      "position": 0,
+      "profile": "xor-2+1-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 3687269800,
+      "sha256": "fdb8c0375a6c8f4671a559edf0fa31405734d9862f2bb3e4008f375785e268cc",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "joint",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 2515625000,
+      "extra": true,
+      "file": "windows/window-0049.json",
+      "groups": 4,
+      "initial_sha256": "30fead60f073b74e04fd747dd9394e7e8c1e043bf6166a5ed047647a257cdf8c",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "5208c1a34df6773b58280a540ba363fa7daa4ae4374541f30594dc7539f654bf",
+        "g1/object": "271d848861261c9178cad49cc61f2df0432c230c29a2d6025321ffbfb9f70231",
+        "g2/object": "09adffecaedeeab852db96da5ef11699d57fc737825240ed371522969a07399f",
+        "g3/object": "a0a1c662349df0680ec73017c41f136b001f4ae1496b868a03d6ed30f20443bb"
+      },
+      "order": [
+        "joint_repeat",
+        "joint",
+        "separated"
+      ],
+      "p99_ns": 9118665400,
+      "pair": 6,
+      "position": 1,
+      "profile": "xor-2+1-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 6045979000,
+      "sha256": "37d22d2733dde29241cf825631b2b05d651faa18cd0a8ff79982fb5d0ebfb459",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "separated",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 2640625000,
+      "extra": true,
+      "file": "windows/window-0050.json",
+      "groups": 4,
+      "initial_sha256": "30fead60f073b74e04fd747dd9394e7e8c1e043bf6166a5ed047647a257cdf8c",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "5208c1a34df6773b58280a540ba363fa7daa4ae4374541f30594dc7539f654bf",
+        "g1/object": "271d848861261c9178cad49cc61f2df0432c230c29a2d6025321ffbfb9f70231",
+        "g2/object": "09adffecaedeeab852db96da5ef11699d57fc737825240ed371522969a07399f",
+        "g3/object": "a0a1c662349df0680ec73017c41f136b001f4ae1496b868a03d6ed30f20443bb"
+      },
+      "order": [
+        "joint_repeat",
+        "joint",
+        "separated"
+      ],
+      "p99_ns": 9904496000,
+      "pair": 6,
+      "position": 2,
+      "profile": "xor-2+1-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 3233423300,
+      "sha256": "ca8bda5f2ece7316ae27a49ff95bfff53f29bc3d5414d278ad885bf2e4883ae6",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "separated",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 2765625000,
+      "extra": true,
+      "file": "windows/window-0051.json",
+      "groups": 4,
+      "initial_sha256": "30fead60f073b74e04fd747dd9394e7e8c1e043bf6166a5ed047647a257cdf8c",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "5208c1a34df6773b58280a540ba363fa7daa4ae4374541f30594dc7539f654bf",
+        "g1/object": "271d848861261c9178cad49cc61f2df0432c230c29a2d6025321ffbfb9f70231",
+        "g2/object": "09adffecaedeeab852db96da5ef11699d57fc737825240ed371522969a07399f",
+        "g3/object": "a0a1c662349df0680ec73017c41f136b001f4ae1496b868a03d6ed30f20443bb"
+      },
+      "order": [
+        "separated",
+        "joint",
+        "joint_repeat"
+      ],
+      "p99_ns": 10307437400,
+      "pair": 7,
+      "position": 0,
+      "profile": "xor-2+1-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 3224129400,
+      "sha256": "6c30a228e5d5e68f41056111e0257902ec9e7607a51a9646894acfc8a4969257",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "joint",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 2484375000,
+      "extra": true,
+      "file": "windows/window-0052.json",
+      "groups": 4,
+      "initial_sha256": "30fead60f073b74e04fd747dd9394e7e8c1e043bf6166a5ed047647a257cdf8c",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "5208c1a34df6773b58280a540ba363fa7daa4ae4374541f30594dc7539f654bf",
+        "g1/object": "271d848861261c9178cad49cc61f2df0432c230c29a2d6025321ffbfb9f70231",
+        "g2/object": "09adffecaedeeab852db96da5ef11699d57fc737825240ed371522969a07399f",
+        "g3/object": "a0a1c662349df0680ec73017c41f136b001f4ae1496b868a03d6ed30f20443bb"
+      },
+      "order": [
+        "separated",
+        "joint",
+        "joint_repeat"
+      ],
+      "p99_ns": 9575250900,
+      "pair": 7,
+      "position": 1,
+      "profile": "xor-2+1-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 3031740800,
+      "sha256": "14a363dd8b9109cdb4963b0395d67124a1889865dd09839964205cca48591280",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "joint_repeat",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 2406250000,
+      "extra": true,
+      "file": "windows/window-0053.json",
+      "groups": 4,
+      "initial_sha256": "30fead60f073b74e04fd747dd9394e7e8c1e043bf6166a5ed047647a257cdf8c",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "5208c1a34df6773b58280a540ba363fa7daa4ae4374541f30594dc7539f654bf",
+        "g1/object": "271d848861261c9178cad49cc61f2df0432c230c29a2d6025321ffbfb9f70231",
+        "g2/object": "09adffecaedeeab852db96da5ef11699d57fc737825240ed371522969a07399f",
+        "g3/object": "a0a1c662349df0680ec73017c41f136b001f4ae1496b868a03d6ed30f20443bb"
+      },
+      "order": [
+        "separated",
+        "joint",
+        "joint_repeat"
+      ],
+      "p99_ns": 9487256200,
+      "pair": 7,
+      "position": 2,
+      "profile": "xor-2+1-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 4495282700,
+      "sha256": "04adf9bdc5d8f54841d60e97cc09811ed359b674122c8167033e474cdebc3c3f",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "joint",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 2546875000,
+      "extra": true,
+      "file": "windows/window-0054.json",
+      "groups": 4,
+      "initial_sha256": "30fead60f073b74e04fd747dd9394e7e8c1e043bf6166a5ed047647a257cdf8c",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "5208c1a34df6773b58280a540ba363fa7daa4ae4374541f30594dc7539f654bf",
+        "g1/object": "271d848861261c9178cad49cc61f2df0432c230c29a2d6025321ffbfb9f70231",
+        "g2/object": "09adffecaedeeab852db96da5ef11699d57fc737825240ed371522969a07399f",
+        "g3/object": "a0a1c662349df0680ec73017c41f136b001f4ae1496b868a03d6ed30f20443bb"
+      },
+      "order": [
+        "joint",
+        "joint_repeat",
+        "separated"
+      ],
+      "p99_ns": 9813231000,
+      "pair": 8,
+      "position": 0,
+      "profile": "xor-2+1-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 2915705500,
+      "sha256": "0214d83219294c2fe1b75d27b986db7298fa35b93d740bd91e2a67bbf407c492",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "joint_repeat",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 2625000000,
+      "extra": true,
+      "file": "windows/window-0055.json",
+      "groups": 4,
+      "initial_sha256": "30fead60f073b74e04fd747dd9394e7e8c1e043bf6166a5ed047647a257cdf8c",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "5208c1a34df6773b58280a540ba363fa7daa4ae4374541f30594dc7539f654bf",
+        "g1/object": "271d848861261c9178cad49cc61f2df0432c230c29a2d6025321ffbfb9f70231",
+        "g2/object": "09adffecaedeeab852db96da5ef11699d57fc737825240ed371522969a07399f",
+        "g3/object": "a0a1c662349df0680ec73017c41f136b001f4ae1496b868a03d6ed30f20443bb"
+      },
+      "order": [
+        "joint",
+        "joint_repeat",
+        "separated"
+      ],
+      "p99_ns": 9594163900,
+      "pair": 8,
+      "position": 1,
+      "profile": "xor-2+1-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 5030878500,
+      "sha256": "713288f86eaec9c8fc637272f0e345d0e5a8293984e14876e2fae7ac07c7f14b",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "separated",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 2671875000,
+      "extra": true,
+      "file": "windows/window-0056.json",
+      "groups": 4,
+      "initial_sha256": "30fead60f073b74e04fd747dd9394e7e8c1e043bf6166a5ed047647a257cdf8c",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "5208c1a34df6773b58280a540ba363fa7daa4ae4374541f30594dc7539f654bf",
+        "g1/object": "271d848861261c9178cad49cc61f2df0432c230c29a2d6025321ffbfb9f70231",
+        "g2/object": "09adffecaedeeab852db96da5ef11699d57fc737825240ed371522969a07399f",
+        "g3/object": "a0a1c662349df0680ec73017c41f136b001f4ae1496b868a03d6ed30f20443bb"
+      },
+      "order": [
+        "joint",
+        "joint_repeat",
+        "separated"
+      ],
+      "p99_ns": 10201338500,
+      "pair": 8,
+      "position": 2,
+      "profile": "xor-2+1-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 3085897800,
+      "sha256": "7a55ecc5c0cc2ab85114fc8dad7d73a8ed043e284b2967339a7ada97e7a1ec9e",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "separated",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 2875000000,
+      "extra": true,
+      "file": "windows/window-0057.json",
+      "groups": 4,
+      "initial_sha256": "30fead60f073b74e04fd747dd9394e7e8c1e043bf6166a5ed047647a257cdf8c",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "5208c1a34df6773b58280a540ba363fa7daa4ae4374541f30594dc7539f654bf",
+        "g1/object": "271d848861261c9178cad49cc61f2df0432c230c29a2d6025321ffbfb9f70231",
+        "g2/object": "09adffecaedeeab852db96da5ef11699d57fc737825240ed371522969a07399f",
+        "g3/object": "a0a1c662349df0680ec73017c41f136b001f4ae1496b868a03d6ed30f20443bb"
+      },
+      "order": [
+        "separated",
+        "joint_repeat",
+        "joint"
+      ],
+      "p99_ns": 10418380400,
+      "pair": 9,
+      "position": 0,
+      "profile": "xor-2+1-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 3576488300,
+      "sha256": "0d2ae0f5e39b0c89fe6893b689ce4f0564cf7879cb29169b2d031aa665bb0627",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "joint_repeat",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 2468750000,
+      "extra": true,
+      "file": "windows/window-0058.json",
+      "groups": 4,
+      "initial_sha256": "30fead60f073b74e04fd747dd9394e7e8c1e043bf6166a5ed047647a257cdf8c",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "5208c1a34df6773b58280a540ba363fa7daa4ae4374541f30594dc7539f654bf",
+        "g1/object": "271d848861261c9178cad49cc61f2df0432c230c29a2d6025321ffbfb9f70231",
+        "g2/object": "09adffecaedeeab852db96da5ef11699d57fc737825240ed371522969a07399f",
+        "g3/object": "a0a1c662349df0680ec73017c41f136b001f4ae1496b868a03d6ed30f20443bb"
+      },
+      "order": [
+        "separated",
+        "joint_repeat",
+        "joint"
+      ],
+      "p99_ns": 9784503700,
+      "pair": 9,
+      "position": 1,
+      "profile": "xor-2+1-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 3140066400,
+      "sha256": "b16694a87199a13dfd3393487dcbec1cd707240f662d1cb5771e8a42a509be4d",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "joint",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 2578125000,
+      "extra": true,
+      "file": "windows/window-0059.json",
+      "groups": 4,
+      "initial_sha256": "30fead60f073b74e04fd747dd9394e7e8c1e043bf6166a5ed047647a257cdf8c",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "5208c1a34df6773b58280a540ba363fa7daa4ae4374541f30594dc7539f654bf",
+        "g1/object": "271d848861261c9178cad49cc61f2df0432c230c29a2d6025321ffbfb9f70231",
+        "g2/object": "09adffecaedeeab852db96da5ef11699d57fc737825240ed371522969a07399f",
+        "g3/object": "a0a1c662349df0680ec73017c41f136b001f4ae1496b868a03d6ed30f20443bb"
+      },
+      "order": [
+        "separated",
+        "joint_repeat",
+        "joint"
+      ],
+      "p99_ns": 9915252500,
+      "pair": 9,
+      "position": 2,
+      "profile": "xor-2+1-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 3501625100,
+      "sha256": "e30476d161fce0b64278550a9be56ec4995cd3688ba9cccf11b024659a7e0ea2",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "joint",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 5437500000,
+      "extra": false,
+      "file": "windows/window-0060.json",
+      "groups": 4,
+      "initial_sha256": "a23a20fd6200d6fe019317c166850480f234faeb8e467602cd9e4da8e27efcc4",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "4c456ff51efa36a816d01c9f81761f4ad97fd56bde4c262c42756b2f56f6b487",
+        "g1/object": "27676bf4e01a527626b3ce627b1d7ed9c93fa6555de06bca59f132cc2f3f5cab",
+        "g2/object": "674c8cfff4a438bb76c106cb78c871f9579ba023b23297f65e8c487d4a98bae2",
+        "g3/object": "a34c8794726031957864a6487715b9fcbd452afc699f0888fb568645072274d2"
+      },
+      "order": [
+        "joint",
+        "separated",
+        "joint_repeat"
+      ],
+      "p99_ns": 12803410800,
+      "pair": 0,
+      "position": 0,
+      "profile": "pq-4+2-gf256-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 6067063700,
+      "sha256": "3ccf5de489400fa2d6dab505fedff2cf77823a9f3588db9f2722592d4a8a76de",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "separated",
+      "committed_stage_bytes": 32768,
+      "controller_thread_cpu_ns": 9218750000,
+      "extra": false,
+      "file": "windows/window-0061.json",
+      "groups": 4,
+      "initial_sha256": "a23a20fd6200d6fe019317c166850480f234faeb8e467602cd9e4da8e27efcc4",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "4c456ff51efa36a816d01c9f81761f4ad97fd56bde4c262c42756b2f56f6b487",
+        "g1/object": "27676bf4e01a527626b3ce627b1d7ed9c93fa6555de06bca59f132cc2f3f5cab",
+        "g2/object": "674c8cfff4a438bb76c106cb78c871f9579ba023b23297f65e8c487d4a98bae2",
+        "g3/object": "a34c8794726031957864a6487715b9fcbd452afc699f0888fb568645072274d2"
+      },
+      "order": [
+        "joint",
+        "separated",
+        "joint_repeat"
+      ],
+      "p99_ns": 16849388300,
+      "pair": 0,
+      "position": 1,
+      "profile": "pq-4+2-gf256-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 9956056600,
+      "sha256": "724ea5ece0a9bcd87971e6e03b68a7d7a1e0a89da7eab89bc0e1a7317ae91a03",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "joint_repeat",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 5421875000,
+      "extra": false,
+      "file": "windows/window-0062.json",
+      "groups": 4,
+      "initial_sha256": "a23a20fd6200d6fe019317c166850480f234faeb8e467602cd9e4da8e27efcc4",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "4c456ff51efa36a816d01c9f81761f4ad97fd56bde4c262c42756b2f56f6b487",
+        "g1/object": "27676bf4e01a527626b3ce627b1d7ed9c93fa6555de06bca59f132cc2f3f5cab",
+        "g2/object": "674c8cfff4a438bb76c106cb78c871f9579ba023b23297f65e8c487d4a98bae2",
+        "g3/object": "a34c8794726031957864a6487715b9fcbd452afc699f0888fb568645072274d2"
+      },
+      "order": [
+        "joint",
+        "separated",
+        "joint_repeat"
+      ],
+      "p99_ns": 12932948100,
+      "pair": 0,
+      "position": 2,
+      "profile": "pq-4+2-gf256-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 6097285100,
+      "sha256": "4bd2b7cc7f872632ded906f1d6127f266a4932ac28b643ea8c8a42e746ae9d8a",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "joint",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 5406250000,
+      "extra": false,
+      "file": "windows/window-0063.json",
+      "groups": 4,
+      "initial_sha256": "a23a20fd6200d6fe019317c166850480f234faeb8e467602cd9e4da8e27efcc4",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "4c456ff51efa36a816d01c9f81761f4ad97fd56bde4c262c42756b2f56f6b487",
+        "g1/object": "27676bf4e01a527626b3ce627b1d7ed9c93fa6555de06bca59f132cc2f3f5cab",
+        "g2/object": "674c8cfff4a438bb76c106cb78c871f9579ba023b23297f65e8c487d4a98bae2",
+        "g3/object": "a34c8794726031957864a6487715b9fcbd452afc699f0888fb568645072274d2"
+      },
+      "order": [
+        "joint",
+        "joint_repeat",
+        "separated"
+      ],
+      "p99_ns": 12982642600,
+      "pair": 1,
+      "position": 0,
+      "profile": "pq-4+2-gf256-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 6019479900,
+      "sha256": "6af3fd57c6863968f65b6447e50a3e850c7f9992be0b1af7fbac44f38a80bdb4",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "joint_repeat",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 5687500000,
+      "extra": false,
+      "file": "windows/window-0064.json",
+      "groups": 4,
+      "initial_sha256": "a23a20fd6200d6fe019317c166850480f234faeb8e467602cd9e4da8e27efcc4",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "4c456ff51efa36a816d01c9f81761f4ad97fd56bde4c262c42756b2f56f6b487",
+        "g1/object": "27676bf4e01a527626b3ce627b1d7ed9c93fa6555de06bca59f132cc2f3f5cab",
+        "g2/object": "674c8cfff4a438bb76c106cb78c871f9579ba023b23297f65e8c487d4a98bae2",
+        "g3/object": "a34c8794726031957864a6487715b9fcbd452afc699f0888fb568645072274d2"
+      },
+      "order": [
+        "joint",
+        "joint_repeat",
+        "separated"
+      ],
+      "p99_ns": 14629833400,
+      "pair": 1,
+      "position": 1,
+      "profile": "pq-4+2-gf256-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 6375463600,
+      "sha256": "2481a214e63953e5a8730fdda65dd1b87d98aa4fc5c0e86c6f778ba4f597491c",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "separated",
+      "committed_stage_bytes": 32768,
+      "controller_thread_cpu_ns": 9359375000,
+      "extra": false,
+      "file": "windows/window-0065.json",
+      "groups": 4,
+      "initial_sha256": "a23a20fd6200d6fe019317c166850480f234faeb8e467602cd9e4da8e27efcc4",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "4c456ff51efa36a816d01c9f81761f4ad97fd56bde4c262c42756b2f56f6b487",
+        "g1/object": "27676bf4e01a527626b3ce627b1d7ed9c93fa6555de06bca59f132cc2f3f5cab",
+        "g2/object": "674c8cfff4a438bb76c106cb78c871f9579ba023b23297f65e8c487d4a98bae2",
+        "g3/object": "a34c8794726031957864a6487715b9fcbd452afc699f0888fb568645072274d2"
+      },
+      "order": [
+        "joint",
+        "joint_repeat",
+        "separated"
+      ],
+      "p99_ns": 17665575900,
+      "pair": 1,
+      "position": 2,
+      "profile": "pq-4+2-gf256-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 10555197700,
+      "sha256": "c71b12d9433936dc88630c7cd23debd1cc3415b80b32fb4ad868bc85acaffe01",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "joint",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 5421875000,
+      "extra": false,
+      "file": "windows/window-0066.json",
+      "groups": 4,
+      "initial_sha256": "a23a20fd6200d6fe019317c166850480f234faeb8e467602cd9e4da8e27efcc4",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "4c456ff51efa36a816d01c9f81761f4ad97fd56bde4c262c42756b2f56f6b487",
+        "g1/object": "27676bf4e01a527626b3ce627b1d7ed9c93fa6555de06bca59f132cc2f3f5cab",
+        "g2/object": "674c8cfff4a438bb76c106cb78c871f9579ba023b23297f65e8c487d4a98bae2",
+        "g3/object": "a34c8794726031957864a6487715b9fcbd452afc699f0888fb568645072274d2"
+      },
+      "order": [
+        "joint",
+        "joint_repeat",
+        "separated"
+      ],
+      "p99_ns": 13688651600,
+      "pair": 2,
+      "position": 0,
+      "profile": "pq-4+2-gf256-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 6392742700,
+      "sha256": "4b4f2027593ce08ed35e21570140519706236072a9ca7a8a2ebf6a66f6003166",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "joint_repeat",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 5781250000,
+      "extra": false,
+      "file": "windows/window-0067.json",
+      "groups": 4,
+      "initial_sha256": "a23a20fd6200d6fe019317c166850480f234faeb8e467602cd9e4da8e27efcc4",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "4c456ff51efa36a816d01c9f81761f4ad97fd56bde4c262c42756b2f56f6b487",
+        "g1/object": "27676bf4e01a527626b3ce627b1d7ed9c93fa6555de06bca59f132cc2f3f5cab",
+        "g2/object": "674c8cfff4a438bb76c106cb78c871f9579ba023b23297f65e8c487d4a98bae2",
+        "g3/object": "a34c8794726031957864a6487715b9fcbd452afc699f0888fb568645072274d2"
+      },
+      "order": [
+        "joint",
+        "joint_repeat",
+        "separated"
+      ],
+      "p99_ns": 13448730200,
+      "pair": 2,
+      "position": 1,
+      "profile": "pq-4+2-gf256-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 6355226300,
+      "sha256": "e54399ff099ff01f7ddaf6e355732bbb539e1484577bf368fd4cf1c09698eba9",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "separated",
+      "committed_stage_bytes": 32768,
+      "controller_thread_cpu_ns": 9000000000,
+      "extra": false,
+      "file": "windows/window-0068.json",
+      "groups": 4,
+      "initial_sha256": "a23a20fd6200d6fe019317c166850480f234faeb8e467602cd9e4da8e27efcc4",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "4c456ff51efa36a816d01c9f81761f4ad97fd56bde4c262c42756b2f56f6b487",
+        "g1/object": "27676bf4e01a527626b3ce627b1d7ed9c93fa6555de06bca59f132cc2f3f5cab",
+        "g2/object": "674c8cfff4a438bb76c106cb78c871f9579ba023b23297f65e8c487d4a98bae2",
+        "g3/object": "a34c8794726031957864a6487715b9fcbd452afc699f0888fb568645072274d2"
+      },
+      "order": [
+        "joint",
+        "joint_repeat",
+        "separated"
+      ],
+      "p99_ns": 16885361700,
+      "pair": 2,
+      "position": 2,
+      "profile": "pq-4+2-gf256-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 9953393800,
+      "sha256": "da10edc53cd9a16b0ace3c9150ac93e9b28679d9d10e4d4991abbd656769906a",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "joint",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 5484375000,
+      "extra": false,
+      "file": "windows/window-0069.json",
+      "groups": 4,
+      "initial_sha256": "a23a20fd6200d6fe019317c166850480f234faeb8e467602cd9e4da8e27efcc4",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "4c456ff51efa36a816d01c9f81761f4ad97fd56bde4c262c42756b2f56f6b487",
+        "g1/object": "27676bf4e01a527626b3ce627b1d7ed9c93fa6555de06bca59f132cc2f3f5cab",
+        "g2/object": "674c8cfff4a438bb76c106cb78c871f9579ba023b23297f65e8c487d4a98bae2",
+        "g3/object": "a34c8794726031957864a6487715b9fcbd452afc699f0888fb568645072274d2"
+      },
+      "order": [
+        "joint",
+        "separated",
+        "joint_repeat"
+      ],
+      "p99_ns": 15196616200,
+      "pair": 3,
+      "position": 0,
+      "profile": "pq-4+2-gf256-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 5883632100,
+      "sha256": "ae626854002b6703871feb27e040e888dd982989e0a947e3dbd7225ea19d44fb",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "separated",
+      "committed_stage_bytes": 32768,
+      "controller_thread_cpu_ns": 9234375000,
+      "extra": false,
+      "file": "windows/window-0070.json",
+      "groups": 4,
+      "initial_sha256": "a23a20fd6200d6fe019317c166850480f234faeb8e467602cd9e4da8e27efcc4",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "4c456ff51efa36a816d01c9f81761f4ad97fd56bde4c262c42756b2f56f6b487",
+        "g1/object": "27676bf4e01a527626b3ce627b1d7ed9c93fa6555de06bca59f132cc2f3f5cab",
+        "g2/object": "674c8cfff4a438bb76c106cb78c871f9579ba023b23297f65e8c487d4a98bae2",
+        "g3/object": "a34c8794726031957864a6487715b9fcbd452afc699f0888fb568645072274d2"
+      },
+      "order": [
+        "joint",
+        "separated",
+        "joint_repeat"
+      ],
+      "p99_ns": 17380194000,
+      "pair": 3,
+      "position": 1,
+      "profile": "pq-4+2-gf256-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 10923878800,
+      "sha256": "f70c210a298a347b439a7da44c6beda6556834f2131e2e1e362b1929198cede9",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "joint_repeat",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 5453125000,
+      "extra": false,
+      "file": "windows/window-0071.json",
+      "groups": 4,
+      "initial_sha256": "a23a20fd6200d6fe019317c166850480f234faeb8e467602cd9e4da8e27efcc4",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "4c456ff51efa36a816d01c9f81761f4ad97fd56bde4c262c42756b2f56f6b487",
+        "g1/object": "27676bf4e01a527626b3ce627b1d7ed9c93fa6555de06bca59f132cc2f3f5cab",
+        "g2/object": "674c8cfff4a438bb76c106cb78c871f9579ba023b23297f65e8c487d4a98bae2",
+        "g3/object": "a34c8794726031957864a6487715b9fcbd452afc699f0888fb568645072274d2"
+      },
+      "order": [
+        "joint",
+        "separated",
+        "joint_repeat"
+      ],
+      "p99_ns": 13858509400,
+      "pair": 3,
+      "position": 2,
+      "profile": "pq-4+2-gf256-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 6214464000,
+      "sha256": "f02f6f0161ff923c69ad7232f94670fed495ae08a7a8143fb05e346e3ee59d13",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "joint_repeat",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 5437500000,
+      "extra": false,
+      "file": "windows/window-0072.json",
+      "groups": 4,
+      "initial_sha256": "a23a20fd6200d6fe019317c166850480f234faeb8e467602cd9e4da8e27efcc4",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "4c456ff51efa36a816d01c9f81761f4ad97fd56bde4c262c42756b2f56f6b487",
+        "g1/object": "27676bf4e01a527626b3ce627b1d7ed9c93fa6555de06bca59f132cc2f3f5cab",
+        "g2/object": "674c8cfff4a438bb76c106cb78c871f9579ba023b23297f65e8c487d4a98bae2",
+        "g3/object": "a34c8794726031957864a6487715b9fcbd452afc699f0888fb568645072274d2"
+      },
+      "order": [
+        "joint_repeat",
+        "joint",
+        "separated"
+      ],
+      "p99_ns": 12629725000,
+      "pair": 4,
+      "position": 0,
+      "profile": "pq-4+2-gf256-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 7953832500,
+      "sha256": "ae0de4756444876b4bd3a4041afb1e5870f7493665f404d0c091b9f32f30f778",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "joint",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 5468750000,
+      "extra": false,
+      "file": "windows/window-0073.json",
+      "groups": 4,
+      "initial_sha256": "a23a20fd6200d6fe019317c166850480f234faeb8e467602cd9e4da8e27efcc4",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "4c456ff51efa36a816d01c9f81761f4ad97fd56bde4c262c42756b2f56f6b487",
+        "g1/object": "27676bf4e01a527626b3ce627b1d7ed9c93fa6555de06bca59f132cc2f3f5cab",
+        "g2/object": "674c8cfff4a438bb76c106cb78c871f9579ba023b23297f65e8c487d4a98bae2",
+        "g3/object": "a34c8794726031957864a6487715b9fcbd452afc699f0888fb568645072274d2"
+      },
+      "order": [
+        "joint_repeat",
+        "joint",
+        "separated"
+      ],
+      "p99_ns": 13087297800,
+      "pair": 4,
+      "position": 1,
+      "profile": "pq-4+2-gf256-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 6110864200,
+      "sha256": "ed0967d8e5002a8a1eac1f573b16251e33faf18e7846969cdf6571a2339f8cb1",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "separated",
+      "committed_stage_bytes": 32768,
+      "controller_thread_cpu_ns": 8843750000,
+      "extra": false,
+      "file": "windows/window-0074.json",
+      "groups": 4,
+      "initial_sha256": "a23a20fd6200d6fe019317c166850480f234faeb8e467602cd9e4da8e27efcc4",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "4c456ff51efa36a816d01c9f81761f4ad97fd56bde4c262c42756b2f56f6b487",
+        "g1/object": "27676bf4e01a527626b3ce627b1d7ed9c93fa6555de06bca59f132cc2f3f5cab",
+        "g2/object": "674c8cfff4a438bb76c106cb78c871f9579ba023b23297f65e8c487d4a98bae2",
+        "g3/object": "a34c8794726031957864a6487715b9fcbd452afc699f0888fb568645072274d2"
+      },
+      "order": [
+        "joint_repeat",
+        "joint",
+        "separated"
+      ],
+      "p99_ns": 16811976400,
+      "pair": 4,
+      "position": 2,
+      "profile": "pq-4+2-gf256-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 9995439800,
+      "sha256": "8d7560eee99bde1ab30ff19439ccb00858bb073bd6c7aa7c2b9e6547ca4a09b8",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "joint_repeat",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 5218750000,
+      "extra": false,
+      "file": "windows/window-0075.json",
+      "groups": 4,
+      "initial_sha256": "a23a20fd6200d6fe019317c166850480f234faeb8e467602cd9e4da8e27efcc4",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "4c456ff51efa36a816d01c9f81761f4ad97fd56bde4c262c42756b2f56f6b487",
+        "g1/object": "27676bf4e01a527626b3ce627b1d7ed9c93fa6555de06bca59f132cc2f3f5cab",
+        "g2/object": "674c8cfff4a438bb76c106cb78c871f9579ba023b23297f65e8c487d4a98bae2",
+        "g3/object": "a34c8794726031957864a6487715b9fcbd452afc699f0888fb568645072274d2"
+      },
+      "order": [
+        "joint_repeat",
+        "joint",
+        "separated"
+      ],
+      "p99_ns": 12824386200,
+      "pair": 5,
+      "position": 0,
+      "profile": "pq-4+2-gf256-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 6188196800,
+      "sha256": "655befeb09d79c8b557b933cec3dbf57d4f5b16cb814d698997b89cba3cbb497",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "joint",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 5343750000,
+      "extra": false,
+      "file": "windows/window-0076.json",
+      "groups": 4,
+      "initial_sha256": "a23a20fd6200d6fe019317c166850480f234faeb8e467602cd9e4da8e27efcc4",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "4c456ff51efa36a816d01c9f81761f4ad97fd56bde4c262c42756b2f56f6b487",
+        "g1/object": "27676bf4e01a527626b3ce627b1d7ed9c93fa6555de06bca59f132cc2f3f5cab",
+        "g2/object": "674c8cfff4a438bb76c106cb78c871f9579ba023b23297f65e8c487d4a98bae2",
+        "g3/object": "a34c8794726031957864a6487715b9fcbd452afc699f0888fb568645072274d2"
+      },
+      "order": [
+        "joint_repeat",
+        "joint",
+        "separated"
+      ],
+      "p99_ns": 12619060400,
+      "pair": 5,
+      "position": 1,
+      "profile": "pq-4+2-gf256-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 7465868200,
+      "sha256": "cca4d4c8210f7ed5762eb59bbfa2e3a36eb92958de9b236e029474d028997a69",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "separated",
+      "committed_stage_bytes": 32768,
+      "controller_thread_cpu_ns": 8906250000,
+      "extra": false,
+      "file": "windows/window-0077.json",
+      "groups": 4,
+      "initial_sha256": "a23a20fd6200d6fe019317c166850480f234faeb8e467602cd9e4da8e27efcc4",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "4c456ff51efa36a816d01c9f81761f4ad97fd56bde4c262c42756b2f56f6b487",
+        "g1/object": "27676bf4e01a527626b3ce627b1d7ed9c93fa6555de06bca59f132cc2f3f5cab",
+        "g2/object": "674c8cfff4a438bb76c106cb78c871f9579ba023b23297f65e8c487d4a98bae2",
+        "g3/object": "a34c8794726031957864a6487715b9fcbd452afc699f0888fb568645072274d2"
+      },
+      "order": [
+        "joint_repeat",
+        "joint",
+        "separated"
+      ],
+      "p99_ns": 17996818000,
+      "pair": 5,
+      "position": 2,
+      "profile": "pq-4+2-gf256-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 9762570700,
+      "sha256": "80cdba140da87150de2e39ccd2e0cc64fe4527d2a9604248ccc7d84268df88d0",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "joint",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 5906250000,
+      "extra": false,
+      "file": "windows/window-0078.json",
+      "groups": 4,
+      "initial_sha256": "a23a20fd6200d6fe019317c166850480f234faeb8e467602cd9e4da8e27efcc4",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "4c456ff51efa36a816d01c9f81761f4ad97fd56bde4c262c42756b2f56f6b487",
+        "g1/object": "27676bf4e01a527626b3ce627b1d7ed9c93fa6555de06bca59f132cc2f3f5cab",
+        "g2/object": "674c8cfff4a438bb76c106cb78c871f9579ba023b23297f65e8c487d4a98bae2",
+        "g3/object": "a34c8794726031957864a6487715b9fcbd452afc699f0888fb568645072274d2"
+      },
+      "order": [
+        "joint",
+        "separated",
+        "joint_repeat"
+      ],
+      "p99_ns": 14385365300,
+      "pair": 6,
+      "position": 0,
+      "profile": "pq-4+2-gf256-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 6355575300,
+      "sha256": "19850ca9b30a8a481f329436777a9819a32ab9f0db8ef87fad510be16df4a3a4",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "separated",
+      "committed_stage_bytes": 32768,
+      "controller_thread_cpu_ns": 9703125000,
+      "extra": false,
+      "file": "windows/window-0079.json",
+      "groups": 4,
+      "initial_sha256": "a23a20fd6200d6fe019317c166850480f234faeb8e467602cd9e4da8e27efcc4",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "4c456ff51efa36a816d01c9f81761f4ad97fd56bde4c262c42756b2f56f6b487",
+        "g1/object": "27676bf4e01a527626b3ce627b1d7ed9c93fa6555de06bca59f132cc2f3f5cab",
+        "g2/object": "674c8cfff4a438bb76c106cb78c871f9579ba023b23297f65e8c487d4a98bae2",
+        "g3/object": "a34c8794726031957864a6487715b9fcbd452afc699f0888fb568645072274d2"
+      },
+      "order": [
+        "joint",
+        "separated",
+        "joint_repeat"
+      ],
+      "p99_ns": 18193418100,
+      "pair": 6,
+      "position": 1,
+      "profile": "pq-4+2-gf256-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 12612071300,
+      "sha256": "17a6d22fb30bdb7ec5293d1d4ff5d9dbf296cc0224ba14639283889b40fd4d4e",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "joint_repeat",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 5703125000,
+      "extra": false,
+      "file": "windows/window-0080.json",
+      "groups": 4,
+      "initial_sha256": "a23a20fd6200d6fe019317c166850480f234faeb8e467602cd9e4da8e27efcc4",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "4c456ff51efa36a816d01c9f81761f4ad97fd56bde4c262c42756b2f56f6b487",
+        "g1/object": "27676bf4e01a527626b3ce627b1d7ed9c93fa6555de06bca59f132cc2f3f5cab",
+        "g2/object": "674c8cfff4a438bb76c106cb78c871f9579ba023b23297f65e8c487d4a98bae2",
+        "g3/object": "a34c8794726031957864a6487715b9fcbd452afc699f0888fb568645072274d2"
+      },
+      "order": [
+        "joint",
+        "separated",
+        "joint_repeat"
+      ],
+      "p99_ns": 14810167200,
+      "pair": 6,
+      "position": 2,
+      "profile": "pq-4+2-gf256-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 6140189500,
+      "sha256": "daf3abae706b7e60270cf1c95dee1744100b09fe292db5ca1cc5d2d07b2ac5ec",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "joint_repeat",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 7187500000,
+      "extra": false,
+      "file": "windows/window-0081.json",
+      "groups": 4,
+      "initial_sha256": "a23a20fd6200d6fe019317c166850480f234faeb8e467602cd9e4da8e27efcc4",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "4c456ff51efa36a816d01c9f81761f4ad97fd56bde4c262c42756b2f56f6b487",
+        "g1/object": "27676bf4e01a527626b3ce627b1d7ed9c93fa6555de06bca59f132cc2f3f5cab",
+        "g2/object": "674c8cfff4a438bb76c106cb78c871f9579ba023b23297f65e8c487d4a98bae2",
+        "g3/object": "a34c8794726031957864a6487715b9fcbd452afc699f0888fb568645072274d2"
+      },
+      "order": [
+        "joint_repeat",
+        "separated",
+        "joint"
+      ],
+      "p99_ns": 22803813300,
+      "pair": 7,
+      "position": 0,
+      "profile": "pq-4+2-gf256-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 8701744300,
+      "sha256": "bc1422155281c41920a84648b7679e127a3c814298192d45783118422dd334f3",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "separated",
+      "committed_stage_bytes": 32768,
+      "controller_thread_cpu_ns": 10921875000,
+      "extra": false,
+      "file": "windows/window-0082.json",
+      "groups": 4,
+      "initial_sha256": "a23a20fd6200d6fe019317c166850480f234faeb8e467602cd9e4da8e27efcc4",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "4c456ff51efa36a816d01c9f81761f4ad97fd56bde4c262c42756b2f56f6b487",
+        "g1/object": "27676bf4e01a527626b3ce627b1d7ed9c93fa6555de06bca59f132cc2f3f5cab",
+        "g2/object": "674c8cfff4a438bb76c106cb78c871f9579ba023b23297f65e8c487d4a98bae2",
+        "g3/object": "a34c8794726031957864a6487715b9fcbd452afc699f0888fb568645072274d2"
+      },
+      "order": [
+        "joint_repeat",
+        "separated",
+        "joint"
+      ],
+      "p99_ns": 23069977300,
+      "pair": 7,
+      "position": 1,
+      "profile": "pq-4+2-gf256-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 12472466200,
+      "sha256": "6a5109428b17797ae8fa9287657f4755da846b61e26c5305bb6f4d64e0502fec",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "joint",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 6890625000,
+      "extra": false,
+      "file": "windows/window-0083.json",
+      "groups": 4,
+      "initial_sha256": "a23a20fd6200d6fe019317c166850480f234faeb8e467602cd9e4da8e27efcc4",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "4c456ff51efa36a816d01c9f81761f4ad97fd56bde4c262c42756b2f56f6b487",
+        "g1/object": "27676bf4e01a527626b3ce627b1d7ed9c93fa6555de06bca59f132cc2f3f5cab",
+        "g2/object": "674c8cfff4a438bb76c106cb78c871f9579ba023b23297f65e8c487d4a98bae2",
+        "g3/object": "a34c8794726031957864a6487715b9fcbd452afc699f0888fb568645072274d2"
+      },
+      "order": [
+        "joint_repeat",
+        "separated",
+        "joint"
+      ],
+      "p99_ns": 19013704300,
+      "pair": 7,
+      "position": 2,
+      "profile": "pq-4+2-gf256-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 8040523700,
+      "sha256": "b0127d3d5ee693057a154b4765bd6b0c4e85542853081be465e5b4cb436b6636",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "joint_repeat",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 5953125000,
+      "extra": false,
+      "file": "windows/window-0084.json",
+      "groups": 4,
+      "initial_sha256": "a23a20fd6200d6fe019317c166850480f234faeb8e467602cd9e4da8e27efcc4",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "4c456ff51efa36a816d01c9f81761f4ad97fd56bde4c262c42756b2f56f6b487",
+        "g1/object": "27676bf4e01a527626b3ce627b1d7ed9c93fa6555de06bca59f132cc2f3f5cab",
+        "g2/object": "674c8cfff4a438bb76c106cb78c871f9579ba023b23297f65e8c487d4a98bae2",
+        "g3/object": "a34c8794726031957864a6487715b9fcbd452afc699f0888fb568645072274d2"
+      },
+      "order": [
+        "joint_repeat",
+        "joint",
+        "separated"
+      ],
+      "p99_ns": 16072087100,
+      "pair": 8,
+      "position": 0,
+      "profile": "pq-4+2-gf256-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 6693414000,
+      "sha256": "a9d2090c88a858842a7dd295c39a096dc283f0b493c37494f07255500eac1788",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "joint",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 5750000000,
+      "extra": false,
+      "file": "windows/window-0085.json",
+      "groups": 4,
+      "initial_sha256": "a23a20fd6200d6fe019317c166850480f234faeb8e467602cd9e4da8e27efcc4",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "4c456ff51efa36a816d01c9f81761f4ad97fd56bde4c262c42756b2f56f6b487",
+        "g1/object": "27676bf4e01a527626b3ce627b1d7ed9c93fa6555de06bca59f132cc2f3f5cab",
+        "g2/object": "674c8cfff4a438bb76c106cb78c871f9579ba023b23297f65e8c487d4a98bae2",
+        "g3/object": "a34c8794726031957864a6487715b9fcbd452afc699f0888fb568645072274d2"
+      },
+      "order": [
+        "joint_repeat",
+        "joint",
+        "separated"
+      ],
+      "p99_ns": 18379094600,
+      "pair": 8,
+      "position": 1,
+      "profile": "pq-4+2-gf256-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 6794313400,
+      "sha256": "6c7e2b1dd9e1728c8fe73f31f64471b2ef5deb9ad4b47f70523512fb18cb4422",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "separated",
+      "committed_stage_bytes": 32768,
+      "controller_thread_cpu_ns": 10140625000,
+      "extra": false,
+      "file": "windows/window-0086.json",
+      "groups": 4,
+      "initial_sha256": "a23a20fd6200d6fe019317c166850480f234faeb8e467602cd9e4da8e27efcc4",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "4c456ff51efa36a816d01c9f81761f4ad97fd56bde4c262c42756b2f56f6b487",
+        "g1/object": "27676bf4e01a527626b3ce627b1d7ed9c93fa6555de06bca59f132cc2f3f5cab",
+        "g2/object": "674c8cfff4a438bb76c106cb78c871f9579ba023b23297f65e8c487d4a98bae2",
+        "g3/object": "a34c8794726031957864a6487715b9fcbd452afc699f0888fb568645072274d2"
+      },
+      "order": [
+        "joint_repeat",
+        "joint",
+        "separated"
+      ],
+      "p99_ns": 20133201600,
+      "pair": 8,
+      "position": 2,
+      "profile": "pq-4+2-gf256-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 11516462100,
+      "sha256": "18c49a2969dcdbf10102ca195e206985336cd477640f8babccf1f6c87789a0fb",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "separated",
+      "committed_stage_bytes": 32768,
+      "controller_thread_cpu_ns": 9578125000,
+      "extra": false,
+      "file": "windows/window-0087.json",
+      "groups": 4,
+      "initial_sha256": "a23a20fd6200d6fe019317c166850480f234faeb8e467602cd9e4da8e27efcc4",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "4c456ff51efa36a816d01c9f81761f4ad97fd56bde4c262c42756b2f56f6b487",
+        "g1/object": "27676bf4e01a527626b3ce627b1d7ed9c93fa6555de06bca59f132cc2f3f5cab",
+        "g2/object": "674c8cfff4a438bb76c106cb78c871f9579ba023b23297f65e8c487d4a98bae2",
+        "g3/object": "a34c8794726031957864a6487715b9fcbd452afc699f0888fb568645072274d2"
+      },
+      "order": [
+        "separated",
+        "joint",
+        "joint_repeat"
+      ],
+      "p99_ns": 19767399600,
+      "pair": 9,
+      "position": 0,
+      "profile": "pq-4+2-gf256-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 12728514900,
+      "sha256": "8a2384fd70edf05716793306e8e007265f39dd1e53f3b4df5962c0060dcba024",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "joint",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 5843750000,
+      "extra": false,
+      "file": "windows/window-0088.json",
+      "groups": 4,
+      "initial_sha256": "a23a20fd6200d6fe019317c166850480f234faeb8e467602cd9e4da8e27efcc4",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "4c456ff51efa36a816d01c9f81761f4ad97fd56bde4c262c42756b2f56f6b487",
+        "g1/object": "27676bf4e01a527626b3ce627b1d7ed9c93fa6555de06bca59f132cc2f3f5cab",
+        "g2/object": "674c8cfff4a438bb76c106cb78c871f9579ba023b23297f65e8c487d4a98bae2",
+        "g3/object": "a34c8794726031957864a6487715b9fcbd452afc699f0888fb568645072274d2"
+      },
+      "order": [
+        "separated",
+        "joint",
+        "joint_repeat"
+      ],
+      "p99_ns": 15383618200,
+      "pair": 9,
+      "position": 1,
+      "profile": "pq-4+2-gf256-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 6304313700,
+      "sha256": "d8dcf0660a79fc94b0016ee013d39a2669048724de01cf8b9f1e4ba5cf22140d",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "joint_repeat",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 6312500000,
+      "extra": false,
+      "file": "windows/window-0089.json",
+      "groups": 4,
+      "initial_sha256": "a23a20fd6200d6fe019317c166850480f234faeb8e467602cd9e4da8e27efcc4",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "4c456ff51efa36a816d01c9f81761f4ad97fd56bde4c262c42756b2f56f6b487",
+        "g1/object": "27676bf4e01a527626b3ce627b1d7ed9c93fa6555de06bca59f132cc2f3f5cab",
+        "g2/object": "674c8cfff4a438bb76c106cb78c871f9579ba023b23297f65e8c487d4a98bae2",
+        "g3/object": "a34c8794726031957864a6487715b9fcbd452afc699f0888fb568645072274d2"
+      },
+      "order": [
+        "separated",
+        "joint",
+        "joint_repeat"
+      ],
+      "p99_ns": 15581150800,
+      "pair": 9,
+      "position": 2,
+      "profile": "pq-4+2-gf256-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 7679428100,
+      "sha256": "932a919ca3bf7e08b07925df703e04ff7cee3f43a1c2f5908d3cc3f8bf75fd78",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "joint",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 6593750000,
+      "extra": true,
+      "file": "windows/window-0090.json",
+      "groups": 4,
+      "initial_sha256": "ddafbfe959cee98525b9cc3bd4063b5aec8212c2834cb89b6d1f6992bfc3568d",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "4c456ff51efa36a816d01c9f81761f4ad97fd56bde4c262c42756b2f56f6b487",
+        "g1/object": "27676bf4e01a527626b3ce627b1d7ed9c93fa6555de06bca59f132cc2f3f5cab",
+        "g2/object": "674c8cfff4a438bb76c106cb78c871f9579ba023b23297f65e8c487d4a98bae2",
+        "g3/object": "a34c8794726031957864a6487715b9fcbd452afc699f0888fb568645072274d2"
+      },
+      "order": [
+        "joint",
+        "separated",
+        "joint_repeat"
+      ],
+      "p99_ns": 15881955100,
+      "pair": 0,
+      "position": 0,
+      "profile": "pq-4+2-gf256-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 8100187800,
+      "sha256": "65a20916c9ed692ffce88a0d6ad7b1673dde063c5e21d7527e8926017a9d0bb6",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "separated",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 8796875000,
+      "extra": true,
+      "file": "windows/window-0091.json",
+      "groups": 4,
+      "initial_sha256": "ddafbfe959cee98525b9cc3bd4063b5aec8212c2834cb89b6d1f6992bfc3568d",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "4c456ff51efa36a816d01c9f81761f4ad97fd56bde4c262c42756b2f56f6b487",
+        "g1/object": "27676bf4e01a527626b3ce627b1d7ed9c93fa6555de06bca59f132cc2f3f5cab",
+        "g2/object": "674c8cfff4a438bb76c106cb78c871f9579ba023b23297f65e8c487d4a98bae2",
+        "g3/object": "a34c8794726031957864a6487715b9fcbd452afc699f0888fb568645072274d2"
+      },
+      "order": [
+        "joint",
+        "separated",
+        "joint_repeat"
+      ],
+      "p99_ns": 18445329500,
+      "pair": 0,
+      "position": 1,
+      "profile": "pq-4+2-gf256-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 9336636700,
+      "sha256": "423c4231c1c307abda28abe137f72c4fc043bc79feccc1538e98ecc613aa696b",
+      "success": true,
+      "unit": 4096
+    },
+    {
+      "arm": "joint_repeat",
+      "committed_stage_bytes": 16384,
+      "controller_thread_cpu_ns": 7093750000,
+      "extra": true,
+      "file": "windows/window-0092.json",
+      "groups": 4,
+      "initial_sha256": "ddafbfe959cee98525b9cc3bd4063b5aec8212c2834cb89b6d1f6992bfc3568d",
+      "object_sha256": {
+        "foreground": "0561ee4b794ed166bfe995f2f069de1358c1861617ba39c6829fbde3e976ded4",
+        "g0/object": "4c456ff51efa36a816d01c9f81761f4ad97fd56bde4c262c42756b2f56f6b487",
+        "g1/object": "27676bf4e01a527626b3ce627b1d7ed9c93fa6555de06bca59f132cc2f3f5cab",
+        "g2/object": "674c8cfff4a438bb76c106cb78c871f9579ba023b23297f65e8c487d4a98bae2",
+        "g3/object": "a34c8794726031957864a6487715b9fcbd452afc699f0888fb568645072274d2"
+      },
+      "order": [
+        "joint",
+        "separated",
+        "joint_repeat"
+      ],
+      "p99_ns": 16956467600,
+      "pair": 0,
+      "position": 2,
+      "profile": "pq-4+2-gf256-v1",
+      "quality": {
+        "adequate": true,
+        "arrival_floor": 1000,
+        "collection_integrity": true,
+        "controller_cpu_floor_met": true,
+        "cpu_floor_ns": 2000000000,
+        "enqueued_before_restoration": 1200,
+        "scheduled_before_restoration": 1200
+      },
+      "restoration_wall_ns": 7757426800,
+      "sha256": "9fb8ddc7a64a409802cec16d569c6296fa9cb7b580287e11a2ae7a144cc84c87",
+      "success": true,
+      "unit": 4096
+    }
+  ],
+  "seed": 20261018,
+  "selections": [
+    {
+      "extra": false,
+      "groups": 4,
+      "profile": "xor-2+1-v1"
+    },
+    {
+      "extra": true,
+      "groups": 4,
+      "profile": "xor-2+1-v1"
+    },
+    {
+      "extra": false,
+      "groups": 4,
+      "profile": "pq-4+2-gf256-v1"
+    },
+    {
+      "extra": true,
+      "groups": 4,
+      "profile": "pq-4+2-gf256-v1"
+    }
+  ],
+  "success": false,
+  "unit": 4096
+}

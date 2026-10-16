@@ -97,7 +97,21 @@ def main():
                 resolved = (document.parent/target).resolve()
                 assert resolved == generated or resolved.exists(), (str(document), target)
                 links.append((str(document.relative_to(ROOT)), target))
-    summary = {"date": "2026-10-15", "source_commit": SOURCE, "matching_runtime_source_test_hashes": len(hashes),
+    continuation = characterization.get("continuation")
+    assert continuation and continuation["start_window"] == 64 and continuation["two_sessions"]
+    assert continuation["environment"]["source_sha256"] == hashes
+    assert continuation["environment"]["protocol_sha256"] == characterization["environment"]["protocol_sha256"]
+    assert continuation["helper_sha256"] == digest((ROOT/"analysis/continue_e18.py").read_bytes())
+    assert continuation["amendment_sha256"] == digest((ROOT/"experiments/e18_continuation_protocol.md").read_bytes())
+    anchor = ROOT/continuation["checkpoint"]
+    assert digest(anchor.read_bytes()) == continuation["checkpoint_sha256"]
+    assert characterization["records"][:64] == read(anchor)["records"]
+    from analysis.continue_e18 import schedule
+    entries = schedule(characterization["selections"])
+    assert len(entries) == 120
+    for ref, entry in zip(characterization["records"], entries):
+        assert all(ref[key] == value for key, value in entry.items())
+    summary = {"date": "2026-10-16", "source_commit": SOURCE, "matching_runtime_source_test_hashes": len(hashes),
                "unchanged_e17_runtime_test_files": len(prior), "protocol_hash_matches": True,
                "shard_digests_and_raw_derived_arithmetic": "PASS", "windows": window_counts,
                "requests": request_counts, "selected_workloads": calibration["selections"],
@@ -105,6 +119,9 @@ def main():
                "identical_software_repeatability_screens": [{"profile": r["profile"], "extra": r["extra"],
                    "established": r["identical_software_p99_5pct_repeatability_screen"]} for r in characterization["summary"]["configurations"]],
                "local_links_checked": len(links), "broken_links": 0,
+               "collection_sessions": 2, "original_64_window_prefix_unchanged": True,
+               "continuation_git_head_at_start": continuation["environment"]["git_head"],
+               "session_confounding_removed": False,
                "original_prism_gate_evaluated": False, "native_power_loss_durability_proven": False,
                "patent_readiness": 55, "audit_script_sha256": digest(Path(__file__).read_bytes())}
     summary["summary_script_sha256"] = digest((ROOT/"analysis/summarize_zoned_measurement.py").read_bytes())
