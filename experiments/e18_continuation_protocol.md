@@ -1,0 +1,13 @@
+# E18 interruption continuation, registered 16 October 2026
+
+This amendment is declared before any missing windows are collected. The original [protocol](zoned_measurement_protocol.md), runtime/test source at `e8ad2dba831f17749b0f8d27e5a32e63b1e9889a`, calibration and all 64 closed observations remain unchanged. The [interruption audit](../evidence/results/e18-checkpoint-audit.json) is historical evidence, not a running-process claim.
+
+Continue the exact seeded 120-entry schedule at entry 64. Check every saved identity/order/position against the regenerated prefix, all shard digests, complete request/receipt quality, source/test hashes and original protocol/calibration identity before starting. Refuse any unexpected shard/checkpoint or existing final manifest. No failed or inadequate saved observation may be replaced. The incomplete runtime store is preserved and never reopened; each new observation uses a fresh root under a new continuation directory.
+
+The continuation helper adds only analysis code. It must not change the original 73 runtime/test files while collecting. The archive's original environment remains its creation snapshot. Add a separate continuation environment with the actual current Git revision, UTC, source/protocol hashes, checkpoint anchor and helper/amendment digests. A different Git revision is permitted only for analysis/prose additions with identical runtime/test/original-protocol hashes. Do not claim that the second session ran on the first session's Git HEAD or date.
+
+Append immutable shards/checkpoints and create the single final manifest only after the schedule ends or a recorded collection failure. Final calculations use the original formulas and retain every prefix observation, including losses and insufficient windows. Report collection across two sessions, the partially split matched set, per-session coverage and host/session confounding. Intervals and identical-software screens remain descriptive and cannot demonstrate a candidate advantage or remove that confounding. Never relabel the run as uninterrupted.
+
+Run no local correctness/profile/other benchmark while the continuation is timed. Light documentation and web review are permitted. If the process stops again, preserve all new evidence and report incomplete; this amendment does not authorize silently retrying an uncertain window.
+
+After finalization, independently recompute all shard/selection/ratio integrity. Only then change runtime source for the separately registered codec experiment. The existing checkpoint audit remains a dated historical report; it is intentionally not a completed-run checker.
