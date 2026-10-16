@@ -43,3 +43,21 @@ The [registered cost pilot](experiments/zoned_cost_protocol.md) now implements t
 6. Keep E16-F separate: choose and pin an actual device/emulator backend, implement authoritative write-pointer/reset-status/identity reconciliation, and run its supported failure model. Local file fsync/zero length does not establish native reset status or power-loss durability. External reproduction and supported claim review are additional outputs.
 
 This measurement plan does not alter R14's negative invention finding or complete the original conditional filing plan. The remaining inventive contribution and human facts cannot be supplied by collecting more identical-controller timings.
+
+## Profile-guided implementation after E18
+
+**16 October status:** verification/profiles/calibration pass, but characterization is interrupted at 64/120 saved windows. [Execution record](evidence/results/E18_EXECUTION.md) and [checkpoint audit](evidence/results/e18-checkpoint-audit.json) preserve that partial attempt. Finish measurement through an explicitly declared continuation or separately registered fresh campaign before claiming a full E18 result. The codec work below is planned, not implemented; it must use a new source-bound calibration and cannot silently reuse the interrupted campaign.
+
+E18's eight instrumented stores identify coding as the largest recorded action-phase elapsed category and model validation as the largest planning category. These are elapsed profiles with overhead, not isolated production CPU shares. Keep the ten-set conventional characterization separate from any implementation change.
+
+The next concrete performance implementation should first strengthen the **shared conventional codec**:
+
+1. Preserve the current 2+1/4+2 generator matrices, GF polynomial, row ordering, byte lengths and zero padding. Keep an independent bytewise/field-arithmetic reference and all existing object/row authenticity checks.
+2. Investigate identity-row copies, precomputed per-coefficient byte translation and whole-buffer XOR to remove Python calls per byte in `coding.combine`. Python documents [256-byte translation tables](https://docs.python.org/3.11/library/stdtypes.html#bytes.translate) and [integer/byte conversion](https://docs.python.org/3.11/library/stdtypes.html#int.from_bytes); these support a standard-library implementation hypothesis, not a measured saving yet.
+3. Check every field coefficient/value pair, all supported decoding bases, odd/zero-length/padded content, original/extra-row corruption and source/staged checks before performance collection. Preserve byte-for-byte old-store and historical witness compatibility. Do not remove decode consistency, regenerated-row digests or content checks for speed.
+4. Give the faster codec to **all** conventional arms. Measure table creation/cold initialization separately, then complete controller and foreground costs under a new source-bound calibration. E18's selection cannot be reused across changed source. A codec speedup is shared engineering, not an inventive distinction.
+5. Only after attributing the new costs, consider planner/model-validation optimization or transaction-local reuse. Specify full affected membership, source retention and authentication before adding a cache; compare with complete reference validation and fault tests. Separate read concurrency requires its own retention/fallback contract.
+
+Conventional context: Intel's [ISA-L erasure-code header](https://github.com/intel/isa-l/blob/master/include/erasure_code.h) already exposes coefficient-table preparation and vector encode/decode operations. This is a current API context check, not a dated patent-anticipation assessment or a claim that the proposed Python implementation is novel. No ISA-L dependency/native binding is added by E18. A useful absolute improvement still needs comparison with the equally capable optimized baseline, and cannot by itself raise the assessed score above 70.
+
+Native device/emulator execution, independent reproduction and supported final claim review remain separate requirements. Improving this prototype's codec will not supply unknown inventor/ownership/priority facts.

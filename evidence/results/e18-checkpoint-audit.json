@@ -1,0 +1,32 @@
+{
+  "all_saved_timing_windows_adequate": true,
+  "audit_script_sha256": "92ba20d8de76682a332b16c49c060ce5fceca7348ce850dd240582bba5b79e3a",
+  "characterization_windows_by_configuration": {
+    "pq-4+2-gf256-v1 spare=False": 4,
+    "xor-2+1-v1 spare=False": 30,
+    "xor-2+1-v1 spare=True": 30
+  },
+  "date": "2026-10-16",
+  "full_campaign_complete": false,
+  "latest_checkpoint": "evidence/results/e18-characterization/checkpoints/checkpoint-0065.json",
+  "latest_checkpoint_sha256": "6e1b0322cf4937359e1a51e33fcbb5a0506424440e7e26e69a73ad6469e96de4",
+  "matching_source_test_hashes": 73,
+  "original_prism_gate_evaluated": false,
+  "patent_readiness": 55,
+  "remaining_registered_windows": 56,
+  "repeatability_screen_evaluated": false,
+  "requests": {
+    "calibration": 28800,
+    "characterization": 76800,
+    "profile": 0
+  },
+  "saved_observation_integrity": "PASS",
+  "source_commit": "e8ad2dba831f17749b0f8d27e5a32e63b1e9889a",
+  "status": "INTERRUPTED; final manifest absent; process no longer running; cause unknown",
+  "unchanged_e17_source_test_files": 71,
+  "windows": {
+    "calibration": 24,
+    "characterization": 64,
+    "profile": 8
+  }
+}

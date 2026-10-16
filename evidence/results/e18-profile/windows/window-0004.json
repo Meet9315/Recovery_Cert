@@ -1,0 +1,4232 @@
+{
+  "arm": "joint",
+  "committed_stage_bytes": 16384,
+  "comparison_effect_claimed": false,
+  "component_scores": [
+    [
+      1,
+      9
+    ],
+    [
+      1,
+      9
+    ],
+    [
+      1,
+      9
+    ],
+    [
+      1,
+      9
+    ]
+  ],
+  "extra": false,
+  "foreground_present": false,
+  "groups": 4,
+  "initial_sha256": "a23a20fd6200d6fe019317c166850480f234faeb8e467602cd9e4da8e27efcc4",
+  "phases": {
+    "actions": {
+      "error": null,
+      "exclusive_categories_elapsed_ns": {
+        "authority": 87667000,
+        "coding": 15512687700,
+        "file_io": 541589900,
+        "hashing": 44300400,
+        "model_validation": 81152700,
+        "runtime_other": 344748100,
+        "serialization": 202950100,
+        "sqlite": 322516800
+      },
+      "functions": [
+        {
+          "calls": 3600,
+          "category": "coding",
+          "exclusive_elapsed_ns": 8899159100,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/coding.py",
+          "function": "combine",
+          "inclusive_elapsed_ns": 15450867600,
+          "line": 63,
+          "primitive_calls": 3600
+        },
+        {
+          "calls": 23637952,
+          "category": "coding",
+          "exclusive_elapsed_ns": 6552988400,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/coding.py",
+          "function": "gf_mul",
+          "inclusive_elapsed_ns": 6552988400,
+          "line": 36,
+          "primitive_calls": 23637952
+        },
+        {
+          "calls": 2000,
+          "category": "file_io",
+          "exclusive_elapsed_ns": 430267000,
+          "file": "~",
+          "function": "<built-in method io.open>",
+          "inclusive_elapsed_ns": 446999400,
+          "line": 0,
+          "primitive_calls": 2000
+        },
+        {
+          "calls": 1188,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 139962600,
+          "file": "~",
+          "function": "<built-in method nt.stat>",
+          "inclusive_elapsed_ns": 145559900,
+          "line": 0,
+          "primitive_calls": 1188
+        },
+        {
+          "calls": 45,
+          "category": "sqlite",
+          "exclusive_elapsed_ns": 91951100,
+          "file": "~",
+          "function": "<method 'close' of 'sqlite3.Connection' objects>",
+          "inclusive_elapsed_ns": 91951100,
+          "line": 0,
+          "primitive_calls": 45
+        },
+        {
+          "calls": 45,
+          "category": "sqlite",
+          "exclusive_elapsed_ns": 90902900,
+          "file": "~",
+          "function": "<method 'commit' of 'sqlite3.Connection' objects>",
+          "inclusive_elapsed_ns": 90902900,
+          "line": 0,
+          "primitive_calls": 45
+        },
+        {
+          "calls": 45396,
+          "category": "serialization",
+          "exclusive_elapsed_ns": 84977700,
+          "file": "C:/Python/Python311/Lib/dataclasses.py",
+          "function": "_asdict_inner",
+          "inclusive_elapsed_ns": 219992400,
+          "line": 1287,
+          "primitive_calls": 132
+        },
+        {
+          "calls": 45,
+          "category": "sqlite",
+          "exclusive_elapsed_ns": 76292500,
+          "file": "~",
+          "function": "<built-in method _sqlite3.connect>",
+          "inclusive_elapsed_ns": 78065200,
+          "line": 0,
+          "primitive_calls": 45
+        },
+        {
+          "calls": 215,
+          "category": "sqlite",
+          "exclusive_elapsed_ns": 62973100,
+          "file": "~",
+          "function": "<method 'execute' of 'sqlite3.Connection' objects>",
+          "inclusive_elapsed_ns": 62973100,
+          "line": 0,
+          "primitive_calls": 215
+        },
+        {
+          "calls": 1992,
+          "category": "file_io",
+          "exclusive_elapsed_ns": 60517600,
+          "file": "~",
+          "function": "<method 'read' of '_io.BufferedReader' objects>",
+          "inclusive_elapsed_ns": 60517600,
+          "line": 0,
+          "primitive_calls": 1992
+        },
+        {
+          "calls": 4972,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 49186500,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<setcomp>",
+          "inclusive_elapsed_ns": 49186500,
+          "line": 175,
+          "primitive_calls": 4972
+        },
+        {
+          "calls": 36404,
+          "category": "serialization",
+          "exclusive_elapsed_ns": 39615700,
+          "file": "C:/Python/Python311/Lib/copy.py",
+          "function": "deepcopy",
+          "inclusive_elapsed_ns": 55944200,
+          "line": 128,
+          "primitive_calls": 36404
+        },
+        {
+          "calls": 2000,
+          "category": "file_io",
+          "exclusive_elapsed_ns": 37976700,
+          "file": "~",
+          "function": "<method '__exit__' of '_io._IOBase' objects>",
+          "inclusive_elapsed_ns": 37976700,
+          "line": 0,
+          "primitive_calls": 2000
+        },
+        {
+          "calls": 7808,
+          "category": "hashing",
+          "exclusive_elapsed_ns": 32384800,
+          "file": "~",
+          "function": "<built-in method _hashlib.openssl_sha256>",
+          "inclusive_elapsed_ns": 32384800,
+          "line": 0,
+          "primitive_calls": 7808
+        },
+        {
+          "calls": 400,
+          "category": "authority",
+          "exclusive_elapsed_ns": 31167700,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_store.py",
+          "function": "_read",
+          "inclusive_elapsed_ns": 16226619100,
+          "line": 156,
+          "primitive_calls": 400
+        },
+        {
+          "calls": 1988,
+          "category": "authority",
+          "exclusive_elapsed_ns": 23841500,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_store.py",
+          "function": "_fragment",
+          "inclusive_elapsed_ns": 671231200,
+          "line": 147,
+          "primitive_calls": 1988
+        },
+        {
+          "calls": 148,
+          "category": "serialization",
+          "exclusive_elapsed_ns": 23468500,
+          "file": "C:/Python/Python311/Lib/json/encoder.py",
+          "function": "iterencode",
+          "inclusive_elapsed_ns": 23468500,
+          "line": 205,
+          "primitive_calls": 148
+        },
+        {
+          "calls": 6376,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 23424300,
+          "file": "C:/Python/Python311/Lib/pathlib.py",
+          "function": "parse_parts",
+          "inclusive_elapsed_ns": 39498100,
+          "line": 56,
+          "primitive_calls": 6376
+        },
+        {
+          "calls": 6376,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 19831100,
+          "file": "C:/Python/Python311/Lib/pathlib.py",
+          "function": "_parse_args",
+          "inclusive_elapsed_ns": 64598500,
+          "line": 484,
+          "primitive_calls": 6376
+        },
+        {
+          "calls": 137484,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 17779000,
+          "file": "~",
+          "function": "<built-in method builtins.isinstance>",
+          "inclusive_elapsed_ns": 17779000,
+          "line": 0,
+          "primitive_calls": 137484
+        },
+        {
+          "calls": 400,
+          "category": "coding",
+          "exclusive_elapsed_ns": 16463700,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/coding.py",
+          "function": "recover",
+          "inclusive_elapsed_ns": 15518707100,
+          "line": 82,
+          "primitive_calls": 400
+        },
+        {
+          "calls": 45628,
+          "category": "serialization",
+          "exclusive_elapsed_ns": 15908400,
+          "file": "C:/Python/Python311/Lib/dataclasses.py",
+          "function": "_is_dataclass_instance",
+          "inclusive_elapsed_ns": 28947500,
+          "line": 1251,
+          "primitive_calls": 45628
+        },
+        {
+          "calls": 6376,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 15251400,
+          "file": "C:/Python/Python311/Lib/pathlib.py",
+          "function": "_make_child",
+          "inclusive_elapsed_ns": 89957700,
+          "line": 530,
+          "primitive_calls": 6376
+        },
+        {
+          "calls": 88,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 14045200,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "validate",
+          "inclusive_elapsed_ns": 31180600,
+          "line": 95,
+          "primitive_calls": 88
+        },
+        {
+          "calls": 3233,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 13700800,
+          "file": "C:/Python/Python311/Lib/pathlib.py",
+          "function": "__str__",
+          "inclusive_elapsed_ns": 19319100,
+          "line": 536,
+          "primitive_calls": 3233
+        },
+        {
+          "calls": 49164,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 13485000,
+          "file": "~",
+          "function": "<built-in method builtins.hasattr>",
+          "inclusive_elapsed_ns": 13485000,
+          "line": 0,
+          "primitive_calls": 49164
+        },
+        {
+          "calls": 7808,
+          "category": "hashing",
+          "exclusive_elapsed_ns": 11915600,
+          "file": "~",
+          "function": "<method 'hexdigest' of '_hashlib.HASH' objects>",
+          "inclusive_elapsed_ns": 11915600,
+          "line": 0,
+          "primitive_calls": 7808
+        },
+        {
+          "calls": 5456,
+          "category": "serialization",
+          "exclusive_elapsed_ns": 10927200,
+          "file": "C:/Python/Python311/Lib/dataclasses.py",
+          "function": "fields",
+          "inclusive_elapsed_ns": 21353700,
+          "line": 1233,
+          "primitive_calls": 5456
+        },
+        {
+          "calls": 3188,
+          "category": "authority",
+          "exclusive_elapsed_ns": 9801400,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_store.py",
+          "function": "zone_path",
+          "inclusive_elapsed_ns": 120281700,
+          "line": 130,
+          "primitive_calls": 3188
+        },
+        {
+          "calls": 7756,
+          "category": "coding",
+          "exclusive_elapsed_ns": 9224400,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/coding.py",
+          "function": "digest",
+          "inclusive_elapsed_ns": 52768800,
+          "line": 12,
+          "primitive_calls": 7756
+        },
+        {
+          "calls": 41932,
+          "category": "serialization",
+          "exclusive_elapsed_ns": 8567700,
+          "file": "C:/Python/Python311/Lib/dataclasses.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 8567700,
+          "line": 1248,
+          "primitive_calls": 41932
+        },
+        {
+          "calls": 6376,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 8472100,
+          "file": "C:/Python/Python311/Lib/pathlib.py",
+          "function": "splitroot",
+          "inclusive_elapsed_ns": 8472100,
+          "line": 147,
+          "primitive_calls": 6376
+        },
+        {
+          "calls": 72808,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 8130800,
+          "file": "~",
+          "function": "<method 'get' of 'dict' objects>",
+          "inclusive_elapsed_ns": 8130800,
+          "line": 0,
+          "primitive_calls": 72808
+        },
+        {
+          "calls": 6376,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 7848200,
+          "file": "C:/Python/Python311/Lib/pathlib.py",
+          "function": "__truediv__",
+          "inclusive_elapsed_ns": 97805900,
+          "line": 765,
+          "primitive_calls": 6376
+        },
+        {
+          "calls": 12,
+          "category": "file_io",
+          "exclusive_elapsed_ns": 7269100,
+          "file": "~",
+          "function": "<built-in method nt.fsync>",
+          "inclusive_elapsed_ns": 7269100,
+          "line": 0,
+          "primitive_calls": 12
+        },
+        {
+          "calls": 42968,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 7241000,
+          "file": "~",
+          "function": "<built-in method builtins.getattr>",
+          "inclusive_elapsed_ns": 7241000,
+          "line": 0,
+          "primitive_calls": 42968
+        },
+        {
+          "calls": 400,
+          "category": "coding",
+          "exclusive_elapsed_ns": 7193300,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/coding.py",
+          "function": "invert",
+          "inclusive_elapsed_ns": 20051100,
+          "line": 46,
+          "primitive_calls": 400
+        },
+        {
+          "calls": 45,
+          "category": "serialization",
+          "exclusive_elapsed_ns": 7132000,
+          "file": "C:/Python/Python311/Lib/json/decoder.py",
+          "function": "raw_decode",
+          "inclusive_elapsed_ns": 7132000,
+          "line": 343,
+          "primitive_calls": 45
+        },
+        {
+          "calls": 1840,
+          "category": "coding",
+          "exclusive_elapsed_ns": 6259700,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/coding.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 4298962000,
+          "line": 94,
+          "primitive_calls": 1840
+        },
+        {
+          "calls": 49228,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 5966800,
+          "file": "~",
+          "function": "<method 'append' of 'list' objects>",
+          "inclusive_elapsed_ns": 5966800,
+          "line": 0,
+          "primitive_calls": 49228
+        },
+        {
+          "calls": 44,
+          "category": "authority",
+          "exclusive_elapsed_ns": 5537700,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_store.py",
+          "function": "_geometry",
+          "inclusive_elapsed_ns": 189326000,
+          "line": 179,
+          "primitive_calls": 44
+        },
+        {
+          "calls": 6376,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 5446500,
+          "file": "C:/Python/Python311/Lib/pathlib.py",
+          "function": "_from_parsed_parts",
+          "inclusive_elapsed_ns": 7216300,
+          "line": 515,
+          "primitive_calls": 6376
+        },
+        {
+          "calls": 28607,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 4993800,
+          "file": "~",
+          "function": "<built-in method builtins.len>",
+          "inclusive_elapsed_ns": 4993800,
+          "line": 0,
+          "primitive_calls": 28607
+        },
+        {
+          "calls": 12324,
+          "category": "serialization",
+          "exclusive_elapsed_ns": 4992500,
+          "file": "C:/Python/Python311/Lib/dataclasses.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 213505600,
+          "line": 1319,
+          "primitive_calls": 3520
+        },
+        {
+          "calls": 44,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 4653300,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "protected",
+          "inclusive_elapsed_ns": 55948500,
+          "line": 171,
+          "primitive_calls": 44
+        },
+        {
+          "calls": 1992,
+          "category": "file_io",
+          "exclusive_elapsed_ns": 4415800,
+          "file": "~",
+          "function": "<method 'seek' of '_io.BufferedReader' objects>",
+          "inclusive_elapsed_ns": 4415800,
+          "line": 0,
+          "primitive_calls": 1992
+        },
+        {
+          "calls": 36404,
+          "category": "serialization",
+          "exclusive_elapsed_ns": 4233400,
+          "file": "C:/Python/Python311/Lib/copy.py",
+          "function": "_deepcopy_atomic",
+          "inclusive_elapsed_ns": 4233400,
+          "line": 182,
+          "primitive_calls": 36404
+        },
+        {
+          "calls": 2560,
+          "category": "coding",
+          "exclusive_elapsed_ns": 4156200,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/coding.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 11163814700,
+          "line": 95,
+          "primitive_calls": 2560
+        },
+        {
+          "calls": 3188,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 4062700,
+          "file": "C:/Python/Python311/Lib/pathlib.py",
+          "function": "_format_parsed_parts",
+          "inclusive_elapsed_ns": 5618300,
+          "line": 523,
+          "primitive_calls": 3188
+        },
+        {
+          "calls": 36404,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 3964300,
+          "file": "~",
+          "function": "<built-in method builtins.id>",
+          "inclusive_elapsed_ns": 3964300,
+          "line": 0,
+          "primitive_calls": 36404
+        },
+        {
+          "calls": 6376,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 3945800,
+          "file": "~",
+          "function": "<built-in method sys.intern>",
+          "inclusive_elapsed_ns": 3945800,
+          "line": 0,
+          "primitive_calls": 6376
+        },
+        {
+          "calls": 12980,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 3919300,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 3919300,
+          "line": 165,
+          "primitive_calls": 12980
+        },
+        {
+          "calls": 1056,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 3759600,
+          "file": "~",
+          "function": "<built-in method builtins.sum>",
+          "inclusive_elapsed_ns": 12530100,
+          "line": 0,
+          "primitive_calls": 1056
+        },
+        {
+          "calls": 1,
+          "category": "authority",
+          "exclusive_elapsed_ns": 3733600,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_store.py",
+          "function": "execute",
+          "inclusive_elapsed_ns": 17146454700,
+          "line": 360,
+          "primitive_calls": 1
+        },
+        {
+          "calls": 400,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 3633600,
+          "file": "~",
+          "function": "<method 'join' of 'bytes' objects>",
+          "inclusive_elapsed_ns": 3633600,
+          "line": 0,
+          "primitive_calls": 400
+        },
+        {
+          "calls": 2000,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 3591400,
+          "file": "C:/Python/Python311/Lib/pathlib.py",
+          "function": "open",
+          "inclusive_elapsed_ns": 450590800,
+          "line": 1036,
+          "primitive_calls": 2000
+        },
+        {
+          "calls": 2380,
+          "category": "coding",
+          "exclusive_elapsed_ns": 3459400,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/coding.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 4606600,
+          "line": 85,
+          "primitive_calls": 2380
+        },
+        {
+          "calls": 1440,
+          "category": "coding",
+          "exclusive_elapsed_ns": 3174300,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/coding.py",
+          "function": "<listcomp>",
+          "inclusive_elapsed_ns": 5411100,
+          "line": 55,
+          "primitive_calls": 1440
+        },
+        {
+          "calls": 3188,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 3038700,
+          "file": "C:/Python/Python311/Lib/pathlib.py",
+          "function": "__fspath__",
+          "inclusive_elapsed_ns": 22329700,
+          "line": 546,
+          "primitive_calls": 3188
+        },
+        {
+          "calls": 6376,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 2891500,
+          "file": "C:/Python/Python311/Lib/pathlib.py",
+          "function": "join_parsed_parts",
+          "inclusive_elapsed_ns": 2891500,
+          "line": 94,
+          "primitive_calls": 6376
+        },
+        {
+          "calls": 37,
+          "category": "authority",
+          "exclusive_elapsed_ns": 2887500,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_store.py",
+          "function": "advance",
+          "inclusive_elapsed_ns": 17142721100,
+          "line": 211,
+          "primitive_calls": 37
+        },
+        {
+          "calls": 2380,
+          "category": "coding",
+          "exclusive_elapsed_ns": 2661500,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/coding.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 2661500,
+          "line": 96,
+          "primitive_calls": 2380
+        },
+        {
+          "calls": 1620,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 2427900,
+          "file": "~",
+          "function": "<built-in method builtins.any>",
+          "inclusive_elapsed_ns": 10990600,
+          "line": 0,
+          "primitive_calls": 1620
+        },
+        {
+          "calls": 400,
+          "category": "coding",
+          "exclusive_elapsed_ns": 2201000,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/coding.py",
+          "function": "<listcomp>",
+          "inclusive_elapsed_ns": 3627100,
+          "line": 48,
+          "primitive_calls": 400
+        },
+        {
+          "calls": 12320,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 2108600,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 2108600,
+          "line": 166,
+          "primitive_calls": 12320
+        },
+        {
+          "calls": 6421,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 2069300,
+          "file": "~",
+          "function": "<method 'replace' of 'str' objects>",
+          "inclusive_elapsed_ns": 2069300,
+          "line": 0,
+          "primitive_calls": 6421
+        },
+        {
+          "calls": 3346,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 1897800,
+          "file": "~",
+          "function": "<method 'encode' of 'str' objects>",
+          "inclusive_elapsed_ns": 1897800,
+          "line": 0,
+          "primitive_calls": 3346
+        },
+        {
+          "calls": 80,
+          "category": "authority",
+          "exclusive_elapsed_ns": 1777600,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_store.py",
+          "function": "<dictcomp>",
+          "inclusive_elapsed_ns": 16228396700,
+          "line": 171,
+          "primitive_calls": 80
+        },
+        {
+          "calls": 6376,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 1769800,
+          "file": "~",
+          "function": "<built-in method __new__ of type object at 0x00007FF9FA6F8F90>",
+          "inclusive_elapsed_ns": 1769800,
+          "line": 0,
+          "primitive_calls": 6376
+        },
+        {
+          "calls": 4780,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 1753600,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/profiles.py",
+          "function": "total_rows",
+          "inclusive_elapsed_ns": 2231700,
+          "line": 16,
+          "primitive_calls": 4780
+        },
+        {
+          "calls": 36,
+          "category": "authority",
+          "exclusive_elapsed_ns": 1648400,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_store.py",
+          "function": "_commit_action",
+          "inclusive_elapsed_ns": 7515813800,
+          "line": 268,
+          "primitive_calls": 36
+        },
+        {
+          "calls": 3336,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 1583800,
+          "file": "~",
+          "function": "<method 'join' of 'str' objects>",
+          "inclusive_elapsed_ns": 1583800,
+          "line": 0,
+          "primitive_calls": 3336
+        },
+        {
+          "calls": 2446,
+          "category": "authority",
+          "exclusive_elapsed_ns": 1500700,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_store.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 2600700,
+          "line": 22,
+          "primitive_calls": 2446
+        },
+        {
+          "calls": 7780,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 1428000,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "code",
+          "inclusive_elapsed_ns": 1428000,
+          "line": 18,
+          "primitive_calls": 7780
+        },
+        {
+          "calls": 6376,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 1317900,
+          "file": "~",
+          "function": "<built-in method nt.fspath>",
+          "inclusive_elapsed_ns": 1317900,
+          "line": 0,
+          "primitive_calls": 6376
+        },
+        {
+          "calls": 90,
+          "category": "authority",
+          "exclusive_elapsed_ns": 1244800,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_store.py",
+          "function": "_transaction",
+          "inclusive_elapsed_ns": 318400400,
+          "line": 99,
+          "primitive_calls": 90
+        },
+        {
+          "calls": 400,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 1167100,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/model.py",
+          "function": "profile_spec",
+          "inclusive_elapsed_ns": 1273400,
+          "line": 18,
+          "primitive_calls": 400
+        },
+        {
+          "calls": 2770,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 1167000,
+          "file": "~",
+          "function": "<built-in method builtins.next>",
+          "inclusive_elapsed_ns": 320556200,
+          "line": 0,
+          "primitive_calls": 2770
+        },
+        {
+          "calls": 6356,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 1100400,
+          "file": "~",
+          "function": "<method 'values' of 'dict' objects>",
+          "inclusive_elapsed_ns": 1100400,
+          "line": 0,
+          "primitive_calls": 6356
+        },
+        {
+          "calls": 2380,
+          "category": "coding",
+          "exclusive_elapsed_ns": 1084000,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/coding.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 1277500,
+          "line": 86,
+          "primitive_calls": 2380
+        },
+        {
+          "calls": 8,
+          "category": "authority",
+          "exclusive_elapsed_ns": 1032800,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_store.py",
+          "function": "_apply_prepared",
+          "inclusive_elapsed_ns": 3493057200,
+          "line": 281,
+          "primitive_calls": 8
+        },
+        {
+          "calls": 576,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 997000,
+          "file": "~",
+          "function": "<built-in method builtins.sorted>",
+          "inclusive_elapsed_ns": 997000,
+          "line": 0,
+          "primitive_calls": 576
+        },
+        {
+          "calls": 400,
+          "category": "coding",
+          "exclusive_elapsed_ns": 969800,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/coding.py",
+          "function": "<setcomp>",
+          "inclusive_elapsed_ns": 1211800,
+          "line": 88,
+          "primitive_calls": 400
+        },
+        {
+          "calls": 400,
+          "category": "authority",
+          "exclusive_elapsed_ns": 949200,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_store.py",
+          "function": "<listcomp>",
+          "inclusive_elapsed_ns": 9101900,
+          "line": 166,
+          "primitive_calls": 400
+        },
+        {
+          "calls": 1188,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 926400,
+          "file": "C:/Python/Python311/Lib/pathlib.py",
+          "function": "stat",
+          "inclusive_elapsed_ns": 146486300,
+          "line": 1008,
+          "primitive_calls": 1188
+        },
+        {
+          "calls": 2880,
+          "category": "coding",
+          "exclusive_elapsed_ns": 902400,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/coding.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 902400,
+          "line": 50,
+          "primitive_calls": 2880
+        },
+        {
+          "calls": 6376,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 892500,
+          "file": "~",
+          "function": "<method 'reverse' of 'list' objects>",
+          "inclusive_elapsed_ns": 892500,
+          "line": 0,
+          "primitive_calls": 6376
+        },
+        {
+          "calls": 100,
+          "category": "serialization",
+          "exclusive_elapsed_ns": 865700,
+          "file": "C:/Python/Python311/Lib/dataclasses.py",
+          "function": "replace",
+          "inclusive_elapsed_ns": 1251200,
+          "line": 1453,
+          "primitive_calls": 100
+        },
+        {
+          "calls": 2464,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 861800,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 1394800,
+          "line": 155,
+          "primitive_calls": 2464
+        },
+        {
+          "calls": 1440,
+          "category": "coding",
+          "exclusive_elapsed_ns": 836500,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/coding.py",
+          "function": "gf_inverse",
+          "inclusive_elapsed_ns": 836500,
+          "line": 40,
+          "primitive_calls": 1440
+        },
+        {
+          "calls": 2464,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 778100,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 1347800,
+          "line": 157,
+          "primitive_calls": 2464
+        },
+        {
+          "calls": 1840,
+          "category": "coding",
+          "exclusive_elapsed_ns": 745300,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/coding.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 745300,
+          "line": 60,
+          "primitive_calls": 1840
+        },
+        {
+          "calls": 44,
+          "category": "authority",
+          "exclusive_elapsed_ns": 709800,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_store.py",
+          "function": "state_from_dict",
+          "inclusive_elapsed_ns": 8526500,
+          "line": 20,
+          "primitive_calls": 44
+        },
+        {
+          "calls": 44,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 698700,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "step",
+          "inclusive_elapsed_ns": 89325200,
+          "line": 201,
+          "primitive_calls": 44
+        },
+        {
+          "calls": 1840,
+          "category": "coding",
+          "exclusive_elapsed_ns": 695200,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/coding.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 695200,
+          "line": 93,
+          "primitive_calls": 1840
+        },
+        {
+          "calls": 148,
+          "category": "serialization",
+          "exclusive_elapsed_ns": 679800,
+          "file": "C:/Python/Python311/Lib/json/__init__.py",
+          "function": "dumps",
+          "inclusive_elapsed_ns": 24989100,
+          "line": 183,
+          "primitive_calls": 148
+        },
+        {
+          "calls": 52,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 588300,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "fingerprint",
+          "inclusive_elapsed_ns": 142592900,
+          "line": 75,
+          "primitive_calls": 52
+        },
+        {
+          "calls": 2376,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 569700,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "uses_active",
+          "inclusive_elapsed_ns": 569700,
+          "line": 47,
+          "primitive_calls": 2376
+        },
+        {
+          "calls": 148,
+          "category": "serialization",
+          "exclusive_elapsed_ns": 566200,
+          "file": "C:/Python/Python311/Lib/json/encoder.py",
+          "function": "encode",
+          "inclusive_elapsed_ns": 24112900,
+          "line": 183,
+          "primitive_calls": 148
+        },
+        {
+          "calls": 12,
+          "category": "file_io",
+          "exclusive_elapsed_ns": 541100,
+          "file": "~",
+          "function": "<method 'flush' of '_io.BufferedRandom' objects>",
+          "inclusive_elapsed_ns": 541100,
+          "line": 0,
+          "primitive_calls": 12
+        },
+        {
+          "calls": 2376,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 533000,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "uses_open",
+          "inclusive_elapsed_ns": 533000,
+          "line": 44,
+          "primitive_calls": 2376
+        },
+        {
+          "calls": 4,
+          "category": "file_io",
+          "exclusive_elapsed_ns": 525800,
+          "file": "~",
+          "function": "<method 'truncate' of '_io.BufferedRandom' objects>",
+          "inclusive_elapsed_ns": 525800,
+          "line": 0,
+          "primitive_calls": 4
+        },
+        {
+          "calls": 45,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 513500,
+          "file": "C:/Python/Python311/Lib/pathlib.py",
+          "function": "make_uri",
+          "inclusive_elapsed_ns": 1435500,
+          "line": 218,
+          "primitive_calls": 45
+        },
+        {
+          "calls": 168,
+          "category": "coding",
+          "exclusive_elapsed_ns": 513500,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/coding.py",
+          "function": "<listcomp>",
+          "inclusive_elapsed_ns": 799000,
+          "line": 59,
+          "primitive_calls": 168
+        },
+        {
+          "calls": 45,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 485100,
+          "file": "C:/Python/Python311/Lib/functools.py",
+          "function": "update_wrapper",
+          "inclusive_elapsed_ns": 1021600,
+          "line": 35,
+          "primitive_calls": 45
+        },
+        {
+          "calls": 45,
+          "category": "authority",
+          "exclusive_elapsed_ns": 476300,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_store.py",
+          "function": "_load",
+          "inclusive_elapsed_ns": 10289600,
+          "line": 115,
+          "primitive_calls": 45
+        },
+        {
+          "calls": 45,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 457700,
+          "file": "C:/Python/Python311/Lib/contextlib.py",
+          "function": "__exit__",
+          "inclusive_elapsed_ns": 184164400,
+          "line": 141,
+          "primitive_calls": 45
+        },
+        {
+          "calls": 264,
+          "category": "authority",
+          "exclusive_elapsed_ns": 448400,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_store.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 660800,
+          "line": 21,
+          "primitive_calls": 264
+        },
+        {
+          "calls": 2596,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 448400,
+          "file": "~",
+          "function": "<built-in method builtins.min>",
+          "inclusive_elapsed_ns": 448400,
+          "line": 0,
+          "primitive_calls": 2596
+        },
+        {
+          "calls": 176,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 430500,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<setcomp>",
+          "inclusive_elapsed_ns": 430500,
+          "line": 173,
+          "primitive_calls": 176
+        },
+        {
+          "calls": 704,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 427000,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 427000,
+          "line": 162,
+          "primitive_calls": 704
+        },
+        {
+          "calls": 45,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 405900,
+          "file": "C:/Python/Python311/Lib/functools.py",
+          "function": "decorating_function",
+          "inclusive_elapsed_ns": 1427500,
+          "line": 518,
+          "primitive_calls": 45
+        },
+        {
+          "calls": 45,
+          "category": "sqlite",
+          "exclusive_elapsed_ns": 397200,
+          "file": "~",
+          "function": "<method 'fetchone' of 'sqlite3.Cursor' objects>",
+          "inclusive_elapsed_ns": 397200,
+          "line": 0,
+          "primitive_calls": 45
+        },
+        {
+          "calls": 88,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 330000,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<setcomp>",
+          "inclusive_elapsed_ns": 330000,
+          "line": 103,
+          "primitive_calls": 88
+        },
+        {
+          "calls": 45,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 303000,
+          "file": "C:/Python/Python311/Lib/functools.py",
+          "function": "lru_cache",
+          "inclusive_elapsed_ns": 345200,
+          "line": 479,
+          "primitive_calls": 45
+        },
+        {
+          "calls": 45,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 300800,
+          "file": "C:/Python/Python311/Lib/contextlib.py",
+          "function": "__init__",
+          "inclusive_elapsed_ns": 372100,
+          "line": 104,
+          "primitive_calls": 45
+        },
+        {
+          "calls": 45,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 283500,
+          "file": "C:/Python/Python311/Lib/urllib/parse.py",
+          "function": "quote_from_bytes",
+          "inclusive_elapsed_ns": 436300,
+          "line": 917,
+          "primitive_calls": 45
+        },
+        {
+          "calls": 45,
+          "category": "serialization",
+          "exclusive_elapsed_ns": 282800,
+          "file": "C:/Python/Python311/Lib/json/decoder.py",
+          "function": "decode",
+          "inclusive_elapsed_ns": 7667400,
+          "line": 332,
+          "primitive_calls": 45
+        },
+        {
+          "calls": 80,
+          "category": "authority",
+          "exclusive_elapsed_ns": 281200,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_store.py",
+          "function": "_read_all",
+          "inclusive_elapsed_ns": 16228677900,
+          "line": 170,
+          "primitive_calls": 80
+        },
+        {
+          "calls": 132,
+          "category": "serialization",
+          "exclusive_elapsed_ns": 269300,
+          "file": "C:/Python/Python311/Lib/dataclasses.py",
+          "function": "asdict",
+          "inclusive_elapsed_ns": 220522700,
+          "line": 1263,
+          "primitive_calls": 132
+        },
+        {
+          "calls": 45,
+          "category": "serialization",
+          "exclusive_elapsed_ns": 266800,
+          "file": "C:/Python/Python311/Lib/json/__init__.py",
+          "function": "loads",
+          "inclusive_elapsed_ns": 8025600,
+          "line": 299,
+          "primitive_calls": 45
+        },
+        {
+          "calls": 400,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 238300,
+          "file": "~",
+          "function": "<method 'items' of 'dict' objects>",
+          "inclusive_elapsed_ns": 238300,
+          "line": 0,
+          "primitive_calls": 400
+        },
+        {
+          "calls": 800,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 235300,
+          "file": "~",
+          "function": "<built-in method builtins.iter>",
+          "inclusive_elapsed_ns": 235300,
+          "line": 0,
+          "primitive_calls": 800
+        },
+        {
+          "calls": 88,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 231900,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<setcomp>",
+          "inclusive_elapsed_ns": 231900,
+          "line": 104,
+          "primitive_calls": 88
+        },
+        {
+          "calls": 44,
+          "category": "authority",
+          "exclusive_elapsed_ns": 223900,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_store.py",
+          "function": "_save",
+          "inclusive_elapsed_ns": 16338900,
+          "line": 119,
+          "primitive_calls": 44
+        },
+        {
+          "calls": 45,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 216300,
+          "file": "C:/Python/Python311/Lib/pathlib.py",
+          "function": "as_posix",
+          "inclusive_elapsed_ns": 345600,
+          "line": 549,
+          "primitive_calls": 45
+        },
+        {
+          "calls": 220,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 212400,
+          "file": "<string>",
+          "function": "__init__",
+          "inclusive_elapsed_ns": 212400,
+          "line": 2,
+          "primitive_calls": 220
+        },
+        {
+          "calls": 45,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 210600,
+          "file": "C:/Python/Python311/Lib/pathlib.py",
+          "function": "is_absolute",
+          "inclusive_elapsed_ns": 210600,
+          "line": 792,
+          "primitive_calls": 45
+        },
+        {
+          "calls": 90,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 199300,
+          "file": "~",
+          "function": "<method 'match' of 're.Pattern' objects>",
+          "inclusive_elapsed_ns": 199300,
+          "line": 0,
+          "primitive_calls": 90
+        },
+        {
+          "calls": 148,
+          "category": "serialization",
+          "exclusive_elapsed_ns": 196400,
+          "file": "C:/Python/Python311/Lib/json/encoder.py",
+          "function": "__init__",
+          "inclusive_elapsed_ns": 196400,
+          "line": 105,
+          "primitive_calls": 148
+        },
+        {
+          "calls": 45,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 174500,
+          "file": "C:/Python/Python311/Lib/contextlib.py",
+          "function": "helper",
+          "inclusive_elapsed_ns": 546600,
+          "line": 287,
+          "primitive_calls": 45
+        },
+        {
+          "calls": 45,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 146300,
+          "file": "C:/Python/Python311/Lib/pathlib.py",
+          "function": "as_uri",
+          "inclusive_elapsed_ns": 1792400,
+          "line": 563,
+          "primitive_calls": 45
+        },
+        {
+          "calls": 108,
+          "category": "authority",
+          "exclusive_elapsed_ns": 121500,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_store.py",
+          "function": "_hook",
+          "inclusive_elapsed_ns": 121500,
+          "line": 206,
+          "primitive_calls": 108
+        },
+        {
+          "calls": 45,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 103900,
+          "file": "C:/Python/Python311/Lib/contextlib.py",
+          "function": "__enter__",
+          "inclusive_elapsed_ns": 135161800,
+          "line": 132,
+          "primitive_calls": 45
+        },
+        {
+          "calls": 45,
+          "category": "authority",
+          "exclusive_elapsed_ns": 101900,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_store.py",
+          "function": "_check",
+          "inclusive_elapsed_ns": 101900,
+          "line": 123,
+          "primitive_calls": 45
+        },
+        {
+          "calls": 88,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 95700,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 95700,
+          "line": 204,
+          "primitive_calls": 88
+        },
+        {
+          "calls": 88,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 89400,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<dictcomp>",
+          "inclusive_elapsed_ns": 89400,
+          "line": 102,
+          "primitive_calls": 88
+        },
+        {
+          "calls": 88,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 73600,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<setcomp>",
+          "inclusive_elapsed_ns": 73600,
+          "line": 159,
+          "primitive_calls": 88
+        },
+        {
+          "calls": 45,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 65900,
+          "file": "~",
+          "function": "<method 'rstrip' of 'bytes' objects>",
+          "inclusive_elapsed_ns": 65900,
+          "line": 0,
+          "primitive_calls": 45
+        },
+        {
+          "calls": 45,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 62200,
+          "file": "~",
+          "function": "<method 'startswith' of 'str' objects>",
+          "inclusive_elapsed_ns": 62200,
+          "line": 0,
+          "primitive_calls": 45
+        },
+        {
+          "calls": 8,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 60500,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<setcomp>",
+          "inclusive_elapsed_ns": 60500,
+          "line": 237,
+          "primitive_calls": 8
+        },
+        {
+          "calls": 90,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 57800,
+          "file": "~",
+          "function": "<built-in method builtins.setattr>",
+          "inclusive_elapsed_ns": 57800,
+          "line": 0,
+          "primitive_calls": 90
+        },
+        {
+          "calls": 220,
+          "category": "authority",
+          "exclusive_elapsed_ns": 54600,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_store.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 54600,
+          "line": 25,
+          "primitive_calls": 220
+        },
+        {
+          "calls": 16,
+          "category": "authority",
+          "exclusive_elapsed_ns": 54200,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_store.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 54200,
+          "line": 243,
+          "primitive_calls": 16
+        },
+        {
+          "calls": 8,
+          "category": "file_io",
+          "exclusive_elapsed_ns": 50200,
+          "file": "~",
+          "function": "<method 'seek' of '_io.BufferedRandom' objects>",
+          "inclusive_elapsed_ns": 50200,
+          "line": 0,
+          "primitive_calls": 8
+        },
+        {
+          "calls": 16,
+          "category": "authority",
+          "exclusive_elapsed_ns": 43800,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_store.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 43800,
+          "line": 246,
+          "primitive_calls": 16
+        },
+        {
+          "calls": 45,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 37100,
+          "file": "~",
+          "function": "<method 'lstrip' of 'str' objects>",
+          "inclusive_elapsed_ns": 37100,
+          "line": 0,
+          "primitive_calls": 45
+        },
+        {
+          "calls": 49,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 36900,
+          "file": "~",
+          "function": "<method 'update' of 'dict' objects>",
+          "inclusive_elapsed_ns": 36900,
+          "line": 0,
+          "primitive_calls": 49
+        },
+        {
+          "calls": 45,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 33500,
+          "file": "~",
+          "function": "<method 'decode' of 'bytes' objects>",
+          "inclusive_elapsed_ns": 33500,
+          "line": 0,
+          "primitive_calls": 45
+        },
+        {
+          "calls": 90,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 23300,
+          "file": "~",
+          "function": "<method 'end' of 're.Match' objects>",
+          "inclusive_elapsed_ns": 23300,
+          "line": 0,
+          "primitive_calls": 90
+        },
+        {
+          "calls": 16,
+          "category": "authority",
+          "exclusive_elapsed_ns": 14400,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_store.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 14400,
+          "line": 303,
+          "primitive_calls": 16
+        },
+        {
+          "calls": 8,
+          "category": "authority",
+          "exclusive_elapsed_ns": 14100,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_store.py",
+          "function": "<dictcomp>",
+          "inclusive_elapsed_ns": 14100,
+          "line": 305,
+          "primitive_calls": 8
+        },
+        {
+          "calls": 8,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 11500,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "appendable",
+          "inclusive_elapsed_ns": 12400,
+          "line": 50,
+          "primitive_calls": 8
+        },
+        {
+          "calls": 8,
+          "category": "file_io",
+          "exclusive_elapsed_ns": 11300,
+          "file": "~",
+          "function": "<method 'write' of '_io.BufferedRandom' objects>",
+          "inclusive_elapsed_ns": 11300,
+          "line": 0,
+          "primitive_calls": 8
+        },
+        {
+          "calls": 36,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 11100,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 11100,
+          "line": 153,
+          "primitive_calls": 36
+        },
+        {
+          "calls": 8,
+          "category": "file_io",
+          "exclusive_elapsed_ns": 8500,
+          "file": "~",
+          "function": "<method 'tell' of '_io.BufferedRandom' objects>",
+          "inclusive_elapsed_ns": 8500,
+          "line": 0,
+          "primitive_calls": 8
+        },
+        {
+          "calls": 12,
+          "category": "file_io",
+          "exclusive_elapsed_ns": 6800,
+          "file": "~",
+          "function": "<method 'fileno' of '_io.BufferedRandom' objects>",
+          "inclusive_elapsed_ns": 6800,
+          "line": 0,
+          "primitive_calls": 12
+        },
+        {
+          "calls": 16,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 6300,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 6300,
+          "line": 236,
+          "primitive_calls": 16
+        },
+        {
+          "calls": 16,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 5600,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 5600,
+          "line": 250,
+          "primitive_calls": 16
+        },
+        {
+          "calls": 12,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 4600,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 4600,
+          "line": 262,
+          "primitive_calls": 12
+        },
+        {
+          "calls": 1,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 3600,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_measure.py",
+          "function": "<lambda>",
+          "inclusive_elapsed_ns": 17146458300,
+          "line": 123,
+          "primitive_calls": 1
+        },
+        {
+          "calls": 8,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 3100,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 3100,
+          "line": 226,
+          "primitive_calls": 8
+        },
+        {
+          "calls": 1,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 1500,
+          "file": "~",
+          "function": "<method 'disable' of '_lsprof.Profiler' objects>",
+          "inclusive_elapsed_ns": 1500,
+          "line": 0,
+          "primitive_calls": 1
+        },
+        {
+          "calls": 4,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 1400,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 1400,
+          "line": 230,
+          "primitive_calls": 4
+        }
+      ],
+      "inclusive_values_overlap": true,
+      "instrumented_diagnostic_only": true,
+      "profile_is_not_uninstrumented_benchmark": true,
+      "thread_cpu_ns": 16859375000,
+      "timer": "cProfile default elapsed timer",
+      "wall_ns": 17146477300
+    },
+    "admission": {
+      "error": null,
+      "exclusive_categories_elapsed_ns": {
+        "authority": 1575700,
+        "coding": 184915100,
+        "file_io": 63610800,
+        "hashing": 768400,
+        "model_validation": 65814100,
+        "runtime_other": 12765600,
+        "serialization": 4156900,
+        "sqlite": 7084900
+      },
+      "functions": [
+        {
+          "calls": 45,
+          "category": "coding",
+          "exclusive_elapsed_ns": 105795100,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/coding.py",
+          "function": "combine",
+          "inclusive_elapsed_ns": 184043700,
+          "line": 63,
+          "primitive_calls": 45
+        },
+        {
+          "calls": 286856,
+          "category": "coding",
+          "exclusive_elapsed_ns": 78270000,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/coding.py",
+          "function": "gf_mul",
+          "inclusive_elapsed_ns": 78270000,
+          "line": 36,
+          "primitive_calls": 286856
+        },
+        {
+          "calls": 23,
+          "category": "file_io",
+          "exclusive_elapsed_ns": 61655800,
+          "file": "~",
+          "function": "<built-in method io.open>",
+          "inclusive_elapsed_ns": 61910000,
+          "line": 0,
+          "primitive_calls": 23
+        },
+        {
+          "calls": 4181,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 40935000,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<setcomp>",
+          "inclusive_elapsed_ns": 40935000,
+          "line": 175,
+          "primitive_calls": 4181
+        },
+        {
+          "calls": 73,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 10907900,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "validate",
+          "inclusive_elapsed_ns": 24642100,
+          "line": 95,
+          "primitive_calls": 73
+        },
+        {
+          "calls": 37,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 3699000,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "protected",
+          "inclusive_elapsed_ns": 46270100,
+          "line": 171,
+          "primitive_calls": 37
+        },
+        {
+          "calls": 10800,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 3313200,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 3313200,
+          "line": 165,
+          "primitive_calls": 10800
+        },
+        {
+          "calls": 27,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 3164000,
+          "file": "~",
+          "function": "<built-in method nt.stat>",
+          "inclusive_elapsed_ns": 3309000,
+          "line": 0,
+          "primitive_calls": 27
+        },
+        {
+          "calls": 876,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 3009000,
+          "file": "~",
+          "function": "<built-in method builtins.sum>",
+          "inclusive_elapsed_ns": 10274900,
+          "line": 0,
+          "primitive_calls": 876
+        },
+        {
+          "calls": 1,
+          "category": "sqlite",
+          "exclusive_elapsed_ns": 1889800,
+          "file": "~",
+          "function": "<built-in method _sqlite3.connect>",
+          "inclusive_elapsed_ns": 1942600,
+          "line": 0,
+          "primitive_calls": 1
+        },
+        {
+          "calls": 1,
+          "category": "sqlite",
+          "exclusive_elapsed_ns": 1884300,
+          "file": "~",
+          "function": "<method 'close' of 'sqlite3.Connection' objects>",
+          "inclusive_elapsed_ns": 1884300,
+          "line": 0,
+          "primitive_calls": 1
+        },
+        {
+          "calls": 10220,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 1753900,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 1753900,
+          "line": 166,
+          "primitive_calls": 10220
+        },
+        {
+          "calls": 1,
+          "category": "sqlite",
+          "exclusive_elapsed_ns": 1731300,
+          "file": "~",
+          "function": "<method 'commit' of 'sqlite3.Connection' objects>",
+          "inclusive_elapsed_ns": 1731300,
+          "line": 0,
+          "primitive_calls": 1
+        },
+        {
+          "calls": 4,
+          "category": "sqlite",
+          "exclusive_elapsed_ns": 1573000,
+          "file": "~",
+          "function": "<method 'execute' of 'sqlite3.Connection' objects>",
+          "inclusive_elapsed_ns": 1573000,
+          "line": 0,
+          "primitive_calls": 4
+        },
+        {
+          "calls": 782,
+          "category": "serialization",
+          "exclusive_elapsed_ns": 1428600,
+          "file": "C:/Python/Python311/Lib/dataclasses.py",
+          "function": "_asdict_inner",
+          "inclusive_elapsed_ns": 3752500,
+          "line": 1287,
+          "primitive_calls": 2
+        },
+        {
+          "calls": 13947,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 1251100,
+          "file": "~",
+          "function": "<built-in method builtins.len>",
+          "inclusive_elapsed_ns": 1251100,
+          "line": 0,
+          "primitive_calls": 13947
+        },
+        {
+          "calls": 6519,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 1158900,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "code",
+          "inclusive_elapsed_ns": 1158900,
+          "line": 18,
+          "primitive_calls": 6519
+        },
+        {
+          "calls": 23,
+          "category": "file_io",
+          "exclusive_elapsed_ns": 1133300,
+          "file": "~",
+          "function": "<method 'read' of '_io.BufferedReader' objects>",
+          "inclusive_elapsed_ns": 1133300,
+          "line": 0,
+          "primitive_calls": 23
+        },
+        {
+          "calls": 23,
+          "category": "file_io",
+          "exclusive_elapsed_ns": 743400,
+          "file": "~",
+          "function": "<method '__exit__' of '_io._IOBase' objects>",
+          "inclusive_elapsed_ns": 743400,
+          "line": 0,
+          "primitive_calls": 23
+        },
+        {
+          "calls": 2357,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 677500,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/profiles.py",
+          "function": "total_rows",
+          "inclusive_elapsed_ns": 880300,
+          "line": 16,
+          "primitive_calls": 2357
+        },
+        {
+          "calls": 640,
+          "category": "serialization",
+          "exclusive_elapsed_ns": 676100,
+          "file": "C:/Python/Python311/Lib/copy.py",
+          "function": "deepcopy",
+          "inclusive_elapsed_ns": 1001100,
+          "line": 128,
+          "primitive_calls": 640
+        },
+        {
+          "calls": 2044,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 673900,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 1110700,
+          "line": 155,
+          "primitive_calls": 2044
+        },
+        {
+          "calls": 6550,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 663000,
+          "file": "~",
+          "function": "<built-in method builtins.isinstance>",
+          "inclusive_elapsed_ns": 663000,
+          "line": 0,
+          "primitive_calls": 6550
+        },
+        {
+          "calls": 2044,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 615400,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 1088100,
+          "line": 157,
+          "primitive_calls": 2044
+        },
+        {
+          "calls": 84,
+          "category": "serialization",
+          "exclusive_elapsed_ns": 596500,
+          "file": "C:/Python/Python311/Lib/dataclasses.py",
+          "function": "replace",
+          "inclusive_elapsed_ns": 892300,
+          "line": 1453,
+          "primitive_calls": 84
+        },
+        {
+          "calls": 106,
+          "category": "hashing",
+          "exclusive_elapsed_ns": 561800,
+          "file": "~",
+          "function": "<built-in method _hashlib.openssl_sha256>",
+          "inclusive_elapsed_ns": 561800,
+          "line": 0,
+          "primitive_calls": 106
+        },
+        {
+          "calls": 23,
+          "category": "authority",
+          "exclusive_elapsed_ns": 549400,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_store.py",
+          "function": "_fragment",
+          "inclusive_elapsed_ns": 66277100,
+          "line": 147,
+          "primitive_calls": 23
+        },
+        {
+          "calls": 5,
+          "category": "authority",
+          "exclusive_elapsed_ns": 523400,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_store.py",
+          "function": "_read",
+          "inclusive_elapsed_ns": 252018800,
+          "line": 156,
+          "primitive_calls": 5
+        },
+        {
+          "calls": 2,
+          "category": "serialization",
+          "exclusive_elapsed_ns": 484100,
+          "file": "C:/Python/Python311/Lib/json/encoder.py",
+          "function": "iterencode",
+          "inclusive_elapsed_ns": 484100,
+          "line": 205,
+          "primitive_calls": 2
+        },
+        {
+          "calls": 1971,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 472700,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "uses_active",
+          "inclusive_elapsed_ns": 472700,
+          "line": 47,
+          "primitive_calls": 1971
+        },
+        {
+          "calls": 1971,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 436800,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "uses_open",
+          "inclusive_elapsed_ns": 436800,
+          "line": 44,
+          "primitive_calls": 1971
+        },
+        {
+          "calls": 36,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 419300,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "step",
+          "inclusive_elapsed_ns": 70771300,
+          "line": 201,
+          "primitive_calls": 36
+        },
+        {
+          "calls": 100,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 413500,
+          "file": "C:/Python/Python311/Lib/pathlib.py",
+          "function": "parse_parts",
+          "inclusive_elapsed_ns": 675100,
+          "line": 56,
+          "primitive_calls": 100
+        },
+        {
+          "calls": 100,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 360000,
+          "file": "C:/Python/Python311/Lib/pathlib.py",
+          "function": "_parse_args",
+          "inclusive_elapsed_ns": 1126200,
+          "line": 484,
+          "primitive_calls": 100
+        },
+        {
+          "calls": 2160,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 344600,
+          "file": "~",
+          "function": "<built-in method builtins.min>",
+          "inclusive_elapsed_ns": 344600,
+          "line": 0,
+          "primitive_calls": 2160
+        },
+        {
+          "calls": 148,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 324700,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<setcomp>",
+          "inclusive_elapsed_ns": 324700,
+          "line": 173,
+          "primitive_calls": 148
+        },
+        {
+          "calls": 584,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 312300,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 312300,
+          "line": 162,
+          "primitive_calls": 584
+        },
+        {
+          "calls": 868,
+          "category": "serialization",
+          "exclusive_elapsed_ns": 311200,
+          "file": "C:/Python/Python311/Lib/dataclasses.py",
+          "function": "_is_dataclass_instance",
+          "inclusive_elapsed_ns": 555700,
+          "line": 1251,
+          "primitive_calls": 868
+        },
+        {
+          "calls": 100,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 276200,
+          "file": "C:/Python/Python311/Lib/pathlib.py",
+          "function": "_make_child",
+          "inclusive_elapsed_ns": 1580800,
+          "line": 530,
+          "primitive_calls": 100
+        },
+        {
+          "calls": 909,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 249400,
+          "file": "~",
+          "function": "<built-in method builtins.hasattr>",
+          "inclusive_elapsed_ns": 249400,
+          "line": 0,
+          "primitive_calls": 909
+        },
+        {
+          "calls": 5,
+          "category": "coding",
+          "exclusive_elapsed_ns": 234700,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/coding.py",
+          "function": "recover",
+          "inclusive_elapsed_ns": 184986900,
+          "line": 82,
+          "primitive_calls": 5
+        },
+        {
+          "calls": 51,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 234000,
+          "file": "C:/Python/Python311/Lib/pathlib.py",
+          "function": "__str__",
+          "inclusive_elapsed_ns": 351400,
+          "line": 536,
+          "primitive_calls": 51
+        },
+        {
+          "calls": 153,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 223500,
+          "file": "~",
+          "function": "<built-in method builtins.sorted>",
+          "inclusive_elapsed_ns": 223500,
+          "line": 0,
+          "primitive_calls": 153
+        },
+        {
+          "calls": 106,
+          "category": "hashing",
+          "exclusive_elapsed_ns": 206600,
+          "file": "~",
+          "function": "<method 'hexdigest' of '_hashlib.HASH' objects>",
+          "inclusive_elapsed_ns": 206600,
+          "line": 0,
+          "primitive_calls": 106
+        },
+        {
+          "calls": 101,
+          "category": "serialization",
+          "exclusive_elapsed_ns": 204200,
+          "file": "C:/Python/Python311/Lib/dataclasses.py",
+          "function": "fields",
+          "inclusive_elapsed_ns": 380800,
+          "line": 1233,
+          "primitive_calls": 101
+        },
+        {
+          "calls": 1327,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 186700,
+          "file": "~",
+          "function": "<built-in method builtins.getattr>",
+          "inclusive_elapsed_ns": 186700,
+          "line": 0,
+          "primitive_calls": 1327
+        },
+        {
+          "calls": 1280,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 182700,
+          "file": "~",
+          "function": "<method 'get' of 'dict' objects>",
+          "inclusive_elapsed_ns": 182700,
+          "line": 0,
+          "primitive_calls": 1280
+        },
+        {
+          "calls": 50,
+          "category": "authority",
+          "exclusive_elapsed_ns": 174500,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_store.py",
+          "function": "zone_path",
+          "inclusive_elapsed_ns": 2137000,
+          "line": 130,
+          "primitive_calls": 50
+        },
+        {
+          "calls": 73,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 173800,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<setcomp>",
+          "inclusive_elapsed_ns": 173800,
+          "line": 103,
+          "primitive_calls": 73
+        },
+        {
+          "calls": 105,
+          "category": "coding",
+          "exclusive_elapsed_ns": 160800,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/coding.py",
+          "function": "digest",
+          "inclusive_elapsed_ns": 910000,
+          "line": 12,
+          "primitive_calls": 105
+        },
+        {
+          "calls": 73,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 151600,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<setcomp>",
+          "inclusive_elapsed_ns": 151600,
+          "line": 104,
+          "primitive_calls": 73
+        },
+        {
+          "calls": 743,
+          "category": "serialization",
+          "exclusive_elapsed_ns": 148900,
+          "file": "C:/Python/Python311/Lib/dataclasses.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 148900,
+          "line": 1248,
+          "primitive_calls": 743
+        },
+        {
+          "calls": 100,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 143300,
+          "file": "C:/Python/Python311/Lib/pathlib.py",
+          "function": "__truediv__",
+          "inclusive_elapsed_ns": 1724100,
+          "line": 765,
+          "primitive_calls": 100
+        },
+        {
+          "calls": 100,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 142100,
+          "file": "C:/Python/Python311/Lib/pathlib.py",
+          "function": "splitroot",
+          "inclusive_elapsed_ns": 142100,
+          "line": 147,
+          "primitive_calls": 100
+        },
+        {
+          "calls": 1,
+          "category": "authority",
+          "exclusive_elapsed_ns": 124700,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_store.py",
+          "function": "_geometry",
+          "inclusive_elapsed_ns": 4329800,
+          "line": 179,
+          "primitive_calls": 1
+        },
+        {
+          "calls": 378,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 118300,
+          "file": "~",
+          "function": "<built-in method builtins.next>",
+          "inclusive_elapsed_ns": 7570900,
+          "line": 0,
+          "primitive_calls": 378
+        },
+        {
+          "calls": 1,
+          "category": "serialization",
+          "exclusive_elapsed_ns": 104400,
+          "file": "C:/Python/Python311/Lib/json/decoder.py",
+          "function": "raw_decode",
+          "inclusive_elapsed_ns": 104400,
+          "line": 343,
+          "primitive_calls": 1
+        },
+        {
+          "calls": 842,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 102600,
+          "file": "~",
+          "function": "<method 'append' of 'list' objects>",
+          "inclusive_elapsed_ns": 102600,
+          "line": 0,
+          "primitive_calls": 842
+        },
+        {
+          "calls": 5,
+          "category": "coding",
+          "exclusive_elapsed_ns": 100400,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/coding.py",
+          "function": "invert",
+          "inclusive_elapsed_ns": 279900,
+          "line": 46,
+          "primitive_calls": 5
+        },
+        {
+          "calls": 100,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 97500,
+          "file": "C:/Python/Python311/Lib/pathlib.py",
+          "function": "_from_parsed_parts",
+          "inclusive_elapsed_ns": 126500,
+          "line": 515,
+          "primitive_calls": 100
+        },
+        {
+          "calls": 50,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 90300,
+          "file": "C:/Python/Python311/Lib/pathlib.py",
+          "function": "_format_parsed_parts",
+          "inclusive_elapsed_ns": 117400,
+          "line": 523,
+          "primitive_calls": 50
+        },
+        {
+          "calls": 23,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 86500,
+          "file": "C:/Python/Python311/Lib/pathlib.py",
+          "function": "open",
+          "inclusive_elapsed_ns": 61996500,
+          "line": 1036,
+          "primitive_calls": 23
+        },
+        {
+          "calls": 72,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 83200,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 83200,
+          "line": 204,
+          "primitive_calls": 72
+        },
+        {
+          "calls": 1,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 81200,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "replay",
+          "inclusive_elapsed_ns": 75412600,
+          "line": 299,
+          "primitive_calls": 1
+        },
+        {
+          "calls": 23,
+          "category": "file_io",
+          "exclusive_elapsed_ns": 78300,
+          "file": "~",
+          "function": "<method 'seek' of '_io.BufferedReader' objects>",
+          "inclusive_elapsed_ns": 78300,
+          "line": 0,
+          "primitive_calls": 23
+        },
+        {
+          "calls": 179,
+          "category": "serialization",
+          "exclusive_elapsed_ns": 75000,
+          "file": "C:/Python/Python311/Lib/dataclasses.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 3667000,
+          "line": 1319,
+          "primitive_calls": 77
+        },
+        {
+          "calls": 640,
+          "category": "serialization",
+          "exclusive_elapsed_ns": 73600,
+          "file": "C:/Python/Python311/Lib/copy.py",
+          "function": "_deepcopy_atomic",
+          "inclusive_elapsed_ns": 73600,
+          "line": 182,
+          "primitive_calls": 640
+        },
+        {
+          "calls": 23,
+          "category": "coding",
+          "exclusive_elapsed_ns": 71200,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/coding.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 48702900,
+          "line": 94,
+          "primitive_calls": 23
+        },
+        {
+          "calls": 43,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 70100,
+          "file": "~",
+          "function": "<built-in method builtins.any>",
+          "inclusive_elapsed_ns": 222900,
+          "line": 0,
+          "primitive_calls": 43
+        },
+        {
+          "calls": 640,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 68700,
+          "file": "~",
+          "function": "<built-in method builtins.id>",
+          "inclusive_elapsed_ns": 68700,
+          "line": 0,
+          "primitive_calls": 640
+        },
+        {
+          "calls": 1,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 60900,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_measure.py",
+          "function": "<lambda>",
+          "inclusive_elapsed_ns": 340996500,
+          "line": 122,
+          "primitive_calls": 1
+        },
+        {
+          "calls": 5,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 58900,
+          "file": "~",
+          "function": "<method 'join' of 'bytes' objects>",
+          "inclusive_elapsed_ns": 58900,
+          "line": 0,
+          "primitive_calls": 5
+        },
+        {
+          "calls": 73,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 56000,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<dictcomp>",
+          "inclusive_elapsed_ns": 56000,
+          "line": 102,
+          "primitive_calls": 73
+        },
+        {
+          "calls": 100,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 55500,
+          "file": "~",
+          "function": "<built-in method sys.intern>",
+          "inclusive_elapsed_ns": 55500,
+          "line": 0,
+          "primitive_calls": 100
+        },
+        {
+          "calls": 73,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 52400,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<setcomp>",
+          "inclusive_elapsed_ns": 52400,
+          "line": 159,
+          "primitive_calls": 73
+        },
+        {
+          "calls": 100,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 51900,
+          "file": "C:/Python/Python311/Lib/pathlib.py",
+          "function": "join_parsed_parts",
+          "inclusive_elapsed_ns": 51900,
+          "line": 94,
+          "primitive_calls": 100
+        },
+        {
+          "calls": 28,
+          "category": "coding",
+          "exclusive_elapsed_ns": 50300,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/coding.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 67400,
+          "line": 85,
+          "primitive_calls": 28
+        },
+        {
+          "calls": 50,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 48200,
+          "file": "C:/Python/Python311/Lib/pathlib.py",
+          "function": "__fspath__",
+          "inclusive_elapsed_ns": 399200,
+          "line": 546,
+          "primitive_calls": 50
+        },
+        {
+          "calls": 18,
+          "category": "coding",
+          "exclusive_elapsed_ns": 48200,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/coding.py",
+          "function": "<listcomp>",
+          "inclusive_elapsed_ns": 82100,
+          "line": 55,
+          "primitive_calls": 18
+        },
+        {
+          "calls": 32,
+          "category": "coding",
+          "exclusive_elapsed_ns": 46100,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/coding.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 135478000,
+          "line": 95,
+          "primitive_calls": 32
+        },
+        {
+          "calls": 1,
+          "category": "authority",
+          "exclusive_elapsed_ns": 42400,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_store.py",
+          "function": "admit",
+          "inclusive_elapsed_ns": 340935600,
+          "line": 192,
+          "primitive_calls": 1
+        },
+        {
+          "calls": 101,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 36600,
+          "file": "~",
+          "function": "<method 'replace' of 'str' objects>",
+          "inclusive_elapsed_ns": 36600,
+          "line": 0,
+          "primitive_calls": 101
+        },
+        {
+          "calls": 2,
+          "category": "authority",
+          "exclusive_elapsed_ns": 36100,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_store.py",
+          "function": "_transaction",
+          "inclusive_elapsed_ns": 7086300,
+          "line": 99,
+          "primitive_calls": 2
+        },
+        {
+          "calls": 4,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 35800,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<setcomp>",
+          "inclusive_elapsed_ns": 35800,
+          "line": 237,
+          "primitive_calls": 4
+        },
+        {
+          "calls": 58,
+          "category": "authority",
+          "exclusive_elapsed_ns": 35300,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_store.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 61900,
+          "line": 22,
+          "primitive_calls": 58
+        },
+        {
+          "calls": 195,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 32700,
+          "file": "~",
+          "function": "<method 'values' of 'dict' objects>",
+          "inclusive_elapsed_ns": 32700,
+          "line": 0,
+          "primitive_calls": 195
+        },
+        {
+          "calls": 5,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 32300,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<listcomp>",
+          "inclusive_elapsed_ns": 32300,
+          "line": 193,
+          "primitive_calls": 5
+        },
+        {
+          "calls": 1,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 30800,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "goal",
+          "inclusive_elapsed_ns": 125300,
+          "line": 182,
+          "primitive_calls": 1
+        },
+        {
+          "calls": 5,
+          "category": "coding",
+          "exclusive_elapsed_ns": 30600,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/coding.py",
+          "function": "<listcomp>",
+          "inclusive_elapsed_ns": 51500,
+          "line": 48,
+          "primitive_calls": 5
+        },
+        {
+          "calls": 53,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 30500,
+          "file": "~",
+          "function": "<method 'encode' of 'str' objects>",
+          "inclusive_elapsed_ns": 30500,
+          "line": 0,
+          "primitive_calls": 53
+        },
+        {
+          "calls": 100,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 29000,
+          "file": "~",
+          "function": "<built-in method __new__ of type object at 0x00007FF9FA6F8F90>",
+          "inclusive_elapsed_ns": 29000,
+          "line": 0,
+          "primitive_calls": 100
+        },
+        {
+          "calls": 28,
+          "category": "coding",
+          "exclusive_elapsed_ns": 28400,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/coding.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 28400,
+          "line": 96,
+          "primitive_calls": 28
+        },
+        {
+          "calls": 52,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 27700,
+          "file": "~",
+          "function": "<method 'join' of 'str' objects>",
+          "inclusive_elapsed_ns": 27700,
+          "line": 0,
+          "primitive_calls": 52
+        },
+        {
+          "calls": 100,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 23300,
+          "file": "~",
+          "function": "<built-in method nt.fspath>",
+          "inclusive_elapsed_ns": 23300,
+          "line": 0,
+          "primitive_calls": 100
+        },
+        {
+          "calls": 27,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 22700,
+          "file": "C:/Python/Python311/Lib/pathlib.py",
+          "function": "stat",
+          "inclusive_elapsed_ns": 3331700,
+          "line": 1008,
+          "primitive_calls": 27
+        },
+        {
+          "calls": 1,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 21200,
+          "file": "C:/Python/Python311/Lib/functools.py",
+          "function": "update_wrapper",
+          "inclusive_elapsed_ns": 33000,
+          "line": 35,
+          "primitive_calls": 1
+        },
+        {
+          "calls": 1,
+          "category": "authority",
+          "exclusive_elapsed_ns": 19600,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_store.py",
+          "function": "<dictcomp>",
+          "inclusive_elapsed_ns": 252038400,
+          "line": 171,
+          "primitive_calls": 1
+        },
+        {
+          "calls": 1,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 18700,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "fingerprint",
+          "inclusive_elapsed_ns": 2788900,
+          "line": 75,
+          "primitive_calls": 1
+        },
+        {
+          "calls": 28,
+          "category": "coding",
+          "exclusive_elapsed_ns": 18500,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/coding.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 21100,
+          "line": 86,
+          "primitive_calls": 28
+        },
+        {
+          "calls": 5,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 17300,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/model.py",
+          "function": "profile_spec",
+          "inclusive_elapsed_ns": 19000,
+          "line": 18,
+          "primitive_calls": 5
+        },
+        {
+          "calls": 1,
+          "category": "authority",
+          "exclusive_elapsed_ns": 15700,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_store.py",
+          "function": "_load",
+          "inclusive_elapsed_ns": 188400,
+          "line": 115,
+          "primitive_calls": 1
+        },
+        {
+          "calls": 1,
+          "category": "authority",
+          "exclusive_elapsed_ns": 15200,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_store.py",
+          "function": "state_from_dict",
+          "inclusive_elapsed_ns": 197800,
+          "line": 20,
+          "primitive_calls": 1
+        },
+        {
+          "calls": 100,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 15000,
+          "file": "~",
+          "function": "<method 'reverse' of 'list' objects>",
+          "inclusive_elapsed_ns": 15000,
+          "line": 0,
+          "primitive_calls": 100
+        },
+        {
+          "calls": 2,
+          "category": "serialization",
+          "exclusive_elapsed_ns": 14400,
+          "file": "C:/Python/Python311/Lib/json/__init__.py",
+          "function": "dumps",
+          "inclusive_elapsed_ns": 516400,
+          "line": 183,
+          "primitive_calls": 2
+        },
+        {
+          "calls": 6,
+          "category": "authority",
+          "exclusive_elapsed_ns": 13600,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_store.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 19800,
+          "line": 21,
+          "primitive_calls": 6
+        },
+        {
+          "calls": 5,
+          "category": "coding",
+          "exclusive_elapsed_ns": 13400,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/coding.py",
+          "function": "<setcomp>",
+          "inclusive_elapsed_ns": 17000,
+          "line": 88,
+          "primitive_calls": 5
+        },
+        {
+          "calls": 36,
+          "category": "coding",
+          "exclusive_elapsed_ns": 13000,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/coding.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 13000,
+          "line": 50,
+          "primitive_calls": 36
+        },
+        {
+          "calls": 23,
+          "category": "coding",
+          "exclusive_elapsed_ns": 12500,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/coding.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 12500,
+          "line": 60,
+          "primitive_calls": 23
+        },
+        {
+          "calls": 5,
+          "category": "authority",
+          "exclusive_elapsed_ns": 12400,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_store.py",
+          "function": "<listcomp>",
+          "inclusive_elapsed_ns": 110100,
+          "line": 166,
+          "primitive_calls": 5
+        },
+        {
+          "calls": 2,
+          "category": "serialization",
+          "exclusive_elapsed_ns": 12300,
+          "file": "C:/Python/Python311/Lib/json/encoder.py",
+          "function": "encode",
+          "inclusive_elapsed_ns": 497700,
+          "line": 183,
+          "primitive_calls": 2
+        },
+        {
+          "calls": 12,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 12100,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "appendable",
+          "inclusive_elapsed_ns": 13300,
+          "line": 50,
+          "primitive_calls": 12
+        },
+        {
+          "calls": 18,
+          "category": "coding",
+          "exclusive_elapsed_ns": 11300,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/coding.py",
+          "function": "gf_inverse",
+          "inclusive_elapsed_ns": 11300,
+          "line": 40,
+          "primitive_calls": 18
+        },
+        {
+          "calls": 1,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 10700,
+          "file": "C:/Python/Python311/Lib/functools.py",
+          "function": "decorating_function",
+          "inclusive_elapsed_ns": 43700,
+          "line": 518,
+          "primitive_calls": 1
+        },
+        {
+          "calls": 32,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 10700,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 10700,
+          "line": 196,
+          "primitive_calls": 32
+        },
+        {
+          "calls": 23,
+          "category": "coding",
+          "exclusive_elapsed_ns": 10600,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/coding.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 10600,
+          "line": 93,
+          "primitive_calls": 23
+        },
+        {
+          "calls": 1,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 9800,
+          "file": "C:/Python/Python311/Lib/contextlib.py",
+          "function": "__exit__",
+          "inclusive_elapsed_ns": 3652200,
+          "line": 141,
+          "primitive_calls": 1
+        },
+        {
+          "calls": 1,
+          "category": "serialization",
+          "exclusive_elapsed_ns": 8900,
+          "file": "C:/Python/Python311/Lib/json/decoder.py",
+          "function": "decode",
+          "inclusive_elapsed_ns": 118200,
+          "line": 332,
+          "primitive_calls": 1
+        },
+        {
+          "calls": 1,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 8000,
+          "file": "C:/Python/Python311/Lib/functools.py",
+          "function": "lru_cache",
+          "inclusive_elapsed_ns": 9100,
+          "line": 479,
+          "primitive_calls": 1
+        },
+        {
+          "calls": 2,
+          "category": "serialization",
+          "exclusive_elapsed_ns": 7700,
+          "file": "C:/Python/Python311/Lib/dataclasses.py",
+          "function": "asdict",
+          "inclusive_elapsed_ns": 3766400,
+          "line": 1263,
+          "primitive_calls": 2
+        },
+        {
+          "calls": 28,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 7600,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 7600,
+          "line": 185,
+          "primitive_calls": 28
+        },
+        {
+          "calls": 1,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 7000,
+          "file": "C:/Python/Python311/Lib/pathlib.py",
+          "function": "make_uri",
+          "inclusive_elapsed_ns": 19500,
+          "line": 218,
+          "primitive_calls": 1
+        },
+        {
+          "calls": 1,
+          "category": "serialization",
+          "exclusive_elapsed_ns": 6700,
+          "file": "C:/Python/Python311/Lib/json/__init__.py",
+          "function": "loads",
+          "inclusive_elapsed_ns": 126100,
+          "line": 299,
+          "primitive_calls": 1
+        },
+        {
+          "calls": 24,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 6600,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 6600,
+          "line": 153,
+          "primitive_calls": 24
+        },
+        {
+          "calls": 1,
+          "category": "sqlite",
+          "exclusive_elapsed_ns": 6500,
+          "file": "~",
+          "function": "<method 'fetchone' of 'sqlite3.Cursor' objects>",
+          "inclusive_elapsed_ns": 6500,
+          "line": 0,
+          "primitive_calls": 1
+        },
+        {
+          "calls": 5,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 6200,
+          "file": "<string>",
+          "function": "__init__",
+          "inclusive_elapsed_ns": 6200,
+          "line": 2,
+          "primitive_calls": 5
+        },
+        {
+          "calls": 28,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 6200,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 6200,
+          "line": 183,
+          "primitive_calls": 28
+        },
+        {
+          "calls": 1,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 5600,
+          "file": "C:/Python/Python311/Lib/urllib/parse.py",
+          "function": "quote_from_bytes",
+          "inclusive_elapsed_ns": 7600,
+          "line": 917,
+          "primitive_calls": 1
+        },
+        {
+          "calls": 16,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 5600,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 5600,
+          "line": 250,
+          "primitive_calls": 16
+        },
+        {
+          "calls": 1,
+          "category": "authority",
+          "exclusive_elapsed_ns": 5600,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_store.py",
+          "function": "_save",
+          "inclusive_elapsed_ns": 357600,
+          "line": 119,
+          "primitive_calls": 1
+        },
+        {
+          "calls": 1,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 4400,
+          "file": "C:/Python/Python311/Lib/contextlib.py",
+          "function": "__init__",
+          "inclusive_elapsed_ns": 4900,
+          "line": 104,
+          "primitive_calls": 1
+        },
+        {
+          "calls": 8,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 4400,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 4400,
+          "line": 188,
+          "primitive_calls": 8
+        },
+        {
+          "calls": 2,
+          "category": "serialization",
+          "exclusive_elapsed_ns": 4300,
+          "file": "C:/Python/Python311/Lib/json/encoder.py",
+          "function": "__init__",
+          "inclusive_elapsed_ns": 4300,
+          "line": 105,
+          "primitive_calls": 2
+        },
+        {
+          "calls": 1,
+          "category": "authority",
+          "exclusive_elapsed_ns": 4300,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_store.py",
+          "function": "_read_all",
+          "inclusive_elapsed_ns": 252042700,
+          "line": 170,
+          "primitive_calls": 1
+        },
+        {
+          "calls": 5,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 3900,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<setcomp>",
+          "inclusive_elapsed_ns": 3900,
+          "line": 194,
+          "primitive_calls": 5
+        },
+        {
+          "calls": 5,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 3900,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<setcomp>",
+          "inclusive_elapsed_ns": 3900,
+          "line": 195,
+          "primitive_calls": 5
+        },
+        {
+          "calls": 10,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 3900,
+          "file": "~",
+          "function": "<built-in method builtins.iter>",
+          "inclusive_elapsed_ns": 3900,
+          "line": 0,
+          "primitive_calls": 10
+        },
+        {
+          "calls": 8,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 3700,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 3700,
+          "line": 236,
+          "primitive_calls": 8
+        },
+        {
+          "calls": 12,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 3700,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 3700,
+          "line": 262,
+          "primitive_calls": 12
+        },
+        {
+          "calls": 2,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 3600,
+          "file": "~",
+          "function": "<method 'match' of 're.Pattern' objects>",
+          "inclusive_elapsed_ns": 3600,
+          "line": 0,
+          "primitive_calls": 2
+        },
+        {
+          "calls": 8,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 3300,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 3300,
+          "line": 226,
+          "primitive_calls": 8
+        },
+        {
+          "calls": 1,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 3100,
+          "file": "C:/Python/Python311/Lib/pathlib.py",
+          "function": "as_posix",
+          "inclusive_elapsed_ns": 3900,
+          "line": 549,
+          "primitive_calls": 1
+        },
+        {
+          "calls": 1,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 2900,
+          "file": "C:/Python/Python311/Lib/pathlib.py",
+          "function": "is_absolute",
+          "inclusive_elapsed_ns": 2900,
+          "line": 792,
+          "primitive_calls": 1
+        },
+        {
+          "calls": 1,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 2500,
+          "file": "C:/Python/Python311/Lib/contextlib.py",
+          "function": "__enter__",
+          "inclusive_elapsed_ns": 3453700,
+          "line": 132,
+          "primitive_calls": 1
+        },
+        {
+          "calls": 1,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 2500,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "to_dict",
+          "inclusive_elapsed_ns": 1249500,
+          "line": 91,
+          "primitive_calls": 1
+        },
+        {
+          "calls": 1,
+          "category": "authority",
+          "exclusive_elapsed_ns": 2300,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_store.py",
+          "function": "_check",
+          "inclusive_elapsed_ns": 2300,
+          "line": 123,
+          "primitive_calls": 1
+        },
+        {
+          "calls": 5,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 2300,
+          "file": "~",
+          "function": "<method 'items' of 'dict' objects>",
+          "inclusive_elapsed_ns": 2300,
+          "line": 0,
+          "primitive_calls": 5
+        },
+        {
+          "calls": 1,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 1700,
+          "file": "C:/Python/Python311/Lib/contextlib.py",
+          "function": "helper",
+          "inclusive_elapsed_ns": 6600,
+          "line": 287,
+          "primitive_calls": 1
+        },
+        {
+          "calls": 1,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 1700,
+          "file": "C:/Python/Python311/Lib/pathlib.py",
+          "function": "as_uri",
+          "inclusive_elapsed_ns": 24100,
+          "line": 563,
+          "primitive_calls": 1
+        },
+        {
+          "calls": 2,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 1300,
+          "file": "~",
+          "function": "<built-in method builtins.setattr>",
+          "inclusive_elapsed_ns": 1300,
+          "line": 0,
+          "primitive_calls": 2
+        },
+        {
+          "calls": 5,
+          "category": "authority",
+          "exclusive_elapsed_ns": 1200,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_store.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 1200,
+          "line": 25,
+          "primitive_calls": 5
+        },
+        {
+          "calls": 4,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 1100,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 1100,
+          "line": 230,
+          "primitive_calls": 4
+        },
+        {
+          "calls": 1,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 1100,
+          "file": "~",
+          "function": "<method 'disable' of '_lsprof.Profiler' objects>",
+          "inclusive_elapsed_ns": 1100,
+          "line": 0,
+          "primitive_calls": 1
+        },
+        {
+          "calls": 1,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 1100,
+          "file": "~",
+          "function": "<method 'rstrip' of 'bytes' objects>",
+          "inclusive_elapsed_ns": 1100,
+          "line": 0,
+          "primitive_calls": 1
+        },
+        {
+          "calls": 1,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 900,
+          "file": "~",
+          "function": "<method 'startswith' of 'str' objects>",
+          "inclusive_elapsed_ns": 900,
+          "line": 0,
+          "primitive_calls": 1
+        },
+        {
+          "calls": 1,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 700,
+          "file": "~",
+          "function": "<method 'update' of 'dict' objects>",
+          "inclusive_elapsed_ns": 700,
+          "line": 0,
+          "primitive_calls": 1
+        },
+        {
+          "calls": 1,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 500,
+          "file": "~",
+          "function": "<method 'lstrip' of 'str' objects>",
+          "inclusive_elapsed_ns": 500,
+          "line": 0,
+          "primitive_calls": 1
+        },
+        {
+          "calls": 1,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 300,
+          "file": "~",
+          "function": "<method 'decode' of 'bytes' objects>",
+          "inclusive_elapsed_ns": 300,
+          "line": 0,
+          "primitive_calls": 1
+        },
+        {
+          "calls": 2,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 300,
+          "file": "~",
+          "function": "<method 'end' of 're.Match' objects>",
+          "inclusive_elapsed_ns": 300,
+          "line": 0,
+          "primitive_calls": 2
+        }
+      ],
+      "inclusive_values_overlap": true,
+      "instrumented_diagnostic_only": true,
+      "profile_is_not_uninstrumented_benchmark": true,
+      "thread_cpu_ns": 281250000,
+      "timer": "cProfile default elapsed timer",
+      "wall_ns": 341014000
+    },
+    "planning": {
+      "error": null,
+      "exclusive_categories_elapsed_ns": {
+        "hashing": 110000,
+        "model_validation": 556058300,
+        "planning": 4504900,
+        "runtime_other": 126030100,
+        "serialization": 13253600
+      },
+      "functions": [
+        {
+          "calls": 8796,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 346794200,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "validate",
+          "inclusive_elapsed_ns": 592717900,
+          "line": 95,
+          "primitive_calls": 8796
+        },
+        {
+          "calls": 35184,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 41714100,
+          "file": "~",
+          "function": "<built-in method builtins.sum>",
+          "inclusive_elapsed_ns": 141879500,
+          "line": 0,
+          "primitive_calls": 35184
+        },
+        {
+          "calls": 8456,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 36841000,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "step",
+          "inclusive_elapsed_ns": 663666700,
+          "line": 201,
+          "primitive_calls": 8456
+        },
+        {
+          "calls": 318740,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 29436500,
+          "file": "~",
+          "function": "<built-in method builtins.len>",
+          "inclusive_elapsed_ns": 29436500,
+          "line": 0,
+          "primitive_calls": 318740
+        },
+        {
+          "calls": 61056,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 21980900,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 21980900,
+          "line": 165,
+          "primitive_calls": 61056
+        },
+        {
+          "calls": 61572,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 20579600,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 33280100,
+          "line": 155,
+          "primitive_calls": 61572
+        },
+        {
+          "calls": 64584,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 19311900,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/profiles.py",
+          "function": "total_rows",
+          "inclusive_elapsed_ns": 25128300,
+          "line": 16,
+          "primitive_calls": 64584
+        },
+        {
+          "calls": 61572,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 19091700,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 32576500,
+          "line": 157,
+          "primitive_calls": 61572
+        },
+        {
+          "calls": 52776,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 13484800,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "uses_active",
+          "inclusive_elapsed_ns": 13484800,
+          "line": 47,
+          "primitive_calls": 52776
+        },
+        {
+          "calls": 52776,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 12700500,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "uses_open",
+          "inclusive_elapsed_ns": 12700500,
+          "line": 44,
+          "primitive_calls": 52776
+        },
+        {
+          "calls": 61572,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 12327900,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 12327900,
+          "line": 166,
+          "primitive_calls": 61572
+        },
+        {
+          "calls": 66632,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 12119300,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "code",
+          "inclusive_elapsed_ns": 12119300,
+          "line": 18,
+          "primitive_calls": 66632
+        },
+        {
+          "calls": 118211,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 11365800,
+          "file": "~",
+          "function": "<built-in method builtins.isinstance>",
+          "inclusive_elapsed_ns": 11365800,
+          "line": 0,
+          "primitive_calls": 118211
+        },
+        {
+          "calls": 61056,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 10470200,
+          "file": "~",
+          "function": "<built-in method builtins.min>",
+          "inclusive_elapsed_ns": 10470200,
+          "line": 0,
+          "primitive_calls": 61056
+        },
+        {
+          "calls": 304,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 10331800,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "successors",
+          "inclusive_elapsed_ns": 684293200,
+          "line": 279,
+          "primitive_calls": 304
+        },
+        {
+          "calls": 16912,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 8015700,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 8015700,
+          "line": 204,
+          "primitive_calls": 16912
+        },
+        {
+          "calls": 21672,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 6741600,
+          "file": "~",
+          "function": "<built-in method builtins.next>",
+          "inclusive_elapsed_ns": 17839500,
+          "line": 0,
+          "primitive_calls": 21672
+        },
+        {
+          "calls": 8796,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 6062200,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<setcomp>",
+          "inclusive_elapsed_ns": 6062200,
+          "line": 103,
+          "primitive_calls": 8796
+        },
+        {
+          "calls": 812,
+          "category": "serialization",
+          "exclusive_elapsed_ns": 5844000,
+          "file": "C:/Python/Python311/Lib/dataclasses.py",
+          "function": "replace",
+          "inclusive_elapsed_ns": 8620600,
+          "line": 1453,
+          "primitive_calls": 812
+        },
+        {
+          "calls": 1996,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 5283000,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<setcomp>",
+          "inclusive_elapsed_ns": 5283000,
+          "line": 175,
+          "primitive_calls": 1996
+        },
+        {
+          "calls": 8796,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 5000900,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<setcomp>",
+          "inclusive_elapsed_ns": 5000900,
+          "line": 104,
+          "primitive_calls": 8796
+        },
+        {
+          "calls": 17592,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 4391300,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 4391300,
+          "line": 162,
+          "primitive_calls": 17592
+        },
+        {
+          "calls": 340,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 3156800,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "protected",
+          "inclusive_elapsed_ns": 9641300,
+          "line": 171,
+          "primitive_calls": 340
+        },
+        {
+          "calls": 8796,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 3142200,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<setcomp>",
+          "inclusive_elapsed_ns": 3142200,
+          "line": 159,
+          "primitive_calls": 8796
+        },
+        {
+          "calls": 8796,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 3086300,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<dictcomp>",
+          "inclusive_elapsed_ns": 3086300,
+          "line": 102,
+          "primitive_calls": 8796
+        },
+        {
+          "calls": 1511,
+          "category": "serialization",
+          "exclusive_elapsed_ns": 3046600,
+          "file": "C:/Python/Python311/Lib/dataclasses.py",
+          "function": "_asdict_inner",
+          "inclusive_elapsed_ns": 7843900,
+          "line": 1287,
+          "primitive_calls": 9
+        },
+        {
+          "calls": 4200,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 2851000,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 6646600,
+          "line": 289,
+          "primitive_calls": 4200
+        },
+        {
+          "calls": 4,
+          "category": "planning",
+          "exclusive_elapsed_ns": 2760600,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_baseline.py",
+          "function": "conventional_zoned_plan",
+          "inclusive_elapsed_ns": 698146900,
+          "line": 29,
+          "primitive_calls": 4
+        },
+        {
+          "calls": 600,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 2096400,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<listcomp>",
+          "inclusive_elapsed_ns": 5322600,
+          "line": 281,
+          "primitive_calls": 600
+        },
+        {
+          "calls": 1200,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 1491200,
+          "file": "~",
+          "function": "<method 'extend' of 'list' objects>",
+          "inclusive_elapsed_ns": 11214800,
+          "line": 0,
+          "primitive_calls": 1200
+        },
+        {
+          "calls": 7112,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 1476300,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 1476300,
+          "line": 226,
+          "primitive_calls": 7112
+        },
+        {
+          "calls": 1191,
+          "category": "serialization",
+          "exclusive_elapsed_ns": 1390700,
+          "file": "C:/Python/Python311/Lib/copy.py",
+          "function": "deepcopy",
+          "inclusive_elapsed_ns": 1953300,
+          "line": 128,
+          "primitive_calls": 1191
+        },
+        {
+          "calls": 2368,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 1261500,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 3077000,
+          "line": 287,
+          "primitive_calls": 2368
+        },
+        {
+          "calls": 2332,
+          "category": "serialization",
+          "exclusive_elapsed_ns": 1090000,
+          "file": "C:/Python/Python311/Lib/dataclasses.py",
+          "function": "_is_dataclass_instance",
+          "inclusive_elapsed_ns": 1789900,
+          "line": 1251,
+          "primitive_calls": 2332
+        },
+        {
+          "calls": 2184,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 942100,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 942100,
+          "line": 81,
+          "primitive_calls": 2184
+        },
+        {
+          "calls": 1504,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 931300,
+          "file": "~",
+          "function": "<built-in method builtins.any>",
+          "inclusive_elapsed_ns": 1859500,
+          "line": 0,
+          "primitive_calls": 1504
+        },
+        {
+          "calls": 6968,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 890200,
+          "file": "~",
+          "function": "<built-in method builtins.getattr>",
+          "inclusive_elapsed_ns": 890200,
+          "line": 0,
+          "primitive_calls": 6968
+        },
+        {
+          "calls": 9,
+          "category": "serialization",
+          "exclusive_elapsed_ns": 773800,
+          "file": "C:/Python/Python311/Lib/json/encoder.py",
+          "function": "iterencode",
+          "inclusive_elapsed_ns": 773800,
+          "line": 205,
+          "primitive_calls": 9
+        },
+        {
+          "calls": 2468,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 718200,
+          "file": "~",
+          "function": "<built-in method builtins.hasattr>",
+          "inclusive_elapsed_ns": 718200,
+          "line": 0,
+          "primitive_calls": 2468
+        },
+        {
+          "calls": 312,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 713900,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "key",
+          "inclusive_elapsed_ns": 1656000,
+          "line": 78,
+          "primitive_calls": 312
+        },
+        {
+          "calls": 2486,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 645900,
+          "file": "~",
+          "function": "<method 'get' of 'dict' objects>",
+          "inclusive_elapsed_ns": 1155300,
+          "line": 0,
+          "primitive_calls": 2486
+        },
+        {
+          "calls": 3632,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 558600,
+          "file": "~",
+          "function": "<built-in method builtins.hash>",
+          "inclusive_elapsed_ns": 558600,
+          "line": 0,
+          "primitive_calls": 3632
+        },
+        {
+          "calls": 208,
+          "category": "planning",
+          "exclusive_elapsed_ns": 550700,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_baseline.py",
+          "function": "<setcomp>",
+          "inclusive_elapsed_ns": 550700,
+          "line": 43,
+          "primitive_calls": 208
+        },
+        {
+          "calls": 184,
+          "category": "planning",
+          "exclusive_elapsed_ns": 521900,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_baseline.py",
+          "function": "<setcomp>",
+          "inclusive_elapsed_ns": 521900,
+          "line": 23,
+          "primitive_calls": 184
+        },
+        {
+          "calls": 1804,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 475200,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 475200,
+          "line": 153,
+          "primitive_calls": 1804
+        },
+        {
+          "calls": 184,
+          "category": "planning",
+          "exclusive_elapsed_ns": 395000,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_baseline.py",
+          "function": "lower_bound",
+          "inclusive_elapsed_ns": 1073100,
+          "line": 19,
+          "primitive_calls": 184
+        },
+        {
+          "calls": 340,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 395000,
+          "file": "~",
+          "function": "<built-in method builtins.sorted>",
+          "inclusive_elapsed_ns": 395000,
+          "line": 0,
+          "primitive_calls": 340
+        },
+        {
+          "calls": 184,
+          "category": "serialization",
+          "exclusive_elapsed_ns": 389000,
+          "file": "C:/Python/Python311/Lib/dataclasses.py",
+          "function": "fields",
+          "inclusive_elapsed_ns": 849900,
+          "line": 1233,
+          "primitive_calls": 184
+        },
+        {
+          "calls": 108,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 306800,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "goal",
+          "inclusive_elapsed_ns": 925800,
+          "line": 182,
+          "primitive_calls": 108
+        },
+        {
+          "calls": 516,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 299800,
+          "file": "<string>",
+          "function": "__hash__",
+          "inclusive_elapsed_ns": 428600,
+          "line": 2,
+          "primitive_calls": 516
+        },
+        {
+          "calls": 1400,
+          "category": "serialization",
+          "exclusive_elapsed_ns": 294600,
+          "file": "C:/Python/Python311/Lib/dataclasses.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 294600,
+          "line": 1248,
+          "primitive_calls": 1400
+        },
+        {
+          "calls": 996,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 277100,
+          "file": "~",
+          "function": "<method 'values' of 'dict' objects>",
+          "inclusive_elapsed_ns": 277100,
+          "line": 0,
+          "primitive_calls": 996
+        },
+        {
+          "calls": 1124,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 271200,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 271200,
+          "line": 250,
+          "primitive_calls": 1124
+        },
+        {
+          "calls": 208,
+          "category": "planning",
+          "exclusive_elapsed_ns": 262300,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_baseline.py",
+          "function": "permitted",
+          "inclusive_elapsed_ns": 813000,
+          "line": 42,
+          "primitive_calls": 208
+        },
+        {
+          "calls": 340,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 248700,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<setcomp>",
+          "inclusive_elapsed_ns": 248700,
+          "line": 173,
+          "primitive_calls": 340
+        },
+        {
+          "calls": 1072,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 221600,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 221600,
+          "line": 262,
+          "primitive_calls": 1072
+        },
+        {
+          "calls": 1,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 193700,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_cost.py",
+          "function": "compose_plan",
+          "inclusive_elapsed_ns": 711454400,
+          "line": 52,
+          "primitive_calls": 1
+        },
+        {
+          "calls": 422,
+          "category": "serialization",
+          "exclusive_elapsed_ns": 178100,
+          "file": "C:/Python/Python311/Lib/dataclasses.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 7472200,
+          "line": 1319,
+          "primitive_calls": 136
+        },
+        {
+          "calls": 616,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 159000,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 159000,
+          "line": 183,
+          "primitive_calls": 616
+        },
+        {
+          "calls": 1268,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 153000,
+          "file": "~",
+          "function": "<method 'append' of 'list' objects>",
+          "inclusive_elapsed_ns": 153000,
+          "line": 0,
+          "primitive_calls": 1268
+        },
+        {
+          "calls": 52,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 146200,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<setcomp>",
+          "inclusive_elapsed_ns": 146200,
+          "line": 237,
+          "primitive_calls": 52
+        },
+        {
+          "calls": 1191,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 143700,
+          "file": "~",
+          "function": "<built-in method builtins.id>",
+          "inclusive_elapsed_ns": 143700,
+          "line": 0,
+          "primitive_calls": 1191
+        },
+        {
+          "calls": 1191,
+          "category": "serialization",
+          "exclusive_elapsed_ns": 140400,
+          "file": "C:/Python/Python311/Lib/copy.py",
+          "function": "_deepcopy_atomic",
+          "inclusive_elapsed_ns": 140400,
+          "line": 182,
+          "primitive_calls": 1191
+        },
+        {
+          "calls": 104,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 125500,
+          "file": "~",
+          "function": "<built-in method _heapq.heappop>",
+          "inclusive_elapsed_ns": 125500,
+          "line": 0,
+          "primitive_calls": 104
+        },
+        {
+          "calls": 132,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 115100,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "appendable",
+          "inclusive_elapsed_ns": 126700,
+          "line": 50,
+          "primitive_calls": 132
+        },
+        {
+          "calls": 180,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 95300,
+          "file": "~",
+          "function": "<built-in method _heapq.heappush>",
+          "inclusive_elapsed_ns": 95300,
+          "line": 0,
+          "primitive_calls": 180
+        },
+        {
+          "calls": 312,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 93700,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 93700,
+          "line": 185,
+          "primitive_calls": 312
+        },
+        {
+          "calls": 9,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 79000,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "fingerprint",
+          "inclusive_elapsed_ns": 8956600,
+          "line": 75,
+          "primitive_calls": 9
+        },
+        {
+          "calls": 9,
+          "category": "hashing",
+          "exclusive_elapsed_ns": 73000,
+          "file": "~",
+          "function": "<built-in method _hashlib.openssl_sha256>",
+          "inclusive_elapsed_ns": 73000,
+          "line": 0,
+          "primitive_calls": 9
+        },
+        {
+          "calls": 4,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 53700,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "replay",
+          "inclusive_elapsed_ns": 10310900,
+          "line": 299,
+          "primitive_calls": 4
+        },
+        {
+          "calls": 16,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 50700,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<listcomp>",
+          "inclusive_elapsed_ns": 50700,
+          "line": 193,
+          "primitive_calls": 16
+        },
+        {
+          "calls": 9,
+          "category": "serialization",
+          "exclusive_elapsed_ns": 40700,
+          "file": "C:/Python/Python311/Lib/json/__init__.py",
+          "function": "dumps",
+          "inclusive_elapsed_ns": 866300,
+          "line": 183,
+          "primitive_calls": 9
+        },
+        {
+          "calls": 9,
+          "category": "hashing",
+          "exclusive_elapsed_ns": 37000,
+          "file": "~",
+          "function": "<method 'hexdigest' of '_hashlib.HASH' objects>",
+          "inclusive_elapsed_ns": 37000,
+          "line": 0,
+          "primitive_calls": 9
+        },
+        {
+          "calls": 9,
+          "category": "serialization",
+          "exclusive_elapsed_ns": 36500,
+          "file": "C:/Python/Python311/Lib/json/encoder.py",
+          "function": "encode",
+          "inclusive_elapsed_ns": 814300,
+          "line": 183,
+          "primitive_calls": 9
+        },
+        {
+          "calls": 9,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 30300,
+          "file": "~",
+          "function": "<method 'encode' of 'str' objects>",
+          "inclusive_elapsed_ns": 30300,
+          "line": 0,
+          "primitive_calls": 9
+        },
+        {
+          "calls": 104,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 26100,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 26100,
+          "line": 236,
+          "primitive_calls": 104
+        },
+        {
+          "calls": 100,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 25900,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 25900,
+          "line": 230,
+          "primitive_calls": 100
+        },
+        {
+          "calls": 56,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 20700,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 20700,
+          "line": 196,
+          "primitive_calls": 56
+        },
+        {
+          "calls": 9,
+          "category": "serialization",
+          "exclusive_elapsed_ns": 17900,
+          "file": "C:/Python/Python311/Lib/dataclasses.py",
+          "function": "asdict",
+          "inclusive_elapsed_ns": 7871000,
+          "line": 1263,
+          "primitive_calls": 9
+        },
+        {
+          "calls": 72,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 17200,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 17200,
+          "line": 188,
+          "primitive_calls": 72
+        },
+        {
+          "calls": 16,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 15400,
+          "file": "<string>",
+          "function": "__eq__",
+          "inclusive_elapsed_ns": 15400,
+          "line": 2,
+          "primitive_calls": 16
+        },
+        {
+          "calls": 9,
+          "category": "serialization",
+          "exclusive_elapsed_ns": 11300,
+          "file": "C:/Python/Python311/Lib/json/encoder.py",
+          "function": "__init__",
+          "inclusive_elapsed_ns": 11300,
+          "line": 105,
+          "primitive_calls": 9
+        },
+        {
+          "calls": 4,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 9700,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_cost.py",
+          "function": "<listcomp>",
+          "inclusive_elapsed_ns": 16600,
+          "line": 65,
+          "primitive_calls": 4
+        },
+        {
+          "calls": 5,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 9500,
+          "file": "<string>",
+          "function": "__init__",
+          "inclusive_elapsed_ns": 9500,
+          "line": 2,
+          "primitive_calls": 5
+        },
+        {
+          "calls": 8,
+          "category": "planning",
+          "exclusive_elapsed_ns": 8900,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_baseline.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 11900,
+          "line": 35,
+          "primitive_calls": 8
+        },
+        {
+          "calls": 8,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 8800,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<setcomp>",
+          "inclusive_elapsed_ns": 8800,
+          "line": 194,
+          "primitive_calls": 8
+        },
+        {
+          "calls": 8,
+          "category": "model_validation",
+          "exclusive_elapsed_ns": 7400,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_model.py",
+          "function": "<setcomp>",
+          "inclusive_elapsed_ns": 7400,
+          "line": 195,
+          "primitive_calls": 8
+        },
+        {
+          "calls": 1,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 4200,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_measure.py",
+          "function": "<lambda>",
+          "inclusive_elapsed_ns": 711458600,
+          "line": 121,
+          "primitive_calls": 1
+        },
+        {
+          "calls": 12,
+          "category": "planning",
+          "exclusive_elapsed_ns": 3100,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_baseline.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 3100,
+          "line": 40,
+          "primitive_calls": 12
+        },
+        {
+          "calls": 8,
+          "category": "planning",
+          "exclusive_elapsed_ns": 2400,
+          "file": "D:/PROJECTS/RecoveryCert-SemanticDelta/prism_c/zoned_baseline.py",
+          "function": "<genexpr>",
+          "inclusive_elapsed_ns": 2400,
+          "line": 39,
+          "primitive_calls": 8
+        },
+        {
+          "calls": 9,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 1600,
+          "file": "~",
+          "function": "<method 'join' of 'str' objects>",
+          "inclusive_elapsed_ns": 1600,
+          "line": 0,
+          "primitive_calls": 9
+        },
+        {
+          "calls": 1,
+          "category": "runtime_other",
+          "exclusive_elapsed_ns": 800,
+          "file": "~",
+          "function": "<method 'disable' of '_lsprof.Profiler' objects>",
+          "inclusive_elapsed_ns": 800,
+          "line": 0,
+          "primitive_calls": 1
+        }
+      ],
+      "inclusive_values_overlap": true,
+      "instrumented_diagnostic_only": true,
+      "profile_is_not_uninstrumented_benchmark": true,
+      "thread_cpu_ns": 703125000,
+      "timer": "cProfile default elapsed timer",
+      "wall_ns": 711478200
+    }
+  },
+  "profile": "pq-4+2-gf256-v1",
+  "success": true,
+  "unit": 4096
+}

@@ -14,7 +14,7 @@ E17 measurement delivery (15 October 2026): [cost/foreground collector](experime
 
 ## Run
 
-E18 source registration (15 October 2026): [scoped diagnosis/calibration/ten-set protocol](experiments/zoned_measurement_protocol.md) addresses E17's counter/sample limitations, while retaining the same ordinary controller. Eight focused methods pass. Full verification and collection are pending at registration; no candidate effect is claimed. Run its phases sequentially, with no other local test campaign overlapping.
+E18 status (16 October 2026): [scoped diagnosis/calibration/ten-set protocol](experiments/zoned_measurement_protocol.md) addresses E17's counter/sample limitations using the same ordinary controller. Full local verification and Ubuntu/Windows source CI pass **213 methods/501 subtests**; all eight profiles and 24 calibration windows pass. Characterization is **interrupted at 64/120 saved windows**, with no final manifest. [Execution record](evidence/results/E18_EXECUTION.md), [partial integrity audit](evidence/results/e18-checkpoint-audit.json), [remaining work](PROGRESS.md). No completed performance gate or candidate effect is claimed. Run phases sequentially with no overlapping local test campaign; a continuation of this interrupted attempt needs a declared protocol rather than silent observation replacement.
 
 From this workspace:
 

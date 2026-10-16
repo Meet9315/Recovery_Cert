@@ -1,0 +1,13 @@
+# E18 collection execution context
+
+15 October 2026. Runtime source/test/protocol freeze is `e8ad2dba831f17749b0f8d27e5a32e63b1e9889a`. Historical E16/E17 files are retained unchanged.
+
+The full local Windows run completes before any E18 profiles: 213 methods/501 subtests, 10000 traces and all older campaigns pass. Source CI is launched before profiling; Ubuntu completes successfully, while the remote Windows job remains in its verification step longer than the local run. Standalone instrumented profiles begin on the locally verified frozen source while that remote job finishes. This is a diagnostic, not a comparative timing run. The Windows CI outcome will be checked and recorded before uninstrumented calibration/characterization.
+
+The remote Windows job subsequently passes, as does the entire source CI run. Its downloaded artifact confirms 213 methods/501 subtests and all 73 local source/test byte hashes. Both-platform CI and local full verification are therefore confirmed before uninstrumented calibration/characterization. No runtime source/protocol changes are made during collection.
+
+No local test campaign overlaps profiling. After profiles finish, calibration and ten-set characterization run sequentially in separate fresh runtime/evidence directories. No other controlled local benchmark/test is scheduled during those timed windows. Ordinary host applications, OS/filesystem activity and scheduling are not guaranteed absent; all offered reads, delays, losses, insufficient observations and errors remain.
+
+Profiles have no foreground worker and include profiler overhead; function elapsed categories are not labeled CPU or used as an uninstrumented benchmark. Calibration/characterization use the unchanged E17 collector, and selection is bound to recorded source/protocol/Git identity plus all calibration shard digests. If a source correction becomes necessary, preserve this revision's results and recollect under the new declared revision rather than silently mixing them.
+
+16 October reconciliation: the earlier characterization process is no longer running, and there is no final manifest. Exactly 64 closed window shards and their checkpoint prefix are retained; termination cause is unknown. No additional local campaign was started to fill the missing observations. The [partial audit](e18-checkpoint-audit.json) verifies saved evidence while explicitly recording campaign incompleteness. The final-manifest summary/audit helpers remain pending use on a complete campaign.

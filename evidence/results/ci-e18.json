@@ -1,0 +1,20 @@
+{
+  "retrieved_client_date": "2026-10-15",
+  "repository": "Meet9315/Recovery_Cert",
+  "head_sha": "e8ad2dba831f17749b0f8d27e5a32e63b1e9889a",
+  "run_id": 38773608364,
+  "status": "completed",
+  "conclusion": "success",
+  "jobs": {"ubuntu-latest": "success", "windows-latest": "success"},
+  "url": "https://github.com/Meet9315/Recovery_Cert/actions/runs/38773608364",
+  "windows_artifact_verification": {
+    "success": true,
+    "test_methods": 213,
+    "subtests": 501,
+    "failures": 0,
+    "errors": 0,
+    "matching_local_source_test_hashes": 73,
+    "report": "verification-e18-ci-windows.json"
+  },
+  "scope": "Full correctness/process-fault suite plus eight new measurement methods; CI uses 1000 traces, local verification uses 10000. CI does not run or confirm the full profiling/calibration/120-window characterization."
+}
