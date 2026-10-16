@@ -1,0 +1,138 @@
+{
+  "configfs_present": true,
+  "devices": [
+    {
+      "name": "loop0",
+      "zoned": "none"
+    },
+    {
+      "name": "loop1",
+      "zoned": "none"
+    },
+    {
+      "name": "loop2",
+      "zoned": "none"
+    },
+    {
+      "name": "loop3",
+      "zoned": "none"
+    },
+    {
+      "name": "loop4",
+      "zoned": "none"
+    },
+    {
+      "name": "loop5",
+      "zoned": "none"
+    },
+    {
+      "name": "loop6",
+      "zoned": "none"
+    },
+    {
+      "name": "loop7",
+      "zoned": "none"
+    },
+    {
+      "name": "ram0",
+      "zoned": "none"
+    },
+    {
+      "name": "ram1",
+      "zoned": "none"
+    },
+    {
+      "name": "ram10",
+      "zoned": "none"
+    },
+    {
+      "name": "ram11",
+      "zoned": "none"
+    },
+    {
+      "name": "ram12",
+      "zoned": "none"
+    },
+    {
+      "name": "ram13",
+      "zoned": "none"
+    },
+    {
+      "name": "ram14",
+      "zoned": "none"
+    },
+    {
+      "name": "ram15",
+      "zoned": "none"
+    },
+    {
+      "name": "ram2",
+      "zoned": "none"
+    },
+    {
+      "name": "ram3",
+      "zoned": "none"
+    },
+    {
+      "name": "ram4",
+      "zoned": "none"
+    },
+    {
+      "name": "ram5",
+      "zoned": "none"
+    },
+    {
+      "name": "ram6",
+      "zoned": "none"
+    },
+    {
+      "name": "ram7",
+      "zoned": "none"
+    },
+    {
+      "name": "ram8",
+      "zoned": "none"
+    },
+    {
+      "name": "ram9",
+      "zoned": "none"
+    },
+    {
+      "name": "sda",
+      "zoned": "none"
+    },
+    {
+      "name": "sdb",
+      "zoned": "none"
+    },
+    {
+      "name": "sdc",
+      "zoned": "none"
+    },
+    {
+      "name": "sdd",
+      "zoned": "none"
+    }
+  ],
+  "kernel": "6.18.33.1-microsoft-standard-WSL2",
+  "kernel_config": {
+    "CONFIG_BLK_DEV_ZONED": "y",
+    "CONFIG_CONFIGFS_FS": "y"
+  },
+  "kvm_present": true,
+  "null_blk_module_probe": {
+    "exit_code": 1,
+    "stderr": "modprobe: FATAL: Module null_blk not found in directory /lib/modules/6.18.33.1-microsoft-standard-WSL2\n",
+    "stdout": ""
+  },
+  "platform": "Linux-6.18.33.1-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+  "read_only_probe": true,
+  "tools": {
+    "blkzone": "/usr/sbin/blkzone",
+    "lsblk": "/usr/bin/lsblk",
+    "modprobe": "/usr/sbin/modprobe",
+    "nvme": null,
+    "python3": "/usr/bin/python3",
+    "qemu-system-x86_64": "/usr/bin/qemu-system-x86_64"
+  }
+}

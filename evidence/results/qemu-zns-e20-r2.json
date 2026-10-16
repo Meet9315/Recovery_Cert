@@ -1,0 +1,190 @@
+{
+  "assigned_serial": "RCSD8b4d3d40e04a44bb",
+  "command": [
+    "/usr/bin/qemu-system-x86_64",
+    "-machine",
+    "q35,accel=tcg",
+    "-bios",
+    "/mnt/d/PROJECTS/RecoveryCert-SemanticDelta/tmp/e20-qemu-r2/owned-halt-bios.bin",
+    "-m",
+    "64",
+    "-display",
+    "none",
+    "-nodefaults",
+    "-monitor",
+    "none",
+    "-qtest",
+    "unix:/tmp/rcsd-qtest-xcaabh4f/control.sock,server=on,wait=off",
+    "-qtest-log",
+    "/mnt/d/PROJECTS/RecoveryCert-SemanticDelta/tmp/e20-qemu-r2/qtest.log",
+    "-drive",
+    "file=/mnt/d/PROJECTS/RecoveryCert-SemanticDelta/tmp/e20-qemu-r2/owned-zns.raw,format=raw,if=none,id=znsdrive",
+    "-device",
+    "nvme,id=nvme0,serial=RCSD8b4d3d40e04a44bb,addr=04.0",
+    "-device",
+    "nvme-ns,drive=znsdrive,bus=nvme0,nsid=1,zoned=on,zoned.zone_size=1M,zoned.zone_capacity=768K,zoned.max_open=2,zoned.max_active=4"
+  ],
+  "command_completions": [
+    {
+      "cid": 1,
+      "opcode": 5,
+      "queue": 0,
+      "result": 0,
+      "status": 0
+    },
+    {
+      "cid": 2,
+      "opcode": 1,
+      "queue": 0,
+      "result": 0,
+      "status": 0
+    },
+    {
+      "cid": 3,
+      "opcode": 6,
+      "queue": 0,
+      "result": 0,
+      "status": 0
+    },
+    {
+      "cid": 4,
+      "opcode": 122,
+      "queue": 1,
+      "result": 0,
+      "status": 0
+    },
+    {
+      "cid": 5,
+      "opcode": 1,
+      "queue": 1,
+      "result": 0,
+      "status": 0
+    },
+    {
+      "cid": 6,
+      "opcode": 122,
+      "queue": 1,
+      "result": 0,
+      "status": 0
+    },
+    {
+      "cid": 7,
+      "opcode": 2,
+      "queue": 1,
+      "result": 0,
+      "status": 0
+    },
+    {
+      "cid": 8,
+      "opcode": 121,
+      "queue": 1,
+      "result": 0,
+      "status": 0
+    },
+    {
+      "cid": 9,
+      "opcode": 122,
+      "queue": 1,
+      "result": 0,
+      "status": 0
+    },
+    {
+      "cid": 10,
+      "opcode": 121,
+      "queue": 1,
+      "result": 0,
+      "status": 0
+    },
+    {
+      "cid": 11,
+      "opcode": 122,
+      "queue": 1,
+      "result": 0,
+      "status": 0
+    },
+    {
+      "cid": 12,
+      "opcode": 121,
+      "queue": 1,
+      "result": 0,
+      "status": 0
+    },
+    {
+      "cid": 13,
+      "opcode": 122,
+      "queue": 1,
+      "result": 0,
+      "status": 0
+    },
+    {
+      "cid": 14,
+      "opcode": 1,
+      "queue": 1,
+      "result": 0,
+      "status": 0
+    },
+    {
+      "cid": 15,
+      "opcode": 2,
+      "queue": 1,
+      "result": 0,
+      "status": 0
+    }
+  ],
+  "existing_image_or_device_used": false,
+  "nvme_zone_append_tested": false,
+  "observations": [
+    {
+      "capacity_lba": 1536,
+      "condition": 1,
+      "phase": "initial",
+      "reported_zones": 64,
+      "start_lba": 0,
+      "type": 2,
+      "wp_lba": 0
+    },
+    {
+      "capacity_lba": 1536,
+      "condition": 2,
+      "phase": "written",
+      "reported_zones": 64,
+      "start_lba": 0,
+      "type": 2,
+      "wp_lba": 8
+    },
+    {
+      "capacity_lba": 1536,
+      "condition": 4,
+      "phase": "closed",
+      "reported_zones": 64,
+      "start_lba": 0,
+      "type": 2,
+      "wp_lba": 8
+    },
+    {
+      "capacity_lba": 1536,
+      "condition": 14,
+      "phase": "finished",
+      "reported_zones": 64,
+      "start_lba": 0,
+      "type": 2,
+      "wp_lba": 18446744073709551615
+    },
+    {
+      "capacity_lba": 1536,
+      "condition": 1,
+      "phase": "reset",
+      "reported_zones": 64,
+      "start_lba": 0,
+      "type": 2,
+      "wp_lba": 0
+    }
+  ],
+  "persistent_authority_integration": false,
+  "platform": "Linux-6.18.33.1-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+  "power_loss_tested": false,
+  "qemu_binary_sha256": "55862c768c21fa7d3e72ca1b24797d8ab5b406eb5ef4c9ab9c2280f4e0b8f330",
+  "qemu_version": "QEMU emulator version 6.2.0 (Debian 1:6.2+dfsg-2ubuntu6.31)",
+  "script_sha256": "d6f677cc6eccdd06c75381850983c939a6b5758e235ca9f65731e9bbcf40fa6c",
+  "success": true
+}
