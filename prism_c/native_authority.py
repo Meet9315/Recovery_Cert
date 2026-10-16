@@ -4,7 +4,7 @@ Device-session loss fails closed; power-loss/session-recreation recovery is not
 supported. Native commands are drained and fenced by the session supervisor.
 """
 
-from contextlib import contextmanager
+from contextlib import closing, contextmanager
 from dataclasses import asdict
 import json
 from pathlib import Path
@@ -102,7 +102,7 @@ class NativeAuthority:
                     "descriptor": client.descriptor, "binding": client.binding,
                     "state": asdict(initial), "manifests": manifests, "fence": 0,
                     "plan": None, "cursor": 0, "pending": None, "quarantine": None}
-        with sqlite3.connect(db_path) as db:
+        with closing(sqlite3.connect(db_path)) as db, db:
             db.execute("PRAGMA journal_mode=WAL")
             db.execute("PRAGMA synchronous=FULL")
             db.execute("CREATE TABLE authority (id INTEGER PRIMARY KEY CHECK(id=1), document TEXT NOT NULL)")
@@ -120,7 +120,7 @@ class NativeAuthority:
                 client.call("write", 0, zone=zone.name, offset=offset*4096, payload=payload.hex(), operation="bootstrap")
             client.call("flush", 0, zone=zone.name)
         document["bootstrap"] = "COMPLETE"
-        with sqlite3.connect(db_path) as db:
+        with closing(sqlite3.connect(db_path)) as db, db:
             db.execute("PRAGMA synchronous=FULL")
             cls.save(db, document)
         authority = cls(root, client)

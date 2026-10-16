@@ -128,6 +128,7 @@ def main():
                         log({**event, "event": "completed"})
                     response.update(success=True, result=value)
                 except Exception as error:
+                    device.after_submit = None
                     response["error"] = repr(error)
                 try:
                     channel.sendall((canonical(response)+"\n").encode())

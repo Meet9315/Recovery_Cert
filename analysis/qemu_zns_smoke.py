@@ -126,6 +126,8 @@ class QemuZns:
         self.memory_write(q["sq"] + q["tail"] * 64, command)
         q["tail"] = (q["tail"] + 1) % 64
         self.write_register(0x1000 + 2 * queue * self.stride, q["tail"])
+        if getattr(self, "after_submit", None):
+            self.after_submit(queue, opcode, self.cid)
         for _ in range(1000):
             completion = self.memory_read(q["cq"] + q["head"] * 16, 16)
             value, _, _, sqid, cid, status = struct.unpack("<IIHHHH", completion)
@@ -162,15 +164,17 @@ class QemuZns:
         self.submit(0x79, queue=1, nsid=nsid, words={10: slba, 13: action})
 
     def write(self, payload, slba=0, *, nsid=1):
-        if len(payload) != 4096:
-            raise ValueError("Smoke writes exactly one 4096-byte PRP page")
+        if not 0 < len(payload) <= 4096 or len(payload) % 512:
+            raise ValueError("Native writes need aligned bytes within one PRP page")
         self.memory_write(self.DATA, payload)
-        self.submit(1, queue=1, nsid=nsid, words={10: slba, 12: 7})
+        self.submit(1, queue=1, nsid=nsid, words={10: slba, 12: len(payload)//512-1})
 
-    def read(self, slba=0, *, nsid=1):
-        self.memory_write(self.DATA, bytes(4096))
-        self.submit(2, queue=1, nsid=nsid, words={10: slba, 12: 7})
-        return self.memory_read(self.DATA, 4096)
+    def read(self, slba=0, *, nsid=1, length=4096):
+        if not 0 < length <= 4096 or length % 512:
+            raise ValueError("Native reads need aligned bytes within one PRP page")
+        self.memory_write(self.DATA, bytes(length))
+        self.submit(2, queue=1, nsid=nsid, words={10: slba, 12: length//512-1})
+        return self.memory_read(self.DATA, length)
 
     def close(self):
         if hasattr(self, "stream"):
