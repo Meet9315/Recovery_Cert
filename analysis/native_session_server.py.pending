@@ -1,0 +1,146 @@
+"""Private serial native-emulator supervisor; survives authority actor exits."""
+
+import argparse
+import json
+import os
+from pathlib import Path
+import secrets
+import signal
+import socket
+import tempfile
+import time
+import uuid
+
+from analysis.qemu_zns_smoke import QemuZns
+from prism_c.native_authority import canonical
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--root", required=True)
+    parser.add_argument("--geometry", required=True)
+    args = parser.parse_args()
+    capacities = json.loads(Path(args.geometry).read_text())
+    device = QemuZns(args.root, capacities)
+    root = Path(args.root).resolve()
+    private = tempfile.TemporaryDirectory(prefix="rcsd-native-session-")
+    address = str(Path(private.name)/"rpc.sock")
+    listener = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
+    listener.bind(address)
+    listener.listen(32)
+    descriptor = {"session": uuid.uuid4().hex, "token": secrets.token_hex(32), "serial": device.serial,
+                  "namespaces": device.namespaces, "socket": address, "pid": os.getpid(),
+                  "qemu_pid": device.process.pid, "boot_id": Path("/proc/sys/kernel/random/boot_id").read_text().strip()}
+    with (root/"session.json").open("x") as handle:
+        handle.write(canonical(descriptor)+"\n")
+    fence, running, delay, bound_store = 0, True, None, None
+
+    def log(value):
+        with (root/"operations.jsonl").open("a") as handle:
+            handle.write(canonical(value)+"\n")
+            handle.flush()
+            os.fsync(handle.fileno())
+
+    def terminate(*_):
+        raise SystemExit(0)
+
+    signal.signal(signal.SIGTERM, terminate)
+    try:
+        while running:
+            channel, _ = listener.accept()
+            with channel:
+                channel.settimeout(10)
+                response = {"session": descriptor["session"], "success": False}
+                try:
+                    with channel.makefile("rb") as incoming:
+                        raw = incoming.readline(100000)
+                    request = json.loads(raw)
+                    if request.get("session") != descriptor["session"] or request.get("token") != descriptor["token"]:
+                        raise ValueError("Session identity rejected")
+                    supplied = request.get("fence")
+                    if type(supplied) is not int or supplied < 0:
+                        raise ValueError("Invalid fence")
+                    op = request["op"]
+                    if op == "bind":
+                        candidate = request.get("store")
+                        if fence != 0 or supplied != 0 or not isinstance(candidate, str) or not candidate or bound_store not in (None, candidate):
+                            raise ValueError("Native session already bound or invalid store")
+                        bound_store, value = candidate, None
+                    elif request.get("store") != bound_store or bound_store is None:
+                        raise ValueError("Wrong native authority binding")
+                    elif op == "fence":
+                        if supplied < fence:
+                            raise ValueError("Stale supervisor fence")
+                        fence = supplied
+                        value = {"fence": fence, "prior_commands_drained": True}
+                    elif supplied != fence:
+                        raise ValueError("Stale supervisor command rejected before device submission")
+                    elif op == "stop":
+                        running, value = False, None
+                    elif op == "delay_next":
+                        if request["kind"] not in ("write", "manage") or type(request["milliseconds"]) is not int or not 0 <= request["milliseconds"] <= 2000:
+                            raise ValueError("Invalid diagnostic delay")
+                        delay, value = (request["kind"], request["milliseconds"]), None
+                    elif op == "stats":
+                        value = {"fence": fence, "commands": len(device.trace), "bound_store": bound_store}
+                    else:
+                        zone = request["zone"]
+                        ns = descriptor["namespaces"][zone]
+                        if device.identify_serial() != descriptor["serial"]:
+                            raise ValueError("Controller identity changed")
+                        event = {"event": "started", "op": op, "zone": zone, "fence": supplied,
+                                 "operation": request.get("operation"), "action": request.get("action"), "offset": request.get("offset")}
+                        log(event)
+                        selected_delay = delay if delay and delay[0] == op else None
+                        if selected_delay:
+                            delay = None
+                            def after_submit(queue, opcode, cid):
+                                if queue == 1 and opcode == (1 if op == "write" else 0x79):
+                                    log({**event, "event": "submitted_unacknowledged", "nvme_cid": cid, "nvme_opcode": opcode})
+                                    time.sleep(selected_delay[1]/1000)
+                            device.after_submit = after_submit
+                        if op == "report":
+                            value = device.report(nsid=ns["nsid"])
+                        elif op == "manage":
+                            if request["action"] not in (1, 2, 3, 4):
+                                raise ValueError("Unsupported zone-management action")
+                            device.manage(request["action"], nsid=ns["nsid"])
+                            value = None
+                        elif op == "flush":
+                            device.submit(0, queue=1, nsid=ns["nsid"])
+                            value = None
+                        elif op in ("read", "write"):
+                            payload = bytes.fromhex(request["payload"]) if op == "write" else None
+                            length = len(payload) if payload is not None else request["length"]
+                            offset = request["offset"]
+                            if (type(offset) is not int or type(length) is not int or min(offset, length) < 0
+                                    or not 0 < length <= 4096 or length % 512 or offset % 512
+                                    or offset+length > ns["capacity_units"]*4096):
+                                raise ValueError("Unaligned/out-of-capacity native operation")
+                            if op == "write":
+                                device.write(payload, offset//512, nsid=ns["nsid"])
+                                value = None
+                            else:
+                                value = device.read(offset//512, nsid=ns["nsid"], length=length).hex()
+                        else:
+                            raise ValueError("Unknown native operation")
+                        device.after_submit = None
+                        log({**event, "event": "completed"})
+                    response.update(success=True, result=value)
+                except Exception as error:
+                    response["error"] = repr(error)
+                try:
+                    channel.sendall((canonical(response)+"\n").encode())
+                except OSError:
+                    pass  # Actor may die after a device completion; supervisor remains alive.
+    finally:
+        listener.close()
+        device.close()
+        private.cleanup()
+        with (root/"supervisor-report.json").open("x") as handle:
+            handle.write(canonical({"session": descriptor["session"], "fence": fence,
+                                    "command_completions": device.trace})+"\n")
+
+
+if __name__ == "__main__":
+    main()

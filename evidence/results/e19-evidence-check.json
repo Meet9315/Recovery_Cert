@@ -1,0 +1,971 @@
+{
+  "audit_script_sha256": "9c8acea463b7b624fdb2e92692c93741369620afe5401e5a7b99722eaf58a446",
+  "cold_module_median_wall_ms": {
+    "historical": 0.1063,
+    "optimized": 8.7696
+  },
+  "collection_git_head": "d8dbf2b5ba2a89d76b6526074bbd227b64d330ae",
+  "controller_summary": {
+    "adequate": true,
+    "complete": true,
+    "configurations": [
+      {
+        "adequate": true,
+        "comparisons": {
+          "joint_repeat": {
+            "controller_thread_cpu_ns_ratio": {
+              "mean": 0.967571976017865,
+              "paired_bootstrap_95_percent_interval": [
+                0.8586200549176382,
+                1.103908245585529
+              ],
+              "resamples": 5000,
+              "scope": "Percentile resampling of observed matched sets; host dependence not removed",
+              "values": [
+                1.4741379310344827,
+                0.6460674157303371,
+                0.9053030303030303,
+                0.9959677419354839,
+                0.9706959706959707,
+                0.9746835443037974,
+                0.921875,
+                0.8137931034482758,
+                0.98046875,
+                0.9927272727272727
+              ]
+            },
+            "p99_ns_ratio": {
+              "mean": 0.9313595757820636,
+              "paired_bootstrap_95_percent_interval": [
+                0.8353948499897789,
+                1.0598654728817496
+              ],
+              "resamples": 5000,
+              "scope": "Percentile resampling of observed matched sets; host dependence not removed",
+              "values": [
+                1.4129361549635082,
+                0.6990412285907953,
+                0.8476438323724095,
+                0.7977244438140271,
+                1.0011943482345027,
+                0.9561949868975015,
+                0.8873341272413661,
+                0.7947792902551459,
+                0.9320254193222445,
+                0.9847219261291358
+              ]
+            },
+            "restoration_wall_ns_ratio": {
+              "mean": 0.9902750254966549,
+              "paired_bootstrap_95_percent_interval": [
+                0.8759099627471989,
+                1.1448421944351506
+              ],
+              "resamples": 5000,
+              "scope": "Percentile resampling of observed matched sets; host dependence not removed",
+              "values": [
+                1.5796874812162596,
+                0.7268427063363183,
+                0.954099016630692,
+                1.0057213851519247,
+                0.8439901087078595,
+                1.0294370268836817,
+                1.0078419705421675,
+                0.793098244309734,
+                0.9758571012055021,
+                0.9861752139824095
+              ]
+            }
+          },
+          "separated": {
+            "controller_thread_cpu_ns_ratio": {
+              "mean": 0.5461863409202022,
+              "paired_bootstrap_95_percent_interval": [
+                0.47282775874154864,
+                0.6305261202572626
+              ],
+              "resamples": 5000,
+              "scope": "Percentile resampling of observed matched sets; host dependence not removed",
+              "values": [
+                0.8465346534653465,
+                0.38397328881469117,
+                0.569047619047619,
+                0.3977455716586151,
+                0.47237076648841353,
+                0.5647921760391198,
+                0.565947242206235,
+                0.458252427184466,
+                0.5516483516483517,
+                0.6515513126491647
+              ]
+            },
+            "p99_ns_ratio": {
+              "mean": 0.5959450933486319,
+              "paired_bootstrap_95_percent_interval": [
+                0.5174536909543627,
+                0.6762462144668262
+              ],
+              "resamples": 5000,
+              "scope": "Percentile resampling of observed matched sets; host dependence not removed",
+              "values": [
+                0.8385024961709185,
+                0.4509931350353388,
+                0.6985626175125262,
+                0.43781200754474225,
+                0.5653303910747715,
+                0.6365408771480915,
+                0.6766593867203592,
+                0.4413296888152601,
+                0.5296178292919441,
+                0.684102504172367
+              ]
+            },
+            "restoration_wall_ns_ratio": {
+              "mean": 0.5573823266870648,
+              "paired_bootstrap_95_percent_interval": [
+                0.47886336019166703,
+                0.6458318516375883
+              ],
+              "resamples": 5000,
+              "scope": "Percentile resampling of observed matched sets; host dependence not removed",
+              "values": [
+                0.8478435813739782,
+                0.47041105108555037,
+                0.5284804787862896,
+                0.364911943139402,
+                0.4699815528162434,
+                0.596468205169777,
+                0.5813368484095865,
+                0.451705547860588,
+                0.5289110886762158,
+                0.7337729695530166
+              ]
+            }
+          }
+        },
+        "extra": false,
+        "groups": 12,
+        "identical_software_p99_5pct_repeatability_screen": false,
+        "matched_sets": 10,
+        "profile": "xor-2+1-v1"
+      },
+      {
+        "adequate": true,
+        "comparisons": {
+          "joint_repeat": {
+            "controller_thread_cpu_ns_ratio": {
+              "mean": 0.9915570825625499,
+              "paired_bootstrap_95_percent_interval": [
+                0.9624465370764589,
+                1.0190525276007942
+              ],
+              "resamples": 5000,
+              "scope": "Percentile resampling of observed matched sets; host dependence not removed",
+              "values": [
+                1.0127388535031847,
+                1.0633802816901408,
+                0.9493670886075949,
+                0.9024390243902439,
+                1.0127388535031847,
+                1.0064516129032257,
+                1.0064102564102564,
+                1.0397350993377483,
+                0.9617834394904459,
+                0.9605263157894737
+              ]
+            },
+            "p99_ns_ratio": {
+              "mean": 0.9876996760142152,
+              "paired_bootstrap_95_percent_interval": [
+                0.9488917937627581,
+                1.0231688139629753
+              ],
+              "resamples": 5000,
+              "scope": "Percentile resampling of observed matched sets; host dependence not removed",
+              "values": [
+                0.9804116647410739,
+                1.0681370074673298,
+                1.0067647091791556,
+                1.005046348782772,
+                0.8889952332846665,
+                1.0333478804820446,
+                1.0208018675944093,
+                0.9601896421887097,
+                1.039038416607258,
+                0.8742639898147322
+              ]
+            },
+            "restoration_wall_ns_ratio": {
+              "mean": 0.9939081536623194,
+              "paired_bootstrap_95_percent_interval": [
+                0.9371533789893958,
+                1.056298695375713
+              ],
+              "resamples": 5000,
+              "scope": "Percentile resampling of observed matched sets; host dependence not removed",
+              "values": [
+                1.0632932323175304,
+                0.9160635752386227,
+                0.8734636087390208,
+                0.9218997600614932,
+                1.0474692902326754,
+                1.001487840300889,
+                0.94844860987548,
+                1.0601859415444392,
+                0.9088107602247368,
+                1.197958918088307
+              ]
+            }
+          },
+          "separated": {
+            "controller_thread_cpu_ns_ratio": {
+              "mean": 0.8381052272036336,
+              "paired_bootstrap_95_percent_interval": [
+                0.801851363449945,
+                0.8726194758563474
+              ],
+              "resamples": 5000,
+              "scope": "Percentile resampling of observed matched sets; host dependence not removed",
+              "values": [
+                0.9244186046511628,
+                0.8531073446327684,
+                0.7772020725388601,
+                0.7219512195121951,
+                0.8983050847457628,
+                0.8253968253968254,
+                0.8820224719101124,
+                0.8486486486486486,
+                0.8388888888888889,
+                0.8111111111111111
+              ]
+            },
+            "p99_ns_ratio": {
+              "mean": 0.8862484929950496,
+              "paired_bootstrap_95_percent_interval": [
+                0.8380700960572175,
+                0.9298579676832625
+              ],
+              "resamples": 5000,
+              "scope": "Percentile resampling of observed matched sets; host dependence not removed",
+              "values": [
+                0.9322514772036,
+                0.9135746511093134,
+                0.9373790207989581,
+                0.7545586117635462,
+                0.8807025933597821,
+                0.968387631905035,
+                0.9776585905203655,
+                0.8541537881593084,
+                0.8866215689982903,
+                0.7571969961322972
+              ]
+            },
+            "restoration_wall_ns_ratio": {
+              "mean": 0.9045269837297958,
+              "paired_bootstrap_95_percent_interval": [
+                0.8529446482766179,
+                0.9575282092843256
+              ],
+              "resamples": 5000,
+              "scope": "Percentile resampling of observed matched sets; host dependence not removed",
+              "values": [
+                0.957108653706138,
+                0.8990710059358188,
+                0.830691990675849,
+                0.7970203846760139,
+                1.0012879062417892,
+                0.8664420052600682,
+                0.8805504351247171,
+                0.9769325425699473,
+                0.7885195609077658,
+                1.047645352199851
+              ]
+            }
+          }
+        },
+        "extra": true,
+        "groups": 8,
+        "identical_software_p99_5pct_repeatability_screen": false,
+        "matched_sets": 10,
+        "profile": "xor-2+1-v1"
+      },
+      {
+        "adequate": true,
+        "comparisons": {
+          "joint_repeat": {
+            "controller_thread_cpu_ns_ratio": {
+              "mean": 0.9844288952796979,
+              "paired_bootstrap_95_percent_interval": [
+                0.9442757690365292,
+                1.0177105766402712
+              ],
+              "resamples": 5000,
+              "scope": "Percentile resampling of observed matched sets; host dependence not removed",
+              "values": [
+                1.0656934306569343,
+                0.9791666666666666,
+                0.9642857142857143,
+                1.0,
+                0.9930555555555556,
+                1.006896551724138,
+                0.9722222222222222,
+                1.0469798657718121,
+                0.9865771812080537,
+                0.8294117647058824
+              ]
+            },
+            "p99_ns_ratio": {
+              "mean": 0.9745825905493022,
+              "paired_bootstrap_95_percent_interval": [
+                0.9543653890196919,
+                0.9958217120836158
+              ],
+              "resamples": 5000,
+              "scope": "Percentile resampling of observed matched sets; host dependence not removed",
+              "values": [
+                0.95035937585243,
+                1.0474803803834507,
+                0.9927779456660079,
+                0.958719068363069,
+                0.9621725571550627,
+                0.9709561749770426,
+                0.9993415156318223,
+                0.9750105539621196,
+                0.9777577990956173,
+                0.9112505344064005
+              ]
+            },
+            "restoration_wall_ns_ratio": {
+              "mean": 1.017258825914045,
+              "paired_bootstrap_95_percent_interval": [
+                0.988873509249982,
+                1.046667707483713
+              ],
+              "resamples": 5000,
+              "scope": "Percentile resampling of observed matched sets; host dependence not removed",
+              "values": [
+                1.0076910676239796,
+                0.9523016515713207,
+                1.0178184634860123,
+                1.018097496917698,
+                1.104779539951148,
+                0.9982233990347542,
+                0.9941366386569868,
+                0.9525471343276045,
+                1.0724477340897733,
+                1.054545133481172
+              ]
+            }
+          },
+          "separated": {
+            "controller_thread_cpu_ns_ratio": {
+              "mean": 0.5776688469315048,
+              "paired_bootstrap_95_percent_interval": [
+                0.5560808281969312,
+                0.5990891162148895
+              ],
+              "resamples": 5000,
+              "scope": "Percentile resampling of observed matched sets; host dependence not removed",
+              "values": [
+                0.5407407407407407,
+                0.5826446280991735,
+                0.5601659751037344,
+                0.6104417670682731,
+                0.5813008130081301,
+                0.6008230452674898,
+                0.532319391634981,
+                0.616600790513834,
+                0.625531914893617,
+                0.5261194029850746
+              ]
+            },
+            "p99_ns_ratio": {
+              "mean": 0.7018552427066038,
+              "paired_bootstrap_95_percent_interval": [
+                0.6891213204147691,
+                0.713338907813211
+              ],
+              "resamples": 5000,
+              "scope": "Percentile resampling of observed matched sets; host dependence not removed",
+              "values": [
+                0.7112863663030957,
+                0.7237884007484685,
+                0.7278411403265815,
+                0.6794197071800223,
+                0.6997238463620743,
+                0.6616227795902652,
+                0.7051698364586834,
+                0.7198616735447282,
+                0.6862517983094047,
+                0.7035868782427139
+              ]
+            },
+            "restoration_wall_ns_ratio": {
+              "mean": 0.582197191909668,
+              "paired_bootstrap_95_percent_interval": [
+                0.5538236365899276,
+                0.6069951219982649
+              ],
+              "resamples": 5000,
+              "scope": "Percentile resampling of observed matched sets; host dependence not removed",
+              "values": [
+                0.5025733202015595,
+                0.5729254678497152,
+                0.5170597058165198,
+                0.6075569935354191,
+                0.6153225757966354,
+                0.6211761706523911,
+                0.5475281869073588,
+                0.5882437781977744,
+                0.6324794186759155,
+                0.6171063014633913
+              ]
+            }
+          }
+        },
+        "extra": false,
+        "groups": 6,
+        "identical_software_p99_5pct_repeatability_screen": true,
+        "matched_sets": 10,
+        "profile": "pq-4+2-gf256-v1"
+      },
+      {
+        "adequate": true,
+        "comparisons": {
+          "joint_repeat": {
+            "controller_thread_cpu_ns_ratio": {
+              "mean": 1.0070946200504631,
+              "paired_bootstrap_95_percent_interval": [
+                0.9856322698777235,
+                1.0300037515305558
+              ],
+              "resamples": 5000,
+              "scope": "Percentile resampling of observed matched sets; host dependence not removed",
+              "values": [
+                0.9536423841059603,
+                1.0129032258064516,
+                1.0827586206896551,
+                1.032258064516129,
+                0.9871794871794872,
+                1.0196078431372548,
+                1.0,
+                1.0193548387096774,
+                1.0064516129032257,
+                0.9567901234567902
+              ]
+            },
+            "p99_ns_ratio": {
+              "mean": 1.0038469487060047,
+              "paired_bootstrap_95_percent_interval": [
+                0.97905756618633,
+                1.027738912257114
+              ],
+              "resamples": 5000,
+              "scope": "Percentile resampling of observed matched sets; host dependence not removed",
+              "values": [
+                0.9325245106433169,
+                1.0016595572260318,
+                1.0331065387397305,
+                1.070450104030766,
+                0.9957907473339219,
+                0.9828125425834562,
+                1.0056695365069788,
+                0.9569011753230845,
+                1.0490339653556104,
+                1.0105208093171494
+              ]
+            },
+            "restoration_wall_ns_ratio": {
+              "mean": 0.9671997846648371,
+              "paired_bootstrap_95_percent_interval": [
+                0.9447784121222003,
+                0.9914468259990179
+              ],
+              "resamples": 5000,
+              "scope": "Percentile resampling of observed matched sets; host dependence not removed",
+              "values": [
+                0.9140347740233278,
+                0.9519958919773371,
+                0.9855675876876236,
+                0.9832904904658701,
+                0.9385671389506665,
+                1.0244886953730528,
+                0.9427097390711004,
+                1.0266767302207012,
+                0.9787050573901834,
+                0.9259617414885085
+              ]
+            }
+          },
+          "separated": {
+            "controller_thread_cpu_ns_ratio": {
+              "mean": 0.568694979079587,
+              "paired_bootstrap_95_percent_interval": [
+                0.5551843060334956,
+                0.5804627862443076
+              ],
+              "resamples": 5000,
+              "scope": "Percentile resampling of observed matched sets; host dependence not removed",
+              "values": [
+                0.5236363636363637,
+                0.585820895522388,
+                0.5902255639097744,
+                0.5904059040590406,
+                0.555956678700361,
+                0.5714285714285714,
+                0.5652173913043478,
+                0.5830258302583026,
+                0.5735294117647058,
+                0.5477031802120141
+              ]
+            },
+            "p99_ns_ratio": {
+              "mean": 0.7119400861030367,
+              "paired_bootstrap_95_percent_interval": [
+                0.6968016277954898,
+                0.7265641084848535
+              ],
+              "resamples": 5000,
+              "scope": "Percentile resampling of observed matched sets; host dependence not removed",
+              "values": [
+                0.7555219150840085,
+                0.7266708777606179,
+                0.7268373856862288,
+                0.6941216155271175,
+                0.6842173734340006,
+                0.7132792591529966,
+                0.7178750105965016,
+                0.6664561714835612,
+                0.7280002350441003,
+                0.706421017261234
+              ]
+            },
+            "restoration_wall_ns_ratio": {
+              "mean": 0.6155576706911075,
+              "paired_bootstrap_95_percent_interval": [
+                0.5961780275245047,
+                0.6347402791470244
+              ],
+              "resamples": 5000,
+              "scope": "Percentile resampling of observed matched sets; host dependence not removed",
+              "values": [
+                0.5689920986426639,
+                0.5993119042077448,
+                0.6154571383498189,
+                0.6237026908204899,
+                0.6102034305441019,
+                0.6671885331011711,
+                0.6323487639162194,
+                0.6551702669968015,
+                0.6162676088339544,
+                0.5669342714981086
+              ]
+            }
+          }
+        },
+        "extra": true,
+        "groups": 4,
+        "identical_software_p99_5pct_repeatability_screen": true,
+        "matched_sets": 10,
+        "profile": "pq-4+2-gf256-v1"
+      }
+    ],
+    "original_prism_gate_evaluated": false,
+    "patent_rating_changed": false
+  },
+  "counts": {
+    "calibration": {
+      "inadequate_windows": 25,
+      "requests": 72000,
+      "windows": 60
+    },
+    "characterization": {
+      "inadequate_windows": 0,
+      "requests": 144000,
+      "windows": 120
+    }
+  },
+  "date": "2026-10-16",
+  "matching_source_test_hashes": 74,
+  "microbenchmark": [
+    {
+      "comparisons": {
+        "thread_cpu_ns": {
+          "positive_pairs": 0,
+          "status": "INSUFFICIENT_CLOCK_RESOLUTION"
+        },
+        "wall_ns": {
+          "mean": 0.11452452544655516,
+          "paired_bootstrap_95_percent_interval": [
+            0.10016143502136055,
+            0.14032693453270226
+          ],
+          "resamples": 5000,
+          "scope": "Percentile resampling of observed matched sets; host dependence not removed",
+          "values": [
+            0.10542372881355933,
+            0.25316741061364356,
+            0.10055673929479689,
+            0.10088304281837833,
+            0.09776459224506692,
+            0.11335283096467577,
+            0.09969096944031132,
+            0.10044888237449615,
+            0.09841515620730486,
+            0.10525831107836818,
+            0.10063211125158028,
+            0.09870053025648028
+          ]
+        }
+      },
+      "medians_ms": {
+        "historical": {
+          "thread_cpu_ns": 0.0,
+          "wall_ns": 4.36745
+        },
+        "optimized": {
+          "thread_cpu_ns": 0.0,
+          "wall_ns": 0.43865
+        }
+      },
+      "operation": "encode",
+      "profile": "xor-2+1-v1",
+      "unit": 64
+    },
+    {
+      "comparisons": {
+        "thread_cpu_ns": {
+          "positive_pairs": 0,
+          "status": "INSUFFICIENT_CLOCK_RESOLUTION"
+        },
+        "wall_ns": {
+          "mean": 0.22867702441506932,
+          "paired_bootstrap_95_percent_interval": [
+            0.22101779185386844,
+            0.24110043090295358
+          ],
+          "resamples": 5000,
+          "scope": "Percentile resampling of observed matched sets; host dependence not removed",
+          "values": [
+            0.23137897440439287,
+            0.22339498726712237,
+            0.22208425720620842,
+            0.2201577314632761,
+            0.2242526221324808,
+            0.22117738825211797,
+            0.22993485234300076,
+            0.29164011864220585,
+            0.22143568310375386,
+            0.22080645161290322,
+            0.21346830047948853,
+            0.22439292607388123
+          ]
+        }
+      },
+      "medians_ms": {
+        "historical": {
+          "thread_cpu_ns": 15.625,
+          "wall_ns": 9.08735
+        },
+        "optimized": {
+          "thread_cpu_ns": 0.0,
+          "wall_ns": 2.0197
+        }
+      },
+      "operation": "recover",
+      "profile": "xor-2+1-v1",
+      "unit": 64
+    },
+    {
+      "comparisons": {
+        "thread_cpu_ns": {
+          "positive_pairs": 2,
+          "status": "INSUFFICIENT_CLOCK_RESOLUTION"
+        },
+        "wall_ns": {
+          "mean": 0.004541761650664107,
+          "paired_bootstrap_95_percent_interval": [
+            0.004505820589389172,
+            0.004582236382057449
+          ],
+          "resamples": 5000,
+          "scope": "Percentile resampling of observed matched sets; host dependence not removed",
+          "values": [
+            0.004684743143201193,
+            0.00456669017516541,
+            0.004470117754700072,
+            0.004555684042444484,
+            0.004480513202960999,
+            0.004498273448756165,
+            0.004532752037322822,
+            0.004656554674943789,
+            0.004539176648278425,
+            0.004455741395482109,
+            0.004533278525673963,
+            0.00452761475903985
+          ]
+        }
+      },
+      "medians_ms": {
+        "historical": {
+          "thread_cpu_ns": 281.25,
+          "wall_ns": 291.8918
+        },
+        "optimized": {
+          "thread_cpu_ns": 0.0,
+          "wall_ns": 1.32375
+        }
+      },
+      "operation": "encode",
+      "profile": "xor-2+1-v1",
+      "unit": 4096
+    },
+    {
+      "comparisons": {
+        "thread_cpu_ns": {
+          "positive_pairs": 3,
+          "status": "INSUFFICIENT_CLOCK_RESOLUTION"
+        },
+        "wall_ns": {
+          "mean": 0.007477433204014994,
+          "paired_bootstrap_95_percent_interval": [
+            0.007298655958687948,
+            0.007667588623549631
+          ],
+          "resamples": 5000,
+          "scope": "Percentile resampling of observed matched sets; host dependence not removed",
+          "values": [
+            0.007149814128682037,
+            0.008141933677870462,
+            0.007438070985321535,
+            0.007114528229543618,
+            0.00767408631202555,
+            0.00775202969378853,
+            0.007189867132662967,
+            0.007899548588977382,
+            0.007172599752687559,
+            0.0075713705093571615,
+            0.007544189665104961,
+            0.007081159772158166
+          ]
+        }
+      },
+      "medians_ms": {
+        "historical": {
+          "thread_cpu_ns": 515.625,
+          "wall_ns": 519.82775
+        },
+        "optimized": {
+          "thread_cpu_ns": 0.0,
+          "wall_ns": 3.87875
+        }
+      },
+      "operation": "recover",
+      "profile": "xor-2+1-v1",
+      "unit": 4096
+    },
+    {
+      "comparisons": {
+        "thread_cpu_ns": {
+          "positive_pairs": 1,
+          "status": "INSUFFICIENT_CLOCK_RESOLUTION"
+        },
+        "wall_ns": {
+          "mean": 0.07613620666598225,
+          "paired_bootstrap_95_percent_interval": [
+            0.06868717687571141,
+            0.08566901852800443
+          ],
+          "resamples": 5000,
+          "scope": "Percentile resampling of observed matched sets; host dependence not removed",
+          "values": [
+            0.07413698199260832,
+            0.06941729463552936,
+            0.07320983942708695,
+            0.07474081055607917,
+            0.0760244513415153,
+            0.07394047272125828,
+            0.07089895919683153,
+            0.11973313243186566,
+            0.052079221469586684,
+            0.08056740976311837,
+            0.08113078048717318,
+            0.06775512596913426
+          ]
+        }
+      },
+      "medians_ms": {
+        "historical": {
+          "thread_cpu_ns": 15.625,
+          "wall_ns": 13.00035
+        },
+        "optimized": {
+          "thread_cpu_ns": 0.0,
+          "wall_ns": 0.95065
+        }
+      },
+      "operation": "encode",
+      "profile": "pq-4+2-gf256-v1",
+      "unit": 64
+    },
+    {
+      "comparisons": {
+        "thread_cpu_ns": {
+          "positive_pairs": 2,
+          "status": "INSUFFICIENT_CLOCK_RESOLUTION"
+        },
+        "wall_ns": {
+          "mean": 0.1676173122372949,
+          "paired_bootstrap_95_percent_interval": [
+            0.16527677119954887,
+            0.17046876893287835
+          ],
+          "resamples": 5000,
+          "scope": "Percentile resampling of observed matched sets; host dependence not removed",
+          "values": [
+            0.17009084809690464,
+            0.16784453588055165,
+            0.16750307494096478,
+            0.16331615830747492,
+            0.1737738711339832,
+            0.16498139620823205,
+            0.17962568667475345,
+            0.16183548001224024,
+            0.1651246096269546,
+            0.16625745863598942,
+            0.1643433282322878,
+            0.1667112990972021
+          ]
+        }
+      },
+      "medians_ms": {
+        "historical": {
+          "thread_cpu_ns": 31.25,
+          "wall_ns": 27.48105
+        },
+        "optimized": {
+          "thread_cpu_ns": 0.0,
+          "wall_ns": 4.5767
+        }
+      },
+      "operation": "recover",
+      "profile": "pq-4+2-gf256-v1",
+      "unit": 64
+    },
+    {
+      "comparisons": {
+        "thread_cpu_ns": {
+          "positive_pairs": 6,
+          "status": "INSUFFICIENT_CLOCK_RESOLUTION"
+        },
+        "wall_ns": {
+          "mean": 0.005196867125454873,
+          "paired_bootstrap_95_percent_interval": [
+            0.005147870917515171,
+            0.005255282688519536
+          ],
+          "resamples": 5000,
+          "scope": "Percentile resampling of observed matched sets; host dependence not removed",
+          "values": [
+            0.005164790591905964,
+            0.00511090014510648,
+            0.005363132209660041,
+            0.00518987184709922,
+            0.005088941962084077,
+            0.005309674758574154,
+            0.005114117305173712,
+            0.005142342971215621,
+            0.005119714038950026,
+            0.00517925487322756,
+            0.005383833183324741,
+            0.00519583161913688
+          ]
+        }
+      },
+      "medians_ms": {
+        "historical": {
+          "thread_cpu_ns": 859.375,
+          "wall_ns": 865.65365
+        },
+        "optimized": {
+          "thread_cpu_ns": 7.8125,
+          "wall_ns": 4.45365
+        }
+      },
+      "operation": "encode",
+      "profile": "pq-4+2-gf256-v1",
+      "unit": 4096
+    },
+    {
+      "comparisons": {
+        "thread_cpu_ns": {
+          "positive_pairs": 10,
+          "status": "INSUFFICIENT_CLOCK_RESOLUTION"
+        },
+        "wall_ns": {
+          "mean": 0.007712893879097574,
+          "paired_bootstrap_95_percent_interval": [
+            0.007602525654213282,
+            0.007837127404316233
+          ],
+          "resamples": 5000,
+          "scope": "Percentile resampling of observed matched sets; host dependence not removed",
+          "values": [
+            0.007840240306926195,
+            0.007630273120626048,
+            0.007929316293385792,
+            0.00758259808368811,
+            0.007757911127207997,
+            0.007848345613273485,
+            0.0074195715015211005,
+            0.007869117811960927,
+            0.007542440448833536,
+            0.007464893601489975,
+            0.00811103743399547,
+            0.0075589812062622575
+          ]
+        }
+      },
+      "medians_ms": {
+        "historical": {
+          "thread_cpu_ns": 1656.25,
+          "wall_ns": 1664.25955
+        },
+        "optimized": {
+          "thread_cpu_ns": 15.625,
+          "wall_ns": 12.8056
+        }
+      },
+      "operation": "recover",
+      "profile": "pq-4+2-gf256-v1",
+      "unit": 4096
+    }
+  ],
+  "only_changed_e18_runtime_file": "prism_c/coding.py",
+  "original_prism_gate_evaluated": false,
+  "patent_readiness": 55,
+  "selected_workloads": [
+    {
+      "extra": false,
+      "groups": 12,
+      "profile": "xor-2+1-v1"
+    },
+    {
+      "extra": true,
+      "groups": 8,
+      "profile": "xor-2+1-v1"
+    },
+    {
+      "extra": false,
+      "groups": 6,
+      "profile": "pq-4+2-gf256-v1"
+    },
+    {
+      "extra": true,
+      "groups": 4,
+      "profile": "pq-4+2-gf256-v1"
+    }
+  ],
+  "source_ci_commit": "e7fb8a6149cf7485bbb1539de9e2a17125b50ff7",
+  "success": true
+}

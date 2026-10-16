@@ -1,0 +1,24 @@
+  native-zns:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install disposable NVMe emulator
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends qemu-system-x86
+          qemu-system-x86_64 --version
+      - name: Verify actual native-session recovery and faults
+        run: python -m analysis.native_fault_campaign collect --root tmp/native-ci --report artifacts/native-ci.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: native-zns-verification
+          path: |
+            artifacts/native-ci.json
+            tmp/native-ci/**/operations.jsonl
+            tmp/native-ci/**/supervisor-stderr.log
+            tmp/native-ci/**/actor-stderr.log
