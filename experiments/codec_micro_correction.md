@@ -1,0 +1,7 @@
+# E19 microbenchmark row-size correction — 16 October 2026
+
+Declared after the initial microbenchmark and complete controller collection, before any corrected microbenchmark outcome. Preserve `codec-batches-e19.json` unchanged. The initial helper used input length `data_rows * unit - 3`; for 2+1 its encoded rows are 63/4095 bytes rather than the declared 64/4096. Both implementations received identical bytes, so initial paired comparisons describe those actual sizes, but their unit labels must not be presented as exact. 4+2 initial rows have the declared size.
+
+Correct the construction to `data_rows * unit - 1` and assert both encoders produce exactly `unit` bytes in every row. Save actual input length/row size and the corrected helper/amendment hashes. Retain all eight configurations, 12 matched sets, 100-operation batches, randomized order/seed, cold-module measurements and CPU-resolution insufficiency rules. Use a new runtime root and `codec-batches-e19-r2.json`; do not overwrite/relabel the original. No favorable-window selection or clock-resolution resizing is authorized.
+
+This is a microbenchmark-only input correction. The deployed codec, full source verification/CI, original E19 protocol, exact-unit controller collector, calibration and complete ten-set controller data remain unchanged. Make no matched cross-source complete-controller speed claim from differently sized calibrated work. The timing collection source remains the recorded source; a later Git revision may add only this analysis correction/prose before the corrected microbenchmark.
