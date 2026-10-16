@@ -1,0 +1,369 @@
+{
+  "cases": [
+    {
+      "arm": "joint",
+      "assigned_serial": "RCSDdf896551703d4758",
+      "command": [
+        "/usr/bin/qemu-system-x86_64",
+        "-machine",
+        "q35,accel=tcg",
+        "-bios",
+        "/mnt/d/PROJECTS/RecoveryCert-SemanticDelta/tmp/e20-native-routes-r1/case-0/owned-halt-bios.bin",
+        "-m",
+        "64",
+        "-display",
+        "none",
+        "-nodefaults",
+        "-monitor",
+        "none",
+        "-qtest",
+        "unix:/tmp/rcsd-qtest-acfg0zdv/control.sock,server=on,wait=off",
+        "-qtest-log",
+        "/mnt/d/PROJECTS/RecoveryCert-SemanticDelta/tmp/e20-native-routes-r1/case-0/qtest.log",
+        "-device",
+        "nvme,id=nvme0,serial=RCSDdf896551703d4758,addr=04.0",
+        "-drive",
+        "file=/mnt/d/PROJECTS/RecoveryCert-SemanticDelta/tmp/e20-native-routes-r1/case-0/owned-ns-1.raw,format=raw,if=none,id=znsdrive1",
+        "-device",
+        "nvme-ns,drive=znsdrive1,bus=nvme0,nsid=1,zoned=on,zoned.zone_size=1M,zoned.zone_capacity=8192,zoned.max_open=1,zoned.max_active=1",
+        "-drive",
+        "file=/mnt/d/PROJECTS/RecoveryCert-SemanticDelta/tmp/e20-native-routes-r1/case-0/owned-ns-2.raw,format=raw,if=none,id=znsdrive2",
+        "-device",
+        "nvme-ns,drive=znsdrive2,bus=nvme0,nsid=2,zoned=on,zoned.zone_size=1M,zoned.zone_capacity=4096,zoned.max_open=1,zoned.max_active=1",
+        "-drive",
+        "file=/mnt/d/PROJECTS/RecoveryCert-SemanticDelta/tmp/e20-native-routes-r1/case-0/owned-ns-3.raw,format=raw,if=none,id=znsdrive3",
+        "-device",
+        "nvme-ns,drive=znsdrive3,bus=nvme0,nsid=3,zoned=on,zoned.zone_size=1M,zoned.zone_capacity=4096,zoned.max_open=1,zoned.max_active=1"
+      ],
+      "command_completions": [
+        {
+          "cid": 1,
+          "opcode": 5,
+          "queue": 0,
+          "result": 0,
+          "status": 0
+        },
+        {
+          "cid": 2,
+          "opcode": 1,
+          "queue": 0,
+          "result": 0,
+          "status": 0
+        },
+        {
+          "cid": 3,
+          "opcode": 6,
+          "queue": 0,
+          "result": 0,
+          "status": 0
+        },
+        {
+          "cid": 4,
+          "opcode": 1,
+          "queue": 1,
+          "result": 0,
+          "status": 0
+        },
+        {
+          "cid": 5,
+          "opcode": 1,
+          "queue": 1,
+          "result": 0,
+          "status": 0
+        },
+        {
+          "cid": 6,
+          "opcode": 1,
+          "queue": 1,
+          "result": 0,
+          "status": 0
+        },
+        {
+          "cid": 7,
+          "opcode": 1,
+          "queue": 1,
+          "result": 0,
+          "status": 0
+        },
+        {
+          "cid": 8,
+          "opcode": 122,
+          "queue": 1,
+          "result": 0,
+          "status": 0
+        },
+        {
+          "cid": 9,
+          "opcode": 122,
+          "queue": 1,
+          "result": 0,
+          "status": 0
+        },
+        {
+          "cid": 10,
+          "opcode": 122,
+          "queue": 1,
+          "result": 0,
+          "status": 0
+        },
+        {
+          "cid": 11,
+          "opcode": 2,
+          "queue": 1,
+          "result": 0,
+          "status": 0
+        },
+        {
+          "cid": 12,
+          "opcode": 2,
+          "queue": 1,
+          "result": 0,
+          "status": 0
+        },
+        {
+          "cid": 13,
+          "opcode": 2,
+          "queue": 1,
+          "result": 0,
+          "status": 0
+        }
+      ],
+      "error": "KeyError('')",
+      "extra": false,
+      "initial": {
+        "max_active": 1,
+        "max_open": 1,
+        "offline": [],
+        "reclaim": [
+          [
+            "A",
+            1
+          ]
+        ],
+        "stripes": [
+          {
+            "eligible": [
+              "A",
+              "B1",
+              "X"
+            ],
+            "name": "object",
+            "profile": "xor-2+1-v1",
+            "single_fault": false
+          }
+        ],
+        "zones": [
+          {
+            "capacity": 2,
+            "domain": "A",
+            "extents": [
+              {
+                "grants": 0,
+                "pins": 0,
+                "row": 0,
+                "status": "LIVE",
+                "stripe": "object"
+              },
+              {
+                "grants": 0,
+                "pins": 0,
+                "row": -1,
+                "status": "RETIRED",
+                "stripe": ""
+              }
+            ],
+            "external_hold": 0,
+            "incarnation": 1,
+            "name": "A",
+            "phase": "FULL",
+            "reservation": null,
+            "reset_prior": ""
+          },
+          {
+            "capacity": 1,
+            "domain": "B1",
+            "extents": [
+              {
+                "grants": 0,
+                "pins": 1,
+                "row": 1,
+                "status": "LIVE",
+                "stripe": "object"
+              }
+            ],
+            "external_hold": 0,
+            "incarnation": 1,
+            "name": "B1",
+            "phase": "FULL",
+            "reservation": null,
+            "reset_prior": ""
+          },
+          {
+            "capacity": 1,
+            "domain": "X",
+            "extents": [
+              {
+                "grants": 0,
+                "pins": 0,
+                "row": 2,
+                "status": "STAGED",
+                "stripe": "object"
+              }
+            ],
+            "external_hold": 0,
+            "incarnation": 1,
+            "name": "X",
+            "phase": "FULL",
+            "reservation": null,
+            "reset_prior": ""
+          }
+        ]
+      },
+      "manifests": {
+        "object": {
+          "length": 8192,
+          "profile": "xor-2+1-v1",
+          "rows": [
+            "88b349d90b9b3560d22285dae1abc68f748ba5b5e2efab9cd914b3a04005c972",
+            "423ac1e0cf4ab7c86d5b2f4c5881bef41db01880f967c110cb5ef577a985fe1b",
+            "92d2c9fac2c32ca67ea0d67691d5103b529c1cf0c63e60d23d784cdb11db9d3f"
+          ],
+          "sha256": "47f86ccbfe5c36d35d4141f1988773902c13fbe624ec8fe936c815bdc1799246"
+        }
+      },
+      "namespaces": {
+        "A": {
+          "capacity_units": 2,
+          "image": "/mnt/d/PROJECTS/RecoveryCert-SemanticDelta/tmp/e20-native-routes-r1/case-0/owned-ns-1.raw",
+          "nsid": 1
+        },
+        "B1": {
+          "capacity_units": 1,
+          "image": "/mnt/d/PROJECTS/RecoveryCert-SemanticDelta/tmp/e20-native-routes-r1/case-0/owned-ns-2.raw",
+          "nsid": 2
+        },
+        "X": {
+          "capacity_units": 1,
+          "image": "/mnt/d/PROJECTS/RecoveryCert-SemanticDelta/tmp/e20-native-routes-r1/case-0/owned-ns-3.raw",
+          "nsid": 3
+        }
+      },
+      "native_stage_bytes": 0,
+      "prefixes": [
+        {
+          "cursor": 0,
+          "exact_readback": true,
+          "reports": {
+            "A": {
+              "capacity_lba": 16,
+              "condition": 14,
+              "reported_zones": 1,
+              "start_lba": 0,
+              "type": 2,
+              "wp_lba": 18446744073709551615
+            },
+            "B1": {
+              "capacity_lba": 8,
+              "condition": 14,
+              "reported_zones": 1,
+              "start_lba": 0,
+              "type": 2,
+              "wp_lba": 18446744073709551615
+            },
+            "X": {
+              "capacity_lba": 8,
+              "condition": 14,
+              "reported_zones": 1,
+              "start_lba": 0,
+              "type": 2,
+              "wp_lba": 18446744073709551615
+            }
+          },
+          "state_sha256": "1f5023409ea6b3c0cea6b56c83ca72674955d786e4f4263d5d99571403cdd10f"
+        }
+      ],
+      "profile": "xor-2+1-v1",
+      "qemu_binary_sha256": "55862c768c21fa7d3e72ca1b24797d8ab5b406eb5ef4c9ab9c2280f4e0b8f330",
+      "qemu_version": "QEMU emulator version 6.2.0 (Debian 1:6.2+dfsg-2ubuntu6.31)",
+      "success": false,
+      "witness": {
+        "actions": [
+          {
+            "incarnation": 1,
+            "kind": "promote",
+            "offset": 0,
+            "row": -1,
+            "stripe": "",
+            "zone": "X"
+          },
+          {
+            "incarnation": 1,
+            "kind": "retire",
+            "offset": 0,
+            "row": -1,
+            "stripe": "",
+            "zone": "A"
+          },
+          {
+            "incarnation": 1,
+            "kind": "reset_request",
+            "offset": -1,
+            "row": -1,
+            "stripe": "",
+            "zone": "A"
+          },
+          {
+            "incarnation": 1,
+            "kind": "reset_ack",
+            "offset": -1,
+            "row": -1,
+            "stripe": "",
+            "zone": "A"
+          },
+          {
+            "incarnation": 2,
+            "kind": "open",
+            "offset": -1,
+            "row": -1,
+            "stripe": "",
+            "zone": "A"
+          },
+          {
+            "incarnation": 2,
+            "kind": "reserve",
+            "offset": -1,
+            "row": 0,
+            "stripe": "object",
+            "zone": "A"
+          },
+          {
+            "incarnation": 2,
+            "kind": "stage",
+            "offset": -1,
+            "row": 0,
+            "stripe": "object",
+            "zone": "A"
+          },
+          {
+            "incarnation": 2,
+            "kind": "promote",
+            "offset": 0,
+            "row": -1,
+            "stripe": "",
+            "zone": "A"
+          }
+        ],
+        "initial": "1f5023409ea6b3c0cea6b56c83ca72674955d786e4f4263d5d99571403cdd10f"
+      }
+    }
+  ],
+  "external_reproduction": false,
+  "harness_sha256": "1e2894c3db9d1bf2b649f7d31f325e1ee090fd7c4ba97a03884d19535c774a88",
+  "native_command_byte_routes": true,
+  "patent_rating_changed": false,
+  "persistent_authority_integration": false,
+  "platform": "Linux-6.18.33.1-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+  "power_loss_tested": false,
+  "qtest_driver_sha256": "d27fc1d45b941f8707fbdd77383b23c43b10347fa7e65eb09711c071c0c7bd7f",
+  "success": false
+}

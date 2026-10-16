@@ -95,7 +95,8 @@ def run_case(root, profile, extra, arm):
                 result["native_stage_bytes"] += len(payload)
             elif action.kind == "promote":
                 payload = device.read(action.offset*8, nsid=namespace(zone))
-                if digest(payload) != manifests[action.stripe]["rows"][action.row]:
+                extent = zone.extents[action.offset]
+                if digest(payload) != manifests[extent.stripe]["rows"][extent.row]:
                     raise RuntimeError("Native staged row authentication failure")
             elif action.kind in ("open", "close", "finish", "reset_ack"):
                 device.manage({"open": 3, "close": 1, "finish": 2, "reset_ack": 4}[action.kind], nsid=namespace(zone))
