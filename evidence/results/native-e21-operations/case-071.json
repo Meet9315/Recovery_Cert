@@ -1,0 +1,2720 @@
+[
+  {
+    "action": null,
+    "event": "started",
+    "fence": 0,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 0,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 0,
+    "offset": 0,
+    "op": "write",
+    "operation": "bootstrap",
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 0,
+    "offset": 0,
+    "op": "write",
+    "operation": "bootstrap",
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 0,
+    "offset": 4096,
+    "op": "write",
+    "operation": "bootstrap",
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 0,
+    "offset": 4096,
+    "op": "write",
+    "operation": "bootstrap",
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 0,
+    "offset": null,
+    "op": "flush",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 0,
+    "offset": null,
+    "op": "flush",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 0,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 0,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 0,
+    "offset": 0,
+    "op": "write",
+    "operation": "bootstrap",
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 0,
+    "offset": 0,
+    "op": "write",
+    "operation": "bootstrap",
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 0,
+    "offset": null,
+    "op": "flush",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 0,
+    "offset": null,
+    "op": "flush",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 0,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 0,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 0,
+    "offset": 0,
+    "op": "write",
+    "operation": "bootstrap",
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 0,
+    "offset": 0,
+    "op": "write",
+    "operation": "bootstrap",
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 0,
+    "offset": null,
+    "op": "flush",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 0,
+    "offset": null,
+    "op": "flush",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 0,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 0,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 0,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 0,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 0,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 0,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 0,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 0,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 0,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 0,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 1,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 1,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 1,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 1,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 1,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 1,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 1,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 1,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 1,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 1,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 1,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 1,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 1,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 1,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 1,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 1,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 1,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 1,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 1,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 1,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 1,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 1,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 1,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 1,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 1,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 1,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 1,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 1,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 1,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 1,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 1,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 1,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 1,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 1,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 1,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 1,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 1,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 1,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 1,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 1,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 1,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 1,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 1,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 1,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 1,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 1,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 1,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 1,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 1,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 1,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 1,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 1,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 1,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 1,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 1,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 1,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 1,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 1,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 1,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 1,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 1,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 1,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 1,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 1,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 1,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 1,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 1,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 1,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 1,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 1,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 1,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 1,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 1,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 1,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 1,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 1,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": 4,
+    "event": "started",
+    "fence": 2,
+    "offset": null,
+    "op": "manage",
+    "operation": "7eda9ddf9f4f1d4947a4a22a9f63969f0c3cbf87023dc45f65d3ae003dea4927",
+    "zone": "A"
+  },
+  {
+    "action": 4,
+    "event": "completed",
+    "fence": 2,
+    "offset": null,
+    "op": "manage",
+    "operation": "7eda9ddf9f4f1d4947a4a22a9f63969f0c3cbf87023dc45f65d3ae003dea4927",
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": null,
+    "op": "flush",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": null,
+    "op": "flush",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": 3,
+    "event": "started",
+    "fence": 2,
+    "offset": null,
+    "op": "manage",
+    "operation": "fe20914b822de0a7b29e48e2cf51a7eba4953e3f054d856f8142eb096689a8aa",
+    "zone": "A"
+  },
+  {
+    "action": 3,
+    "event": "completed",
+    "fence": 2,
+    "offset": null,
+    "op": "manage",
+    "operation": "fe20914b822de0a7b29e48e2cf51a7eba4953e3f054d856f8142eb096689a8aa",
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": null,
+    "op": "flush",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": null,
+    "op": "flush",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": 0,
+    "op": "write",
+    "operation": "70cc9cf47650f04f65fe2b6033fbcabc02063f29ef3d4ee84eaadec30d651515",
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": 0,
+    "op": "write",
+    "operation": "70cc9cf47650f04f65fe2b6033fbcabc02063f29ef3d4ee84eaadec30d651515",
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": null,
+    "op": "flush",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": null,
+    "op": "flush",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": 2048,
+    "op": "write",
+    "operation": "70cc9cf47650f04f65fe2b6033fbcabc02063f29ef3d4ee84eaadec30d651515",
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": 2048,
+    "op": "write",
+    "operation": "70cc9cf47650f04f65fe2b6033fbcabc02063f29ef3d4ee84eaadec30d651515",
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": null,
+    "op": "flush",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": null,
+    "op": "flush",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": 1,
+    "event": "started",
+    "fence": 2,
+    "offset": null,
+    "op": "manage",
+    "operation": "9c5a52bc1e1c757766aee9dd6eabb5013fd0fda6d696d323b64b627f1546e3a0",
+    "zone": "A"
+  },
+  {
+    "action": 1,
+    "event": "completed",
+    "fence": 2,
+    "offset": null,
+    "op": "manage",
+    "operation": "9c5a52bc1e1c757766aee9dd6eabb5013fd0fda6d696d323b64b627f1546e3a0",
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": null,
+    "op": "flush",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": null,
+    "op": "flush",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": 2,
+    "event": "started",
+    "fence": 2,
+    "offset": null,
+    "op": "manage",
+    "operation": "c643f77a23f353b085c5da8cb5c20b78674453a717c14404306c50a30989fc30",
+    "zone": "A"
+  },
+  {
+    "action": 2,
+    "event": "completed",
+    "fence": 2,
+    "offset": null,
+    "op": "manage",
+    "operation": "c643f77a23f353b085c5da8cb5c20b78674453a717c14404306c50a30989fc30",
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": null,
+    "op": "flush",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": null,
+    "op": "flush",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": 0,
+    "op": "read",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "A"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "B1"
+  },
+  {
+    "action": null,
+    "event": "started",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "X"
+  },
+  {
+    "action": null,
+    "event": "completed",
+    "fence": 2,
+    "offset": null,
+    "op": "report",
+    "operation": null,
+    "zone": "X"
+  }
+]

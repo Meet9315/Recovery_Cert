@@ -46,4 +46,12 @@ This smoke test checks actual kernel write-pointer/report/close/finish/reset beh
 
 ## Return record
 
+For the native journal extension, use source `49db8a156b1f62bb8399cdf1f5a979e19d5f2b09`, recorded in [execution](results/E21_EXECUTION.md), and run the [registered authority fault campaign](../experiments/native_authority_protocol.md) on Linux with QEMU installed:
+
+```bash
+python3 -m analysis.native_fault_campaign collect --root tmp/outside-native-authority --report artifacts/outside-native-authority.json
+```
+
+This creates only fresh owned images/namespaces. Retain all case operation logs, supervisor summaries, process exit codes and raw campaign report; never reuse a failed authority root. Also save `qemu-system-x86_64 --version` and the binary SHA-256 separately: the E21 campaign embeds OS/Python/SQLite and source hashes, but does not embed the QEMU build. Existing local/remote campaigns each pass 84 cases with 74 actor terminations. The continuous supervisor session is part of the contract, and its loss is expected to fail closed rather than demonstrate power-loss recovery. The GitHub native CI job is a separate automated repetition, not an independent human review. Commands in this handoff require the corresponding implementation revision; do not run them on a historical revision that lacks the module.
+
 Record operator identity/organization if supplied, date, source commit and hashes, hardware/emulator/OS versions and configuration, exact commands, all raw outputs, failures/deviations and any independently implemented oracle used. Human identity is not inferred from an account or an automated runner. Send nothing externally without the user's explicit instruction.

@@ -1,6 +1,6 @@
 # Native-session authority contract (E21)
 
-16 October 2026. Planned activation follows completion/audit of E19 timing. The [registered fault protocol](../experiments/native_authority_protocol.md) defines the exact implementation/verification gates. This format is opt-in and separate from `prism-zoned-file-v1`; opening a file authority as native, or native authority as file, must fail.
+16 October 2026. Implemented at source `49db8a156b1f62bb8399cdf1f5a979e19d5f2b09`, after completion/audit of E19 timing. The [registered fault protocol](../experiments/native_authority_protocol.md) defines the exact verification gates; [E21 execution](../evidence/results/E21_EXECUTION.md) records actual outcomes and remaining limits. This format is opt-in and separate from `prism-zoned-file-v1`; opening a file authority as native, or native authority as file, must fail.
 
 ## Supported continuity and identity
 

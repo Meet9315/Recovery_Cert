@@ -1,0 +1,54 @@
+{
+  "audit_script_sha256": "5d6b01724f5ac26d1bd666cf518c8fe6c87c33b65e02f2cdd0a62b465eab4ec9",
+  "both_platform_correctness_ci_hashes_match": true,
+  "broken_local_links": 0,
+  "date": "2026-10-16",
+  "independent_external_reproduction": false,
+  "local": {
+    "boundary_coverage": 66,
+    "cases": 84,
+    "full_source_hashes_match": true,
+    "operation_manifest_sha256": "7af8ab9095683d13d7fb63cc2eeeed89d722685dc63e6c6d69cfef6af691a098",
+    "operation_shards_verified": 84,
+    "outcomes": {
+      "ALTERED_INTENT_REJECTED; NO_FREE_CREDIT": 2,
+      "CHANGED_SESSION_IDENTITY_REJECTED_BEFORE_IO": 2,
+      "NOMINAL_EXACT_TARGET": 8,
+      "PARTIAL_APPEND_QUARANTINED; SOURCES_RETAINED": 4,
+      "RESUMED_EXACT_TARGET": 66,
+      "SESSION_LOSS_FAILS_CLOSED; NOT POWER_LOSS_RECOVERY": 2,
+      "actor_terminations": 74
+    },
+    "receipts_independently_replayed": 784,
+    "submitted_command_drain_orderings_verified": 4,
+    "successful_nvme_completions": 41488,
+    "unique_sessions": 84
+  },
+  "local_document_links_checked": 494,
+  "matching_source_test_hashes": 76,
+  "patent_readiness": 55,
+  "physical_power_loss_tested": false,
+  "remote_native_ci": {
+    "boundary_coverage": 66,
+    "cases": 84,
+    "full_source_hashes_match": true,
+    "operation_manifest_sha256": "8380651789d1ea58b3206d03578c5fead5d345769c86ae8d368e4ffe3d48a0a4",
+    "operation_shards_verified": 84,
+    "outcomes": {
+      "ALTERED_INTENT_REJECTED; NO_FREE_CREDIT": 2,
+      "CHANGED_SESSION_IDENTITY_REJECTED_BEFORE_IO": 2,
+      "NOMINAL_EXACT_TARGET": 8,
+      "PARTIAL_APPEND_QUARANTINED; SOURCES_RETAINED": 4,
+      "RESUMED_EXACT_TARGET": 66,
+      "SESSION_LOSS_FAILS_CLOSED; NOT POWER_LOSS_RECOVERY": 2,
+      "actor_terminations": 74
+    },
+    "receipts_independently_replayed": 784,
+    "submitted_command_drain_orderings_verified": 4,
+    "successful_nvme_completions": 41488,
+    "unique_sessions": 84
+  },
+  "subtests": 691,
+  "test_methods": 224,
+  "unchanged_e19_source_test_files": 74
+}

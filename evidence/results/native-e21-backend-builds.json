@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-16",
+  "local": {
+    "observation": "Read during the final local campaign; same version/hash as E20 smoke. E21 raw campaign has OS/Python/SQLite but did not itself embed QEMU build metadata.",
+    "qemu_binary_sha256": "55862c768c21fa7d3e72ca1b24797d8ab5b406eb5ef4c9ab9c2280f4e0b8f330",
+    "qemu_version": "QEMU emulator version 6.2.0 (Debian 1:6.2+dfsg-2ubuntu6.31)"
+  },
+  "physical_power_loss_tested": false,
+  "remote_native_ci": {
+    "binary_hash_status": "Not captured by this CI workflow; do not infer from package version.",
+    "binary_sha256": null,
+    "downloaded_job_log_sha256": "bf54cd34cc9e917eaef71aa085907a21285a39222956533c036e954954700bb7",
+    "job_id": 116861220229,
+    "job_url": "https://github.com/Meet9315/Recovery_Cert/actions/runs/38866744648/job/116861220229",
+    "qemu_version": "QEMU emulator version 8.2.2 (Debian 1:8.2.2+ds-0ubuntu1.18)",
+    "run_id": 38866744648,
+    "selected_log_lines": [
+      "2026-10-16T07:22:14.5932232Z Setting up qemu-system-x86 (1:8.2.2+ds-0ubuntu1.18) ...",
+      "2026-10-16T07:22:16.4743631Z QEMU emulator version 8.2.2 (Debian 1:8.2.2+ds-0ubuntu1.18)"
+    ]
+  }
+}

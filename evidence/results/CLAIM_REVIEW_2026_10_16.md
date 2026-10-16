@@ -8,6 +8,8 @@ The implemented system is a Python/SQLite single-authority recovery prototype fo
 
 E18's added measurement tooling and any subsequent codec optimization must be distinguished from the inventive subject matter. Conventional joint/repeat arms are identical software. A shared codec improvement is ordinary implementation engineering, available to the strongest comparator.
 
+**Engineering amendment later on 16 October:** [E18](E18_EXECUTION.md) now completes its declared two-session campaign; [E19](E19_EXECUTION.md) implements the shared compatible codec and complete recalibrated timings. [E20](E20_EXECUTION.md) executes actual QEMU NVMe ZNS byte routes. [E21](E21_EXECUTION.md) adds a separate opt-in SQLite journal authority bound to a continuous serial device-supervisor session; its final verification status must be read in that execution record. The broader statement above remains the file embodiment's scope, not a denial of this later native extension. The new native contract still fails closed on device-session loss and does not establish physical power-loss recovery or an inventive distinction.
+
 ## Narrow illustrative method and support chart
 
 The following is a **claim skeleton for review**, not a representation that its combination is new. It intentionally describes only supported local behavior. An independent claim would need an established distinguishing interaction before filing. Claim language and statutory eligibility require professional review.
@@ -29,6 +31,8 @@ In a storage controller maintaining immutable erasure-coded objects and a persis
 | Authenticated adoption/quarantine | `_geometry`, `_apply_prepared`, `_commit_action` | 28 resumed and four expected quarantined E16 outcomes | Conservative uncertain-write accounting is technically useful but no non-obvious distinction is established. |
 | Reset closure/incarnation guards | Zoned model transitions; persistent intents/takeover | Serialized trusted authority only | Ordinary guarded counters matched the proposed frontier in R14. |
 | Native reset/write-pointer reconciliation | Not established by file length/truncation | Native device/power-loss gate pending | Must not broaden the implemented claim to device evidence that does not exist. |
+
+The last row describes the file embodiment only. A separate native-session claim-review variant can replace file length/truncation with actual namespace report/command outcomes and add an authority/store/session-bound serial-supervisor barrier. Its exact limitation is **continuous-session actor recovery**, including draining prior submitted commands before accepting the new fence and refusing late old-fence submissions; it must expressly exclude automatic session recreation/power-loss recovery. Support is [native authority contract](../../spec/native_session_authority.md), source `prism_c/native_authority.py` and [E21's completed local/remote 84-case fault campaigns](E21_EXECUTION.md). RAIZN's reset/write ordering and ordinary journalling/fencing are direct combination concerns. This added implementation does not establish a new non-obvious interaction merely because the barrier is explicit.
 
 ## Refreshed primary-source screen
 

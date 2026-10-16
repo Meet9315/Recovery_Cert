@@ -2,7 +2,7 @@
 
 A runnable local prototype of reservation-backed repair continuations and acknowledged storage reclamation. Python 3.11 or later; standard library only. No installation or network access is required.
 
-16 October delivery: [E19](evidence/results/E19_EXECUTION.md) implements a shared compatible codec optimization, with 218 methods/687 subtests and both-platform source CI passing. Corrected codec batches show large elapsed savings with cold initialization and CPU-clock limitations retained; all 120 freshly calibrated controller windows/144000 reads pass integrity/adequacy, while two repeatability screens fail. [E20](evidence/results/E20_EXECUTION.md) separately executes actual QEMU NVMe ZNS commands and eight exact codeword routes; that optional Linux emulator requires QEMU installation. Native persistent-authority/process-fault integration is the next opt-in gate. Neither result establishes a novel distinction or the 70+ target.
+16 October delivery: [E19](evidence/results/E19_EXECUTION.md) implements the shared compatible codec and complete fresh calibration/120-window controller characterization; two repeatability screens fail. [E20](evidence/results/E20_EXECUTION.md) executes actual QEMU NVMe ZNS command/byte routes. [E21](evidence/results/E21_EXECUTION.md) adds an opt-in journaled native-session authority with a serial supervisor and takeover command drain. Local and remote Linux campaigns each pass **84 cases/74 actor terminations**; full local verification passes **224 methods/691 subtests**, and Ubuntu/Windows correctness plus native CI all pass. This optional Linux backend requires QEMU. Session loss fails closed; physical power-loss recovery and an inventive distinction remain unproved. [Current progress and remaining requirements](PROGRESS.md).
 
 Current research decision (13 October 2026): [updated patent-readiness assessment](evidence/results/PATENT_REASSESSMENT_2026_10_13.md) is **55/100**, a subjective readiness rubric, not grant probability. The [redesign plan](RCSD_PRISM_C_Redesign_Plan.md) investigates joint repair and whole-zone reclamation after conventional controllers match the current tested hypotheses. Engineering implementation status is recorded below; the 73/75 patent targets remain conditional.
 
@@ -51,6 +51,14 @@ The demo root must be new or empty. Existing stores are never reset by the demo.
 To resume an interrupted plan: `python -m prism_c resume --root <store-directory> --plan <plan-id> --takeover`. This advances the owner fence, invalidating older controllers. `cancel` accepts the same arguments and leaves materialized partial writes charged until reclamation; cancellation does not immediately free their capacity.
 
 Those resume/cancel commands apply to slot stores. The separate zoned-file adapter uses `ZonedFileStore(root)`, `takeover()` and `execute(fence)`; it has no cancellation or asynchronous worker API. Its creation/campaign paths must be nonexistent. Read the [contract](spec/zoned_file_store.md) before interpreting pending intents, quarantine or simulated reset outcomes.
+
+To repeat the native authority/fault campaign on Linux with `qemu-system-x86_64` installed:
+
+```bash
+python3 -m analysis.native_fault_campaign collect --root tmp/native-authority-new --report artifacts/native-authority-new.json
+```
+
+Both paths must be fresh. It creates disposable owned images and never accepts an existing device path. The [native-session contract](spec/native_session_authority.md) supports actor recovery while its private supervisor/controller session survives. Slot-store resume/cancel commands above do not apply to this separate native format. [Outside reproduction handoff](evidence/REPRODUCTION_HANDOFF.md).
 
 ## Implemented
 
